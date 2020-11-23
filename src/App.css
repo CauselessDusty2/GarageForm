@@ -1,38 +1,95 @@
-.App {
-  text-align: center;
+.cardContainer{
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 648px;
+  background: lightgray;
+  padding: 0.5em;
+  margin-bottom: 2em;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.card{
+  padding-top:0.5em;
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex-wrap: wrap;
+  background: #fff;
+  margin-right: 0.5em;
+  height: 120px;
+  width: 100px;
+  margin-bottom: 0.5em;
+}
+.card:hover{
+  background: gold;
+  cursor: pointer;
+}
+.selected{
+  background: gold;
+}
+
+#root{
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.title{
+  font-size: 1.5em;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.cardValue{
+  font-weight: bold;
+  font-size: 0.75em;
+  text-align: center;
+}
+.infoSection{
+  margin-bottom: 2em;
+  padding: 1em;
+  background: lightgray;
+  color: #05182A;
+  font-size: 1.2em;
 }
 
-.App-link {
-  color: #61dafb;
+.toggle{
+  margin-bottom: 1em;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.submit{
+  background: white;
+  border: none;
+  font-size: 1.2em;
+  font-weight: bold;
+  cursor: pointer;
+  height: 2em;
+  width: 10em;
+  text-decoration: none;
+  color: black;
+  padding: 0.25em 0.5em;
+}
+.submit:hover{
+  background: yellow;
+}
+
+.textInput{
+  height: 2em;
+  width: 100%;
+  border: none;
+  background-color: white;
+  margin-bottom: 1em;
+}
+.addInfoText{
+  height: 4em;
+  resize: none;
+  outline: none;
+  font-size: 1.2em;
+}
+label{
+  font-weight: bold;
+}
+
+.cardImage{
+  width: 80px;
+  height: 80px;
+}
+
+.selectedState{
+  background: gold;
 }
