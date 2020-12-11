@@ -194,12 +194,13 @@ const AdvancedQuoteSection = props => {
             return OVERHEAD_COLOUR_5
         } else if (series === "Esteem") {
             return OVERHEAD_COLOUR_6
-        }
+        } else if (series === "Mid-Century Modern")
+            return OVERHEAD_COLOUR_7
         return ""
     }
 
     const getOverheadWindowPatern = series => {
-        if (series === "Thermocraft" || series === "Ranchcraft" || series === "Carriagecraft" || series === "Flush" || series === "Elite" ) {
+        if (series === "Thermocraft" || series === "Ranchcraft" || series === "Carriagecraft" || series === "Flush" || series === "Elite" || series === "Mid-Century Modern") {
             return WINDOW_PATERN_1
         } else if (series === "Contemporary") {
             return WINDOW_PATERN_2
@@ -209,11 +210,11 @@ const AdvancedQuoteSection = props => {
         return ""
     }
 
-    const getOverheadWindowType = ( series, patern ) => {
+    const getOverheadWindowType = ( series, patern, finish ) => {
         if (patern && patern !== "None" && series) {
             if (series === "Thermocraft" || series === "Ranchcraft" || series === "Carriagecraft" || series === "Flush" ) {
                 return WINDOW_TYPE_3
-            } else if ( series === "Elite" ) {
+            } else if ( series === "Elite" || ( series === "Mid-Century Modern" && finish !== "Dark Tint Clear")) {
                 return WINDOW_TYPE_2
             } else {
                 return WINDOW_TYPE_1
@@ -230,6 +231,8 @@ const AdvancedQuoteSection = props => {
                 return GLASS_FINISH_2
             } else if ( series === "Esteem" ) {
                 return GLASS_FINISH_3
+            } else if ( series === "Mid-Century Modern") {
+                return GLASS_FINISH_4
             }
         }
         return ""
@@ -252,7 +255,7 @@ const AdvancedQuoteSection = props => {
         if ( windowType === "Inlaid Muntin Bars" ) {
             if ( series === "Thermocraft" || series === "Flush" || series === "Ranchcraft" || series === "Carriagecraft" ) {
                 return MUNTIN_STYLE_1
-            } else if ( series === "Elite" ) {
+            } else if ( series === "Elite" || series === "Mid-Century Modern") {
                 return MUNTIN_STYLE_2
             }
         }
@@ -269,6 +272,14 @@ const AdvancedQuoteSection = props => {
                 } else if ( glassFinish === "Satin" ) {
                     return MUNTIN_COLOUR_3
                 } else if ( glassFinish === "Bronze Reflective") {
+                    return MUNTIN_COLOUR_4
+                }
+            } else if ( series === "Mid-Century Modern") {
+                if ( glassFinish === "Clear" ) {
+                    return [...MUNTIN_COLOUR_1, ...MUNTIN_COLOUR_2]
+                } else if ( glassFinish === "Satin" ) {
+                    return MUNTIN_COLOUR_3
+                } else if ( glassFinish === "Bronze Tint") {
                     return MUNTIN_COLOUR_4
                 }
             }
@@ -549,7 +560,7 @@ const AdvancedQuoteSection = props => {
             <CardContainer
                 onChange={props.handleOverheadWindowType}
                 stateGroup="overheadWindowType"
-                list={getOverheadWindowType(props.state.overheadSeries, props.state.overheadWindowPatern)}
+                list={getOverheadWindowType(props.state.overheadSeries, props.state.overheadWindowPatern, props.state.overheadGlassFinish)}
                 title="Overhead Door Window Type"
                 state={props.state.overheadWindowType}
                 summary="overhead door window type options"
@@ -1142,6 +1153,13 @@ const OVERHEAD_COLOUR_6 = [
     {value: "Red", imgSrc: "https://doordesigner.steel-craft.ca/img/preview/color-esteem-red.jpg"}
 ]
 
+const OVERHEAD_COLOUR_7 = [
+    {value: "White", imgSrc: "https://www.steel-craft.ca/portals/3/Images/doors/White.jpg"},
+    {value: "Sable Grey", imgSrc: "https://www.steel-craft.ca/portals/3/Images/doors/SableGrey.jpg"},
+    {value: "Cedar", imgSrc: "https://doordesigner.steel-craft.ca/img/preview/color-contemporary-cedar.jpg"},
+    {value: "Weathered Wood", imgSrc: "https://doordesigner.steel-craft.ca/img/preview/color-mid-century-modern-weathered-wood.jpg"}
+]
+
 //window patern options
 const WINDOW_PATERN_1 = [
     {value: "None", imgSrc: "https://doordesigner.steel-craft.ca/img/preview/window-pattern-thermocraft-none.jpg"},
@@ -1212,6 +1230,13 @@ const GLASS_FINISH_3 = [
     {value: "Bronze Lexan", imgSrc: "https://doordesigner.steel-craft.ca/img/preview/glass-26x14-bronze-lexan.png"},
     {value: "Blue Lexan", imgSrc: "https://doordesigner.steel-craft.ca/img/preview/glass-26x14-blue-lexan.png"},
     {value: "Green Lexan", imgSrc: "https://doordesigner.steel-craft.ca/img/preview/glass-26x14-green-lexan.png"}
+]
+
+const GLASS_FINISH_4 = [
+    {value: "Clear", imgSrc: "https://www.steel-craft.ca/portals/3/Images/doors/Window-Clear.jpg"},
+    {value: "Satin", imgSrc: "https://www.steel-craft.ca/portals/3/Images/doors/Window-Satin.jpg"},
+    {value: "Bronze Tint", imgSrc: "https://doordesigner.steel-craft.ca/img/preview/glass-38x14-bronze-reflective-contemporary.png"},
+    {value: "Dark Tint Clear", imgSrc: "https://doordesigner.steel-craft.ca/img/preview/glass-38x14-dark-tint-clear.png"},
 ]
 
 const WINDOW_FRAME_COLOUR_1 = [

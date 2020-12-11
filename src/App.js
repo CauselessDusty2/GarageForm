@@ -100,6 +100,9 @@ class App extends React.Component {
         if ( overheadGlassFinish !== this.overheadGlassFinish ) {
             this.setState({overheadGlassFinish, overheadWindowFrameColour: '', overheadMuntinColour: ''})
         }
+        if ( this.state.overheadGlassFinish === "Dark Tint Clear" ) {
+            this.setState({overheadWindowType: ''})
+        }
     }
 
     handleOverheadSeriesChange(state, overheadSeries) {
