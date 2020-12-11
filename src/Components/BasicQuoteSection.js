@@ -1,45 +1,52 @@
 import React from 'react'
 import CardContainer from "./CardContainer";
 
+
 const BasicQuoteSection = props => {
     return(
-        <div>
+        <section id="basicSection">
             <CardContainer
                 onChange={props.onClick}
-                stateGroup="width"
+                stateGroup="basicWidth"
                 list={props.state.length > 30 ? WIDTH_ALT : WIDTH}
                 title="Width"
-                state={props.state.width}
+                state={props.state.basicWidth}
+                summary="The width of the garage means the gable end of the garage, the side that the overhead door will be on"
             />
 
             <CardContainer
                 onChange={props.onClick}
-                stateGroup="length"
+                stateGroup="basicLength"
                 list={props.state.width ? props.state.width < 16 ? LENGTH_ALT : LENGTH : LENGTH}
                 title="Length"
-                state={props.state.length}
+                state={props.state.basicLength}
+                summary="The length of the garage means the eave end of the garage, the side that the man door will be on"
             />
 
             <CardContainer
                 onChange={props.onClick}
-                stateGroup="basicVinylColour"
-                list={BASIC_VINYL_COLOUR}
-                title="Vinyl Siding Colour"
-                state={props.state.basicVinylColour}
+                stateGroup="basicSiding"
+                list={SIDING}
+                title="Siding"
+                state={props.state.basicSiding}
+                summary="The garage can either have Mitten vinyl siding in one of three stocked colours, or have no siding"
             />
 
             <CardContainer
                 onChange={props.onClick}
-                stateGroup="shingleColour"
+                stateGroup="basicShingleColour"
                 list={SHINGLE_COLOUR}
                 title="Shingle Colour"
-                state={props.state.shingleColour}
+                state={props.state.basicShingleColour}
+                summary="The duration colours come in 10 different colour option"
             />
-        </div>
+        </section>
     )
 }
 
 export default BasicQuoteSection
+
+
 
 const WIDTH = [
     {value: "12", imgSrc: "../img/12.png"},
@@ -89,19 +96,19 @@ const LENGTH_ALT = [
     {value: "30", imgSrc: "../img/30.png"},
     {value: "Other", imgSrc: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPmZH3hkaoPDIdnJtwIKTz1XakSVX6zIAkfw&usqp=CAU"}
 ]
-const BASIC_VINYL_COLOUR = [
+const SIDING =  [
     {
-        value:"Frost",
+        value:"Vinyl - Frost",
         imgSrc:"https://www.mittensiding.com/upload/mproducts/colors/thumb/sentry-frost-sm.jpg"
     },{
-        value:"Brownstone",
+        value:"Vinyl - Brownstone",
         imgSrc:"https://www.mittensiding.com/upload/mproducts/colors/thumb/sentry-brownstone-sm.jpg"
     },{
-        value:"Gunmetal Grey",
-        imgSrc:"https://www.mittensiding.com/upload/mproducts/colors/thumb/sentry-gunmetal-grey-sm.jpg"
-    },{
-        value:"Stratus",
+        value:"Vinyl - Stratus",
         imgSrc:"https://www.mittensiding.com/upload/mproducts/colors/thumb/sentry-stratus-sm.jpg"
+    },{
+        value:"No Siding",
+        imgSrc:"https://garagedoorcompanyoseo.com/wp-content/uploads/2020/03/0C04C2E9-0965-4674-AC0A-E784F85833A8-rotated.jpg"
     }
 ]
 const SHINGLE_COLOUR = [

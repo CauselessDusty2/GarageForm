@@ -1,0 +1,47 @@
+{
+  "width": [{
+    "value": "12",
+    "imgSrc": "../img/12.png"
+  },
+    {
+      "value": "14",
+      "imgSrc": "../img/14.png"
+    },
+    {
+      "value": "16",
+      "imgSrc": "../img/16.png"
+    },
+    {
+      "value": "18",
+      "imgSrc": "../img/18.png"
+    },
+    {
+      "value": "20",
+      "imgSrc": "../img/20.png"
+    },
+    {
+      "value": "22",
+      "imgSrc": "../img/22.png"
+    },
+    {
+      "value": "24",
+      "imgSrc": "../img/24.png"
+    },
+    {
+      "value": "26",
+      "imgSrc": "../img/26.png"
+    },
+    {
+      "value": "28",
+      "imgSrc": "../img/28.png"
+    },
+    {
+      "value": "30",
+      "imgSrc": "../img/30.png"
+    },
+    {
+      "value": "Other",
+      "imgSrc": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPmZH3hkaoPDIdnJtwIKTz1XakSVX6zIAkfw&usqp=CAU"
+    }
+  ]
+}

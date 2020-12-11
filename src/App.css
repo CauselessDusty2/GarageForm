@@ -93,3 +93,7 @@ label{
 .selectedState{
   background: gold;
 }
+
+.childSelection{
+  margin-left: 3em;
+}
