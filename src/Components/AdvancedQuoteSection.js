@@ -312,6 +312,7 @@ const AdvancedQuoteSection = props => {
                 list={props.state.length > 30 ? WIDTH_ALT : WIDTH}
                 title="Width"
                 state={props.state.width}
+                customState={props.state.widthCustom}
                 summary="The width of the garage means the gable end of the garage, the side that the overhead door will be on"
             />
             <CardContainer
@@ -320,6 +321,7 @@ const AdvancedQuoteSection = props => {
                 list={props.state.width ? props.state.width < 16 ? LENGTH_ALT : LENGTH : LENGTH}
                 title="Length"
                 state={props.state.length}
+                customState={props.state.lengthCustom}
                 summary="The length of the garage means the eave end of the garage, the side that the man door will be on"
             />
             <CardContainer
@@ -328,6 +330,7 @@ const AdvancedQuoteSection = props => {
                 list={HEIGHT}
                 title="Height"
                 state={props.state.height}
+                customState={props.state.heightCustom}
                 summary="The height of the garage walls, measured from the ground to the bottom of the roof line"
             />
             <CardContainer

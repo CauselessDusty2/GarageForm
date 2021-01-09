@@ -15,6 +15,9 @@ const Card = props => {
             <span className="cardValue">
                 {props.value}
             </span>
+            <div className="cardDescription">
+                {props.description}
+            </div>
         </div>
     )
 }

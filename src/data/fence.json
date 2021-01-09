@@ -1,0 +1,96 @@
+{
+  "style": [
+    {
+      "value": "Maple",
+      "imgSrc": "../img/maple-cedar.jpg",
+      "description": "The Maple is a popular fence design, with no-sag, and looks the same on both sides."
+    },{
+      "value": "Classic",
+      "imgSrc": "../img/fence-classic-cedar.jpg",
+      "description": "The Classic is the easiest fence to build and most economical, with boards on one side, no-sag, and rails on edge."
+    },{
+      "value": "Executive",
+      "imgSrc": "../img/fence-executive-cedar.jpg",
+      "description": "The Executive is the strongest, built with no-sag , three rails and a 2x6 cap to finish of the top."
+    },{
+      "value": "Luxton",
+      "imgSrc": "../img/fence-luxton-cedar.jpg",
+      "description": "The Luxton is a classic fence that is simple to build, with no-sag and three rails across one side."
+    }
+  ],
+  "advancedStyle": [
+    {
+      "value": "Cubanite",
+      "imgSrc": "https://static.wixstatic.com/media/c4f997_ccaaf51e477b42f4bb0fc879244871bf~mv2_d_2000_2000_s_2.png/v1/fill/w_746,h_746,al_c,q_90,usm_0.66_1.00_0.01/c4f997_ccaaf51e477b42f4bb0fc879244871bf~mv2_d_2000_2000_s_2.webp"
+    },{
+      "value": "Bijou",
+      "imgSrc": "https://static.wixstatic.com/media/c4f997_b22fa4d42be54fde877756bd05545364~mv2.png/v1/fill/w_600,h_600,al_c,q_85/c4f997_b22fa4d42be54fde877756bd05545364~mv2.webp"
+    },{
+      "value": "Topaz",
+      "imgSrc": "https://static.wixstatic.com/media/c4f997_d43234d022fc4d319a272ce69d29efac~mv2.png/v1/fill/w_600,h_600,al_c,q_85/c4f997_d43234d022fc4d319a272ce69d29efac~mv2.webp"
+    },{
+      "value": "Benitoite",
+      "imgSrc": "https://static.wixstatic.com/media/c4f997_a67ea463fe8f4f1caeae6cab255d3b0f~mv2.png/v1/fill/w_600,h_600,al_c,q_85/c4f997_a67ea463fe8f4f1caeae6cab255d3b0f~mv2.webp"
+    },{
+      "value": "Coral",
+      "imgSrc": "https://static.wixstatic.com/media/c4f997_888cf7835f94491b9c779301ae6da699~mv2.png/v1/fill/w_600,h_600,al_c,q_85/c4f997_888cf7835f94491b9c779301ae6da699~mv2.webp"
+    },{
+      "value": "Diamond",
+      "imgSrc": "https://static.wixstatic.com/media/c4f997_00022bf8485d41e19e4d3f1e215a0862~mv2.png/v1/fill/w_600,h_600,al_c,q_85/c4f997_00022bf8485d41e19e4d3f1e215a0862~mv2.webp"
+    },{
+      "value": "Garnet",
+      "imgSrc": "https://static.wixstatic.com/media/c4f997_fd00ab65d7254a41833b078622579565~mv2.png/v1/fill/w_600,h_600,al_c,q_85/c4f997_fd00ab65d7254a41833b078622579565~mv2.webp"
+    },{
+      "value": "Moonstone",
+      "imgSrc": "https://static.wixstatic.com/media/c4f997_13a87ee547e646e4a392db37dff7678b~mv2.png/v1/fill/w_600,h_600,al_c,q_85/c4f997_13a87ee547e646e4a392db37dff7678b~mv2.webp"
+    },{
+      "value": "Quartz",
+      "imgSrc": "https://static.wixstatic.com/media/c4f997_d4c013cac4dc48a59a08897a6247c4cc~mv2.png/v1/fill/w_600,h_600,al_c,q_85/c4f997_d4c013cac4dc48a59a08897a6247c4cc~mv2.webp"
+    },{
+      "value": "Ruby",
+      "imgSrc": "https://static.wixstatic.com/media/c4f997_31f189473110483ba480f3f71c3a3269~mv2.png/v1/fill/w_600,h_600,al_c,q_85/c4f997_31f189473110483ba480f3f71c3a3269~mv2.webp"
+    },{
+      "value": "Sapphire",
+      "imgSrc": "https://static.wixstatic.com/media/c4f997_31f189473110483ba480f3f71c3a3269~mv2.png/v1/fill/w_370,h_370,al_c,q_85,usm_0.66_1.00_0.01/c4f997_31f189473110483ba480f3f71c3a3269~mv2.webp"
+    },{
+      "value": "Sphere",
+      "imgSrc": "https://static.wixstatic.com/media/c4f997_7a020426af0d4561b1df0dc9486699c3~mv2.png/v1/fill/w_370,h_370,al_c,q_85,usm_0.66_1.00_0.01/c4f997_7a020426af0d4561b1df0dc9486699c3~mv2.webp"
+    },{
+      "value": "Tiger Eye",
+      "imgSrc": "https://static.wixstatic.com/media/c4f997_392ea564ab6f4e1e8a1a6f0d7d3d44a8~mv2.png/v1/fill/w_370,h_370,al_c,q_85,usm_0.66_1.00_0.01/c4f997_392ea564ab6f4e1e8a1a6f0d7d3d44a8~mv2.webp"
+    },{
+      "value": "Zircon",
+      "imgSrc": "https://static.wixstatic.com/media/c4f997_dda131ee2a004002b7932f2c5e145e87~mv2_d_2000_2000_s_2.png/v1/fill/w_370,h_370,al_c,q_85,usm_0.66_1.00_0.01/c4f997_dda131ee2a004002b7932f2c5e145e87~mv2_d_2000_2000_s_2.webp"
+    }
+  ],
+  "material": [
+    {
+      "value": "Brown Treated",
+      "imgSrc": "../img/fence-pressure-treated.jpg"
+    },{
+      "value": "Cedar",
+      "imgSrc": "../img/fence-cedar.jpg"
+    }
+  ],
+  "advancedMaterial": [
+    {
+      "value": "Brown Treated",
+      "imgSrc": "../img/fence-pressure-treated.jpg"
+    },{
+      "value": "Cedar",
+      "imgSrc": "../img/fence-cedar.jpg"
+    },{
+      "value": "Metal"
+    }
+  ],
+  "heightWood" :  [
+    {"value": "5ft"},
+    {"value": "6ft"},
+    {"value":  "Other"}
+  ],
+  "heightMetal" :  [
+    {"value": "48\""},
+    {"value": "60\""},
+    {"value": "70\""}
+  ]
+}

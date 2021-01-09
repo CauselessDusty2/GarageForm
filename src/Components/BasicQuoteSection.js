@@ -58,8 +58,7 @@ const WIDTH = [
     {value: "24", imgSrc: "../img/24.png"},
     {value: "26", imgSrc: "../img/26.png"},
     {value: "28", imgSrc: "../img/28.png"},
-    {value: "30", imgSrc: "../img/30.png"},
-    {value: "Other", imgSrc: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPmZH3hkaoPDIdnJtwIKTz1XakSVX6zIAkfw&usqp=CAU"}
+    {value: "30", imgSrc: "../img/30.png"}
 ]
 const WIDTH_ALT = [
     {value: "16", imgSrc: "../img/16.png"},
@@ -69,8 +68,7 @@ const WIDTH_ALT = [
     {value: "24", imgSrc: "../img/24.png"},
     {value: "26", imgSrc: "../img/26.png"},
     {value: "28", imgSrc: "../img/28.png"},
-    {value: "30", imgSrc: "../img/30.png"},
-    {value: "Other", imgSrc: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPmZH3hkaoPDIdnJtwIKTz1XakSVX6zIAkfw&usqp=CAU"}
+    {value: "30", imgSrc: "../img/30.png"}
 ]
 const LENGTH = [
     {value: "20", imgSrc: "../img/20.png"},
@@ -83,8 +81,7 @@ const LENGTH = [
     {value: "34", imgSrc: "../img/34.png"},
     {value: "36", imgSrc: "../img/36.png"},
     {value: "38", imgSrc: "../img/38.png"},
-    {value: "40", imgSrc: "../img/40.png"},
-    {value: "Other", imgSrc: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPmZH3hkaoPDIdnJtwIKTz1XakSVX6zIAkfw&usqp=CAU"}
+    {value: "40", imgSrc: "../img/40.png"}
 ]
 
 const LENGTH_ALT = [
@@ -93,8 +90,7 @@ const LENGTH_ALT = [
     {value: "24", imgSrc: "../img/24.png"},
     {value: "26", imgSrc: "../img/26.png"},
     {value: "28", imgSrc: "../img/28.png"},
-    {value: "30", imgSrc: "../img/30.png"},
-    {value: "Other", imgSrc: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPmZH3hkaoPDIdnJtwIKTz1XakSVX6zIAkfw&usqp=CAU"}
+    {value: "30", imgSrc: "../img/30.png"}
 ]
 const SIDING =  [
     {
