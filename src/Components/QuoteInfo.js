@@ -17,7 +17,7 @@ const QuoteInfo = props => {
                 {props.state.basicWidth &&<li>Width: {props.state.basicWidth}</li>}
                 {props.state.basicLength &&<li>Length: {props.state.basicLength}</li>}
                 {props.state.basicSiding && <li>Siding: {props.state.basicSiding}</li>}
-                {props.state.shingleColour && <li>Shingle Colour: {props.state.shingleColour}</li>}
+                {props.state.basicShingleColour && <li>Shingle Colour: {props.state.basicShingleColour}</li>}
             </ul>:<ul>
                 {props.state.width &&<li>Width: {props.state.width}</li>}
                 {props.state.length &&<li>Length: {props.state.length}</li>}

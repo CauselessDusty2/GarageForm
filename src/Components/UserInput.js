@@ -27,7 +27,7 @@ const initialValues = {
         }
 }
 
-const phoneRegExp = /^[0-9]{3}[-]{1}[0-9]{3}[-]{1}[0-9]{4}$/
+const phoneRegExp = /^([1-9][0-9]{2}-){2}[0-9]{4}$/
 
 const UserInput = props => {
     return(
@@ -47,7 +47,7 @@ const UserInput = props => {
             {({ values, setFieldValue }) => (
                 <Form className="infoSection">
                     {/*Only allows numeric input*/}
-                    {values.customerInfo.phoneNumber.length !== 0
+ s                   {values.customerInfo.phoneNumber.length !== 0
                     && parseInt(values.customerInfo.phoneNumber.charAt(values.customerInfo.phoneNumber.length-1)) !== 0
                     && !parseInt(values.customerInfo.phoneNumber.charAt(values.customerInfo.phoneNumber.length-1))
                     && setFieldValue('customerInfo.phoneNumber', values.customerInfo.phoneNumber.slice(0,values.customerInfo.phoneNumber.length-1))}
