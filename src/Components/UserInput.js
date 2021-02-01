@@ -27,7 +27,7 @@ const initialValues = {
         }
 }
 
-const phoneRegExp = /^([1-9][0-9]{2}\-){2}[0-9]{4}$/
+const phoneRegExp = /^([1-9][0-9]{2}-){2}[0-9]{4}$/
 
 const UserInput = props => {
     return(

@@ -1,5 +1,6 @@
 import React from 'react'
 import Card from './Card'
+import PropTypes from 'prop-types'
 
 const CardContainer = props => {
     return (
@@ -46,4 +47,20 @@ const CardContainer = props => {
     )
 }
 
+CardContainer.propTypes ={
+    //additionalClass:
+    title: PropTypes.string, //The title for the container
+    summary: PropTypes.string, //the summary for the card section
+    list: PropTypes.array, //the list of items to populate the cards in the container
+    //key:
+    //value:
+    //imgSrc:
+    //onChange:
+    //stateGroup:
+    //click:
+    //state:
+    //value:
+}
+
 export default CardContainer
+

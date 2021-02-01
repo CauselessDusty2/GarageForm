@@ -5,7 +5,7 @@ const BasicQuoteSection = props => <section id="basicSection">
     {Object.keys(props.section).map(section => <>
         {props.section[section].if &&
             <CardContainer
-                onChange={props.onClick}
+                onChange={props.section[section].changeHandler || props.onClick}
                 stateGroup={props.section[section].stateGroup}
                 list={props.section[section].list}
                 title={props.section[section].title}

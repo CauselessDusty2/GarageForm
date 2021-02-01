@@ -6,21 +6,12 @@ import UserInput from "../Components/UserInput"
 import Price from "../Components/Price";
 import data from "../data/fence.json"
 
-const HEIGHT = [
-    {value: "5ft"},
-    {value: "6ft", imgSrc: ""}
-]
-
-const POST_SIZE = [
-    {value: "4x4"},
-    {value: "6x6"}
-]
-
 class Fence extends React.Component {
     constructor(props) {
         super(props);
         this.handleSimpleStateChange=this.handleSimpleStateChange.bind(this)
         this.showBasic=this.showBasic.bind(this)
+        this.handleMaterialChange=this.handleMaterialChange.bind(this)
 
         this.state = {
             basic: true,
@@ -35,11 +26,30 @@ class Fence extends React.Component {
         };
     }
 
+    handleMaterialChange(state, material) {
+        if (material !== this.state.material) {
+            if (this.state.material === "Metal" || material === "Metal"){
+                this.setState({
+                    material: material,
+                    style: '',
+                    height: '',
+                    heightCustom: '',
+                    postSize: '',
+                    spacing: ''
+                })
+            } else {
+                this.setState({material: material})
+            }
+        }
+    }
+
     handleSimpleStateChange(key, value) {this.setState({ [key]: value})}
+
     showBasic() {this.setState({basic: !this.state.basic})}
 
+
     render() {
-        const BASIC_SECTION = {
+        let BASIC_SECTION={
             style : {
                 if: true,
                 stateGroup : "style",
@@ -52,7 +62,7 @@ class Fence extends React.Component {
             height : {
                 if: true,
                 stateGroup : "height",
-                list : HEIGHT,
+                list : data.basicHeight,
                 title : "Height",
                 state : this.state.height,
                 summary : "The Height of the fence"
@@ -72,18 +82,18 @@ class Fence extends React.Component {
                 input : true,
                 title : "Length",
                 state : this.state.length,
-                summary : "The length of the fence"
+                summary : "The length of the fence in feet"
             }
         }
 
-        const ADVANCED_SECTION = {
+        let ADVANCED_SECTION = {
             length : {
                 if: true,
                 stateGroup : "length",
                 input : true,
                 title : "Length",
                 state : this.state.length,
-                summary : "The length of the fence"
+                summary : "The length of the fence",
             },
             material : {
                 if: true,
@@ -91,7 +101,8 @@ class Fence extends React.Component {
                 list : data.advancedMaterial,
                 title : "Wood Type",
                 state : this.state.material,
-                summary : "The type of wood for the fence"
+                summary : "The type of wood for the fence",
+                changeHandler : this.handleMaterialChange
             },
             height : {
                 if: this.state.material,
@@ -100,7 +111,7 @@ class Fence extends React.Component {
                 title : "Height",
                 state : this.state.height,
                 summary : "The Height of the fence",
-                customState : this.state.heightCustom
+                customState : this.state.heightCustom,
             },
             style : {
                 if : this.state.material,
@@ -109,16 +120,15 @@ class Fence extends React.Component {
                 title : "Style of Fence",
                 state : this.state.style,
                 summary : "The style of the fence",
-                changeHandler : this.handleSimpleStateChange
             },
 
             postSize: {
                 if: this.state.material && this.state.material !== "Metal",
                 stateGroup : "postSize",
-                list : POST_SIZE,
+                list : data.postSize,
                 title : "Post Size",
                 state : this.state.postSize,
-                summary : "The size of the fence posts"
+                summary : "The size of the fence posts",
             },
             spacing: {
                 if: this.state.material && this.state.material !== "Metal",
@@ -126,7 +136,7 @@ class Fence extends React.Component {
                 input: true,
                 title : "Post Spacing",
                 state : this.state.spacing,
-                summary : "The space between the fence posts"
+                summary : "The space between the fence posts",
             },
             gateQty: {
 
@@ -139,26 +149,26 @@ class Fence extends React.Component {
                     Switch to {this.state.basic ? "Advanced Request" : "Basic Request"}
                 </button>
 
-                {this.state.basic ?
-                    <BasicQuoteSection
-                        onClick={this.handleSimpleStateChange}
-                        section={BASIC_SECTION}
-                    />
-                    :
-                    <BasicQuoteSection
-                        onClick={this.handleSimpleStateChange}
-                        section={ADVANCED_SECTION}
-                    />
-                }
+                <BasicQuoteSection
+                    onClick={this.handleSimpleStateChange}
+                    section={this.state.basic ? BASIC_SECTION : ADVANCED_SECTION}
+                />
+
                 <QuoteInfo
                     handleChange={this.handleSimpleStateChange}
                     state={this.state}
                 />
-                <Price
-                    width={this.state.basicWidth}
-                    length={this.state.basicLength}
-                    siding={this.state.basicSiding}
-                />
+
+                {this.state.basic &&
+                    <Price
+                        type="fence"
+                        requirements = {[this.state.material, this.state.height, this.state.style, this.state.length]}
+                        width={this.state.basicWidth}
+                        length={this.state.basicLength}
+                        siding={this.state.basicSiding}
+                    />
+                }
+
                 <UserInput
                     handleChange={this.handleSimpleStateChange}
                     state={this.state}

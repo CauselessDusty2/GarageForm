@@ -83,6 +83,10 @@
       "value": "Metal"
     }
   ],
+  "basicHeight" :  [
+    {"value": "5ft"},
+    {"value": "6ft"}
+  ],
   "heightWood" :  [
     {"value": "5ft"},
     {"value": "6ft"},
@@ -92,5 +96,9 @@
     {"value": "48\""},
     {"value": "60\""},
     {"value": "70\""}
+  ],
+  "postSize" : [
+    {"value": "4x4"},
+    {"value": "6x6"}
   ]
 }
