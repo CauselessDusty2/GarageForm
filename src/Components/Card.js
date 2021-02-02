@@ -26,20 +26,17 @@ const Card = props => {
     )
 }
 
-Card.propTypes ={
-    selected: PropTypes.string, // A class name to style a card as selected
-    stateGroup: PropTypes.string, // The name of the state the card is in
-    onChange: PropTypes.func, //The change handler passed through the card container from a given quote form
-    optionalDescription: PropTypes.string, //The description of the card
-    imgSrc: PropTypes.string, //The image that displays on the card
-    value: PropTypes.string, //The value or name for the card
-}
-
 Card.defaultProps = {
     imgSrc: "https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-image-512.png"
 }
 
+Card.propTypes ={
+    imgSrc: PropTypes.string, //The image that displays on the card
+    onChange: PropTypes.func, //The change handler passed through the card container from a given quote form
+    optionalDescription: PropTypes.string, //The description of the card
+    selected: PropTypes.string, // A class name to style a card as selected
+    stateGroup: PropTypes.string, // The name of the state the card is in
+    value: PropTypes.string, //The value or name for the card
+}
+
 export default Card
-
-
-

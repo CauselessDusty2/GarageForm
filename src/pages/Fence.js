@@ -49,9 +49,9 @@ class Fence extends React.Component {
 
 
     render() {
-        let BASIC_SECTION={
+        const BASIC_SECTION={
             style : {
-                if: true,
+                showIf : true,
                 stateGroup : "style",
                 list : data.style,
                 title : "Style of Fence",
@@ -60,7 +60,7 @@ class Fence extends React.Component {
                 changeHandler : this.handleSimpleStateChange
             },
             height : {
-                if: true,
+                showIf : true,
                 stateGroup : "height",
                 list : data.basicHeight,
                 title : "Height",
@@ -68,7 +68,7 @@ class Fence extends React.Component {
                 summary : "The Height of the fence"
             },
             material : {
-                if: true,
+                showIf : true,
                 stateGroup : "material",
                 list : data.material,
                 title : "Wood Type",
@@ -76,7 +76,7 @@ class Fence extends React.Component {
                 summary : "The type of wood for the fence"
             },
             length : {
-                if: true,
+                showIf : true,
                 stateGroup : "length",
                 list : null,
                 input : true,
@@ -86,9 +86,9 @@ class Fence extends React.Component {
             }
         }
 
-        let ADVANCED_SECTION = {
+        const ADVANCED_SECTION = {
             length : {
-                if: true,
+                showIf : true,
                 stateGroup : "length",
                 input : true,
                 title : "Length",
@@ -96,7 +96,7 @@ class Fence extends React.Component {
                 summary : "The length of the fence",
             },
             material : {
-                if: true,
+                showIf : true,
                 stateGroup : "material",
                 list : data.advancedMaterial,
                 title : "Wood Type",
@@ -105,7 +105,7 @@ class Fence extends React.Component {
                 changeHandler : this.handleMaterialChange
             },
             height : {
-                if: this.state.material,
+                showIf: this.state.material,
                 stateGroup : "height",
                 list : this.state.material === "Metal" ? data.heightMetal : data.heightWood,
                 title : "Height",
@@ -114,7 +114,7 @@ class Fence extends React.Component {
                 customState : this.state.heightCustom,
             },
             style : {
-                if : this.state.material,
+                showIf : this.state.material,
                 stateGroup : "style",
                 list : this.state.material === "Metal" ? data.advancedStyle : data.style,
                 title : "Style of Fence",
@@ -123,7 +123,7 @@ class Fence extends React.Component {
             },
 
             postSize: {
-                if: this.state.material && this.state.material !== "Metal",
+                showIf: this.state.material && this.state.material !== "Metal",
                 stateGroup : "postSize",
                 list : data.postSize,
                 title : "Post Size",
@@ -131,7 +131,7 @@ class Fence extends React.Component {
                 summary : "The size of the fence posts",
             },
             spacing: {
-                if: this.state.material && this.state.material !== "Metal",
+                showIf: this.state.material && this.state.material !== "Metal",
                 stateGroup : "spacing",
                 input: true,
                 title : "Post Spacing",
@@ -150,7 +150,7 @@ class Fence extends React.Component {
                 </button>
 
                 <BasicQuoteSection
-                    onClick={this.handleSimpleStateChange}
+                    defaultClickHandler={this.handleSimpleStateChange}
                     section={this.state.basic ? BASIC_SECTION : ADVANCED_SECTION}
                 />
 
@@ -179,5 +179,3 @@ class Fence extends React.Component {
 }
 
 export default Fence;
-
-

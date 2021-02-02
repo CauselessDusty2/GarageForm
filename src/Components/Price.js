@@ -1,12 +1,12 @@
 //Add code here to return a price
-const getPrice = (width, length, sidingOption, type, requirements) => {
+const getPrice = (width, length, sidingOption, type, shingleColour, requirements) => {
     if (type === "fence") {
         let [material, height, style, length] = requirements
-        return material + " " + height + " " + style + " " + length
+        return [material, height,style,length].join(" ") + "ft"
     } else {
         if (sidingOption === "No Siding") {
             //Pricing if no siding is selected
-            return "Some Other Value"
+            return [width+"ft", length+"ft", sidingOption, shingleColour].join(" - ")
         }
         //Pricing if a siding is selected
         return "Some Value"
@@ -35,7 +35,7 @@ const Price = props => <section className="infoSection">
                 $
             </span>
             <span id="priceValue">
-                {getPrice(props.width, props.length, props.sidingOption, props.type, props.requirements)}
+                {getPrice(props.width, props.length, props.siding, props.type, props.shingleColour, props.requirements)}
             </span>
         </div>
     </section> :

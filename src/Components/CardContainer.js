@@ -10,14 +10,13 @@ const CardContainer = props => {
             </div>
             <summary className="cardContainerSummary">{props.summary}</summary>
             <span className="cardContainer">
-                {props.list && props.list.map( item =>
+                {props.list && props.list.map( (item, i)=>
                     <Card
-                        key={item.key}
+                        key={i}
                         value={item.value}
                         imgSrc={item.imgSrc}
                         onChange={props.onChange}
                         stateGroup={props.stateGroup}
-                        click={props.click}
                         selected={props.state === item.value ? "selectedState" : ""}
                         description={item?.description}
                     />
@@ -48,19 +47,15 @@ const CardContainer = props => {
 }
 
 CardContainer.propTypes ={
-    //additionalClass:
-    title: PropTypes.string, //The title for the container
-    summary: PropTypes.string, //the summary for the card section
+    additionalClass: PropTypes.string, //Any additional classNames to add to the card container
+    imgSrc: PropTypes.string,//The image source for the card
     list: PropTypes.array, //the list of items to populate the cards in the container
-    //key:
-    //value:
-    //imgSrc:
-    //onChange:
-    //stateGroup:
-    //click:
-    //state:
-    //value:
+    onChange: PropTypes.func, //click handler
+    state: PropTypes.string, //The state of the quote form
+    stateGroup: PropTypes.string, //The state this container effects
+    summary: PropTypes.string, //the summary for the card section
+    title: PropTypes.string, //The title for the container
+    value: PropTypes.string,//The value of the card
 }
 
 export default CardContainer
-
