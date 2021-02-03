@@ -1,6 +1,6 @@
 import React from 'react'
 import '../App.css'
-import BasicQuoteSection from "../Components/BasicQuoteSectionFence";
+import QuoteSection from "../Components/QuoteSection";
 import QuoteInfo from '../Components/QuoteInfo'
 import UserInput from "../Components/UserInput"
 import Price from "../Components/Price";
@@ -50,22 +50,13 @@ class Fence extends React.Component {
 
     render() {
         const BASIC_SECTION={
-            style : {
+            length : {
                 showIf : true,
-                stateGroup : "style",
-                list : data.style,
-                title : "Style of Fence",
-                state : this.state.style,
-                summary : "The style of the fence",
-                changeHandler : this.handleSimpleStateChange
-            },
-            height : {
-                showIf : true,
-                stateGroup : "height",
-                list : data.basicHeight,
-                title : "Height",
-                state : this.state.height,
-                summary : "The Height of the fence"
+                stateGroup : "length",
+                input : "number",
+                title : "Length",
+                state : this.state.length,
+                summary : "The length of the fence in feet"
             },
             material : {
                 showIf : true,
@@ -75,14 +66,22 @@ class Fence extends React.Component {
                 state : this.state.material,
                 summary : "The type of wood for the fence"
             },
-            length : {
+            height : {
                 showIf : true,
-                stateGroup : "length",
-                list : null,
-                input : true,
-                title : "Length",
-                state : this.state.length,
-                summary : "The length of the fence in feet"
+                stateGroup : "height",
+                list : data.basicHeight,
+                title : "Height",
+                state : this.state.height,
+                summary : "The Height of the fence"
+            },
+            style : {
+                showIf : true,
+                stateGroup : "style",
+                list : data.style,
+                title : "Style of Fence",
+                state : this.state.style,
+                summary : "The style of the fence",
+                changeHandler : this.handleSimpleStateChange
             }
         }
 
@@ -90,7 +89,7 @@ class Fence extends React.Component {
             length : {
                 showIf : true,
                 stateGroup : "length",
-                input : true,
+                input : "number",
                 title : "Length",
                 state : this.state.length,
                 summary : "The length of the fence",
@@ -102,7 +101,7 @@ class Fence extends React.Component {
                 title : "Wood Type",
                 state : this.state.material,
                 summary : "The type of wood for the fence",
-                changeHandler : this.handleMaterialChange
+                changeHandler : this.handleMaterialChange,
             },
             height : {
                 showIf: this.state.material,
@@ -112,6 +111,7 @@ class Fence extends React.Component {
                 state : this.state.height,
                 summary : "The Height of the fence",
                 customState : this.state.heightCustom,
+                additionalClass : "childSelection"
             },
             style : {
                 showIf : this.state.material,
@@ -120,6 +120,7 @@ class Fence extends React.Component {
                 title : "Style of Fence",
                 state : this.state.style,
                 summary : "The style of the fence",
+                additionalClass : "childSelection"
             },
 
             postSize: {
@@ -129,14 +130,16 @@ class Fence extends React.Component {
                 title : "Post Size",
                 state : this.state.postSize,
                 summary : "The size of the fence posts",
+                additionalClass : "childSelection"
             },
             spacing: {
                 showIf: this.state.material && this.state.material !== "Metal",
                 stateGroup : "spacing",
-                input: true,
+                input: "number",
                 title : "Post Spacing",
                 state : this.state.spacing,
                 summary : "The space between the fence posts",
+                additionalClass : "childSelection"
             },
             gateQty: {
 
@@ -149,23 +152,24 @@ class Fence extends React.Component {
                     Switch to {this.state.basic ? "Advanced Request" : "Basic Request"}
                 </button>
 
-                <BasicQuoteSection
+                <QuoteSection
                     defaultClickHandler={this.handleSimpleStateChange}
                     section={this.state.basic ? BASIC_SECTION : ADVANCED_SECTION}
                 />
 
                 <QuoteInfo
+                    title="Fence Info"
                     handleChange={this.handleSimpleStateChange}
                     state={this.state}
+                    stateList={this.state.basic ? {"Length": this.state.length, "Material": this.state.material, "Height": this.state.height, "Style": this.state.style}
+                      : {"Length": this.state.length, "Material": this.state.material, "Height": this.state.heightCustom || this.state.height, "Style": this.state.style, "PostSize": this.state.postSize, "Post Spacing": this.state.spacing}
+                    }
                 />
 
                 {this.state.basic &&
                     <Price
                         type="fence"
                         requirements = {[this.state.material, this.state.height, this.state.style, this.state.length]}
-                        width={this.state.basicWidth}
-                        length={this.state.basicLength}
-                        siding={this.state.basicSiding}
                     />
                 }
 

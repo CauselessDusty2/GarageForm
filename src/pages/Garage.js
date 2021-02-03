@@ -1,17 +1,18 @@
 import React from 'react'
 import '../App.css'
-import BasicQuoteSection from "../Components/BasicQuoteSectionFence";
+import QuoteSection from "../Components/QuoteSection";
 import QuoteInfo from '../Components/QuoteInfo'
 import UserInput from "../Components/UserInput"
 import Price from "../Components/Price";
 import data from "../data/garage.json"
 //import {getProfileType} from "../helperFunctions/garage/getProfileType"
-import * as garageFunctions from "../helperFunctions/garage.js"
+import * as garageUtils from "../helperFunctions/garageUtils.js"
 
 class Garage extends React.Component {
     constructor(props) {
         super(props);
         this.handleGaugeChange=this.handleGaugeChange.bind(this)
+        this.handleGdoChange=this.handleGdoChange.bind(this)
         this.handleHardieFinishChange=this.handleHardieFinishChange.bind(this)
         this.handleHardieSizeChange=this.handleHardieSizeChange.bind(this)
         this.handleMittenLineChange=this.handleMittenLineChange.bind(this)
@@ -45,19 +46,23 @@ class Garage extends React.Component {
             heightCustom: '',
             studSize: '',
             sidingType: '',
+            sidingTypeCustom: '',
             sidingProfile: '',
             mittenLine: '',
             gauge: '',
+            gdo: '',
             hardieFinish: '',
             hardieSize: '',
             sidingColour: '',
             drywall: '',
             insulation: '',
             overheadSize: '',
+            overheadSizeCustom: '',
             overheadSeries: '',
             overheadEliteStyle: '',
             overheadColour: '',
             overheadWindowPatern: '',
+            overheadWindowPaternCustom: '',
             overheadWindowType: '',
             overheadGlassFinish: '',
             overheadWindowFrameColour: '',
@@ -71,6 +76,7 @@ class Garage extends React.Component {
             gdoDrive: '',
             gdoOption: '',
             roofType: '',
+            roofTypeCustom: '',
             roofProfile: '',
             roofGauge: '',
             roofColour: ''
@@ -80,6 +86,12 @@ class Garage extends React.Component {
     handleGaugeChange(state, gauge) {
         if (gauge !== this.state.gauge ){
             this.setState({gauge, sidingColour: ''})
+        }
+    }
+
+    handleGdoChange(state, gdo) {
+        if (gdo !== this.state.gdo ){
+            this.setState({gdo, gdoHp: '', gdoDrive: '', gdoOption: ''})
         }
     }
 
@@ -180,23 +192,23 @@ class Garage extends React.Component {
 
     render() {
         const BASIC_SECTION={
-            width : {
+            basicWidth : {
                 showIf : true,
                 stateGroup : "basicWidth",
-                list : this.state.basicLength <= 30 ? data.width : data.widthAlt,
+                list : this.state.basicLength <= 30 ? data.basicWidth : data.basicWidthAlt,
                 title : "Width",
                 state : this.state.basicWidth,
                 summary : "The width of the garage means the gable end of the garage, the side that the overhead door will be on"
             },
-            length : {
+            basicLength : {
                 showIf : true,
                 stateGroup : "basicLength",
-                list : this.state.basicWidth ? this.state.basicWidth < 16 ? data.lengthAlt : data.length : data.length,
+                list : this.state.basicWidth ? this.state.basicWidth < 16 ? data.basicLengthAlt : data.basicLength : data.basicLength,
                 title : "Length",
                 state : this.state.basicLength,
                 summary : "The length of the garage means the eave end of the garage, the side that the man door will be on"
             },
-            siding : {
+            basicSiding : {
                 showIf : true,
                 stateGroup : "basicSiding",
                 list : data.siding,
@@ -221,7 +233,8 @@ class Garage extends React.Component {
               list : this.state.length <= 30 ? data.width : data.widthAlt,
               title : "Width",
               state : this.state.width,
-              summary : "The width of the garage means the gable end of the garage, the side that the overhead door will be on"
+              summary : "The width of the garage means the gable end of the garage, the side that the overhead door will be on",
+              customState : this.state.widthCustom
           },
           length : {
               showIf : true,
@@ -229,7 +242,8 @@ class Garage extends React.Component {
               list : this.state.width ? this.state.width < 16 ? data.lengthAlt : data.length : data.length,
               title : "Length",
               state : this.state.length,
-              summary : "The length of the garage means the eave end of the garage, the side that the man door will be on"
+              summary : "The length of the garage means the eave end of the garage, the side that the man door will be on",
+              customState : this.state.lengthCustom
           },
           height : {
               showIf : true,
@@ -237,7 +251,8 @@ class Garage extends React.Component {
               list : data.height,
               title : "Height",
               state : this.state.height,
-              summary : "The height of the garage walls, measured from the ground to the bottom of the roof line"
+              summary : "The height of the garage walls, measured from the ground to the bottom of the roof line",
+              customState : this.state.heightCustom
           },
           studSize : {
               showIf : true,
@@ -270,12 +285,13 @@ class Garage extends React.Component {
               title : "Siding Type",
               state : this.state.sidingType,
               summary : "The diferent types of siding for the garage, vinyl, metal, engineered, stucco prep",
-              changeHandler : this.handleSidingTypeChange
+              changeHandler : this.handleSidingTypeChange,
+              customState : this.state.sidingTypeCustom
           },
           sidingProfile : {
-              showIf : garageFunctions.getProfileType(this.state.sidingType),
+              showIf : garageUtils.getProfileType(this.state.sidingType),
               stateGroup : "sidingProfile",
-              list : garageFunctions.getProfileType(this.state.sidingType),
+              list : garageUtils.getProfileType(this.state.sidingType),
               title : "Siding Profile",
               state : this.state.sidingProfile,
               summary : "The different profile options for the siding type",
@@ -283,25 +299,276 @@ class Garage extends React.Component {
               additionalClass : "childSelection"
           },
           mittenLine : {
-              showIf : garageFunctions.getMittenLineType(this.state.sidingProfile),
+              showIf : garageUtils.getMittenLineType(this.state.sidingProfile),
               stateGroup : "mittenLine",
-              list : garageFunctions.getMittenLineType(this.state.sidingProfile),
+              list : garageUtils.getMittenLineType(this.state.sidingProfile),
               title : "Siding Product Line",
               state : this.state.mittenLine,
               summary : "The different mitten product lines",
               changeHandler : this.handleMittenLineChange,
-              additionalClass : "childSelection"
+              additionalClass : "childSelection2"
           },
           gauge : {
-              showIf : garageFunctions.getGauge(this.state.sidingProfile),
+              showIf : garageUtils.getGauge(this.state.sidingProfile),
               stateGroup : "gauge",
-              list : garageFunctions.getGauge(this.state.sidingProfile),
+              list : garageUtils.getGauge(this.state.sidingProfile),
               title : "Gauge",
               state : this.state.gauge,
               summary : "The gauge of the metal",
               changeHandler : this.handleGaugeChange,
+              additionalClass : "childSelection2"
+          },
+          hardieFinish : {
+              showIf : garageUtils.getHardieFinish(this.state.sidingProfile),
+              stateGroup : "hardieFinish",
+              list : garageUtils.getHardieFinish(this.state.sidingProfile),
+              title : "Siding Finish",
+              state : this.state.hardieFinish,
+              summary : "The finish of the siding",
+              changeHandler : this.handleHardieFinishChange,
+              additionalClass : "childSelection2"
+          },
+          hardieSize : {
+              showIf : garageUtils.getHardieSizes(this.state.sidingProfile, this.state.hardieFinish),
+              stateGroup : "hardieSize",
+              list : garageUtils.getHardieSizes(this.state.sidingProfile, this.state.hardieFinish),
+              title : "Siding Size",
+              state : this.state.hardieSize,
+              summary : "The size of the siding",
+              changeHandler : this.handleHardieSizeChange,
+              additionalClass : "childSelection3"
+          },
+          sidingColour : {
+              showIf : garageUtils.getSidingColours(
+                  this.state.sidingType,
+                  this.state.sidingProfile,
+                  this.state.gauge,
+                  this.state.mittenLine,
+                  this.state.hardieFinish,
+                  this.state.hardieSize
+              ),
+              stateGroup : "sidingColour",
+              list : garageUtils.getSidingColours(
+                  this.state.sidingType,
+                  this.state.sidingProfile,
+                  this.state.gauge,
+                  this.state.mittenLine,
+                  this.state.hardieFinish,
+                  this.state.hardieSize
+              ),
+              title : "Siding Colour",
+              state : this.state.sidingColour,
+              summary : "The colour of the siding",
+              additionalClass : this.state.sidingType === "Hardie" ? "childSelection4" : this.state.sidingType === "Canexel" ? "childSelection2" : this.state.sidingType === "KWP" ? "childSelection2" : "childSelection3"
+          },
+          roofType : {
+              showIf : true,
+              stateGroup : "roofType",
+              list : data.roofingTypes,
+              title : "Roofing Type",
+              state : this.state.roofType,
+              summary : "The type of roofing",
+              changeHandler : this.handleRoofTypeChange,
+              customState : this.state.roofTypeCustom
+          },
+          roofProfile : {
+              showIf : this.state.roofType === "Domtek Metal",
+              stateGroup : "roofProfile",
+              list : garageUtils.getProfileType(this.state.roofType),
+              title : "Roofing Profile",
+              state : this.state.roofProfile,
+              summary : "The different profile options for the roofing type",
+              changeHandler : this.handleRoofProfileChange,
               additionalClass : "childSelection"
           },
+          roofGauge : {
+              showIf : this.state.roofProfile,
+              stateGroup : "roofGauge",
+              list : garageUtils.getGauge(this.state.roofProfile),
+              title : "Gauge",
+              state : this.state.roofGauge,
+              summary : "The gauge of the metal",
+              changeHandler : this.handleRoofGaugeChange,
+              additionalClass : "childSelection2"
+          },
+          roofColour : {
+              showIf : this.state.roofType === "Shingles" || this.state.roofGauge,
+              stateGroup : "roofColour",
+              list : this.state.roofType === "Shingles" ? data.shingleColour : garageUtils.getSidingColours(
+                  this.state.roofType,
+                  this.state.roofProfile,
+                  this.state.roofGauge),
+              title : this.state.roofType === "Domtek Metal" ? "Metal Roofing Colour" : "Shingle Colour",
+              state : this.state.roofColour,
+              summary : "The colour of the roofing",
+              additionalClass :  this.state.roofType === "Shingles" ? "childSelection" : "childSelection3"
+          },
+          overheadSize : {
+              showIf : true,
+              stateGroup : "overheadSize",
+              list : garageUtils.getOverheadSizes(this.state.width),
+              title : "Overhead Door Size",
+              state : this.state.overheadSize,
+              summary : "Overhead door size options",
+              customState : this.state.overheadSizeCustom
+          },
+          overheadSeries : {
+              showIf : true,
+              stateGroup : "overheadSeries",
+              list : data.overheadDoorSeries,
+              title : "Overhead Door Series",
+              state : this.state.overheadSeries,
+              changeHandler : this.handleOverheadSeriesChange,
+              summary : "Overhead door series options",
+          },
+          overheadEliteStyle : {
+              showIf : this.state.overheadSeries === "Elite",
+              stateGroup : "overheadEliteStyle",
+              list : data.eliteStyle,
+              title : "Overhead Door Style",
+              state : this.state.overheadEliteStyle,
+              summary : "Overhead door style options",
+              additionalClass : "childSelection"
+          },
+          overheadColour : {
+              showIf : this.state.overheadSeries,
+              stateGroup : "overheadColour",
+              list : garageUtils.getOverheadColours(this.state.overheadSeries),
+              title : "Overhead Door Colour",
+              state : this.state.overheadColour,
+              summary : "Overhead door colour options",
+              additionalClass : "childSelection"
+          },
+          overheadDecorativeHandle : {
+              showIf : garageUtils.getDecorativeHandle(this.state.overheadSeries),
+              stateGroup : "overheadDecorativeHandle",
+              list : garageUtils.getDecorativeHandle(this.state.overheadSeries),
+              title : "Overhead Door Decorative Handle",
+              state : this.state.overheadDecorativeHandle,
+              summary : "Overhead door decorative handle options",
+              additionalClass : "childSelection"
+          },
+          overheadDecorativeHinge : {
+              showIf : garageUtils.getDecorativeHinge(this.state.overheadSeries),
+              stateGroup : "overheadDecorativeHinge",
+              list : garageUtils.getDecorativeHinge(this.state.overheadSeries),
+              title : "Overhead Door Decorative Hinge",
+              state : this.state.overheadDecorativeHinge,
+              summary : "Overhead door decorative hinge options",
+              additionalClass : "childSelection"
+          },
+          overheadWindowPatern : {
+              showIf : garageUtils.getOverheadWindowPaterns(this.state.overheadSeries),
+              stateGroup : "overheadWindowPatern",
+              list : garageUtils.getOverheadWindowPaterns(this.state.overheadSeries),
+              title : "Overhead Door Window Patern",
+              state : this.state.overheadWindowPatern,
+              changeHandler : this.handleWindowPaternChange,
+              summary : "Overhead door window patern options",
+              additionalClass : "childSelection",
+              customState : this.state.overheadWindowPaternCustom
+          },
+          overheadGlassType : {
+              showIf : garageUtils.getOverheadGlassType(this.state.overheadWindowPatern),
+              stateGroup : "overheadGlassType",
+              list : garageUtils.getOverheadGlassType(this.state.overheadWindowPatern),
+              title : "Overhead Door Glass Type",
+              state : this.state.overheadGlassType,
+              summary : "Overhead door glass type options",
+              additionalClass : "childSelection2"
+          },
+          overheadGlassFinish : {
+              showIf : garageUtils.getOverheadGlassFinishes(this.state.overheadSeries, this.state.overheadWindowPatern),
+              stateGroup : "overheadGlassFinish",
+              list : garageUtils.getOverheadGlassFinishes(this.state.overheadSeries, this.state.overheadWindowPatern),
+              title : "Overhead Door Glass Finish",
+              state : this.state.overheadGlassFinish,
+              changeHandler : this.handleOverheadGlassFinish,
+              summary : "Overhead door glass finish options",
+              additionalClass : "childSelection2"
+          },
+          overheadWindowFrameColour : {
+              showIf : garageUtils.getOverheadWindowFrames(this.state.overheadSeries, this.state.overheadWindowPatern, this.state.overheadGlassFinish),
+              stateGroup : "overheadWindowFrameColour",
+              list : garageUtils.getOverheadWindowFrames(this.state.overheadSeries, this.state.overheadWindowPatern, this.state.overheadGlassFinish),
+              title : "Overhead Door Window Frame Colour",
+              state : this.state.overheadWindowFrameColour,
+              summary : "overhead door window frame colour options",
+              additionalClass : "childSelection3"
+          },
+          overheadWindowType : {
+              showIf : garageUtils.getOverheadWindowTypes(this.state.overheadSeries, this.state.overheadWindowPatern, this.state.overheadGlassFinish),
+              stateGroup : "overheadWindowType",
+              list : garageUtils.getOverheadWindowTypes(this.state.overheadSeries, this.state.overheadWindowPatern, this.state.overheadGlassFinish),
+              title : "Overhead Door Window Type",
+              state : this.state.overheadWindowType,
+              changeHandler : this.handleOverheadWindowType,
+              summary : "overhead door window type options",
+              additionalClass : "childSelection2"
+          },
+          overheadMuntinStyle : {
+              showIf : garageUtils.getOverheadMuntinStyles(this.state.overheadSeries, this.state.overheadWindowType),
+              stateGroup : "overheadMuntinStyle",
+              list : garageUtils.getOverheadMuntinStyles(this.state.overheadSeries, this.state.overheadWindowType),
+              title : "Overhead Door Muntin Style",
+              state : this.state.overheadMuntinStyle,
+              summary : "overhead door muntin style options",
+              additionalClass : "childSelection3"
+          },
+          overheadMuntinColour : {
+              showIf : garageUtils.getOverheadMuntinColours(this.state.overheadSeries, this.state.overheadWindowType, this.state.overheadGlassFinish),
+              stateGroup : "overheadMuntinColour",
+              title : "Overhead Door Muntin Colour",
+              list : garageUtils.getOverheadMuntinColours(this.state.overheadSeries, this.state.overheadWindowType, this.state.overheadGlassFinish),
+              state : this.state.overheadMuntinColour,
+              summary : "overhead door muntin colour options",
+              additionalClass : "childSelection3"
+          },
+          overheadSnapInDesign : {
+              showIf : garageUtils.getOverheadSnapInDesigns(this.state.overheadSeries, this.state.overheadWindowType),
+              stateGroup : "overheadSnapInDesign",
+              title : "Overhead Door Snap-In Design",
+              list : garageUtils.getOverheadSnapInDesigns(this.state.overheadSeries, this.state.overheadWindowType),
+              state : this.state.overheadSnapInDesign,
+              summary : "overhead door snap-in design options",
+              additionalClass : "childSelection3"
+          },
+          gdo : {
+            showIf : true,
+            stateGroup : "gdo",
+            title : "Include Garage Door Opener",
+            list : data.yesNo,
+            state : this.state.gdo,
+            changeHandler : this.handleGdoChange,
+            summary : "Would you like to include a garage door opener with the quote?"
+          },
+          gdoHp : {
+              showIf : this.state.gdo === "Yes",
+              stateGroup : "gdoHp",
+              title : "Garage Door Opener Horse Power",
+              list : data.horsePower,
+              state : this.state.gdoHp,
+              summary : "Garage door openers horse power is the power it has to lift the door",
+              additionalClass : "childSelection"
+          },
+          gdoDrive : {
+              showIf : this.state.gdo === "Yes",
+              stateGroup : "gdoDrive",
+              title : "Garage Door Opener Drive Type",
+              list : data.driveType,
+              state : this.state.gdoDrive,
+              summary : "Chain drive costs less but is louder than the belt drive",
+              additionalClass : "childSelection"
+          },
+          gdoOption : {
+              showIf : this.state.gdo === "Yes",
+              stateGroup : "gdoOption",
+              title : "Garage Door Opener Additional Options",
+              list : data.openerOptions,
+              state : this.state.gdoOption,
+              summary : "Openers can come with additional options, built in lights and MyQ smart phone connectivity",
+              additionalClass : "childSelection"
+          }
         }
 
         return (
@@ -310,24 +577,62 @@ class Garage extends React.Component {
                     Switch to {this.state.basic ? "Advanced Request" : "Basic Request"}
                 </button>
 
-                <BasicQuoteSection
+                <QuoteSection
                     defaultClickHandler={this.handleSimpleStateChange}
                     section={this.state.basic ? BASIC_SECTION : ADVANCED_SECTION}
                 />
 
                 <QuoteInfo
+                    title="Garage Info"
                     handleChange={this.handleSimpleStateChange}
                     state={this.state}
+                    stateList={this.state.basic ?
+                      {"Width":this.state.basicWidth,
+                      "Length":this.state.basicLength,
+                      "Siding":this.state.basicSiding,
+                      "ShingleColour":this.state.basicShingleColour}
+                    :
+                      {"Width":this.state.widthCustom||this.state.width,
+                      "Length": this.state.lengthCustom||this.state.length,
+                      "Height":this.state.heightCustom||this.state.height,
+                      "Stud Size":this.state.studSize,
+                      "Drywall":this.state.drywall,
+                      "Insulation":this.state.insulation,
+                      "Siding Type":this.state.sidingTypeCustom||this.state.sidingType,
+                      "Siding Profile":this.state.sidingProfile,
+                      "Siding Line":this.state.mittenLine,
+                      "Siding Gauge":this.state.gauge,
+                      "Siding Finish":this.state.hardieFinish,
+                      "Siding Size":this.state.hardieSize,
+                      "Siding Colour":this.state.sidingColour,
+                      "Roofing Type":this.state.roofTypeCustom||this.state.roofType,
+                      "Roofing Profile":this.state.roofProfile,
+                      "Roofing Metal Gauge":this.state.roofGauge,
+                      "Roofing Colour":this.state.roofColour,
+                      "Overhead Door Size":this.state.overheadSizeCustom||this.state.overheadSize,
+                      "Overhead Door Series":this.state.overheadSeries,
+                      "Overhead Door Style":this.state.overheadEliteStyle,
+                      "Overhead Door Colour":this.state.overheadColour,
+                      "Overhead Door Decorative Handle":this.state.overheadDecorativeHandle,
+                      "Overhead Door Decorative Glass":this.state.overheadDecorativeHinge,
+                      "Overhead Door Window Patern":this.state.overheadWindowPaternCustom||this.state.overheadWindowPatern,
+                      "Overhead Door Glass Type":this.state.overheadGlassType,
+                      "Overhead Door Glass Finish":this.state.overheadGlassFinish,
+                      "Overhead Door Window Type":this.state.overheadWindowType,
+                      "Overhead Door Frame Colour":this.state.overheadWindowFrameColour,
+                      "Overhead Door Muntin Style":this.state.overheadMuntinStyle,
+                      "Overhead Door Muntin Colour":this.state.overheadMuntinColour,
+                      "Overhead Door Snap In Design":this.state.overheadSnapInDesign,
+                      "Garage Door Opener Horse Power":this.state.gdoHp,
+                      "Garage Door Opener Drive Type":this.state.gdoDrive,
+                      "Garage Door Opener Additional Options":this.state.gdoOption}
+                    }
                 />
 
                 {this.state.basic &&
                     <Price
                         type="garage"
                         requirements = {[this.state.basicWidth, this.state.basicLength, this.state.basicSiding, this.state.basicShingleColour]}
-                        width={this.state.basicWidth}
-                        length={this.state.basicLength}
-                        siding={this.state.basicSiding}
-                        shingleColour={this.state.basicShingleColour}
                     />
                 }
 

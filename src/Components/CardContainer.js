@@ -21,7 +21,7 @@ const CardContainer = props => {
                         description={item?.description}
                     />
                 )}
-                {props.input && <input
+                {props.input && props.input === "number" && <input
                     className={"textInput"}
                     type="text"
                     onChange={e => {
@@ -29,7 +29,7 @@ const CardContainer = props => {
                         props.onChange(props.stateGroup, e.target.value)
                     }}
                     value={props.state}
-                    placeholder="enter width in feet"
+                    placeholder="Enter custom value"
                 />}
                 {props.state === "Other" && <input
                     className={"textInput"}
@@ -37,8 +37,7 @@ const CardContainer = props => {
                     placeholder="Enter custom value"
                     value={props.customState}
                     onChange={e => {
-                        /^[0-9]*$/.test(e.target.value) &&
-                        props.onChange(props.stateGroup + "Custom", e.target.value)
+                        props.customClickHandler(props.stateGroup + "Custom", e.target.value)
                     }}
                 />}
             </span>

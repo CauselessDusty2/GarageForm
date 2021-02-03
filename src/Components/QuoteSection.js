@@ -7,6 +7,7 @@ const BasicQuoteSection = props => <section id="basicSection">
         {props.section[section].showIf &&
             <CardContainer
                 key={i}
+                customClickHandler={props.defaultClickHandler}
                 onChange={props.section[section].changeHandler || props.defaultClickHandler}
                 stateGroup={props.section[section].stateGroup}
                 list={props.section[section].list}

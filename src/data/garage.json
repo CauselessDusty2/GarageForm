@@ -1,7 +1,30 @@
 {
+  "basicWidth" : [
+      {"value": "12", "imgSrc": "../img/12.png"},
+      {"value": "14", "imgSrc": "../img/14.png"},
+      {"value": "16", "imgSrc": "../img/16.png"},
+      {"value": "18", "imgSrc": "../img/18.png"},
+      {"value": "20", "imgSrc": "../img/20.png"},
+      {"value": "22", "imgSrc": "../img/22.png"},
+      {"value": "24", "imgSrc": "../img/24.png"},
+      {"value": "26", "imgSrc": "../img/26.png"},
+      {"value": "28", "imgSrc": "../img/28.png"},
+      {"value": "30", "imgSrc": "../img/30.png"}
+  ],
   "width" : [
       {"value": "12", "imgSrc": "../img/12.png"},
       {"value": "14", "imgSrc": "../img/14.png"},
+      {"value": "16", "imgSrc": "../img/16.png"},
+      {"value": "18", "imgSrc": "../img/18.png"},
+      {"value": "20", "imgSrc": "../img/20.png"},
+      {"value": "22", "imgSrc": "../img/22.png"},
+      {"value": "24", "imgSrc": "../img/24.png"},
+      {"value": "26", "imgSrc": "../img/26.png"},
+      {"value": "28", "imgSrc": "../img/28.png"},
+      {"value": "30", "imgSrc": "../img/30.png"},
+      {"value": "Other"}
+  ],
+  "basicWidthAlt" : [
       {"value": "16", "imgSrc": "../img/16.png"},
       {"value": "18", "imgSrc": "../img/18.png"},
       {"value": "20", "imgSrc": "../img/20.png"},
@@ -19,9 +42,10 @@
       {"value": "24", "imgSrc": "../img/24.png"},
       {"value": "26", "imgSrc": "../img/26.png"},
       {"value": "28", "imgSrc": "../img/28.png"},
-      {"value": "30", "imgSrc": "../img/30.png"}
+      {"value": "30", "imgSrc": "../img/30.png"},
+      {"value": "Other"}
   ],
-  "length" : [
+  "basicLength" : [
       {"value": "20", "imgSrc": "../img/20.png"},
       {"value": "22", "imgSrc": "../img/22.png"},
       {"value": "24", "imgSrc": "../img/24.png"},
@@ -34,13 +58,36 @@
       {"value": "38", "imgSrc": "../img/38.png"},
       {"value": "40", "imgSrc": "../img/40.png"}
   ],
-  "lengthAlt" : [
+  "length" : [
+      {"value": "20", "imgSrc": "../img/20.png"},
+      {"value": "22", "imgSrc": "../img/22.png"},
+      {"value": "24", "imgSrc": "../img/24.png"},
+      {"value": "26", "imgSrc": "../img/26.png"},
+      {"value": "28", "imgSrc": "../img/28.png"},
+      {"value": "30", "imgSrc": "../img/30.png"},
+      {"value": "32", "imgSrc": "../img/32.png"},
+      {"value": "34", "imgSrc": "../img/34.png"},
+      {"value": "36", "imgSrc": "../img/36.png"},
+      {"value": "38", "imgSrc": "../img/38.png"},
+      {"value": "40", "imgSrc": "../img/40.png"},
+      {"value": "Other"}
+  ],
+  "basicLengthAlt" : [
       {"value": "20", "imgSrc": "../img/20.png"},
       {"value": "22", "imgSrc": "../img/22.png"},
       {"value": "24", "imgSrc": "../img/24.png"},
       {"value": "26", "imgSrc": "../img/26.png"},
       {"value": "28", "imgSrc": "../img/28.png"},
       {"value": "30", "imgSrc": "../img/30.png"}
+  ],
+  "lengthAlt" : [
+      {"value": "20", "imgSrc": "../img/20.png"},
+      {"value": "22", "imgSrc": "../img/22.png"},
+      {"value": "24", "imgSrc": "../img/24.png"},
+      {"value": "26", "imgSrc": "../img/26.png"},
+      {"value": "28", "imgSrc": "../img/28.png"},
+      {"value": "30", "imgSrc": "../img/30.png"},
+      {"value": "Other"}
   ],
   "siding" : [
       {
@@ -91,9 +138,9 @@
       }
   ],
   "height" : [
-      {"value": "8", "imgSrc": ""},
-      {"value": "10", "imgSrc": ""},
-      {"value": "Other", "imgSrc": ""}
+      {"value": "8ft", "imgSrc": ""},
+      {"value": "10ft", "imgSrc": ""},
+      {"value": "Other"}
   ],
   "studSize" : [
       {"value": "2x4", "imgSrc": ""},
@@ -108,7 +155,7 @@
       {"value": "KWP", "imgSrc": "https://www.kwpproducts.com/wp-content/uploads/2017/04/rustic-gray.jpg"},
       {"value": "Hardie", "imgSrc": "https://www.jameshardie.ca/JamesHardieNorthAmerica/media/Home/Highlights/ColorThatLast_SmallImage.jpg?ext=.jpg"},
       {"value": "Unsure", "imgSrc": ""},
-      {"value": "Other", "imgSrc": ""}
+      {"value": "Other"}
   ],
   "vinylSidingProfiles" : [
       {"value": "Double 4\" Dutchlap", "imgSrc": "https://www.mittensiding.com/upload/mproducts/profiles/d4-dutchlap-nickel-profile_2.jpg"},
@@ -485,19 +532,19 @@
   "roofingTypes" : [
       {"value": "Shingles", "imgSrc": "https://res.cloudinary.com/ocimages/image/upload/f_auto/v1579546785/roofing/shingles/duration-series/shingle-thumbs/duration.jpg"},
       {"value": "Domtek Metal", "imgSrc": "http://www.domtek.ca/wp-content/uploads/2016/09/agricultural.jpg"},
-      {"value": "Other", "imgSrc": ""}
+      {"value": "Other"}
   ],
   "overheadDoorSize1" : [
       {"value": "9x7", "imgSrc": ""},
       {"value": "9x8", "imgSrc": ""},
-      {"value": "Other", "imgSrc": ""}
+      {"value": "Other"}
   ],
   "overheadDoorSize2" : [
       {"value": "9x7", "imgSrc": ""},
       {"value": "9x8", "imgSrc": ""},
       {"value": "16x7", "imgSrc": ""},
       {"value": "16x8", "imgSrc": ""},
-      {"value": "Other", "imgSrc": ""}
+      {"value": "Other"}
   ],
   "overheadDoorSeries" : [
       {"value": "Thermocraft", "imgSrc": "https://www.steel-craft.ca/portals/3/Images/doors/thermo-16-front.jpg"},
