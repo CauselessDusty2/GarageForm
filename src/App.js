@@ -38,7 +38,7 @@ class App extends React.Component {
             {this.state.selected && <button onClick={e => this.handleClick("")}>Back</button>}
             {this.state.selected === "garage" && <Garage />}
             {this.state.selected === "deck" && <span>Deck quote generator</span>}
-            {this.state.selected === "general" && <General/>}
+            {this.state.selected === "general" && <General />}
             {this.state.selected === "window" && <span>Deck Window generator</span>}
             {this.state.selected === "entryDoor" && <span>Entry Door quote generator</span>}
             {this.state.selected === "fence" && <Fence />}

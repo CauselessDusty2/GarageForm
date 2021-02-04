@@ -5,6 +5,7 @@ import QuoteInfo from '../Components/QuoteInfo'
 import UserInput from "../Components/UserInput"
 import Price from "../Components/Price";
 import data from "../data/fence.json"
+import FileInput from '../Components/FileInput'
 
 class Fence extends React.Component {
     constructor(props) {
@@ -12,9 +13,17 @@ class Fence extends React.Component {
         this.handleSimpleStateChange=this.handleSimpleStateChange.bind(this)
         this.showBasic=this.showBasic.bind(this)
         this.handleMaterialChange=this.handleMaterialChange.bind(this)
+        this.omitBasic=this.omitBasic.bind(this)
 
         this.state = {
-            basic: true,
+            files: null,
+            toggleBasic: true,
+            basic: {
+              material: '',
+              style: '',
+              height: '',
+              length: '',
+            },
             material: '',
             style: '',
             height: '',
@@ -24,6 +33,11 @@ class Fence extends React.Component {
             length: '',
             gateQty: ''
         };
+    }
+
+    omitBasic() {
+      let {basic, ...newState} = this.state
+      return newState
     }
 
     handleMaterialChange(state, material) {
@@ -43,45 +57,55 @@ class Fence extends React.Component {
         }
     }
 
-    handleSimpleStateChange(key, value) {this.setState({ [key]: value})}
+    handleSimpleStateChange(key, value) {
+        if (key.includes('basic.')){
+            this.setState(
+              {basic : {
+                ...this.state.basic,
+                [key.split('.')[1]]: value
+              }
+            })
+        } else {
+          this.setState({ [key]: value})
+        }
+    }
 
-    showBasic() {this.setState({basic: !this.state.basic})}
+    showBasic() {this.setState({toggleBasic: !this.state.toggleBasic})}
 
 
     render() {
         const BASIC_SECTION={
-            length : {
+            basic_length : {
                 showIf : true,
-                stateGroup : "length",
+                stateGroup : "basic.length",
                 input : "number",
                 title : "Length",
-                state : this.state.length,
+                state : this.state.basic.length,
                 summary : "The length of the fence in feet"
             },
-            material : {
+            basic_material : {
                 showIf : true,
-                stateGroup : "material",
+                stateGroup : "basic.material",
                 list : data.material,
                 title : "Wood Type",
-                state : this.state.material,
+                state : this.state.basic.material,
                 summary : "The type of wood for the fence"
             },
-            height : {
+            basic_height : {
                 showIf : true,
-                stateGroup : "height",
+                stateGroup : "basic.height",
                 list : data.basicHeight,
                 title : "Height",
-                state : this.state.height,
+                state : this.state.basic.height,
                 summary : "The Height of the fence"
             },
-            style : {
+            basic_style : {
                 showIf : true,
-                stateGroup : "style",
+                stateGroup : "basic.style",
                 list : data.style,
                 title : "Style of Fence",
-                state : this.state.style,
+                state : this.state.basic.style,
                 summary : "The style of the fence",
-                changeHandler : this.handleSimpleStateChange
             }
         }
 
@@ -149,33 +173,36 @@ class Fence extends React.Component {
         return (
             <div>
                 <button onClick={this.showBasic} className="basic">
-                    Switch to {this.state.basic ? "Advanced Request" : "Basic Request"}
+                    Switch to {this.state.toggleBasic ? "Advanced Request" : "Basic Request"}
                 </button>
 
                 <QuoteSection
                     defaultClickHandler={this.handleSimpleStateChange}
-                    section={this.state.basic ? BASIC_SECTION : ADVANCED_SECTION}
+                    section={this.state.toggleBasic ? BASIC_SECTION : ADVANCED_SECTION}
                 />
 
                 <QuoteInfo
                     title="Fence Info"
                     handleChange={this.handleSimpleStateChange}
                     state={this.state}
-                    stateList={this.state.basic ? {"Length": this.state.length, "Material": this.state.material, "Height": this.state.height, "Style": this.state.style}
+                    stateList={this.state.toggleBasic ? {"Length": this.state.basic.length, "Material": this.state.basic.material, "Height": this.state.basic.height, "Style": this.state.basic.style}
                       : {"Length": this.state.length, "Material": this.state.material, "Height": this.state.heightCustom || this.state.height, "Style": this.state.style, "PostSize": this.state.postSize, "Post Spacing": this.state.spacing}
                     }
                 />
+                {!this.state.toggleBasic && <FileInput setFilesState={files => this.setState({files})}/> }
 
-                {this.state.basic &&
+                {this.state.toggleBasic &&
                     <Price
                         type="fence"
-                        requirements = {[this.state.material, this.state.height, this.state.style, this.state.length]}
+                        requirements = {[this.state.basic.material, this.state.basic.height, this.state.basic.style, this.state.basic.length]}
                     />
                 }
 
                 <UserInput
                     handleChange={this.handleSimpleStateChange}
-                    state={this.state}
+                    state={this.state.toggleBasic ? this.state.basic : this.omitBasic()}
+                    requestType="Fence"
+                    files={this.state.files}
                 />
             </div>
         );

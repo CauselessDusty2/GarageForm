@@ -7,10 +7,12 @@ import Price from "../Components/Price";
 import data from "../data/garage.json"
 //import {getProfileType} from "../helperFunctions/garage/getProfileType"
 import * as garageUtils from "../helperFunctions/garageUtils.js"
+import FileInput from '../Components/FileInput'
 
 class Garage extends React.Component {
     constructor(props) {
         super(props);
+        this.omitBasic=this.omitBasic.bind(this)
         this.handleGaugeChange=this.handleGaugeChange.bind(this)
         this.handleGdoChange=this.handleGdoChange.bind(this)
         this.handleHardieFinishChange=this.handleHardieFinishChange.bind(this)
@@ -29,20 +31,20 @@ class Garage extends React.Component {
         this.showBasic=this.showBasic.bind(this)
 
         this.state = {
-            basic: true,
+            files: null,
+            toggleBasic: true,
+            basic: {
+              garageWidth: '',
+              garageLength: '',
+              siding: '',
+              shingleColour: '',
+            },
             additionalInfo: '',
-            name: '',
-            phoneNumber: '',
-            email: '',
-            width: '',
-            widthCustom: '',
-            length: '',
-            lengthCustom: '',
-            basicWidth: '',
-            basicLength: '',
-            basicSiding: '',
-            basicShingleColour: '',
-            height: '',
+            garageWidth: '',
+            garageWidthCustom: '',
+            garageLength: '',
+            garageLengthCustom: '',
+            garageHeight: '',
             heightCustom: '',
             studSize: '',
             sidingType: '',
@@ -81,6 +83,11 @@ class Garage extends React.Component {
             roofGauge: '',
             roofColour: ''
         };
+    }
+
+    omitBasic() {
+      let {basic, ...newState} = this.state
+      return newState
     }
 
     handleGaugeChange(state, gauge) {
@@ -178,7 +185,18 @@ class Garage extends React.Component {
         }
     }
 
-    handleSimpleStateChange(key, value) {this.setState({ [key]: value})}
+    handleSimpleStateChange(key, value) {
+        if (key.includes('basic.')){
+            this.setState(
+              {basic : {
+                ...this.state.basic,
+                [key.split('.')[1]]: value
+              }
+            })
+        } else {
+          this.setState({ [key]: value})
+        }
+    }
 
     handleWindowPaternChange(state, overheadWindowPatern) {
         if (overheadWindowPatern !== this.state.overheadWindowPatern && overheadWindowPatern === "None") {
@@ -188,69 +206,69 @@ class Garage extends React.Component {
         }
     }
 
-    showBasic() {this.setState({basic: !this.state.basic})}
+    showBasic() {this.setState({toggleBasic: !this.state.toggleBasic})}
 
     render() {
         const BASIC_SECTION={
-            basicWidth : {
+            basic_garageWidth : {
                 showIf : true,
-                stateGroup : "basicWidth",
-                list : this.state.basicLength <= 30 ? data.basicWidth : data.basicWidthAlt,
+                stateGroup : "basic.garageWidth",
+                list : this.state.basic.garageLength > 30 ? data.basicWidthAlt : data.basicWidth,
                 title : "Width",
-                state : this.state.basicWidth,
+                state : this.state.basic.garageWidth,
                 summary : "The width of the garage means the gable end of the garage, the side that the overhead door will be on"
             },
-            basicLength : {
+            basic_garageLength : {
                 showIf : true,
-                stateGroup : "basicLength",
-                list : this.state.basicWidth ? this.state.basicWidth < 16 ? data.basicLengthAlt : data.basicLength : data.basicLength,
+                stateGroup : "basic.garageLength",
+                list : this.state.basic.garageWidth ? this.state.basic.garageWidth < 16 ? data.basicLengthAlt : data.basicLength : data.basicLength,
                 title : "Length",
-                state : this.state.basicLength,
+                state : this.state.basic.garageLength,
                 summary : "The length of the garage means the eave end of the garage, the side that the man door will be on"
             },
-            basicSiding : {
+            basic_siding : {
                 showIf : true,
-                stateGroup : "basicSiding",
+                stateGroup : "basic.siding",
                 list : data.siding,
                 title : "Siding",
-                state : this.state.basicSiding,
+                state : this.state.basic.siding,
                 summary : "The garage can either have Mitten vinyl siding in one of three stocked colours, or sheathing only"
             },
-            shingleColour : {
+            basic_shingleColour : {
                 showIf : true,
-                stateGroup : "basicShingleColour",
+                stateGroup : "basic.shingleColour",
                 list : data.shingleColour,
                 title : "Shingle Colour",
-                state : this.state.basicShingleColour,
+                state : this.state.basic.shingleColour,
                 summary : "The duration colours come in 10 different colour option"
             }
         }
 
         const ADVANCED_SECTION = {
-          width : {
+          garageWidth : {
               showIf : true,
-              stateGroup : "width",
-              list : this.state.length <= 30 ? data.width : data.widthAlt,
+              stateGroup : "garageWidth",
+              list : this.state.garageLength > 30 ? data.widthAlt : data.width,
               title : "Width",
-              state : this.state.width,
+              state : this.state.garageWidth,
               summary : "The width of the garage means the gable end of the garage, the side that the overhead door will be on",
-              customState : this.state.widthCustom
+              customState : this.state.garageWidthCustom
           },
-          length : {
+          garageLength : {
               showIf : true,
-              stateGroup : "length",
-              list : this.state.width ? this.state.width < 16 ? data.lengthAlt : data.length : data.length,
+              stateGroup : "garageLength",
+              list : this.state.garageWidth ? this.state.garageWidth < 16 ? data.lengthAlt : data.length : data.length,
               title : "Length",
-              state : this.state.length,
+              state : this.state.garageLength,
               summary : "The length of the garage means the eave end of the garage, the side that the man door will be on",
-              customState : this.state.lengthCustom
+              customState : this.state.garageLengthCustom
           },
-          height : {
+          garageHeight : {
               showIf : true,
-              stateGroup : "height",
+              stateGroup : "garageHeight",
               list : data.height,
               title : "Height",
-              state : this.state.height,
+              state : this.state.garageHeight,
               summary : "The height of the garage walls, measured from the ground to the bottom of the roof line",
               customState : this.state.heightCustom
           },
@@ -406,7 +424,7 @@ class Garage extends React.Component {
           overheadSize : {
               showIf : true,
               stateGroup : "overheadSize",
-              list : garageUtils.getOverheadSizes(this.state.width),
+              list : garageUtils.getOverheadSizes(this.state.garageWidth),
               title : "Overhead Door Size",
               state : this.state.overheadSize,
               summary : "Overhead door size options",
@@ -574,27 +592,27 @@ class Garage extends React.Component {
         return (
             <div>
                 <button onClick={this.showBasic} className="basic">
-                    Switch to {this.state.basic ? "Advanced Request" : "Basic Request"}
+                    Switch to {this.state.toggleBasic ? "Advanced Request" : "Basic Request"}
                 </button>
 
                 <QuoteSection
                     defaultClickHandler={this.handleSimpleStateChange}
-                    section={this.state.basic ? BASIC_SECTION : ADVANCED_SECTION}
+                    section={this.state.toggleBasic ? BASIC_SECTION : ADVANCED_SECTION}
                 />
 
                 <QuoteInfo
                     title="Garage Info"
                     handleChange={this.handleSimpleStateChange}
                     state={this.state}
-                    stateList={this.state.basic ?
-                      {"Width":this.state.basicWidth,
-                      "Length":this.state.basicLength,
-                      "Siding":this.state.basicSiding,
-                      "ShingleColour":this.state.basicShingleColour}
+                    stateList={this.state.toggleBasic ?
+                      {"Width":this.state.basic.garageWidth,
+                      "Length":this.state.basic.garageLength,
+                      "Siding":this.state.basic.siding,
+                      "ShingleColour":this.state.basic.shingleColour}
                     :
-                      {"Width":this.state.widthCustom||this.state.width,
-                      "Length": this.state.lengthCustom||this.state.length,
-                      "Height":this.state.heightCustom||this.state.height,
+                      {"Width":this.state.customGarageWidth||this.state.garageWidth,
+                      "Length": this.state.customGarageLength||this.state.garageLength,
+                      "Height":this.state.heightCustom||this.state.garageHeight,
                       "Stud Size":this.state.studSize,
                       "Drywall":this.state.drywall,
                       "Insulation":this.state.insulation,
@@ -629,16 +647,20 @@ class Garage extends React.Component {
                     }
                 />
 
-                {this.state.basic &&
+                {!this.state.toggleBasic && <FileInput setFilesState={files => this.setState({files})}/>}
+
+                {this.state.toggleBasic &&
                     <Price
                         type="garage"
-                        requirements = {[this.state.basicWidth, this.state.basicLength, this.state.basicSiding, this.state.basicShingleColour]}
+                        requirements = {[this.state.basic.garageWidth, this.state.basic.garageLength, this.state.basic.siding, this.state.basic.shingleColour]}
                     />
                 }
 
                 <UserInput
                     handleChange={this.handleSimpleStateChange}
-                    state={this.state}
+                    state={this.state.toggleBasic ? this.state.basic : this.omitBasic()}
+                    requestType="Garage"
+                    files={!this.state.toggleBasic && this.state.files}
                 />
             </div>
         );

@@ -1,17 +1,22 @@
 import {React, useState} from 'react'
 import '../App.css'
-import UserInput from "../Components/UserInput";
+import UserInput from "../Components/UserInput"
+import Card from '../Components/Card'
+import FileInput from '../Components/FileInput'
 //import QuoteInfo from "../Components/QuoteInfo";
+
+
 
 const General = props => {
     const [additionalInfo, setAdditionalInfo] = useState("")
-    const [files, setfiles] = useState("")
+    const [files, setFiles] = useState(null)
     const handleSimpleStateChange = value => setAdditionalInfo(value)
-    const handleFileUpload = target => console.log(target)
+
     return(<span>
         <h1>General Request</h1>
-        <input type="file" id="file" multiple name="file" accept="image/*, .pdf" onChange={(e) => handleFileUpload(e.target.files)}/>
-        <section className="infoSection">
+
+        <section className="infoSection" id="general">
+
             <label>Request</label>
                 <textarea
                     className="addInfoText textInput"
@@ -19,10 +24,11 @@ const General = props => {
                     value={additionalInfo}
                     onChange={(e) => handleSimpleStateChange(e.target.value)}/>
         </section>
-
+        <FileInput setFilesState={setFiles}/>
         <UserInput
             state={{"Request": additionalInfo}}
-
+            requestType="General"
+            files={files}
         />
     </span>)
 
