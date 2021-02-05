@@ -1,9 +1,11 @@
 import React from 'react'
 import './App.css'
-import Garage from "./pages/Garage";
-import General from "./pages/General";
-import Fence from "./pages/Fence";
+import Garage from "./pages/Garage"
+import General from "./pages/General"
+import Fence from "./pages/Fence"
 import Card from "./Components/Card"
+import Siding from "./pages/Siding"
+import Roofing from "./pages/Roofing"
 
 class App extends React.Component {
     constructor(props) {
@@ -42,8 +44,8 @@ class App extends React.Component {
             {this.state.selected === "window" && <span>Deck Window generator</span>}
             {this.state.selected === "entryDoor" && <span>Entry Door quote generator</span>}
             {this.state.selected === "fence" && <Fence />}
-            {this.state.selected === "siding" && <span>Siding quote generator</span>}
-            {this.state.selected === "roofing" && <span>Roofing quote generator</span>}
+            {this.state.selected === "siding" && <Siding />}
+            {this.state.selected === "roofing" && <Roofing />}
             {this.state.selected === "stormDoor" && <span>Storm Door quote generator</span>}
             {this.state.selected === "customBuilding" && <span>Custom Building quote generator</span>}
             {this.state.selected === "interiorDoor" && <span>Interior Door quote generator</span>}

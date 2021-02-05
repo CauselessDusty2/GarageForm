@@ -44,8 +44,9 @@ const FileInput = props => {
               if (imageFileTypes.includes(files[key].type)){
                 return <Card value={files[key].name} imgSrc={URL.createObjectURL(files[key])}/>
               } else if (fileTypes.includes(files[key].type)){
-                return <object data={URL.createObjectURL(files[key])} className="pdf"/>
+                return <object data={URL.createObjectURL(files[key])} className="pdf">PDF</object>
               }
+              return null
             })}
           </div>
       </section>

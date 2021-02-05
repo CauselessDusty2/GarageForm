@@ -1,7 +1,6 @@
 import {React, useState} from 'react'
 import '../App.css'
 import UserInput from "../Components/UserInput"
-import Card from '../Components/Card'
 import FileInput from '../Components/FileInput'
 //import QuoteInfo from "../Components/QuoteInfo";
 
