@@ -60,7 +60,6 @@ class Roofing extends React.Component {
     render() {
         const SECTION = {
           roofType : {
-              showIf : true,
               stateGroup : "roofType",
               list : data.roofingTypes,
               title : "Roofing Type",
@@ -103,6 +102,14 @@ class Roofing extends React.Component {
           }
         }
 
+        const DISPLAY_LIST = {
+          "Type":this.state.roofTypeCustom||this.state.roofType,
+          "Profile":this.state.roofProfile,
+          "Metal Gauge":this.state.roofGauge,
+          "Colour":this.state.roofColour,
+          "Additional Info": this.state.additionalInfo
+        }
+
         return (
             <div>
                 <QuoteSection
@@ -114,21 +121,16 @@ class Roofing extends React.Component {
                     title="Roofing Info"
                     handleChange={this.handleSimpleStateChange}
                     state={this.state}
-                    stateList={
-                      {"Roofing Type":this.state.roofTypeCustom||this.state.roofType,
-                      "Roofing Profile":this.state.roofProfile,
-                      "Roofing Metal Gauge":this.state.roofGauge,
-                      "Roofing Colour":this.state.roofColour}
-                    }
+                    stateList={DISPLAY_LIST}
                 />
 
                 <FileInput setFilesState={files => this.setState({files})}/>
 
                 <UserInput
                     handleChange={this.handleSimpleStateChange}
-                    state={this.state}
                     requestType="Roofing"
                     files={this.state.files}
+                    stateList={DISPLAY_LIST}
                 />
             </div>
         );

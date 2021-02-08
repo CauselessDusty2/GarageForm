@@ -84,7 +84,6 @@ class Siding extends React.Component {
     render() {
         const SECTION = {
           sidingType : {
-              showIf : true,
               stateGroup : "sidingType",
               list : data.sidingType,
               title : "Siding Type",
@@ -168,6 +167,17 @@ class Siding extends React.Component {
           }
         }
 
+        const DISPLAY_LIST = {
+          "Type": this.state.sidingTypeCustom||this.state.sidingType,
+          "Profile": this.state.sidingProfile,
+          "Line": this.state.mittenLine,
+          "Gauge": this.state.gauge,
+          "Finish": this.state.hardieFinish,
+          "Size": this.state.hardieSize,
+          "Colour": this.state.sidingColour,
+          "Additional Info": this.state.additionalInfo
+        }
+
         return (
             <div>
                 <QuoteSection
@@ -179,24 +189,16 @@ class Siding extends React.Component {
                     title="Siding Info"
                     handleChange={this.handleSimpleStateChange}
                     state={this.state}
-                    stateList={
-                      {"Siding Type": this.state.sidingTypeCustom||this.state.sidingType,
-                      "Siding Profile": this.state.sidingProfile,
-                      "Siding Line": this.state.mittenLine,
-                      "Siding Gauge": this.state.gauge,
-                      "Siding Finish": this.state.hardieFinish,
-                      "Siding Size": this.state.hardieSize,
-                      "Siding Colour": this.state.sidingColour}
-                    }
+                    stateList={DISPLAY_LIST}
                 />
 
                 <FileInput setFilesState={files => this.setState({files})}/>
 
                 <UserInput
                     handleChange={this.handleSimpleStateChange}
-                    state={this.state}
                     requestType="Siding"
                     files={this.state.files}
+                    stateList={DISPLAY_LIST}
                 />
             </div>
         );

@@ -31,16 +31,18 @@ const validationSchema = Yup.object().shape({
   .required('Required')
 })
 
-const getMessage = (requestType, name, email, phoneNumber, selections, files) => {
+const getMessage = (requestType, name, email, phoneNumber, files, stateList) => {
   let body = ""
   body += `${requestType} quote request\n\n`
   body += `Customer Name: ${name}\n`
   body += `Customer Email: ${email}\n`
   body += `Customer Phone Number: ${phoneNumber}\n\n`
 
-  {selections && Object.keys(selections).map( (key, index) => {
-    body+= key === "toggleBasic" ? "" : selections[key] ? `${key.replace("basic","")}: ${selections[key]}\n` : ""
-  })}
+  {stateList &&
+      Object.keys(stateList).map( (key, index) => {
+        body+=  stateList[key] ? `${key}: ${stateList[key]}\n` : ""
+      })
+  }
 
   body += files ? "\nFiles:\n" : ""
 
@@ -57,7 +59,7 @@ const UserInput = props => {
             initialValues={initialValues}
             dirty
             validationSchema={validationSchema}
-            onSubmit={values => handleSubmit(getMessage(props.requestType, values.name, values.email, values.phoneNumber, props.state, props.files))}
+            onSubmit={values => handleSubmit(getMessage(props.requestType, values.name, values.email, values.phoneNumber, props.files, props.stateList))}
         >
             {({ errors, touched, dirty }) => (
                 <Form className="infoSection">

@@ -1,11 +1,12 @@
 import React from 'react'
 import '../App.css'
-import QuoteSection from "../Components/QuoteSection";
+import QuoteSection from "../Components/QuoteSection"
 import QuoteInfo from '../Components/QuoteInfo'
 import UserInput from "../Components/UserInput"
-import Price from "../Components/Price";
+import Price from "../Components/Price"
 import data from "../data/fence.json"
 import FileInput from '../Components/FileInput'
+import CardContainer from '../Components/CardContainer'
 
 class Fence extends React.Component {
     constructor(props) {
@@ -13,7 +14,6 @@ class Fence extends React.Component {
         this.handleSimpleStateChange=this.handleSimpleStateChange.bind(this)
         this.showBasic=this.showBasic.bind(this)
         this.handleMaterialChange=this.handleMaterialChange.bind(this)
-        this.omitBasic=this.omitBasic.bind(this)
 
         this.state = {
             files: null,
@@ -33,11 +33,6 @@ class Fence extends React.Component {
             length: '',
             gateQty: ''
         };
-    }
-
-    omitBasic() {
-      let {basic, ...newState} = this.state
-      return newState
     }
 
     handleMaterialChange(state, material) {
@@ -76,7 +71,6 @@ class Fence extends React.Component {
     render() {
         const BASIC_SECTION={
             basic_length : {
-                showIf : true,
                 stateGroup : "basic.length",
                 input : "number",
                 title : "Length",
@@ -84,7 +78,6 @@ class Fence extends React.Component {
                 summary : "The length of the fence in feet"
             },
             basic_material : {
-                showIf : true,
                 stateGroup : "basic.material",
                 list : data.material,
                 title : "Wood Type",
@@ -92,7 +85,6 @@ class Fence extends React.Component {
                 summary : "The type of wood for the fence"
             },
             basic_height : {
-                showIf : true,
                 stateGroup : "basic.height",
                 list : data.basicHeight,
                 title : "Height",
@@ -100,7 +92,6 @@ class Fence extends React.Component {
                 summary : "The Height of the fence"
             },
             basic_style : {
-                showIf : true,
                 stateGroup : "basic.style",
                 list : data.style,
                 title : "Style of Fence",
@@ -111,7 +102,6 @@ class Fence extends React.Component {
 
         const ADVANCED_SECTION = {
             length : {
-                showIf : true,
                 stateGroup : "length",
                 input : "number",
                 title : "Length",
@@ -119,7 +109,6 @@ class Fence extends React.Component {
                 summary : "The length of the fence",
             },
             material : {
-                showIf : true,
                 stateGroup : "material",
                 list : data.advancedMaterial,
                 title : "Wood Type",
@@ -148,7 +137,7 @@ class Fence extends React.Component {
             },
 
             postSize: {
-                showIf: this.state.material && this.state.material !== "Metal",
+                showIf: !!this.state.material && this.state.material !== "Metal",
                 stateGroup : "postSize",
                 list : data.postSize,
                 title : "Post Size",
@@ -157,17 +146,32 @@ class Fence extends React.Component {
                 additionalClass : "childSelection"
             },
             spacing: {
-                showIf: this.state.material && this.state.material !== "Metal",
+                showIf: !!this.state.material && this.state.material !== "Metal",
                 stateGroup : "spacing",
                 input: "number",
                 title : "Post Spacing",
                 state : this.state.spacing,
                 summary : "The space between the fence posts",
                 additionalClass : "childSelection"
-            },
-            gateQty: {
-
             }
+        }
+
+        const DISPLAY_LIST_BASIC = {
+          "Length": this.state.basic.length,
+          "Material": this.state.basic.material,
+          "Height": this.state.basic.height,
+          "Style": this.state.basic.style,
+          "Additional Info": this.state.additionalInfo
+        }
+
+        const DISPLAY_LIST_ADVANCED = {
+          "Length": this.state.length,
+          "Material": this.state.material,
+          "Height": this.state.heightCustom || this.state.height,
+          "Style": this.state.style,
+          "PostSize": this.state.postSize,
+          "Post Spacing": this.state.spacing,
+          "Additional Info": this.state.additionalInfo
         }
 
         return (
@@ -185,9 +189,7 @@ class Fence extends React.Component {
                     title="Fence Info"
                     handleChange={this.handleSimpleStateChange}
                     state={this.state}
-                    stateList={this.state.toggleBasic ? {"Length": this.state.basic.length, "Material": this.state.basic.material, "Height": this.state.basic.height, "Style": this.state.basic.style}
-                      : {"Length": this.state.length, "Material": this.state.material, "Height": this.state.heightCustom || this.state.height, "Style": this.state.style, "PostSize": this.state.postSize, "Post Spacing": this.state.spacing}
-                    }
+                    stateList={this.state.toggleBasic ? DISPLAY_LIST_BASIC: DISPLAY_LIST_ADVANCED}
                 />
                 {!this.state.toggleBasic && <FileInput setFilesState={files => this.setState({files})}/> }
 
@@ -200,9 +202,9 @@ class Fence extends React.Component {
 
                 <UserInput
                     handleChange={this.handleSimpleStateChange}
-                    state={this.state.toggleBasic ? this.state.basic : this.omitBasic()}
                     requestType="Fence"
                     files={this.state.files}
+                    stateList={this.state.toggleBasic ? DISPLAY_LIST_BASIC: DISPLAY_LIST_ADVANCED}
                 />
             </div>
         );

@@ -12,7 +12,6 @@ import FileInput from '../Components/FileInput'
 class Garage extends React.Component {
     constructor(props) {
         super(props);
-        this.omitBasic=this.omitBasic.bind(this)
         this.handleGaugeChange=this.handleGaugeChange.bind(this)
         this.handleGdoChange=this.handleGdoChange.bind(this)
         this.handleHardieFinishChange=this.handleHardieFinishChange.bind(this)
@@ -83,11 +82,6 @@ class Garage extends React.Component {
             roofGauge: '',
             roofColour: ''
         };
-    }
-
-    omitBasic() {
-      let {basic, ...newState} = this.state
-      return newState
     }
 
     handleGaugeChange(state, gauge) {
@@ -211,7 +205,6 @@ class Garage extends React.Component {
     render() {
         const BASIC_SECTION={
             basic_garageWidth : {
-                showIf : true,
                 stateGroup : "basic.garageWidth",
                 list : this.state.basic.garageLength > 30 ? data.basicWidthAlt : data.basicWidth,
                 title : "Width",
@@ -219,7 +212,6 @@ class Garage extends React.Component {
                 summary : "The width of the garage means the gable end of the garage, the side that the overhead door will be on"
             },
             basic_garageLength : {
-                showIf : true,
                 stateGroup : "basic.garageLength",
                 list : this.state.basic.garageWidth ? this.state.basic.garageWidth < 16 ? data.basicLengthAlt : data.basicLength : data.basicLength,
                 title : "Length",
@@ -227,7 +219,6 @@ class Garage extends React.Component {
                 summary : "The length of the garage means the eave end of the garage, the side that the man door will be on"
             },
             basic_siding : {
-                showIf : true,
                 stateGroup : "basic.siding",
                 list : data.siding,
                 title : "Siding",
@@ -235,7 +226,6 @@ class Garage extends React.Component {
                 summary : "The garage can either have Mitten vinyl siding in one of three stocked colours, or sheathing only"
             },
             basic_shingleColour : {
-                showIf : true,
                 stateGroup : "basic.shingleColour",
                 list : data.shingleColour,
                 title : "Shingle Colour",
@@ -246,7 +236,6 @@ class Garage extends React.Component {
 
         const ADVANCED_SECTION = {
           garageWidth : {
-              showIf : true,
               stateGroup : "garageWidth",
               list : this.state.garageLength > 30 ? data.widthAlt : data.width,
               title : "Width",
@@ -255,7 +244,6 @@ class Garage extends React.Component {
               customState : this.state.garageWidthCustom
           },
           garageLength : {
-              showIf : true,
               stateGroup : "garageLength",
               list : this.state.garageWidth ? this.state.garageWidth < 16 ? data.lengthAlt : data.length : data.length,
               title : "Length",
@@ -264,7 +252,6 @@ class Garage extends React.Component {
               customState : this.state.garageLengthCustom
           },
           garageHeight : {
-              showIf : true,
               stateGroup : "garageHeight",
               list : data.height,
               title : "Height",
@@ -273,7 +260,6 @@ class Garage extends React.Component {
               customState : this.state.heightCustom
           },
           studSize : {
-              showIf : true,
               stateGroup : "studSize",
               list : data.studSize,
               title : "Stud Size",
@@ -281,7 +267,6 @@ class Garage extends React.Component {
               summary : "The size of the studs for the walls, either 2x4 or 2x6 studs"
           },
           drywall : {
-              showIf : true,
               stateGroup : "drywall",
               list : data.yesNo,
               title : "Include Drywall",
@@ -289,7 +274,6 @@ class Garage extends React.Component {
               summary : "Option to add drywall"
           },
           insulation : {
-              showIf : true,
               stateGroup : "insulation",
               list : data.yesNo,
               title : "Include Insulation",
@@ -297,7 +281,6 @@ class Garage extends React.Component {
               summary : "Option to include batt insulation between studs"
           },
           sidingType : {
-              showIf : true,
               stateGroup : "sidingType",
               list : data.sidingType,
               title : "Siding Type",
@@ -380,7 +363,6 @@ class Garage extends React.Component {
               additionalClass : this.state.sidingType === "Hardie" ? "childSelection4" : this.state.sidingType === "Canexel" ? "childSelection2" : this.state.sidingType === "KWP" ? "childSelection2" : "childSelection3"
           },
           roofType : {
-              showIf : true,
               stateGroup : "roofType",
               list : data.roofingTypes,
               title : "Roofing Type",
@@ -422,7 +404,6 @@ class Garage extends React.Component {
               additionalClass :  this.state.roofType === "Shingles" ? "childSelection" : "childSelection3"
           },
           overheadSize : {
-              showIf : true,
               stateGroup : "overheadSize",
               list : garageUtils.getOverheadSizes(this.state.garageWidth),
               title : "Overhead Door Size",
@@ -431,7 +412,6 @@ class Garage extends React.Component {
               customState : this.state.overheadSizeCustom
           },
           overheadSeries : {
-              showIf : true,
               stateGroup : "overheadSeries",
               list : data.overheadDoorSeries,
               title : "Overhead Door Series",
@@ -552,7 +532,6 @@ class Garage extends React.Component {
               additionalClass : "childSelection3"
           },
           gdo : {
-            showIf : true,
             stateGroup : "gdo",
             title : "Include Garage Door Opener",
             list : data.yesNo,
@@ -589,6 +568,52 @@ class Garage extends React.Component {
           }
         }
 
+        const DISPLAY_LIST_BASIC = {
+          "Width":this.state.basic.garageWidth,
+          "Length":this.state.basic.garageLength,
+          "Siding":this.state.basic.siding,
+          "Shingle Colour":this.state.basic.shingleColour,
+          "Additional Info": this.state.additionalInfo
+        }
+
+        const DISPLAY_LIST_ADVANCED ={
+          "Width":this.state.customGarageWidth||this.state.garageWidth,
+          "Length": this.state.customGarageLength||this.state.garageLength,
+          "Height":this.state.heightCustom||this.state.garageHeight,
+          "Stud Size":this.state.studSize,
+          "Drywall":this.state.drywall,
+          "Insulation":this.state.insulation,
+          "Siding Type":this.state.sidingTypeCustom||this.state.sidingType,
+          "Siding Profile":this.state.sidingProfile,
+          "Siding Line":this.state.mittenLine,
+          "Siding Gauge":this.state.gauge,
+          "Siding Finish":this.state.hardieFinish,
+          "Siding Size":this.state.hardieSize,
+          "Siding Colour":this.state.sidingColour,
+          "Roofing Type":this.state.roofTypeCustom||this.state.roofType,
+          "Roofing Profile":this.state.roofProfile,
+          "Roofing Metal Gauge":this.state.roofGauge,
+          "Roofing Colour":this.state.roofColour,
+          "Overhead Door Size":this.state.overheadSizeCustom||this.state.overheadSize,
+          "Overhead Door Series":this.state.overheadSeries,
+          "Overhead Door Style":this.state.overheadEliteStyle,
+          "Overhead Door Colour":this.state.overheadColour,
+          "Overhead Door Decorative Handle":this.state.overheadDecorativeHandle,
+          "Overhead Door Decorative Glass":this.state.overheadDecorativeHinge,
+          "Overhead Door Window Patern":this.state.overheadWindowPaternCustom||this.state.overheadWindowPatern,
+          "Overhead Door Glass Type":this.state.overheadGlassType,
+          "Overhead Door Glass Finish":this.state.overheadGlassFinish,
+          "Overhead Door Window Type":this.state.overheadWindowType,
+          "Overhead Door Frame Colour":this.state.overheadWindowFrameColour,
+          "Overhead Door Muntin Style":this.state.overheadMuntinStyle,
+          "Overhead Door Muntin Colour":this.state.overheadMuntinColour,
+          "Overhead Door Snap In Design":this.state.overheadSnapInDesign,
+          "Garage Door Opener Horse Power":this.state.gdoHp,
+          "Garage Door Opener Drive Type":this.state.gdoDrive,
+          "Garage Door Opener Additional Options":this.state.gdoOption,
+          "Additional Info": this.state.additionalInfo
+        }
+
         return (
             <div>
                 <button onClick={this.showBasic} className="basic">
@@ -604,47 +629,7 @@ class Garage extends React.Component {
                     title="Garage Info"
                     handleChange={this.handleSimpleStateChange}
                     state={this.state}
-                    stateList={this.state.toggleBasic ?
-                      {"Width":this.state.basic.garageWidth,
-                      "Length":this.state.basic.garageLength,
-                      "Siding":this.state.basic.siding,
-                      "ShingleColour":this.state.basic.shingleColour}
-                    :
-                      {"Width":this.state.customGarageWidth||this.state.garageWidth,
-                      "Length": this.state.customGarageLength||this.state.garageLength,
-                      "Height":this.state.heightCustom||this.state.garageHeight,
-                      "Stud Size":this.state.studSize,
-                      "Drywall":this.state.drywall,
-                      "Insulation":this.state.insulation,
-                      "Siding Type":this.state.sidingTypeCustom||this.state.sidingType,
-                      "Siding Profile":this.state.sidingProfile,
-                      "Siding Line":this.state.mittenLine,
-                      "Siding Gauge":this.state.gauge,
-                      "Siding Finish":this.state.hardieFinish,
-                      "Siding Size":this.state.hardieSize,
-                      "Siding Colour":this.state.sidingColour,
-                      "Roofing Type":this.state.roofTypeCustom||this.state.roofType,
-                      "Roofing Profile":this.state.roofProfile,
-                      "Roofing Metal Gauge":this.state.roofGauge,
-                      "Roofing Colour":this.state.roofColour,
-                      "Overhead Door Size":this.state.overheadSizeCustom||this.state.overheadSize,
-                      "Overhead Door Series":this.state.overheadSeries,
-                      "Overhead Door Style":this.state.overheadEliteStyle,
-                      "Overhead Door Colour":this.state.overheadColour,
-                      "Overhead Door Decorative Handle":this.state.overheadDecorativeHandle,
-                      "Overhead Door Decorative Glass":this.state.overheadDecorativeHinge,
-                      "Overhead Door Window Patern":this.state.overheadWindowPaternCustom||this.state.overheadWindowPatern,
-                      "Overhead Door Glass Type":this.state.overheadGlassType,
-                      "Overhead Door Glass Finish":this.state.overheadGlassFinish,
-                      "Overhead Door Window Type":this.state.overheadWindowType,
-                      "Overhead Door Frame Colour":this.state.overheadWindowFrameColour,
-                      "Overhead Door Muntin Style":this.state.overheadMuntinStyle,
-                      "Overhead Door Muntin Colour":this.state.overheadMuntinColour,
-                      "Overhead Door Snap In Design":this.state.overheadSnapInDesign,
-                      "Garage Door Opener Horse Power":this.state.gdoHp,
-                      "Garage Door Opener Drive Type":this.state.gdoDrive,
-                      "Garage Door Opener Additional Options":this.state.gdoOption}
-                    }
+                    stateList={this.state.toggleBasic ? DISPLAY_LIST_BASIC : DISPLAY_LIST_ADVANCED}
                 />
 
                 {!this.state.toggleBasic && <FileInput setFilesState={files => this.setState({files})}/>}
@@ -658,9 +643,9 @@ class Garage extends React.Component {
 
                 <UserInput
                     handleChange={this.handleSimpleStateChange}
-                    state={this.state.toggleBasic ? this.state.basic : this.omitBasic()}
                     requestType="Garage"
                     files={!this.state.toggleBasic && this.state.files}
+                    stateList={this.state.toggleBasic ? DISPLAY_LIST_BASIC : DISPLAY_LIST_ADVANCED}
                 />
             </div>
         );

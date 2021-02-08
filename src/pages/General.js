@@ -2,9 +2,6 @@ import {React, useState} from 'react'
 import '../App.css'
 import UserInput from "../Components/UserInput"
 import FileInput from '../Components/FileInput'
-//import QuoteInfo from "../Components/QuoteInfo";
-
-
 
 const General = props => {
     const [additionalInfo, setAdditionalInfo] = useState("")
@@ -24,8 +21,9 @@ const General = props => {
                     onChange={(e) => handleSimpleStateChange(e.target.value)}/>
         </section>
         <FileInput setFilesState={setFiles}/>
+
         <UserInput
-            state={{"Request": additionalInfo}}
+            stateList={{"Request": additionalInfo}}
             requestType="General"
             files={files}
         />
