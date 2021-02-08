@@ -1,3 +1,5 @@
+import Container from './Container'
+
 //Add code here to return a price
 const getPrice = (requirements, type) => {
     let price = "Error"
@@ -33,7 +35,7 @@ const valid = requirements => {
     return valid
 }
 
-const Price = props => <section className="infoSection">
+const Price = props => <Container className="infoSection">
     <h1>Price</h1>
     {valid(props.requirements) ? <section>
         <p>The price for your {props.type} is</p>
@@ -49,7 +51,7 @@ const Price = props => <section className="infoSection">
     </section> :
     <p>Please select all options to see a price</p>
     }
-</section>
+</Container>
 
 
 

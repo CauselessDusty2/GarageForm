@@ -1,8 +1,10 @@
 import React from 'react'
 
+import Container from './Container'
+
 const QuoteInfo = props => {
     return (
-        <section className="infoSection">
+        <Container className="infoSection">
             <label>Additional Info</label>
             <textarea
                 className="addInfoText textInput"
@@ -20,7 +22,7 @@ const QuoteInfo = props => {
                 })}
               </ul>
             }
-        </section>
+        </Container>
     )
 }
 

@@ -1,3 +1,7 @@
+body{
+  padding: 0 1em;
+}
+
 .fileInputButton{
   padding: 0.3em 1.8em;
   border-radius: 5px;
@@ -18,19 +22,13 @@
 .appContainer{
   display: flex;
   flex-direction: row;
-  min-height: 80vh;
   align-items: center;
-  background-color: lightgray;
   margin: 10vh;
-  padding: 0 2em;
   flex-wrap: wrap;
 }
 .cardContainer{
   display: flex;
   flex-wrap: wrap;
-  max-width: 648px;
-  background: lightgray;
-  padding: 0.5em;
   margin-bottom: 2em;
 }
 .fileContainer{

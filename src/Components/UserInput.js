@@ -1,6 +1,7 @@
 import React from 'react'
 import { Formik, Field, Form, ErrorMessage } from 'formik'
 import * as Yup from 'yup'
+import Container from './Container'
 
 const handleSubmit = async(body) => {
     alert(body)
@@ -62,37 +63,38 @@ const UserInput = props => {
             onSubmit={values => handleSubmit(getMessage(props.requestType, values.name, values.email, values.phoneNumber, props.files, props.stateList))}
         >
             {({ errors, touched, dirty }) => (
-                <Form className="infoSection">
+                <Container className="infoSection">
+                    <Form>
+                        <label>Name</label>
+                        <Field
+                            name="name"
+                            type="text"
+                            placeholder="John Doe"
+                            className="textInput"
+                        />
+                        {errors.name && touched.name && <div>{errors.name}</div>}
 
-                    <label>Name</label>
-                    <Field
-                        name="name"
-                        type="text"
-                        placeholder="John Doe"
-                        className="textInput"
-                    />
-                    {errors.name && touched.name && <div>{errors.name}</div>}
+                        <label>Email</label>
+                        <Field
+                            name="email"
+                            type="text"
+                            placeholder="john@doe.com"
+                            className="textInput"
+                        />
+                        {errors.email && touched.email && <div>{errors.email}</div>}
 
-                    <label>Email</label>
-                    <Field
-                        name="email"
-                        type="text"
-                        placeholder="john@doe.com"
-                        className="textInput"
-                    />
-                    {errors.email && touched.email && <div>{errors.email}</div>}
+                        <label>Phone Number</label>
+                        <Field
+                            name="phoneNumber"
+                            type="text"
+                            placeholder="123-456-7890"
+                            className="textInput"
+                        />
+                        {errors.phoneNumber && touched.phoneNumber && <div>{errors.phoneNumber}</div>}
 
-                    <label>Phone Number</label>
-                    <Field
-                        name="phoneNumber"
-                        type="text"
-                        placeholder="123-456-7890"
-                        className="textInput"
-                    />
-                    {errors.phoneNumber && touched.phoneNumber && <div>{errors.phoneNumber}</div>}
-
-                    <button type="submit" disabled={!!errors.phoneNumber || !!errors.name || !!errors.email || !touched.name}>Submit</button>
-                </Form>
+                        <button type="submit" disabled={!!errors.phoneNumber || !!errors.name || !!errors.email || !touched.name}>Submit</button>
+                    </Form>
+                </Container>
             )}
         </Formik>
     )

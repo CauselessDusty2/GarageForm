@@ -1,6 +1,7 @@
 import React from 'react'
 import Card from './Card'
 import PropTypes from 'prop-types'
+import Container from './Container'
 
 const CardContainer = props => {
     return (
@@ -9,7 +10,7 @@ const CardContainer = props => {
                 {props.title}
             </div>
             <summary className="cardContainerSummary">{props.summary}</summary>
-            <span className="cardContainer">
+            <Container className="cardContainer">
                 {props.list && props.list.map( (item, i)=>
                     <Card
                         key={i}
@@ -40,7 +41,7 @@ const CardContainer = props => {
                         props.customClickHandler(props.stateGroup + "Custom", e.target.value)
                     }}
                 />}
-            </span>
+            </Container>
         </section>
     )
 }

@@ -1,6 +1,7 @@
 import {React, useState} from 'react'
 import Card from './Card'
 import '../App.css'
+import Container from './Container'
 
 const imageFileTypes = [
   "image/apng",
@@ -35,7 +36,7 @@ const FileInput = props => {
     }
 
     return(
-      <section className="infoSection">
+      <Container className="infoSection">
           <label for="file_upload" className="fileInputButton">Select images or pdfs to upload</label>
           <input type="file" id="file_upload" name="file_upload" className="file_upload" accept="image/*, .pdf" multiple onChange={(e) => handleFileUpload(e.target.files)}/>
 
@@ -49,7 +50,7 @@ const FileInput = props => {
               return null
             })}
           </div>
-      </section>
+      </Container>
     )
 }
 
