@@ -1,21 +1,11 @@
 import React from 'react'
 import { Formik, Field, Form, ErrorMessage } from 'formik'
 import * as Yup from 'yup'
+import Container from './Container'
 
-const handleSubmit = async(name, email, phoneNumber, state) => {
-    console.log("Submit Clicked and user input has been validated")
-    //state is an object that contains all the state values in App.js, I have destructured it so there is a variable for each value.
-    //if an option was not selected the value of the variable will be ''
-
-    /*let {basic, additionalInfo, basicWidth, basicLength, basicSiding, basicShingleColour,
-        width, length, height, studSize, sidingType, sidingProfiles, mittenLine, gauge,
-        hardieFinish, hardieSize, sidingColour, drywall, insulation, overheadsize,
-        overheadSeries, overheadEliteStyle, overheadColour, overheadWindowPatern,
-        overheadWindowType, overheadGlassfinish, overheadWindowFrameColour,
-        overheadMuntinStyle, overheadMuntinColour, overheadSnapInDesign,
-        overheadGlassType, overheadDecorativeHandle, overheadDecorativeHinge, gdoHP,
-        gdoDrive, gdoOption, roofType, roofProfile, roofGauge, roofColour} = state
-    */
+const handleSubmit = async(body) => {
+    alert(body)
+    //PLACE CODE HERE
 }
 
 const initialValues = {
@@ -27,79 +17,84 @@ const initialValues = {
         }
 }
 
-const phoneRegExp = /^([1-9][0-9]{2}-){2}[0-9]{4}$/
+const phoneRegExp = /^(1? ?\(?)-?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/
+
+const validationSchema = Yup.object().shape({
+  name: Yup.string()
+    .min(2, 'Too Short!')
+    .max(100, "Too Long")
+    .required('Required'),
+  email: Yup.string()
+    .email('Invalid Email')
+    .required('Required'),
+  phoneNumber: Yup.string()
+  .matches(phoneRegExp,"Not a valid phone number")
+  .required('Required')
+})
+
+const getMessage = (requestType, name, email, phoneNumber, files, stateList) => {
+  let body = ""
+  body += `${requestType} quote request\n\n`
+  body += `Customer Name: ${name}\n`
+  body += `Customer Email: ${email}\n`
+  body += `Customer Phone Number: ${phoneNumber}\n\n`
+
+  {stateList &&
+      Object.keys(stateList).map( (key, index) => {
+        body+=  stateList[key] ? `${key}: ${stateList[key]}\n` : ""
+      })
+  }
+
+  body += files ? "\nFiles:\n" : ""
+
+  {files && Object.keys(files).map(key => {
+    body+= `${files[key].name}\n`
+  })}
+
+  return body
+}
 
 const UserInput = props => {
     return(
         <Formik
             initialValues={initialValues}
-            validationSchema={Yup.object({
-                customerInfo: Yup.object({
-                    name: Yup.string().required('Required'),
-                    email: Yup.string()
-                        .email('Invalid email!')
-                        .required('Required'),
-                    phoneNumber: Yup.string().matches(phoneRegExp,"Not a valid phone number").required('Required')
-                })
-            })}
-            onSubmit={values => handleSubmit(values.customerInfo.name, values.customerInfo.email, values.customerInfo.phoneNumber, props.state)}
+            dirty
+            validationSchema={validationSchema}
+            onSubmit={values => handleSubmit(getMessage(props.requestType, values.name, values.email, values.phoneNumber, props.files, props.stateList))}
         >
-            {({ values, setFieldValue }) => (
-                <Form className="infoSection">
-                    {/*Only allows numeric input*/}
- s                   {values.customerInfo.phoneNumber.length !== 0
-                    && parseInt(values.customerInfo.phoneNumber.charAt(values.customerInfo.phoneNumber.length-1)) !== 0
-                    && !parseInt(values.customerInfo.phoneNumber.charAt(values.customerInfo.phoneNumber.length-1))
-                    && setFieldValue('customerInfo.phoneNumber', values.customerInfo.phoneNumber.slice(0,values.customerInfo.phoneNumber.length-1))}
+            {({ errors, touched, dirty }) => (
+                <Container className="infoSection">
+                    <Form>
+                        <label>Name</label>
+                        <Field
+                            name="name"
+                            type="text"
+                            placeholder="John Doe"
+                            className="textInput"
+                        />
+                        {errors.name && touched.name && <div>{errors.name}</div>}
 
-                    {/*adds a - when adding the fourth character*/}
-                    {values.customerInfo.phoneNumber.length===4
-                    && values.customerInfo.phoneNumber.charAt(3) !== '-'
-                    && setFieldValue('customerInfo.phoneNumber', values.customerInfo.phoneNumber.slice(0,3) + '-' + values.customerInfo.phoneNumber.slice(3,4))}
+                        <label>Email</label>
+                        <Field
+                            name="email"
+                            type="text"
+                            placeholder="john@doe.com"
+                            className="textInput"
+                        />
+                        {errors.email && touched.email && <div>{errors.email}</div>}
 
-                    {/*adds a - when adding the 8th character*/}
-                    {values.customerInfo.phoneNumber.length===8
-                    && values.customerInfo.phoneNumber.charAt(7) !== '-'
-                    && setFieldValue('customerInfo.phoneNumber', values.customerInfo.phoneNumber.slice(0,7) + '-' + values.customerInfo.phoneNumber.slice(7,8))}
+                        <label>Phone Number</label>
+                        <Field
+                            name="phoneNumber"
+                            type="text"
+                            placeholder="123-456-7890"
+                            className="textInput"
+                        />
+                        {errors.phoneNumber && touched.phoneNumber && <div>{errors.phoneNumber}</div>}
 
-                    <label>Name</label>
-                    <Field
-                        name="customerInfo.name"
-                        type="text"
-                        placeholder="John Doe"
-                        className="textInput"
-                    />
-                    <ErrorMessage
-                        name="customerInfo.name">
-                        {msg => <div className="errorMsg">{msg}</div>}
-                    </ErrorMessage>
-
-                    <label>Email</label>
-                    <Field
-                        name="customerInfo.email"
-                        type="text"
-                        placeholder="john@doe.com"
-                        className="textInput"
-                    />
-                    <ErrorMessage
-                        name="customerInfo.email">
-                        {msg => <div className="errorMsg" >{msg}</div>}
-                    </ErrorMessage>
-
-                    <label>Phone Number</label>
-                    <Field
-                        name="customerInfo.phoneNumber"
-                        type="text"
-                        placeholder="123-456-7890"
-                        className="textInput"
-                    />
-                    <ErrorMessage
-                        name="customerInfo.phoneNumber">
-                        {msg => <div className="errorMsg">{msg}</div>}
-                    </ErrorMessage>
-
-                    <button type="submit">Submit</button>
-                </Form>
+                        <button type="submit" disabled={!!errors.phoneNumber || !!errors.name || !!errors.email || !touched.name}>Submit</button>
+                    </Form>
+                </Container>
             )}
         </Formik>
     )

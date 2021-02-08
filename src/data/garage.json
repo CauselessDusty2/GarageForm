@@ -1,0 +1,777 @@
+{
+  "basicWidth" : [
+      {"value": "12", "imgSrc": "../img/12.png"},
+      {"value": "14", "imgSrc": "../img/14.png"},
+      {"value": "16", "imgSrc": "../img/16.png"},
+      {"value": "18", "imgSrc": "../img/18.png"},
+      {"value": "20", "imgSrc": "../img/20.png"},
+      {"value": "22", "imgSrc": "../img/22.png"},
+      {"value": "24", "imgSrc": "../img/24.png"},
+      {"value": "26", "imgSrc": "../img/26.png"},
+      {"value": "28", "imgSrc": "../img/28.png"},
+      {"value": "30", "imgSrc": "../img/30.png"}
+  ],
+  "width" : [
+      {"value": "12", "imgSrc": "../img/12.png"},
+      {"value": "14", "imgSrc": "../img/14.png"},
+      {"value": "16", "imgSrc": "../img/16.png"},
+      {"value": "18", "imgSrc": "../img/18.png"},
+      {"value": "20", "imgSrc": "../img/20.png"},
+      {"value": "22", "imgSrc": "../img/22.png"},
+      {"value": "24", "imgSrc": "../img/24.png"},
+      {"value": "26", "imgSrc": "../img/26.png"},
+      {"value": "28", "imgSrc": "../img/28.png"},
+      {"value": "30", "imgSrc": "../img/30.png"},
+      {"value": "Other"}
+  ],
+  "basicWidthAlt" : [
+      {"value": "16", "imgSrc": "../img/16.png"},
+      {"value": "18", "imgSrc": "../img/18.png"},
+      {"value": "20", "imgSrc": "../img/20.png"},
+      {"value": "22", "imgSrc": "../img/22.png"},
+      {"value": "24", "imgSrc": "../img/24.png"},
+      {"value": "26", "imgSrc": "../img/26.png"},
+      {"value": "28", "imgSrc": "../img/28.png"},
+      {"value": "30", "imgSrc": "../img/30.png"}
+  ],
+  "widthAlt" : [
+      {"value": "16", "imgSrc": "../img/16.png"},
+      {"value": "18", "imgSrc": "../img/18.png"},
+      {"value": "20", "imgSrc": "../img/20.png"},
+      {"value": "22", "imgSrc": "../img/22.png"},
+      {"value": "24", "imgSrc": "../img/24.png"},
+      {"value": "26", "imgSrc": "../img/26.png"},
+      {"value": "28", "imgSrc": "../img/28.png"},
+      {"value": "30", "imgSrc": "../img/30.png"},
+      {"value": "Other"}
+  ],
+  "basicLength" : [
+      {"value": "20", "imgSrc": "../img/20.png"},
+      {"value": "22", "imgSrc": "../img/22.png"},
+      {"value": "24", "imgSrc": "../img/24.png"},
+      {"value": "26", "imgSrc": "../img/26.png"},
+      {"value": "28", "imgSrc": "../img/28.png"},
+      {"value": "30", "imgSrc": "../img/30.png"},
+      {"value": "32", "imgSrc": "../img/32.png"},
+      {"value": "34", "imgSrc": "../img/34.png"},
+      {"value": "36", "imgSrc": "../img/36.png"},
+      {"value": "38", "imgSrc": "../img/38.png"},
+      {"value": "40", "imgSrc": "../img/40.png"}
+  ],
+  "length" : [
+      {"value": "20", "imgSrc": "../img/20.png"},
+      {"value": "22", "imgSrc": "../img/22.png"},
+      {"value": "24", "imgSrc": "../img/24.png"},
+      {"value": "26", "imgSrc": "../img/26.png"},
+      {"value": "28", "imgSrc": "../img/28.png"},
+      {"value": "30", "imgSrc": "../img/30.png"},
+      {"value": "32", "imgSrc": "../img/32.png"},
+      {"value": "34", "imgSrc": "../img/34.png"},
+      {"value": "36", "imgSrc": "../img/36.png"},
+      {"value": "38", "imgSrc": "../img/38.png"},
+      {"value": "40", "imgSrc": "../img/40.png"},
+      {"value": "Other"}
+  ],
+  "basicLengthAlt" : [
+      {"value": "20", "imgSrc": "../img/20.png"},
+      {"value": "22", "imgSrc": "../img/22.png"},
+      {"value": "24", "imgSrc": "../img/24.png"},
+      {"value": "26", "imgSrc": "../img/26.png"},
+      {"value": "28", "imgSrc": "../img/28.png"},
+      {"value": "30", "imgSrc": "../img/30.png"}
+  ],
+  "lengthAlt" : [
+      {"value": "20", "imgSrc": "../img/20.png"},
+      {"value": "22", "imgSrc": "../img/22.png"},
+      {"value": "24", "imgSrc": "../img/24.png"},
+      {"value": "26", "imgSrc": "../img/26.png"},
+      {"value": "28", "imgSrc": "../img/28.png"},
+      {"value": "30", "imgSrc": "../img/30.png"},
+      {"value": "Other"}
+  ],
+  "siding" : [
+      {
+          "value":"Vinyl - Frost",
+          "imgSrc":"https://www.mittensiding.com/upload/mproducts/colors/thumb/sentry-frost-sm.jpg"
+      },{
+          "value":"Vinyl - Brownstone",
+          "imgSrc":"https://www.mittensiding.com/upload/mproducts/colors/thumb/sentry-brownstone-sm.jpg"
+      },{
+          "value":"Vinyl - Stratus",
+          "imgSrc":"https://www.mittensiding.com/upload/mproducts/colors/thumb/sentry-stratus-sm.jpg"
+      },{
+          "value":"No Siding",
+          "imgSrc":"https://garagedoorcompanyoseo.com/wp-content/uploads/2020/03/0C04C2E9-0965-4674-AC0A-E784F85833A8-rotated.jpg"
+      }
+  ],
+  "shingleColour" : [
+      {
+          "value":"Desert Tan",
+          "imgSrc":"https://dcpd6wotaa0mb.cloudfront.net/mdms/uploads/shingle_colors/swatch_160x160s/000/000/208/original/PYS_TruDefDur_DesertTan_768x768_72dpi.jpg?1503324909"
+      },{
+          "value":"Brownwood",
+          "imgSrc":"https://dcpd6wotaa0mb.cloudfront.net/mdms/uploads/shingle_colors/swatch_160x160s/000/000/205/original/PYS_TruDefDur_Brownwood_768x768_72dpi.jpg?1503324906"
+      },{
+          "value":"Teak",
+          "imgSrc":"https://dcpd6wotaa0mb.cloudfront.net/mdms/uploads/shingle_colors/swatch_160x160s/000/000/218/original/PYS_TruDefDur_Teak_768x768_72dpi.jpg?1503324920"
+      },{
+          "value":"Driftwood",
+          "imgSrc":"https://dcpd6wotaa0mb.cloudfront.net/mdms/uploads/shingle_colors/swatch_160x160s/000/000/209/original/open-uri20200811-17537-sxvbzb?1597169699"
+      },{
+          "value":"Onyx Black",
+          "imgSrc":"https://dcpd6wotaa0mb.cloudfront.net/mdms/uploads/shingle_colors/swatch_160x160s/000/000/212/original/PYS_TruDefDur_OnyxBlack_768x768_72dpi.jpg?1503324914"
+      },{
+          "value":"Estate Gray",
+          "imgSrc":"https://dcpd6wotaa0mb.cloudfront.net/mdms/uploads/shingle_colors/swatch_160x160s/000/000/210/original/PYS_TruDefDur_EstateGray_768x768_72dpi.jpg?1503324912"
+      },{
+          "value":"Sierra Gray",
+          "imgSrc":"https://dcpd6wotaa0mb.cloudfront.net/mdms/uploads/shingle_colors/swatch_160x160s/000/000/216/original/PYS_TruDefDur_SierraGray_768x768_72dpi.jpg?1503324918"
+      },{
+          "value":"Quarry Gray",
+          "imgSrc":"https://dcpd6wotaa0mb.cloudfront.net/mdms/uploads/shingle_colors/swatch_160x160s/000/000/214/original/PYS_TruDefDur_QuarryGray_768x768_72dpi.jpg?1503324916"
+      },{
+          "value":"Harbor Blue",
+          "imgSrc":"https://dcpd6wotaa0mb.cloudfront.net/mdms/uploads/shingle_colors/swatch_160x160s/000/000/211/original/PYS_TruDefDur_HarborBlue_768x768_72dpi.jpg?1503324913"
+      },{
+          "value":"Chareau Green",
+          "imgSrc":"https://dcpd6wotaa0mb.cloudfront.net/mdms/uploads/shingle_colors/swatch_160x160s/000/000/206/original/PYS_TruDefDur_ChateauGreen_768x768_72dpi.jpg?1503324907"
+      }
+  ],
+  "height" : [
+      {"value": "8ft", "imgSrc": ""},
+      {"value": "10ft", "imgSrc": ""},
+      {"value": "Other"}
+  ],
+  "studSize" : [
+      {"value": "2x4", "imgSrc": ""},
+      {"value": "2x6", "imgSrc": ""},
+      {"value": "Unsure", "imgSrc": ""}
+  ],
+  "sidingType" : [
+      {"value": "Mitten Vinyl", "imgSrc": "https://www.mittensiding.com/upload/mproducts/10/sentry-richmond-red.jpg"},
+      {"value": "Stucco Prep", "imgSrc": ""},
+      {"value": "Domtek Metal", "imgSrc": "http://www.domtek.ca/wp-content/uploads/2016/09/agricultural.jpg"},
+      {"value": "Canexel", "imgSrc": "https://canexel.ca/wp-content/themes/jsb/imports/images/inspiration-1.jpg"},
+      {"value": "KWP", "imgSrc": "https://www.kwpproducts.com/wp-content/uploads/2017/04/rustic-gray.jpg"},
+      {"value": "Hardie", "imgSrc": "https://www.jameshardie.ca/JamesHardieNorthAmerica/media/Home/Highlights/ColorThatLast_SmallImage.jpg?ext=.jpg"},
+      {"value": "Unsure", "imgSrc": ""},
+      {"value": "Other"}
+  ],
+  "vinylSidingProfiles" : [
+      {"value": "Double 4\" Dutchlap", "imgSrc": "https://www.mittensiding.com/upload/mproducts/profiles/d4-dutchlap-nickel-profile_2.jpg"},
+      {"value": "Double 4.5\" Dutchlap", "imgSrc": "https://www.mittensiding.com/upload/mproducts/profiles/sentry-d45dl-huron-blue-profile.jpg"},
+      {"value": "Double 5\" Dutchlap", "imgSrc": "https://www.mittensiding.com/upload/mproducts/profiles/d5-dutchlap-bone-profile.jpg"},
+      {"value": "Double 4\" Horizontal", "imgSrc": "https://www.mittensiding.com/upload/mproducts/profiles/sentry-d4h-yukon-grey-profile.jpg"},
+      {"value": "Double 4.5\" Horizontal", "imgSrc": "https://www.mittensiding.com/upload/mproducts/profiles/d45h-cypress-profile.jpg"},
+      {"value": "Double 5\" Horizontal", "imgSrc": "https://www.mittensiding.com/upload/mproducts/profiles/d5h-brownstone-profile.jpg"},
+      {"value": "Triple Three", "imgSrc": "https://www.mittensiding.com/upload/mproducts/profiles/t3-khaki-brown-profile_2.jpg"},
+      {"value": "Double 5\" Vertical", "imgSrc": "https://www.mittensiding.com/upload/mproducts/profiles/d5-vertical-satin-grey-profile.jpg"},
+      {"value": "Board & Batten", "imgSrc": "https://www.mittensiding.com/upload/mproducts/profiles/sentry-bnb-rockaway-grey-profile.jpg"},
+      {"value": "Unsure", "imgSrc": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPmZH3hkaoPDIdnJtwIKTz1XakSVX6zIAkfw&usqp=CAU"}
+  ],
+  "domtekProfiles" : [
+      {"value": "Pro-Lock", "imgSrc": "http://www.domtek.ca/wp-content/uploads/2016/09/feat_prolock.jpg"},
+      {"value": "Pro-Rib", "imgSrc": "http://www.domtek.ca/wp-content/uploads/2016/10/feat_prorib.jpg"},
+      {"value": "Tuff-Rib", "imgSrc": "http://www.domtek.ca/wp-content/uploads/2016/10/feat_tuffrib.jpg"},
+      {"value": "Lo-Rib", "imgSrc": "http://www.domtek.ca/wp-content/uploads/2016/10/feat_lorib.jpg"},
+      {"value": "PB-Rib", "imgSrc": "http://www.domtek.ca/wp-content/uploads/2016/10/feat_pbrib.jpg"},
+      {"value": "7/8 Corrugated", "imgSrc": "http://www.domtek.ca/wp-content/uploads/2019/05/feat_corrugated.jpg"},
+      {"value": "Unsure", "imgSrc": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPmZH3hkaoPDIdnJtwIKTz1XakSVX6zIAkfw&usqp=CAU"}
+  ],
+  "canexelProfiles" : [
+      {"value": "Ced’R-Vue 6\" Snap Lap", "imgSrc": "https://canexel.ca/wp-content/themes/jsb/imports/images/cedr-vue-big.jpg"},
+      {"value": "Ced’R-Vue 8\" Lap", "imgSrc": "https://canexel.ca/wp-content/themes/jsb/imports/images/cedr-vue-big.jpg"},
+      {"value": "Ridgewood D-5", "imgSrc": "https://canexel.ca/wp-content/themes/jsb/imports/images/ridgewood-big.jpg"},
+      {"value": "Ultraplank", "imgSrc": "https://canexel.ca/wp-content/themes/jsb/imports/images/ultraplank-big.jpg"},
+      {"value": "Unsure", "imgSrc": ""}
+  ],
+  "kwpProfiles" : [
+      {"value": "Prestige Double 5\" Dutch Lap", "imgSrc": "https://www.kwpproducts.com/wp-content/uploads/2016/01/PRESTIGE_CEDER.png"},
+      {"value": "Laurentian 8 ½\" Bevel", "imgSrc": "https://www.kwpproducts.com/wp-content/uploads/2016/01/LAURENTIAN_ALMOND.png"},
+      {"value": "Provincial double 5\" Vertical", "imgSrc": "https://www.kwpproducts.com/wp-content/uploads/2016/01/PROVINCIAL_REDpng.png"},
+      {"value": "Bold 6\"", "imgSrc": "https://www.kwpproducts.com/wp-content/uploads/2016/01/BOLD_KHAKI-100x100.png"},
+      {"value": "Bold 8\"", "imgSrc": "https://www.kwpproducts.com/wp-content/uploads/2016/01/BOLD_KHAKI-100x100.png"},
+      {"value": "Rustics", "imgSrc": "https://www.kwpproducts.com/wp-content/uploads/2018/07/yellowstone_rustic_400x400-300x300.jpg"},
+      {"value": "Smooth", "imgSrc": "https://www.kwpproducts.com/wp-content/uploads/2016/01/SMOOTH_SIERRA.png"},
+      {"value": "Unsure", "imgSrc": ""}
+  ],
+  "hardieProfiles" : [
+      {"value": "HardiePlank Lap Siding", "imgSrc": "https://www.jameshardie.ca/JamesHardieNorthAmerica/media/Navigation/Products/menu-hardieplank-lap-siding.jpg?ext=.jpg"},
+      {"value": "HardiePanel Vertical Siding", "imgSrc": "https://www.jameshardie.ca/JamesHardieNorthAmerica/media/Navigation/Products/menu-hardiepanel-vertical-siding.jpg?ext=.jpg"},
+      {"value": "Unsure", "imgSrc": ""}
+  ],
+  "vinylLineOne" : [
+      {"value": "Sentry", "imgSrc": "https://www.mittensiding.com/upload/mproducts/10/sentry-showcase.jpg"},
+      {"value": "Sentry Variegated", "imgSrc": "https://www.mittensiding.com/upload/mproducts/444/arctic-2.jpg"}
+  ],
+  "vinylLineTwo" : [
+      {"value": "Sentry", "imgSrc": "https://www.mittensiding.com/upload/mproducts/10/sentry-showcase.jpg"},
+      {"value": "Sentry Variegated", "imgSrc": "https://www.mittensiding.com/upload/mproducts/444/arctic-2.jpg"},
+      {"value": "Highland", "imgSrc": "https://www.mittensiding.com/upload/mproducts/69/highland-ash.jpg"},
+      {"value": "Oregon Pride", "imgSrc": "https://www.mittensiding.com/upload/mproducts/9/op-frost.jpg"}
+  ],
+  "vinylLineThree" : [
+      {"value": "Highland", "imgSrc": "https://www.mittensiding.com/upload/mproducts/69/highland-ash.jpg"}
+  ],
+  "vinylLineFour" : [
+      {"value": "Highland", "imgSrc": "https://www.mittensiding.com/upload/mproducts/69/highland-ash.jpg"},
+      {"value": "Oregon Pride", "imgSrc": "https://www.mittensiding.com/upload/mproducts/9/op-frost.jpg"}
+  ],
+  "vinylLineFive" : [
+      {"value": "Oregon Pride", "imgSrc": "https://www.mittensiding.com/upload/mproducts/9/op-frost.jpg"}
+  ],
+  "mittenVariegatedColours" : [
+      {"value":"Burnt Sienna", "imgSrc": "https://www.mittensiding.com/upload/mproducts/colors/thumb/variegated-d4h-burnt-sienna-webheader-box.jpg"},
+      {"value":"Farmhouse", "imgSrc": "https://www.mittensiding.com/upload/mproducts/colors/thumb/variegated-d4h-farmhouse-webheader-box.jpg"},
+      {"value":"Arctic Grey", "imgSrc": "https://www.mittensiding.com/upload/mproducts/colors/thumb/variegated-d4h-arctic-grey-webheader-box.jpg"},
+      {"value":"Hemlock", "imgSrc": "https://www.mittensiding.com/upload/mproducts/colors/thumb/variegated-d4h-hemlock-webheader-box.jpg"}
+  ],
+  "mittenBoldPremiumColours" : [
+      {"value":"Yukon Grey", "imgSrc": "https://www.mittensiding.com/upload/mproducts/colors/thumb/yukon-grey-box.jpg"},
+      {"value":"Huron Blue", "imgSrc": "https://www.mittensiding.com/upload/mproducts/colors/thumb/huron-blue-box.jpg"},
+      {"value":"Timber Bark", "imgSrc": "https://www.mittensiding.com/upload/mproducts/colors/thumb/sentry-timber-bark-sm.jpg"},
+      {"value":"Lighthouse Red", "imgSrc": "https://www.mittensiding.com/upload/mproducts/colors/thumb/sentry-lighthouse-red-sm.jpg"},
+      {"value":"Sapphire Blue", "imgSrc": "https://www.mittensiding.com/upload/mproducts/colors/thumb/sentry-sapphire-blue-sm.jpg"},
+      {"value":"Regatta Blue", "imgSrc": "https://www.mittensiding.com/upload/mproducts/colors/thumb/sentry-regatta-blue-sm.jpg"},
+      {"value":"Burnt Orange", "imgSrc": "https://www.mittensiding.com/upload/mproducts/colors/thumb/sentry-burnt-orange-sm.jpg"},
+      {"value":"Eggplant", "imgSrc": "https://www.mittensiding.com/upload/mproducts/colors/thumb/sentry-eggplant-sm.jpg"},
+      {"value":"Annapolis Blue", "imgSrc": "https://www.mittensiding.com/upload/mproducts/colors/thumb/sentry-annapolis-blue-sm.jpg"},
+      {"value":"Aviator Green", "imgSrc": "https://www.mittensiding.com/upload/mproducts/colors/thumb/sentry-aviator-green-sm.jpg"},
+      {"value":"Richmond Red", "imgSrc": "https://www.mittensiding.com/upload/mproducts/colors/thumb/sentry-richmond-red-sm.jpg"},
+      {"value":"Gunmetal Grey", "imgSrc": "https://www.mittensiding.com/upload/mproducts/colors/thumb/sentry-gunmetal-grey-sm.jpg"},
+      {"value":"Coffee Bean", "imgSrc": "https://www.mittensiding.com/upload/mproducts/colors/thumb/sentry-coffee-bean-sm.jpg"},
+      {"value":"Grenadier Green", "imgSrc": "https://www.mittensiding.com/upload/mproducts/colors/thumb/sentry-grenadier-green-sm.jpg"},
+      {"value":"Muskoka Green", "imgSrc": "https://www.mittensiding.com/upload/mproducts/colors/thumb/sentry-muskoka-green-sm.jpg"},
+      {"value":"Khaki Brown", "imgSrc": "https://www.mittensiding.com/upload/mproducts/colors/thumb/sentry-khaki-brown-sm.jpg"},
+      {"value":"Caribou Brown", "imgSrc": "https://www.mittensiding.com/upload/mproducts/colors/thumb/sentry-caribou-brown-sm.jpg"},
+      {"value":"Chestnut Brown", "imgSrc": "https://www.mittensiding.com/upload/mproducts/colors/thumb/sentry-chestnut-brown-sm.jpg"},
+      {"value":"Rockaway Grey", "imgSrc": "https://www.mittensiding.com/upload/mproducts/colors/thumb/sentry-rockaway-grey-sm.jpg"}
+  ],
+  "mittenStandardColours" : [
+      {"value":"Frost", "imgSrc": "https://www.mittensiding.com/upload/mproducts/colors/thumb/sentry-frost-sm.jpg"},
+      {"value":"Bone", "imgSrc": "https://www.mittensiding.com/upload/mproducts/colors/thumb/sentry-bone-sm.jpg"},
+      {"value":"Ivory", "imgSrc": "https://www.mittensiding.com/upload/mproducts/colors/thumb/sentry-ivory-sm.jpg"},
+      {"value":"Cypress", "imgSrc": "https://www.mittensiding.com/upload/mproducts/colors/thumb/sentry-cypress-sm.jpg"},
+      {"value":"Stratus", "imgSrc": "https://www.mittensiding.com/upload/mproducts/colors/thumb/sentry-stratus-sm.jpg"},
+      {"value":"Flagstone", "imgSrc": "https://www.mittensiding.com/upload/mproducts/colors/thumb/sentry-flagstone-sm.jpg"},
+      {"value":"Brownstone", "imgSrc": "https://www.mittensiding.com/upload/mproducts/colors/thumb/sentry-brownstone-sm.jpg"},
+      {"value":"Clay", "imgSrc": "https://www.mittensiding.com/upload/mproducts/colors/thumb/sentry-clay-sm.jpg"},
+      {"value":"Hearthstone", "imgSrc": "https://www.mittensiding.com/upload/mproducts/colors/thumb/sentry-hearthstone-sm.jpg"},
+      {"value":"Sandalwood", "imgSrc": "https://www.mittensiding.com/upload/mproducts/colors/thumb/sentry-sandcastle-sm.jpg"},
+      {"value":"Ash", "imgSrc": "https://www.mittensiding.com/upload/mproducts/colors/thumb/sentry-ash-sm.jpg"},
+      {"value":"Sandcastle", "imgSrc": "https://www.mittensiding.com/upload/mproducts/colors/thumb/sentry-sandalwood-sm.jpg"},
+      {"value":"Lite Maple", "imgSrc": "https://www.mittensiding.com/upload/mproducts/colors/thumb/sentry-lite-maple-sm.jpg"},
+      {"value":"Saffron", "imgSrc": "https://www.mittensiding.com/upload/mproducts/colors/thumb/sentry-saffron-sm-.jpg"},
+      {"value":"Satin Grey", "imgSrc": "https://www.mittensiding.com/upload/mproducts/colors/thumb/sentry-satin-grey-sm.jpg"},
+      {"value":"Sage", "imgSrc": "https://www.mittensiding.com/upload/mproducts/colors/thumb/sentry-sage-sm.jpg"},
+      {"value":"Nickel", "imgSrc": "https://www.mittensiding.com/upload/mproducts/colors/thumb/sentry-nickelsampler.jpg"},
+      {"value":"Indigo", "imgSrc": "https://www.mittensiding.com/upload/mproducts/colors/thumb/sentry-indigosample.jpg"}
+  ],
+  "mittenHighlandSpecificColours" : [
+      {"value":"Khaki Brown", "imgSrc": "https://www.mittensiding.com/upload/mproducts/colors/thumb/sentry-khaki-brown-sm.jpg"},
+      {"value":"Rockaway Grey", "imgSrc": "https://www.mittensiding.com/upload/mproducts/colors/thumb/sentry-rockaway-grey-sm.jpg"},
+      {"value":"Grenadier Green", "imgSrc": "https://www.mittensiding.com/upload/mproducts/colors/thumb/sentry-grenadier-green-sm.jpg"}
+  ],
+  "domtek26Colours" : [
+      {"value":"White White", "imgSrc": "http://www.domtek.ca/wp-content/uploads/2016/09/colour_white.gif"},
+      {"value":"Brite White", "imgSrc": "http://www.domtek.ca/wp-content/uploads/2016/09/colour_brite.gif"},
+      {"value":"Bone White", "imgSrc": "http://www.domtek.ca/wp-content/uploads/2016/09/colour_bone.gif"},
+      {"value":"Black", "imgSrc": "http://www.domtek.ca/wp-content/uploads/2016/09/colour_black.gif"},
+      {"value":"Melcher's Green", "imgSrc": "http://www.domtek.ca/wp-content/uploads/2016/09/colour_melchers.gif"},
+      {"value":"Barn Red", "imgSrc": "http://www.domtek.ca/wp-content/uploads/2016/09/colour_barn.gif"},
+      {"value":"Gold", "imgSrc": "http://www.domtek.ca/wp-content/uploads/2016/09/colour_gold.gif"},
+      {"value":"Dark Brown", "imgSrc": "http://www.domtek.ca/wp-content/uploads/2016/09/colour_dark.gif"},
+      {"value":"Coffee Brown", "imgSrc": "http://www.domtek.ca/wp-content/uploads/2016/09/colour_coffee.gif"},
+      {"value":"Charcoal", "imgSrc": "http://www.domtek.ca/wp-content/uploads/2016/09/colour_charcoal-1.gif"},
+      {"value":"Copper Penny", "imgSrc": "http://www.domtek.ca/wp-content/uploads/2016/09/colour_copper_penny.gif"},
+      {"value":"Galvalume", "imgSrc": "http://www.domtek.ca/wp-content/uploads/2016/09/colour_galvalume.jpg"}
+  ],
+  "domtek24Colours" : [
+      {"value":"White White", "imgSrc": "http://www.domtek.ca/wp-content/uploads/2016/09/colour_white.gif"},
+      {"value":"Black", "imgSrc": "http://www.domtek.ca/wp-content/uploads/2016/09/colour_black.gif"},
+      {"value":"Dark Brown", "imgSrc": "http://www.domtek.ca/wp-content/uploads/2016/09/colour_dark.gif"},
+      {"value":"Charcoal", "imgSrc": "http://www.domtek.ca/wp-content/uploads/2016/09/colour_charcoal-1.gif"},
+      {"value":"Regent Grey", "imgSrc": "http://www.domtek.ca/wp-content/uploads/2016/09/colour_regent.gif"},
+      {"value":"Metallic Copper", "imgSrc": "http://www.domtek.ca/wp-content/uploads/2016/09/colour_copper.jpg"},
+      {"value":"Silver Metallic", "imgSrc": "http://www.domtek.ca/wp-content/uploads/2016/09/colour_silver.jpg"},
+      {"value":"Galvalume", "imgSrc": "http://www.domtek.ca/wp-content/uploads/2016/09/colour_galvalume.jpg"}
+  ],
+  "domtekMatteColours" : [
+      {"value":"Matte Jet Black", "imgSrc": "http://www.domtek.ca/wp-content/uploads/2016/09/colour_matte_black.gif"},
+      {"value":"Matte Graphite Grey", "imgSrc": "http://www.domtek.ca/wp-content/uploads/2016/09/colour_matte_grey.gif"},
+      {"value":"Matte Green", "imgSrc": "http://www.domtek.ca/wp-content/uploads/2016/09/colour_matte_green.gif"},
+      {"value":"Matte Chocolate Brown", "imgSrc": "http://www.domtek.ca/wp-content/uploads/2016/09/colour_matte_brown.gif"},
+      {"value":"Matte Sepia Brown", "imgSrc": "http://www.domtek.ca/wp-content/uploads/2016/09/colour_matte_sepia.gif"}
+  ],
+  "domtek28Colours" : [
+      {"value":"White White", "imgSrc": "http://www.domtek.ca/wp-content/uploads/2016/09/colour_white.gif"},
+      {"value":"Brite White", "imgSrc": "http://www.domtek.ca/wp-content/uploads/2016/09/colour_brite.gif"},
+      {"value":"Bone White", "imgSrc": "http://www.domtek.ca/wp-content/uploads/2016/09/colour_bone.gif"},
+      {"value":"Black", "imgSrc": "http://www.domtek.ca/wp-content/uploads/2016/09/colour_black.gif"},
+      {"value":"Melcher's Green", "imgSrc": "http://www.domtek.ca/wp-content/uploads/2016/09/colour_melchers.gif"},
+      {"value":"Forest Green", "imgSrc": "http://www.domtek.ca/wp-content/uploads/2016/09/colour_forest.gif"},
+      {"value":"Heron Blue", "imgSrc": "http://www.domtek.ca/wp-content/uploads/2016/09/colour_heron.gif"},
+      {"value":"Slate Blue", "imgSrc": "http://www.domtek.ca/wp-content/uploads/2016/09/colour_slate.gif"},
+      {"value":"Tile Red", "imgSrc": "http://www.domtek.ca/wp-content/uploads/2016/09/colour_tile.gif"},
+      {"value":"Barn Red", "imgSrc": "http://www.domtek.ca/wp-content/uploads/2016/09/colour_barn.gif"},
+      {"value":"Burgundy", "imgSrc": "http://www.domtek.ca/wp-content/uploads/2016/09/colour_burgundy.gif"},
+      {"value":"Antique Linen", "imgSrc": "http://www.domtek.ca/wp-content/uploads/2016/09/colour_antique.gif"},
+      {"value":"Light Stone", "imgSrc": "http://www.domtek.ca/wp-content/uploads/2016/09/colour_light_stone.gif"},
+      {"value":"Buckskin", "imgSrc": "http://www.domtek.ca/wp-content/uploads/2016/09/colour_buckskin.gif"},
+      {"value":"Burnished Slate", "imgSrc": "http://www.domtek.ca/wp-content/uploads/2016/09/colour_burnished.gif"},
+      {"value":"Tan", "imgSrc": "http://www.domtek.ca/wp-content/uploads/2016/09/colour_tan.gif"},
+      {"value":"Coffee Brown", "imgSrc": "http://www.domtek.ca/wp-content/uploads/2016/09/colour_coffee.gif"},
+      {"value":"Taupe", "imgSrc": "http://www.domtek.ca/wp-content/uploads/2016/09/colour_taupe.gif"},
+      {"value":"Charcoal", "imgSrc": "http://www.domtek.ca/wp-content/uploads/2016/09/colour_charcoal-1.gif"},
+      {"value":"MS Charcoal", "imgSrc": "http://www.domtek.ca/wp-content/uploads/2016/09/colour_mscharcoal.gif"},
+      {"value":"Zinc Grey", "imgSrc": "http://www.domtek.ca/wp-content/uploads/2016/09/colour_zinc.gif"},
+      {"value":"Stone Grey", "imgSrc": "http://www.domtek.ca/wp-content/uploads/2016/09/colour_stone.gif"},
+      {"value":"Regent Grey", "imgSrc": "http://www.domtek.ca/wp-content/uploads/2016/09/colour_regent.gif"},
+      {"value":"Copper Penny", "imgSrc": "http://www.domtek.ca/wp-content/uploads/2016/09/colour_copper_penny.gif"},
+      {"value":"Galvalume", "imgSrc": "http://www.domtek.ca/wp-content/uploads/2016/09/colour_galvalume.jpg"},
+      {"value":"Galvanized", "imgSrc": "http://www.domtek.ca/wp-content/uploads/2016/09/colour_galvanized.jpg"}
+  ],
+  "allDomtekColours" : [
+      {"value":"White White", "imgSrc": "http://www.domtek.ca/wp-content/uploads/2016/09/colour_white.gif"},
+      {"value":"Brite White", "imgSrc": "http://www.domtek.ca/wp-content/uploads/2016/09/colour_brite.gif"},
+      {"value":"Bone White", "imgSrc": "http://www.domtek.ca/wp-content/uploads/2016/09/colour_bone.gif"},
+      {"value":"Black", "imgSrc": "http://www.domtek.ca/wp-content/uploads/2016/09/colour_black.gif"},
+      {"value":"Melcher's Green", "imgSrc": "http://www.domtek.ca/wp-content/uploads/2016/09/colour_melchers.gif"},
+      {"value":"Forest Green", "imgSrc": "http://www.domtek.ca/wp-content/uploads/2016/09/colour_forest.gif"},
+      {"value":"Heron Blue", "imgSrc": "http://www.domtek.ca/wp-content/uploads/2016/09/colour_heron.gif"},
+      {"value":"Slate Blue", "imgSrc": "http://www.domtek.ca/wp-content/uploads/2016/09/colour_slate.gif"},
+      {"value":"Tile Red", "imgSrc": "http://www.domtek.ca/wp-content/uploads/2016/09/colour_tile.gif"},
+      {"value":"Barn Red", "imgSrc": "http://www.domtek.ca/wp-content/uploads/2016/09/colour_barn.gif"},
+      {"value":"Burgundy", "imgSrc": "http://www.domtek.ca/wp-content/uploads/2016/09/colour_burgundy.gif"},
+      {"value":"Antique Linen", "imgSrc": "http://www.domtek.ca/wp-content/uploads/2016/09/colour_antique.gif"},
+      {"value":"Light Stone", "imgSrc": "http://www.domtek.ca/wp-content/uploads/2016/09/colour_light_stone.gif"},
+      {"value":"Buckskin", "imgSrc": "http://www.domtek.ca/wp-content/uploads/2016/09/colour_buckskin.gif"},
+      {"value":"Burnished Slate", "imgSrc": "http://www.domtek.ca/wp-content/uploads/2016/09/colour_burnished.gif"},
+      {"value":"Tan", "imgSrc": "http://www.domtek.ca/wp-content/uploads/2016/09/colour_tan.gif"},
+      {"value":"Coffee Brown", "imgSrc": "http://www.domtek.ca/wp-content/uploads/2016/09/colour_coffee.gif"},
+      {"value":"Taupe", "imgSrc": "http://www.domtek.ca/wp-content/uploads/2016/09/colour_taupe.gif"},
+      {"value":"Charcoal", "imgSrc": "http://www.domtek.ca/wp-content/uploads/2016/09/colour_charcoal-1.gif"},
+      {"value":"MS Charcoal", "imgSrc": "http://www.domtek.ca/wp-content/uploads/2016/09/colour_mscharcoal.gif"},
+      {"value":"Zinc Grey", "imgSrc": "http://www.domtek.ca/wp-content/uploads/2016/09/colour_zinc.gif"},
+      {"value":"Stone Grey", "imgSrc": "http://www.domtek.ca/wp-content/uploads/2016/09/colour_stone.gif"},
+      {"value":"Regent Grey", "imgSrc": "http://www.domtek.ca/wp-content/uploads/2016/09/colour_regent.gif"},
+      {"value":"Copper Penny", "imgSrc": "http://www.domtek.ca/wp-content/uploads/2016/09/colour_copper_penny.gif"},
+      {"value":"Galvalume", "imgSrc": "http://www.domtek.ca/wp-content/uploads/2016/09/colour_galvalume.jpg"},
+      {"value":"Galvanized", "imgSrc": "http://www.domtek.ca/wp-content/uploads/2016/09/colour_galvanized.jpg"},
+      {"value":"Matte Jet Black", "imgSrc": "http://www.domtek.ca/wp-content/uploads/2016/09/colour_matte_black.gif"},
+      {"value":"Matte Graphite Grey", "imgSrc": "http://www.domtek.ca/wp-content/uploads/2016/09/colour_matte_grey.gif"},
+      {"value":"Matte Green", "imgSrc": "http://www.domtek.ca/wp-content/uploads/2016/09/colour_matte_green.gif"},
+      {"value":"Matte Chocolate Brown", "imgSrc": "http://www.domtek.ca/wp-content/uploads/2016/09/colour_matte_brown.gif"},
+      {"value":"Matte Sepia Brown", "imgSrc": "http://www.domtek.ca/wp-content/uploads/2016/09/colour_matte_sepia.gif"},
+      {"value":"Gold", "imgSrc": "http://www.domtek.ca/wp-content/uploads/2016/09/colour_gold.gif"},
+      {"value":"Dark Brown", "imgSrc": "http://www.domtek.ca/wp-content/uploads/2016/09/colour_dark.gif"},
+      {"value":"Metallic Copper", "imgSrc": "http://www.domtek.ca/wp-content/uploads/2016/09/colour_copper.jpg"},
+      {"value":"Silver Metallic", "imgSrc": "http://www.domtek.ca/wp-content/uploads/2016/09/colour_silver.jpg"}
+  ],
+  "canexelColours" : [
+      {"value":"Khaki", "imgSrc": "https://canexel.ca/wp-content/uploads/2020/06/classic-khaki-colours.jpg"},
+      {"value":"Mist Grey", "imgSrc": "https://canexel.ca/wp-content/uploads/2020/06/classic-mist-grey-colours.jpg"},
+      {"value":"River Rock", "imgSrc": "https://canexel.ca/wp-content/uploads/2020/06/classic-river-rock-colours.jpg"},
+      {"value":"Cedar", "imgSrc": "https://canexel.ca/wp-content/uploads/2020/06/inspiration-cedar-colours.jpg"},
+      {"value":"Country Red", "imgSrc": "https://canexel.ca/wp-content/uploads/2020/06/inspiration-country-red-colours.jpg"},
+      {"value":"Midnight Blue", "imgSrc": "https://canexel.ca/wp-content/uploads/2020/06/inspiration-midnight-blue-colours.jpg"},
+      {"value":"Scotia Blue", "imgSrc": "https://canexel.ca/wp-content/uploads/2020/06/inspiration-scotia-blue-colours.jpg"},
+      {"value":"Acadia", "imgSrc": "https://canexel.ca/wp-content/uploads/2020/06/nature-acadia-colours.jpg"},
+      {"value":"Barista", "imgSrc": "https://canexel.ca/wp-content/uploads/2020/06/nature-barista-colours.jpg"},
+      {"value":"Barnwood", "imgSrc": "https://canexel.ca/wp-content/uploads/2020/06/BoisGrange.jpg"},
+      {"value":"Black", "imgSrc": "https://canexel.ca/wp-content/uploads/2020/06/nature-black-colours.jpg"},
+      {"value":"Cliffside", "imgSrc": "https://canexel.ca/wp-content/uploads/2020/06/nature-cliffside-colours.jpg"},
+      {"value":"Coastline", "imgSrc": "https://canexel.ca/wp-content/uploads/2020/06/nature-coastline-colours.jpg"},
+      {"value":"Granite", "imgSrc": "https://canexel.ca/wp-content/uploads/2020/06/nature-granite-colours.jpg"},
+      {"value":"Sandalwood", "imgSrc": "https://canexel.ca/wp-content/uploads/2020/06/nature-sandalwood-colours.jpg"},
+      {"value":"Red Fox", "imgSrc": "https://canexel.ca/wp-content/uploads/2020/06/nature-redfox-colours.jpg"},
+      {"value":"Sand", "imgSrc": "https://canexel.ca/wp-content/uploads/2020/06/nature-sand-colours.jpg"},
+      {"value":"Sierra", "imgSrc": "https://canexel.ca/wp-content/uploads/2020/06/nature-sierra-colours.jpg"},
+      {"value":"Timberwolf", "imgSrc": "https://canexel.ca/wp-content/uploads/2020/06/LoupGris.jpg"},
+      {"value":"Walnut", "imgSrc": "https://canexel.ca/wp-content/uploads/2020/06/nature-walnut-colours.jpg"},
+      {"value":"White", "imgSrc": "https://canexel.ca/wp-content/uploads/2020/06/blanc.jpg"},
+      {"value":"Yellowstone", "imgSrc": "https://canexel.ca/wp-content/uploads/2020/06/nature-yellowstone-colours.jpg"}
+  ],
+  "prestigeColours" : [
+      {"value":"Acadia", "imgSrc": "https://www.kwpproducts.com/wp-content/uploads/2016/01/CLASSIC_ACADIA-1.png"},
+      {"value":"Acadia Rustic", "imgSrc": "https://www.kwpproducts.com/wp-content/uploads/2018/07/acadia_rustic_400x400-opt-300x300.jpg"},
+      {"value":"Almond", "imgSrc": "https://www.kwpproducts.com/wp-content/uploads/2016/01/CLASSIC_ALMOND-1.png"},
+      {"value":"Cactus", "imgSrc": "https://www.kwpproducts.com/wp-content/uploads/2016/01/BOLD_CACTUS.png"},
+      {"value":"Cedar", "imgSrc": "https://www.kwpproducts.com/wp-content/uploads/2016/01/CLASSIC_CEDAR-1.png"},
+      {"value":"Cedar Rustic", "imgSrc": "https://www.kwpproducts.com/wp-content/uploads/2018/07/cedar_rustic_400x400-opt-300x300.jpg"},
+      {"value":"Coffee", "imgSrc": "https://www.kwpproducts.com/wp-content/uploads/2016/01/CLASSIC_COFFEE-1.png"},
+      {"value":"Commercial Brown", "imgSrc": "https://www.kwpproducts.com/wp-content/uploads/2017/02/BOLD_com-brown.png"},
+      {"value":"Country Red", "imgSrc": "https://www.kwpproducts.com/wp-content/uploads/2016/01/CLASSIC_RED-1.png"},
+      {"value":"Granite", "imgSrc": "https://www.kwpproducts.com/wp-content/uploads/2016/01/CLASSIC_GRANITE-1.png"},
+      {"value":"Granite Rustic", "imgSrc": "https://www.kwpproducts.com/wp-content/uploads/2018/07/Granite_rustic_400x400-300x300.jpg"},
+      {"value":"Gray Rustic", "imgSrc": "https://www.kwpproducts.com/wp-content/uploads/2018/07/gray_rustic_400x400-300x300.jpg"},
+      {"value":"Khaki", "imgSrc": "https://www.kwpproducts.com/wp-content/uploads/2016/01/CLASSIC_KHAKI-1.png"},
+      {"value":"Maize", "imgSrc": "https://www.kwpproducts.com/wp-content/uploads/2016/01/CLASSIC_MAIZE-1.png"},
+      {"value":"Olive", "imgSrc": "https://www.kwpproducts.com/wp-content/uploads/2017/02/BOLD_OLIVE.png"},
+      {"value":"Pearl Gray", "imgSrc": "https://www.kwpproducts.com/wp-content/uploads/2016/01/bold_PearlGray.png"},
+      {"value":"Sierra", "imgSrc": "https://www.kwpproducts.com/wp-content/uploads/2016/01/CLASSIC_SIERRA-1.png"},
+      {"value":"Sierra Rustic", "imgSrc": "https://www.kwpproducts.com/wp-content/uploads/2018/07/sierra_rustic_400x400-300x300.jpg"},
+      {"value":"Thunder Blue", "imgSrc": "https://www.kwpproducts.com/wp-content/uploads/2016/01/CLASSIC_BLUE-1.png"},
+      {"value":"Torrified Brown Rustic", "imgSrc": "https://www.kwpproducts.com/wp-content/uploads/2018/07/torrefied_brown__rustic_600x600-1-300x300.jpg"},
+      {"value":"Walnut", "imgSrc": "https://www.kwpproducts.com/wp-content/uploads/2017/02/WALNUT_RUSTIC.png"},
+      {"value":"Walnut Rustic", "imgSrc": "https://www.kwpproducts.com/wp-content/uploads/2018/07/walnut_rustic_400x400-300x300.jpg"},
+      {"value":"White", "imgSrc": "https://www.kwpproducts.com/wp-content/uploads/2016/01/CLASSIC_WHITE.png"},
+      {"value":"Yellowstone", "imgSrc": "https://www.kwpproducts.com/wp-content/uploads/2016/01/CLASSIC_YELLOWSTONEpng-1.png"},
+      {"value":"Yellowstone Rustic", "imgSrc": "https://www.kwpproducts.com/wp-content/uploads/2018/07/yellowstone_rustic_400x400-300x300.jpg"}
+  ],
+  "laurentianColours" : [
+      {"value":"Acadia", "imgSrc": "https://www.kwpproducts.com/wp-content/uploads/2016/01/CLASSIC_ACADIA-1.png"},
+      {"value":"Almond", "imgSrc": "https://www.kwpproducts.com/wp-content/uploads/2016/01/CLASSIC_ALMOND-1.png"},
+      {"value":"Cedar", "imgSrc": "https://www.kwpproducts.com/wp-content/uploads/2016/01/CLASSIC_CEDAR-1.png"},
+      {"value":"Coffee", "imgSrc": "https://www.kwpproducts.com/wp-content/uploads/2016/01/CLASSIC_COFFEE-1.png"},
+      {"value":"Country Red", "imgSrc": "https://www.kwpproducts.com/wp-content/uploads/2016/01/CLASSIC_RED-1.png"},
+      {"value":"Granite", "imgSrc": "https://www.kwpproducts.com/wp-content/uploads/2016/01/CLASSIC_GRANITE-1.png"},
+      {"value":"Khaki", "imgSrc": "https://www.kwpproducts.com/wp-content/uploads/2016/01/CLASSIC_KHAKI-1.png"},
+      {"value":"Maize", "imgSrc": "https://www.kwpproducts.com/wp-content/uploads/2016/01/CLASSIC_MAIZE-1.png"},
+      {"value":"Sierra", "imgSrc": "https://www.kwpproducts.com/wp-content/uploads/2016/01/CLASSIC_SIERRA-1.png"},
+      {"value":"Thunder Blue", "imgSrc": "https://www.kwpproducts.com/wp-content/uploads/2016/01/CLASSIC_BLUE-1.png"},
+      {"value":"White", "imgSrc": "https://www.kwpproducts.com/wp-content/uploads/2016/01/CLASSIC_WHITE.png"},
+      {"value":"Yellowstone", "imgSrc": "https://www.kwpproducts.com/wp-content/uploads/2016/01/CLASSIC_YELLOWSTONEpng-1.png"}
+  ],
+  "boldColours" : [
+      {"value":"Cactus", "imgSrc": "https://www.kwpproducts.com/wp-content/uploads/2016/01/BOLD_CACTUS.png"},
+      {"value":"Coffee", "imgSrc": "https://www.kwpproducts.com/wp-content/uploads/2016/01/CLASSIC_COFFEE-1.png"},
+      {"value":"Commercial Brown", "imgSrc": "https://www.kwpproducts.com/wp-content/uploads/2017/02/BOLD_com-brown.png"},
+      {"value":"Country Red", "imgSrc": "https://www.kwpproducts.com/wp-content/uploads/2016/01/CLASSIC_RED-1.png"},
+      {"value":"Granite", "imgSrc": "https://www.kwpproducts.com/wp-content/uploads/2016/01/CLASSIC_GRANITE-1.png"},
+      {"value":"Khaki", "imgSrc": "https://www.kwpproducts.com/wp-content/uploads/2016/01/CLASSIC_KHAKI-1.png"},
+      {"value":"Olive", "imgSrc": "https://www.kwpproducts.com/wp-content/uploads/2017/02/BOLD_OLIVE.png"},
+      {"value":"Pearl Gray", "imgSrc": "https://www.kwpproducts.com/wp-content/uploads/2016/01/bold_PearlGray.png"},
+      {"value":"White", "imgSrc": "https://www.kwpproducts.com/wp-content/uploads/2016/01/CLASSIC_WHITE.png"}
+  ],
+  "rusticColours" : [
+      {"value":"Acadia Rustic", "imgSrc": "https://www.kwpproducts.com/wp-content/uploads/2018/07/acadia_rustic_400x400-opt-300x300.jpg"},
+      {"value":"Cedar Rustic", "imgSrc": "https://www.kwpproducts.com/wp-content/uploads/2018/07/cedar_rustic_400x400-opt-300x300.jpg"},
+      {"value":"Granite Rustic", "imgSrc": "https://www.kwpproducts.com/wp-content/uploads/2018/07/Granite_rustic_400x400-300x300.jpg"},
+      {"value":"Gray Rustic", "imgSrc": "https://www.kwpproducts.com/wp-content/uploads/2018/07/gray_rustic_400x400-300x300.jpg"},
+      {"value":"Sierra Rustic", "imgSrc": "https://www.kwpproducts.com/wp-content/uploads/2018/07/sierra_rustic_400x400-300x300.jpg"},
+      {"value":"Torrified Brown Rustic", "imgSrc": "https://www.kwpproducts.com/wp-content/uploads/2018/07/torrefied_brown__rustic_600x600-1-300x300.jpg"},
+      {"value":"Walnut Rustic", "imgSrc": "https://www.kwpproducts.com/wp-content/uploads/2018/07/walnut_rustic_400x400-300x300.jpg"},
+      {"value":"Yellowstone Rustic", "imgSrc": "https://www.kwpproducts.com/wp-content/uploads/2018/07/yellowstone_rustic_400x400-300x300.jpg"}
+  ],
+  "gaugeOne" : [
+      {"value":"26 Gauge", "imgSrc": "../img/26.png"},
+      {"value":"24 Gauge", "imgSrc": "../img/24.png"},
+      {"value":"Unsure", "imgSrc": ""}
+  ],
+  "gaugeTwo" : [
+      {"value":"28 Gauge", "imgSrc": "../img/28.png"},
+      {"value":"26 Gauge", "imgSrc": "../img/26.png"},
+      {"value":"Unsure", "imgSrc": ""}
+  ],
+  "hardieplankFinish" : [
+      {"value": "Select Cedarmill", "imgSrc": "https://www.jameshardie.ca/JamesHardieNorthAmerica/media/Products/HardiePlank-Lap-Siding/Variations/Select-Cedarmill/HardiePlank_SelectCedarmill_Drawer.jpg?ext=.jpg"},
+      {"value": "Smooth", "imgSrc": "https://www.jameshardie.ca/JamesHardieNorthAmerica/media/Products/HardiePlank-Lap-Siding/Variations/Smooth/HardiePlank_Smooth_Drawer.jpg?ext=.jpg"},
+      {"value": "Beaded Cedarmill", "imgSrc": "https://www.jameshardie.ca/JamesHardieNorthAmerica/media/Products/HardiePlank-Lap-Siding/Variations/Beaded-Cedarmill/HardiePlank_BeadedCedarmill_Drawer.jpg?ext=.jpg"},
+      {"value": "Unsure", "imgSrc": ""}
+  ],
+  "hardiepanelFinish" : [
+      {"value": "Select Cedarmill", "imgSrc": "https://www.jameshardie.ca/JamesHardieNorthAmerica/media/Products/HardiePanel-Vertical-Siding/Variations/Select-Cedarmill/HardiePanelSelectCedarmill_Drawer.jpg?ext=.jpg"},
+      {"value": "Smooth", "imgSrc": "https://www.jameshardie.ca/JamesHardieNorthAmerica/media/Products/HardiePanel-Vertical-Siding/Variations/Smooth/HardiePanelSmooth_Drawer.jpg?ext=.jpg"},
+      {"value": "Stucco", "imgSrc": "https://www.jameshardie.ca/JamesHardieNorthAmerica/media/Products/HardiePanel-Vertical-Siding/Variations/Stucco/HardiePanelStucco_Drawer.jpg?ext=.jpg"},
+      {"value": "Sierra 8\"", "imgSrc": "https://www.jameshardie.ca/JamesHardieNorthAmerica/media/Products/HardiePanel-Vertical-Siding/Variations/Sierra-8/HardiePanelSierra8_Drawer.jpg?ext=.jpg"},
+      {"value": "Unsure", "imgSrc": ""}
+  ],
+  "hardiePlankSize1" : [
+      {"value": "5-1/4\"", "imgSrc": ""},
+      {"value": "6-1/4\"", "imgSrc": ""},
+      {"value": "7-1/4\"", "imgSrc": ""},
+      {"value": "8-1/4\"", "imgSrc": ""}
+  ],
+  "hardiePlankSize2" : [
+      {"value": "5-1/4\"", "imgSrc": ""},
+      {"value": "6-1/4\"", "imgSrc": ""},
+      {"value": "7-1/4\"", "imgSrc": ""},
+      {"value": "8-1/4\"", "imgSrc": ""},
+      {"value": "12\"", "imgSrc": ""}
+  ],
+  "hardiePlankSize3" : [
+      {"value": "8-1/4\"", "imgSrc": ""}
+  ],
+  "hardiePanelSize1" : [
+      {"value": "4x8", "imgSrc": ""},
+      {"value": "4x10", "imgSrc": ""}
+  ],
+  "hardiepanelSize2" : [
+      {"value": "4x8", "imgSrc": ""}
+  ],
+  "hardieColour1" : [
+      {"value": "Primed", "imgSrc": "g"}
+  ],
+  "hardieColour2" : [
+      {"value": "Primed", "imgSrc": ""},
+      {"value": "Dream Collection", "imgSrc": ""}
+  ],
+  "hardieColour3" : [
+      {"value": "Arctic White", "imgSrc": "https://www.jameshardie.ca/JamesHardieNorthAmerica/media/Color-and-Design/ColorPlus-Colors/Arctic-White/arctic-white-color-hero-left.jpg?ext=.jpg"},
+      {"value": "Cobble Stone", "imgSrc": "https://www.jameshardie.ca/JamesHardieNorthAmerica/media/Color-and-Design/ColorPlus-Colors/Cobble-Stone/cobble-stone-color-hero-left.jpg?ext=.jpg"},
+      {"value": "Navajo Beige", "imgSrc": "https://www.jameshardie.ca/JamesHardieNorthAmerica/media/Color-and-Design/ColorPlus-Colors/Navajo-Beige/navajo-beige-color-hero-left.jpg?ext=.jpg"},
+      {"value": "Monerey Taupe", "imgSrc": "https://www.jameshardie.ca/JamesHardieNorthAmerica/media/Color-and-Design/ColorPlus-Colors/Monterey-Taupe/monterey-taupe-color-hero-left.jpg?ext=.jpg"},
+      {"value": "Khaki Brown", "imgSrc": "https://www.jameshardie.ca/JamesHardieNorthAmerica/media/Color-and-Design/ColorPlus-Colors/Khaki-Brown/khaki-brown-color-hero-left.jpg?ext=.jpg"},
+      {"value": "Timber Bark", "imgSrc": "https://www.jameshardie.ca/JamesHardieNorthAmerica/media/Color-and-Design/ColorPlus-Colors/Timber-Bark/timber-bark-color-hero-left.jpg?ext=.jpg"},
+      {"value": "Peral Gray", "imgSrc": "https://www.jameshardie.ca/JamesHardieNorthAmerica/media/Color-and-Design/ColorPlus-Colors/Pearl-Gray/pearl-gray-color-hero-left.jpg?ext=.jpg"},
+      {"value": "Light Mist", "imgSrc": "https://www.jameshardie.ca/JamesHardieNorthAmerica/media/Color-and-Design/ColorPlus-Colors/Light-Mist/light-mist-color-hero-left.jpg?ext=.jpg"},
+      {"value": "Gray Slate", "imgSrc": "https://www.jameshardie.ca/JamesHardieNorthAmerica/media/Color-and-Design/ColorPlus-Colors/Gray-Slate/gray-slate-color-hero-left.jpg?ext=.jpg"},
+      {"value": "Night Gray", "imgSrc": "https://www.jameshardie.ca/JamesHardieNorthAmerica/media/Color-and-Design/ColorPlus-Colors/Night-Gray/night-gray-color-hero-left.jpg?ext=.jpg"},
+      {"value": "BoothBay Blue", "imgSrc": "https://www.jameshardie.ca/JamesHardieNorthAmerica/media/Color-and-Design/ColorPlus-Colors/Boothbay-Blue/boothbay-blue-color-hero-left.jpg?ext=.jpg"},
+      {"value": "Evening Blue", "imgSrc": "https://www.jameshardie.ca/JamesHardieNorthAmerica/media/Color-and-Design/ColorPlus-Colors/Evening-Blue/evening-blue-color-hero-left.jpg?ext=.jpg"},
+      {"value": "Aged Pewter", "imgSrc": "https://www.jameshardie.ca/JamesHardieNorthAmerica/media/Color-and-Design/ColorPlus-Colors/Aged-Pewter/aged-pewter-color-hero-left.jpg?ext=.jpg"},
+      {"value": "Iron Gray", "imgSrc": "https://www.jameshardie.ca/JamesHardieNorthAmerica/media/Color-and-Design/ColorPlus-Colors/Iron-Grey/iron-gray-color-hero-left.jpg?ext=.jpg"},
+      {"value": "Countrylane Red", "imgSrc": "https://www.jameshardie.ca/JamesHardieNorthAmerica/media/Color-and-Design/ColorPlus-Colors/Countrylane-Red/countrylane-red-color-hero-left.jpg?ext=.jpg"},
+      {"value": "Woodstock Brown", "imgSrc": "https://www.jameshardie.ca/JamesHardieNorthAmerica/media/Color-and-Design/ColorPlus-Colors/Woodstock-Brown/woodstock-brown-color-hero-left.jpg?ext=.jpg"},
+      {"value": "Rich Expresso", "imgSrc": "https://www.jameshardie.ca/JamesHardieNorthAmerica/media/Color-and-Design/ColorPlus-Colors/Rich-Espresso/rich-espresso-color-hero-left.jpg?ext=.jpg"},
+      {"value": "Heathered Moss", "imgSrc": "https://www.jameshardie.ca/JamesHardieNorthAmerica/media/Color-and-Design/ColorPlus-Colors/Heathered-Moss/heathered-moss-color-hero-left.jpg?ext=.jpg"},
+      {"value": "Primed", "imgSrc": ""},
+      {"value": "Dream Collection", "imgSrc": ""}
+  ],
+  "roofingTypes" : [
+      {"value": "Shingles", "imgSrc": "https://res.cloudinary.com/ocimages/image/upload/f_auto/v1579546785/roofing/shingles/duration-series/shingle-thumbs/duration.jpg"},
+      {"value": "Domtek Metal", "imgSrc": "http://www.domtek.ca/wp-content/uploads/2016/09/agricultural.jpg"},
+      {"value": "Other"}
+  ],
+  "overheadDoorSize1" : [
+      {"value": "9x7", "imgSrc": ""},
+      {"value": "9x8", "imgSrc": ""},
+      {"value": "Other"}
+  ],
+  "overheadDoorSize2" : [
+      {"value": "9x7", "imgSrc": ""},
+      {"value": "9x8", "imgSrc": ""},
+      {"value": "16x7", "imgSrc": ""},
+      {"value": "16x8", "imgSrc": ""},
+      {"value": "Other"}
+  ],
+  "overheadDoorSeries" : [
+      {"value": "Thermocraft", "imgSrc": "https://www.steel-craft.ca/portals/3/Images/doors/thermo-16-front.jpg"},
+      {"value": "Ranchcraft", "imgSrc": "https://www.steel-craft.ca/portals/3/Images/doors/ranch-16-front.jpg"},
+      {"value": "Carriagecraft", "imgSrc": "https://www.steel-craft.ca/portals/3/Images/doors/carriagecraft-white-door.jpg"},
+      {"value": "Flush", "imgSrc": "https://www.steel-craft.ca/portals/3/Images/doors/flush-16-front.jpg"},
+      {"value": "Elite", "imgSrc": "https://doordesigner.steel-craft.ca/img/preview/door-elite.jpg"},
+      {"value": "Esteem", "imgSrc": "https://www.steel-craft.ca/portals/3/Images/doors/esteem-16-front.jpg"},
+      {"value": "Contemporary", "imgSrc": "https://doordesigner.steel-craft.ca/img/preview/door-mid-century-modern.jpg"},
+      {"value": "Mid-Century Modern", "imgSrc": "https://doordesigner.steel-craft.ca/img/preview/door-contemporary.jpg"}
+  ],
+  "eliteStyle" : [
+      {"value": "Ranchcraft", "imgSrc": "https://doordesigner.steel-craft.ca/img/preview/color-elite-ranchcraft-walnut.jpg"},
+      {"value": "Carriagecraft", "imgSrc": "https://doordesigner.steel-craft.ca/img/preview/color-elite-carriagecraft-walnut.jpg"},
+      {"value": "Flush", "imgSrc": "https://doordesigner.steel-craft.ca/img/preview/color-elite-flush-walnut.jpg"}
+  ],
+  "overheadColour1" : [
+      {"value": "White", "imgSrc": "https://www.steel-craft.ca/portals/3/Images/doors/White.jpg"},
+      {"value": "Sable Grey", "imgSrc": "https://www.steel-craft.ca/portals/3/Images/doors/SableGrey.jpg"},
+      {"value": "Sandstone", "imgSrc": "https://www.steel-craft.ca/portals/3/Images/doors/Sandstone.jpg"},
+      {"value": "Brown", "imgSrc": "https://www.steel-craft.ca/portals/3/Images/doors/Brown.jpg"}
+  ],
+  "overheadColour2" : [
+      {"value": "White", "imgSrc": "https://www.steel-craft.ca/portals/3/Images/doors/White.jpg"},
+      {"value": "Sandstone", "imgSrc": "https://www.steel-craft.ca/portals/3/Images/doors/Sandstone.jpg"},
+      {"value": "Brown", "imgSrc": "https://www.steel-craft.ca/portals/3/Images/doors/Brown.jpg"}
+  ],
+  "overheadColour3" : [
+      {"value": "White", "imgSrc": "https://www.steel-craft.ca/portals/3/Images/doors/White.jpg"},
+      {"value": "Sandstone", "imgSrc": "https://www.steel-craft.ca/portals/3/Images/doors/Sandstone.jpg"}
+  ],
+  "overheadColour4" : [
+      {"value": "Walnut", "imgSrc": "https://doordesigner.steel-craft.ca/img/preview/color-elite-flush-walnut.jpg"},
+      {"value": "Charcoal", "imgSrc": "https://doordesigner.steel-craft.ca/img/preview/color-elite-flush-charcoal.jpg"}
+  ],
+  "overheadColour5" : [
+      {"value": "Walnut", "imgSrc": "https://doordesigner.steel-craft.ca/img/preview/color-contemporary-walnut.jpg"},
+      {"value": "Charcoal", "imgSrc": "https://doordesigner.steel-craft.ca/img/preview/color-contemporary-charcoal.jpg"},
+      {"value": "Cedar", "imgSrc": "https://doordesigner.steel-craft.ca/img/preview/color-contemporary-cedar.jpg"},
+      {"value": "White", "imgSrc": "https://doordesigner.steel-craft.ca/img/preview/color-contemporary-white.jpg"},
+      {"value": "Sable Grey", "imgSrc": "https://doordesigner.steel-craft.ca/img/preview/color-contemporary-sable-grey.jpg"}
+  ],
+  "overheadColour6" : [
+      {"value": "Walnut", "imgSrc": "https://doordesigner.steel-craft.ca/img/preview/color-esteem-walnut.jpg"},
+      {"value": "Cedar", "imgSrc": "https://doordesigner.steel-craft.ca/img/preview/color-esteem-cedar.jpg"},
+      {"value": "Ano-Light Bronze", "imgSrc": "https://doordesigner.steel-craft.ca/img/preview/color-esteem-light-bronze.jpg"},
+      {"value": "Ano-Medium Bronze", "imgSrc": "https://doordesigner.steel-craft.ca/img/preview/color-esteem-medium-bronze.jpg"},
+      {"value": "Ano-Dark Bronze", "imgSrc": "https://doordesigner.steel-craft.ca/img/preview/color-esteem-dark-bronze.jpg"},
+      {"value": "Ano-Black", "imgSrc": "https://doordesigner.steel-craft.ca/img/preview/color-esteem-ano-black.jpg"},
+      {"value": "Black", "imgSrc": "https://doordesigner.steel-craft.ca/img/preview/color-esteem-black.jpg"},
+      {"value": "Charcoal", "imgSrc": "https://doordesigner.steel-craft.ca/img/preview/color-esteem-charcoal.jpg"},
+      {"value": "Light Brown", "imgSrc": "https://doordesigner.steel-craft.ca/img/preview/color-esteem-light-brown.jpg"},
+      {"value": "Dark Brown", "imgSrc": "https://doordesigner.steel-craft.ca/img/preview/color-esteem-dark-brown.jpg"},
+      {"value": "Sable Grey", "imgSrc": "https://doordesigner.steel-craft.ca/img/preview/color-esteem-sable-grey.jpg"},
+      {"value": "Sandstone", "imgSrc": "https://doordesigner.steel-craft.ca/img/preview/color-esteem-sandstone.jpg"},
+      {"value": "Oyster Grey", "imgSrc": "https://doordesigner.steel-craft.ca/img/preview/color-esteem-oyster-grey.jpg"},
+      {"value": "Light Green", "imgSrc": "https://doordesigner.steel-craft.ca/img/preview/color-esteem-light-green.jpg"},
+      {"value": "Dark Green", "imgSrc": "https://doordesigner.steel-craft.ca/img/preview/color-esteem-dark-green.jpg"},
+      {"value": "Light Blue", "imgSrc": "https://doordesigner.steel-craft.ca/img/preview/color-esteem-light-blue.jpg"},
+      {"value": "Dark Blue", "imgSrc": "https://doordesigner.steel-craft.ca/img/preview/color-esteem-dark-blue.jpg"},
+      {"value": "Red", "imgSrc": "https://doordesigner.steel-craft.ca/img/preview/color-esteem-red.jpg"}
+  ],
+  "overheadColour7" : [
+      {"value": "White", "imgSrc": "https://www.steel-craft.ca/portals/3/Images/doors/White.jpg"},
+      {"value": "Sable Grey", "imgSrc": "https://www.steel-craft.ca/portals/3/Images/doors/SableGrey.jpg"},
+      {"value": "Cedar", "imgSrc": "https://doordesigner.steel-craft.ca/img/preview/color-contemporary-cedar.jpg"},
+      {"value": "Weathered Wood", "imgSrc": "https://doordesigner.steel-craft.ca/img/preview/color-mid-century-modern-weathered-wood.jpg"}
+  ],
+  "windowPatern1" : [
+      {"value": "None", "imgSrc": "https://doordesigner.steel-craft.ca/img/preview/window-pattern-thermocraft-none.jpg"},
+      {"value": "Top Row", "imgSrc": "https://doordesigner.steel-craft.ca/img/preview/window-pattern-thermocraft-top-row.jpg"},
+      {"value": "Second Row", "imgSrc": "https://doordesigner.steel-craft.ca/img/preview/window-pattern-thermocraft-second-row.jpg"},
+      {"value": "Left Column", "imgSrc": "https://doordesigner.steel-craft.ca/img/preview/window-pattern-thermocraft-left-column.jpg"},
+      {"value": "Right Column", "imgSrc": "https://doordesigner.steel-craft.ca/img/preview/window-pattern-thermocraft-right-column.jpg"},
+      {"value": "Other", "imgSrc": "https://doordesigner.steel-craft.ca/img/preview/window-pattern-thermocraft-custom.jpg"}
+  ],
+  "windowPatern2" : [
+      {"value": "None", "imgSrc": "https://doordesigner.steel-craft.ca/img/preview/window-pattern-esteem-none.jpg"},
+      {"value": "All Rows", "imgSrc": "https://doordesigner.steel-craft.ca/img/preview/window-pattern-esteem-all-rows.jpg"},
+      {"value": "Top Row", "imgSrc": "https://doordesigner.steel-craft.ca/img/preview/window-pattern-esteem-top-row.jpg"},
+      {"value": "Second Row", "imgSrc": "https://doordesigner.steel-craft.ca/img/preview/window-pattern-esteem-second-row.jpg"},
+      {"value": "Third Row", "imgSrc": "https://doordesigner.steel-craft.ca/img/preview/window-pattern-esteem-third-row.jpg"},
+      {"value": "Top Two Rows", "imgSrc": "https://doordesigner.steel-craft.ca/img/preview/window-pattern-esteem-top-two-rows.jpg"},
+      {"value": "Top Three Rows", "imgSrc": "https://doordesigner.steel-craft.ca/img/preview/window-pattern-esteem-top-three-rows.jpg"},
+      {"value": "Left Column", "imgSrc": "https://doordesigner.steel-craft.ca/img/preview/window-pattern-esteem-left-column.jpg"},
+      {"value": "Right Column", "imgSrc": "https://doordesigner.steel-craft.ca/img/preview/window-pattern-esteem-right-column.jpg"},
+      {"value": "Other", "imgSrc": "https://doordesigner.steel-craft.ca/img/preview/window-pattern-esteem-custom.jpg"}
+  ],
+  "windowPatern3" : [
+      {"value": "None", "imgSrc": "https://doordesigner.steel-craft.ca/img/preview/window-pattern-contemporary-none.jpg"},
+      {"value": "Top Row", "imgSrc": "https://doordesigner.steel-craft.ca/img/preview/window-pattern-contemporary-top-row.jpg"},
+      {"value": "Left Column - Full Section", "imgSrc": "https://doordesigner.steel-craft.ca/img/preview/window-pattern-contemporary-left-column-full.jpg"},
+      {"value": "Right Column - Full Section", "imgSrc": "https://doordesigner.steel-craft.ca/img/preview/window-pattern-contemporary-right-column-full.jpg"},
+      {"value": "Left Column - Top Section", "imgSrc": "https://doordesigner.steel-craft.ca/img/preview/window-pattern-contemporary-left-column-top.jpg"},
+      {"value": "Right Column - Top Section", "imgSrc": "https://doordesigner.steel-craft.ca/img/preview/window-pattern-contemporary-right-column-top.jpg"},
+      {"value": "Left Column - Bottom", "imgSrc": "https://doordesigner.steel-craft.ca/img/preview/window-pattern-contemporary-left-column-bottom.jpg"},
+      {"value": "Right Column - Bottom", "imgSrc": "https://doordesigner.steel-craft.ca/img/preview/window-pattern-contemporary-right-column-bottom.jpg"},
+      {"value": "Other", "imgSrc": "https://doordesigner.steel-craft.ca/img/preview/window-pattern-contemporary-custom.jpg"}
+  ],
+  "windowType1" : [
+      {"value": "Plain Lite", "imgSrc": "https://www.steel-craft.ca/portals/3/Images/doors/Window-Clear.jpg"}
+  ],
+  "windowType2" : [
+      {"value": "Plain Lite", "imgSrc": "https://www.steel-craft.ca/portals/3/Images/doors/Window-Clear.jpg"},
+      {"value": "Inlaid Muntin Bars", "imgSrc": ""}
+  ],
+  "windowType3" : [
+      {"value": "Plain Lite", "imgSrc": "https://www.steel-craft.ca/portals/3/Images/doors/Window-Clear.jpg"},
+      {"value": "Inlaid Muntin Bars", "imgSrc": "https://doordesigner.steel-craft.ca/img/preview/muntin-26x14-stanton.jpg"},
+      {"value": "Snap-In Decorative Designs", "imgSrc": "https://doordesigner.steel-craft.ca/img/preview/insert-26x14-sunburst.jpg"}
+  ],
+  "glassFinish1" : [
+      {"value": "Clear", "imgSrc": "https://www.steel-craft.ca/portals/3/Images/doors/Window-Clear.jpg"},
+      {"value": "Satin", "imgSrc": "https://www.steel-craft.ca/portals/3/Images/doors/Window-Satin.jpg"}
+  ],
+  "glassFinish2" : [
+      {"value": "Clear", "imgSrc": "https://www.steel-craft.ca/portals/3/Images/doors/Window-Clear.jpg"},
+      {"value": "Satin", "imgSrc": "https://www.steel-craft.ca/portals/3/Images/doors/Window-Satin.jpg"},
+      {"value": "Bronze Reflective", "imgSrc": "https://doordesigner.steel-craft.ca/img/preview/glass-38x14-bronze-reflective-contemporary.png"}
+  ],
+  "glassFinish3" : [
+      {"value": "Clear", "imgSrc": "https://www.steel-craft.ca/portals/3/Images/doors/Window-Clear.jpg"},
+      {"value": "Satin", "imgSrc": "https://www.steel-craft.ca/portals/3/Images/doors/Window-Satin.jpg"},
+      {"value": "Dark Tint Privacy", "imgSrc": "https://doordesigner.steel-craft.ca/img/preview/glass-26x14-dark-tint-privacy.png"},
+      {"value": "Dark Tint Clear", "imgSrc": "https://doordesigner.steel-craft.ca/img/preview/glass-26x14-dark-tint-clear.png"},
+      {"value": "Bronze Reflective", "imgSrc": "https://doordesigner.steel-craft.ca/img/preview/glass-26x14-bronze-reflective.png"},
+      {"value": "Clear Lexan", "imgSrc": "https://doordesigner.steel-craft.ca/img/preview/glass-26x14-clear-lexan.png"},
+      {"value": "Bronze Lexan", "imgSrc": "https://doordesigner.steel-craft.ca/img/preview/glass-26x14-bronze-lexan.png"},
+      {"value": "Blue Lexan", "imgSrc": "https://doordesigner.steel-craft.ca/img/preview/glass-26x14-blue-lexan.png"},
+      {"value": "Green Lexan", "imgSrc": "https://doordesigner.steel-craft.ca/img/preview/glass-26x14-green-lexan.png"}
+  ],
+  "glassFinish4" : [
+      {"value": "Clear", "imgSrc": "https://www.steel-craft.ca/portals/3/Images/doors/Window-Clear.jpg"},
+      {"value": "Satin", "imgSrc": "https://www.steel-craft.ca/portals/3/Images/doors/Window-Satin.jpg"},
+      {"value": "Bronze Tint", "imgSrc": "https://doordesigner.steel-craft.ca/img/preview/glass-38x14-bronze-reflective-contemporary.png"},
+      {"value": "Dark Tint Clear", "imgSrc": "https://doordesigner.steel-craft.ca/img/preview/glass-38x14-dark-tint-clear.png"}
+  ],
+  "windowFrameColour1" : [
+      {"value": "Black", "imgSrc": "https://doordesigner.steel-craft.ca/img/preview/muntin-color-black.png"}
+  ],
+  "windowFrameColour2" : [
+      {"value": "Bronze", "imgSrc": "https://doordesigner.steel-craft.ca/img/preview/muntin-color-bronze.png"}
+  ],
+  "windowFrameColour3" : [
+      {"value": "Black", "imgSrc": "https://doordesigner.steel-craft.ca/img/preview/muntin-color-black.png"},
+      {"value": "Bronze", "imgSrc": "https://doordesigner.steel-craft.ca/img/preview/muntin-color-bronze.png"}
+  ],
+  "muntinStyle1" : [
+      {"value": "Stanton", "imgSrc": "https://www.steel-craft.ca/portals/3/Images/doors/muntin-26x14-stanton.jpg"},
+      {"value": "Regal", "imgSrc": "https://www.steel-craft.ca/portals/3/Images/doors/muntin-26x14-regal.jpg"}
+  ],
+  "muntinStyle2" : [
+      {"value": "Stanton", "imgSrc": "https://www.steel-craft.ca/portals/3/Images/doors/muntin-26x14-stanton.jpg"},
+      {"value": "Regal", "imgSrc": "https://www.steel-craft.ca/portals/3/Images/doors/muntin-26x14-regal.jpg"},
+      {"value": "Provincial", "imgSrc": "https://doordesigner.steel-craft.ca/img/preview/muntin-38x14-provincial.jpg"}
+  ],
+  "muntinColour1" : [
+      {"value": "White", "imgSrc": "https://doordesigner.steel-craft.ca/img/preview/muntin-color-white.png"},
+      {"value": "Pewter", "imgSrc": "https://doordesigner.steel-craft.ca/img/preview/muntin-color-pewter.png"},
+      {"value": "Brass", "imgSrc": "https://doordesigner.steel-craft.ca/img/preview/muntin-color-brass.png"}
+  ],
+  "muntinColour2" : [
+      {"value": "Bronze", "imgSrc": "https://doordesigner.steel-craft.ca/img/preview/muntin-color-bronze.png"},
+      {"value": "Black", "imgSrc": "https://doordesigner.steel-craft.ca/img/preview/muntin-color-black.png"}
+  ],
+  "muntinColour3" : [
+      {"value": "Black", "imgSrc": "https://doordesigner.steel-craft.ca/img/preview/muntin-color-black.png"}
+  ],
+  "muntinColour4" : [
+      {"value": "Bronze", "imgSrc": "https://doordesigner.steel-craft.ca/img/preview/muntin-color-bronze.png"}
+  ],
+  "snapInDesign1" : [
+      {"value": "Sunburst", "imgSrc": "https://www.steel-craft.ca/portals/3/Images/doors/insert-26x14-sunburst.jpg"},
+      {"value": "Ridgewood", "imgSrc": "https://www.steel-craft.ca/portals/3/Images/doors/insert-26x14-ridgewood.jpg"},
+      {"value": "Somerview", "imgSrc": "https://www.steel-craft.ca/portals/3/Images/doors/insert-26x14-somerview.jpg"},
+      {"value": "Cascade", "imgSrc": "https://www.steel-craft.ca/portals/3/Images/doors/insert-26x14-cascade.jpg"},
+      {"value": "Waterton", "imgSrc": "https://www.steel-craft.ca/portals/3/Images/doors/insert-26x14-waterton.jpg"},
+      {"value": "Stockton", "imgSrc": "https://www.steel-craft.ca/portals/3/Images/doors/insert-26x14-stockton.jpg"},
+      {"value": "Colonial", "imgSrc": "https://www.steel-craft.ca/portals/3/Images/doors/insert-26x14-colonial.jpg"},
+      {"value": "Wynbridge", "imgSrc": "https://www.steel-craft.ca/portals/3/Images/doors/insert-26x14-wynbridge.jpg"},
+      {"value": "Somerton", "imgSrc": "https://www.steel-craft.ca/portals/3/Images/doors/insert-26x14-somerton.jpg"},
+      {"value": "Stockbridge", "imgSrc": "https://www.steel-craft.ca/portals/3/Images/doors/insert-26x14-stockbridge.jpg"}
+  ],
+  "snapInDesign2" : [
+      {"value": "Cascade", "imgSrc": "https://www.steel-craft.ca/portals/3/Images/doors/insert-26x14-cascade.jpg"},
+      {"value": "Waterton", "imgSrc": "https://www.steel-craft.ca/portals/3/Images/doors/insert-26x14-waterton.jpg"},
+      {"value": "Stockton", "imgSrc": "https://www.steel-craft.ca/portals/3/Images/doors/insert-26x14-stockton.jpg"},
+      {"value": "Wynbridge", "imgSrc": "https://www.steel-craft.ca/portals/3/Images/doors/insert-26x14-wynbridge.jpg"},
+      {"value": "Somerton", "imgSrc": "https://www.steel-craft.ca/portals/3/Images/doors/insert-26x14-somerton.jpg"},
+      {"value": "Stockbridge", "imgSrc": "https://www.steel-craft.ca/portals/3/Images/doors/insert-26x14-stockbridge.jpg"}
+  ],
+  "glassType" : [
+      {"value": "1/8\" Single Pane", "imgSrc": ""},
+      {"value": "5/8\" Thermopane", "imgSrc": ""},
+      {"value": "Unsure", "imgSrc": ""}
+  ],
+  "decorativeHandle" : [
+      {"value": "Veneto", "imgSrc": "https://doordesigner.steel-craft.ca/img/preview/handle-veneto.png"},
+      {"value": "Milano", "imgSrc": "https://doordesigner.steel-craft.ca/img/preview/handle-milano.png"},
+      {"value": "San Marino", "imgSrc": "https://doordesigner.steel-craft.ca/img/preview/handle-san-marino.png"},
+      {"value": "None", "imgSrc": "https://doordesigner.steel-craft.ca/img/preview/handle-none.png"}
+  ],
+  "decorativeHinge" : [
+      {"value": "Sicilian", "imgSrc": "https://doordesigner.steel-craft.ca/img/preview/hinge-sicilian.png"},
+      {"value": "Tuscan", "imgSrc": "https://doordesigner.steel-craft.ca/img/preview/hinge-tuscan.png"},
+      {"value": "Umbria", "imgSrc": "https://doordesigner.steel-craft.ca/img/preview/hinge-umbria.png"},
+      {"value": "None", "imgSrc": "https://doordesigner.steel-craft.ca/img/preview/handle-none.png"}
+  ],
+  "openerOptions" : [
+      {"value": "Lights", "imgSrc": "https://embed.widencdn.net/img/cgi/doho01uhq8/520px/C203_FAMILY_2.jpg"},
+      {"value": "MyQ", "imgSrc": "https://www.chamberlain.com/medias/TopNav-Smart-CLP22.jpg?context=bWFzdGVyfGltYWdlc3w2MzY5fGltYWdlL2pwZWd8aW1hZ2VzL2gwOC9oZGMvODc5ODAxNzEyNjQzMC5qcGd8MGY0MzBjNDM5NzdlNjlmYTA4YjlkNjljM2QxZmIwYWU3OTE2YTlmZmFlOWFiZDEzYzNkNjk0ZjEyZWRlMDMxMA"},
+      {"value": "MyQ and Lights", "imgSrc": "https://embed.widencdn.net/img/cgi/0aa0ihwxis/520px/B1381_family_2.jpg"},
+      {"value": "None", "imgSrc": ""}
+  ],
+  "horsePower" : [
+      {"value": "1/2HP", "imgSrc": ""},
+      {"value": "3/4HP", "imgSrc": ""},
+      {"value": "1-1/2HP", "imgSrc": ""},
+      {"value": "Unsure", "imgSrc": ""}
+  ],
+  "driveType" : [
+      {"value": "Chain Drive", "imgSrc": "https://www.chamberlain.com/medias/chain77.jpg?context=bWFzdGVyfGltYWdlc3wxNzYzNnxpbWFnZS9qcGVnfGltYWdlcy9oMzYvaDE0Lzg4NTAyNzU0MDE3NTguanBnfDNkMDhlZTQwMzVkOTA3MGRhOWNlNzliZTVmZjc4OWUxMzQ4MzNjYjA5ZmZkZTdhZjEzYWQyYTU2ZWUzMWMxNDY"},
+      {"value": "Belt Drive", "imgSrc": "https://www.chamberlain.com/medias/beltnav300b.jpg?context=bWFzdGVyfGltYWdlc3wyNTM5NnxpbWFnZS9qcGVnfGltYWdlcy9oZTAvaGRiLzg3OTY4OTQwNjg3NjYuanBnfGE4MThjODVhNDRhNzlmZjA2ZjM3MzNjM2U5MzQ0MWUzNDdmOWQ1MjFhNzUzMjhiZGZhYzBjZDUwMGMyNTljNzA"},
+      {"value": "Unsure", "imgSrc": ""}
+  ],
+  "yesNo" : [
+      {"value": "Yes", "imgSrc": ""},
+      {"value": "No", "imgSrc": ""}
+  ]
+}

@@ -1,16 +1,25 @@
+import Container from './Container'
+
 //Add code here to return a price
-const getPrice = (width, length, sidingOption, type, requirements) => {
+const getPrice = (requirements, type) => {
+    let price = "Error"
     if (type === "fence") {
         let [material, height, style, length] = requirements
-        return material + " " + height + " " + style + " " + length
-    } else {
-        if (sidingOption === "No Siding") {
+
+        price = [...requirements].join(" - ") + "ft"
+
+    } else if (type === "garage") {
+        let [width, length, siding] = requirements
+
+        if (siding === "No Siding") {
             //Pricing if no siding is selected
-            return "Some Other Value"
+            price = [...requirements].join(" - ")
+        } else {
+            //Pricing if a siding is selected
+            price = [...requirements].join(" - ")
         }
-        //Pricing if a siding is selected
-        return "Some Value"
     }
+    return price
 }
 
 const valid = requirements => {
@@ -26,7 +35,7 @@ const valid = requirements => {
     return valid
 }
 
-const Price = props => <section className="infoSection">
+const Price = props => <Container className="infoSection">
     <h1>Price</h1>
     {valid(props.requirements) ? <section>
         <p>The price for your {props.type} is</p>
@@ -35,13 +44,14 @@ const Price = props => <section className="infoSection">
                 $
             </span>
             <span id="priceValue">
-                {getPrice(props.width, props.length, props.sidingOption, props.type, props.requirements)}
+
+                {getPrice(props.requirements, props.type)}
             </span>
         </div>
     </section> :
     <p>Please select all options to see a price</p>
     }
-</section>
+</Container>
 
 
 
