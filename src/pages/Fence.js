@@ -1,12 +1,12 @@
 import React from 'react'
-import '../App.css'
+
 import QuoteSection from "../Components/QuoteSection"
 import QuoteInfo from '../Components/QuoteInfo'
 import UserInput from "../Components/UserInput"
 import Price from "../Components/Price"
-import data from "../data/fence.json"
 import FileInput from '../Components/FileInput'
-import CardContainer from '../Components/CardContainer'
+
+import data from "../data/fence.json"
 
 class Fence extends React.Component {
     constructor(props) {

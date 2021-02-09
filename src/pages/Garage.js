@@ -1,13 +1,13 @@
 import React from 'react'
-import '../App.css'
+
 import QuoteSection from "../Components/QuoteSection";
 import QuoteInfo from '../Components/QuoteInfo'
 import UserInput from "../Components/UserInput"
 import Price from "../Components/Price";
-import data from "../data/garage.json"
-//import {getProfileType} from "../helperFunctions/garage/getProfileType"
-import * as garageUtils from "../helperFunctions/garageUtils.js"
 import FileInput from '../Components/FileInput'
+
+import data from "../data/garage.json"
+import * as garageUtils from "../helperFunctions/garageUtils.js"
 
 class Garage extends React.Component {
     constructor(props) {
@@ -44,7 +44,7 @@ class Garage extends React.Component {
             garageLength: '',
             garageLengthCustom: '',
             garageHeight: '',
-            heightCustom: '',
+            garageHeightCustom: '',
             studSize: '',
             sidingType: '',
             sidingTypeCustom: '',
@@ -257,7 +257,7 @@ class Garage extends React.Component {
               title : "Height",
               state : this.state.garageHeight,
               summary : "The height of the garage walls, measured from the ground to the bottom of the roof line",
-              customState : this.state.heightCustom
+              customState : this.state.garageHeightCustom
           },
           studSize : {
               stateGroup : "studSize",
@@ -348,6 +348,7 @@ class Garage extends React.Component {
                   this.state.hardieFinish,
                   this.state.hardieSize
               ),
+
               stateGroup : "sidingColour",
               list : garageUtils.getSidingColours(
                   this.state.sidingType,
@@ -382,7 +383,7 @@ class Garage extends React.Component {
               additionalClass : "childSelection"
           },
           roofGauge : {
-              showIf : this.state.roofProfile,
+              showIf : this.state.roofProfile !== "Unsure" && this.state.roofProfile,
               stateGroup : "roofGauge",
               list : garageUtils.getGauge(this.state.roofProfile),
               title : "Gauge",
@@ -392,16 +393,15 @@ class Garage extends React.Component {
               additionalClass : "childSelection2"
           },
           roofColour : {
-              showIf : this.state.roofType === "Shingles" || this.state.roofGauge,
+              showIf : this.state.roofType === "Shingles" ||  garageUtils.getDomtekColours(this.state.roofProfile,this.state.roofGauge),
               stateGroup : "roofColour",
-              list : this.state.roofType === "Shingles" ? data.shingleColour : garageUtils.getSidingColours(
-                  this.state.roofType,
+              list : this.state.roofType === "Shingles" ? data.shingleColour : garageUtils.getDomtekColours(
                   this.state.roofProfile,
                   this.state.roofGauge),
               title : this.state.roofType === "Domtek Metal" ? "Metal Roofing Colour" : "Shingle Colour",
               state : this.state.roofColour,
               summary : "The colour of the roofing",
-              additionalClass :  this.state.roofType === "Shingles" ? "childSelection" : "childSelection3"
+              additionalClass :  this.state.roofType === "Shingles" ? "childSelection" : this.state.roofProfile === "Unsure" ? "childSelection2" : "childSelection3"
           },
           overheadSize : {
               stateGroup : "overheadSize",

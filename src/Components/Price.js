@@ -1,5 +1,7 @@
 import Container from './Container'
 
+import './Price.css'
+
 //Add code here to return a price
 const getPrice = (requirements, type) => {
     let price = "Error"
@@ -44,7 +46,6 @@ const Price = props => <Container className="infoSection">
                 $
             </span>
             <span id="priceValue">
-
                 {getPrice(props.requirements, props.type)}
             </span>
         </div>

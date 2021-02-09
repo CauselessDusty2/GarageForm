@@ -1,11 +1,12 @@
 import React from 'react'
-import '../App.css'
+
 import QuoteSection from "../Components/QuoteSection";
 import QuoteInfo from '../Components/QuoteInfo'
 import UserInput from "../Components/UserInput"
+import FileInput from '../Components/FileInput'
+
 import data from "../data/garage.json"
 import * as garageUtils from "../helperFunctions/garageUtils.js"
-import FileInput from '../Components/FileInput'
 
 class Siding extends React.Component {
     constructor(props) {

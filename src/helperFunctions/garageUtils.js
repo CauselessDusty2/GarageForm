@@ -189,7 +189,7 @@ export const getSidingColours = ( sidingType, productLine, gauge, mittenVinylLin
     let colours = null
     switch(sidingType) {
         case "Mitten Vinyl":
-            colours = getMittenColours( mittenVinylLine )
+            colours = productLine === "Unsure" ? [ ...data.mittenVariegatedColours, ...data.mittenBoldPremiumColours, ...data.mittenStandardColours ] :  getMittenColours( mittenVinylLine )
             break;
         case "Domtek Metal":
             colours = getDomtekColours( productLine, gauge )
@@ -209,6 +209,7 @@ export const getSidingColours = ( sidingType, productLine, gauge, mittenVinylLin
 
     return colours
 }
+
 
 export const getGauge = productLine => {
     let gauges = null

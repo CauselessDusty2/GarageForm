@@ -1,0 +1,22 @@
+.fileInputButton{
+  padding: 0.3em 1.8em;
+  border-radius: 5px;
+  background-color: rgb(255, 225, 83);
+  margin-bottom: 10em;
+}
+.fileContainer{
+  margin-top: 1em;
+  width: 40em;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.file_upload{
+  opacity: 0;
+}
+
+#pdf{
+  margin-right: 0.5em;
+  width: 100px;
+  height: 169.6px;
+}

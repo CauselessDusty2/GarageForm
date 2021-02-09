@@ -1,15 +1,20 @@
 import React from 'react'
-import Card from './Card'
 import PropTypes from 'prop-types'
+
+import Card from './Card'
 import Container from './Container'
+
+import './CardContainer.css'
 
 const CardContainer = props => {
     return (
         <section className={props.additionalClass + " cardSection"}>
-            <div className="title">
+            <div className="cardContainerTitle">
                 {props.title}
             </div>
-            <summary className="cardContainerSummary">{props.summary}</summary>
+            <summary className="cardContainerSummary">
+                {props.summary}
+            </summary>
             <Container className="cardContainer">
                 {props.list && props.list.map( (item, i)=>
                     <Card

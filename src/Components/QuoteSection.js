@@ -1,10 +1,13 @@
 import React from 'react'
-import CardContainer from "./CardContainer";
 import PropTypes from 'prop-types'
+
+import CardContainer from "./CardContainer";
+
+import './QuoteSection.css'
 
 const showList = showIf => !(showIf === undefined || showIf) ? false : true
 
-const BasicQuoteSection = props => <section id="basicSection">
+const BasicQuoteSection = props => <section id="QuoteSection">
     {Object.keys(props.section).map( (section, i) => <>
         {showList(props.section[section].showIf) &&
             <CardContainer

@@ -1,7 +1,10 @@
 import {React, useState} from 'react'
+
 import Card from './Card'
-import '../App.css'
 import Container from './Container'
+
+import '../App.css'
+import './FileInput.css'
 
 const imageFileTypes = [
   "image/apng",
@@ -45,7 +48,7 @@ const FileInput = props => {
               if (imageFileTypes.includes(files[key].type)){
                 return <Card value={files[key].name} imgSrc={URL.createObjectURL(files[key])}/>
               } else if (fileTypes.includes(files[key].type)){
-                return <object data={URL.createObjectURL(files[key])} className="pdf">PDF</object>
+                return <object data={URL.createObjectURL(files[key])} id="pdf">PDF</object>
               }
               return null
             })}

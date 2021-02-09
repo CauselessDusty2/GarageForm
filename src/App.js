@@ -25,7 +25,7 @@ class App extends React.Component {
     handleSimpleStateChange = (key, value) => {this.setState({ [key]: value})}
     render() {
         return (<span>
-            {!this.state.selected && <Container className="appContainer">
+            {!this.state.selected && <Container id="appContainer">
                 <Card stateGroup="selected" value="Garage" onChange={this.handleSimpleStateChange}/>
                 <Card stateGroup="selected" value="Deck" onChange={this.handleSimpleStateChange}/>
                 <Card stateGroup="selected" value="General" onChange={this.handleSimpleStateChange}/>
@@ -40,16 +40,16 @@ class App extends React.Component {
             </Container>}
             {this.state.selected && <button onClick={e => this.handleClick("")}>Back</button>}
             {this.state.selected === "Garage" && <Garage />}
-            {this.state.selected === "Deck" && <img src="https://lh3.googleusercontent.com/proxy/EMfKTp8lvIyAaRNUkafBR5vDr5Dkzwghyrg47GDRdcNyQSamT52IVGuuH_X6Alk2DENMtyTme1X2jRhjkrBXvqdVBmq3pXvf8Z6ekqh34j9E-8vqCEvH4jFZbgCUql0mZaaN2eq6Xw" height="120%" width="120%"/>}
+            {this.state.selected === "Deck" && <img src="https://lh3.googleusercontent.com/proxy/EMfKTp8lvIyAaRNUkafBR5vDr5Dkzwghyrg47GDRdcNyQSamT52IVGuuH_X6Alk2DENMtyTme1X2jRhjkrBXvqdVBmq3pXvf8Z6ekqh34j9E-8vqCEvH4jFZbgCUql0mZaaN2eq6Xw" height="120%" width="120%" alt="Deck"/>}
             {this.state.selected === "General" && <General />}
-            {this.state.selected === "Window" && <img src="https://lh3.googleusercontent.com/proxy/EMfKTp8lvIyAaRNUkafBR5vDr5Dkzwghyrg47GDRdcNyQSamT52IVGuuH_X6Alk2DENMtyTme1X2jRhjkrBXvqdVBmq3pXvf8Z6ekqh34j9E-8vqCEvH4jFZbgCUql0mZaaN2eq6Xw" height="120%" width="120%"/>}
-            {this.state.selected === "Entry Door" && <img src="https://lh3.googleusercontent.com/proxy/EMfKTp8lvIyAaRNUkafBR5vDr5Dkzwghyrg47GDRdcNyQSamT52IVGuuH_X6Alk2DENMtyTme1X2jRhjkrBXvqdVBmq3pXvf8Z6ekqh34j9E-8vqCEvH4jFZbgCUql0mZaaN2eq6Xw" height="120%" width="120%"/>}
+            {this.state.selected === "Window" && <img src="https://lh3.googleusercontent.com/proxy/EMfKTp8lvIyAaRNUkafBR5vDr5Dkzwghyrg47GDRdcNyQSamT52IVGuuH_X6Alk2DENMtyTme1X2jRhjkrBXvqdVBmq3pXvf8Z6ekqh34j9E-8vqCEvH4jFZbgCUql0mZaaN2eq6Xw" height="120%" width="120%" alt="Window"/>}
+            {this.state.selected === "Entry Door" && <img src="https://lh3.googleusercontent.com/proxy/EMfKTp8lvIyAaRNUkafBR5vDr5Dkzwghyrg47GDRdcNyQSamT52IVGuuH_X6Alk2DENMtyTme1X2jRhjkrBXvqdVBmq3pXvf8Z6ekqh34j9E-8vqCEvH4jFZbgCUql0mZaaN2eq6Xw" height="120%" width="120%" alt="Entry Door"/>}
             {this.state.selected === "Fence" && <Fence />}
             {this.state.selected === "Siding" && <Siding />}
             {this.state.selected === "Roofing" && <Roofing />}
-            {this.state.selected === "Storm Door" && <img src="https://lh3.googleusercontent.com/proxy/EMfKTp8lvIyAaRNUkafBR5vDr5Dkzwghyrg47GDRdcNyQSamT52IVGuuH_X6Alk2DENMtyTme1X2jRhjkrBXvqdVBmq3pXvf8Z6ekqh34j9E-8vqCEvH4jFZbgCUql0mZaaN2eq6Xw" height="120%" width="120%"/>}
-            {this.state.selected === "Custom Building" && <img src="https://lh3.googleusercontent.com/proxy/EMfKTp8lvIyAaRNUkafBR5vDr5Dkzwghyrg47GDRdcNyQSamT52IVGuuH_X6Alk2DENMtyTme1X2jRhjkrBXvqdVBmq3pXvf8Z6ekqh34j9E-8vqCEvH4jFZbgCUql0mZaaN2eq6Xw" height="120%" width="120%"/>}
-            {this.state.selected === "Interior Door" && <img src="https://lh3.googleusercontent.com/proxy/EMfKTp8lvIyAaRNUkafBR5vDr5Dkzwghyrg47GDRdcNyQSamT52IVGuuH_X6Alk2DENMtyTme1X2jRhjkrBXvqdVBmq3pXvf8Z6ekqh34j9E-8vqCEvH4jFZbgCUql0mZaaN2eq6Xw" height="120%" width="120%"/>}
+            {this.state.selected === "Storm Door" && <img src="https://lh3.googleusercontent.com/proxy/EMfKTp8lvIyAaRNUkafBR5vDr5Dkzwghyrg47GDRdcNyQSamT52IVGuuH_X6Alk2DENMtyTme1X2jRhjkrBXvqdVBmq3pXvf8Z6ekqh34j9E-8vqCEvH4jFZbgCUql0mZaaN2eq6Xw" height="120%" width="120%" alt="Storm Door"/>}
+            {this.state.selected === "Custom Building" && <img src="https://lh3.googleusercontent.com/proxy/EMfKTp8lvIyAaRNUkafBR5vDr5Dkzwghyrg47GDRdcNyQSamT52IVGuuH_X6Alk2DENMtyTme1X2jRhjkrBXvqdVBmq3pXvf8Z6ekqh34j9E-8vqCEvH4jFZbgCUql0mZaaN2eq6Xw" height="120%" width="120%" alt="Custom Building"/>}
+            {this.state.selected === "Interior Door" && <img src="https://lh3.googleusercontent.com/proxy/EMfKTp8lvIyAaRNUkafBR5vDr5Dkzwghyrg47GDRdcNyQSamT52IVGuuH_X6Alk2DENMtyTme1X2jRhjkrBXvqdVBmq3pXvf8Z6ekqh34j9E-8vqCEvH4jFZbgCUql0mZaaN2eq6Xw" height="120%" width="120%" alt="Interior Door"/>}
         </span>);
     }
 }
