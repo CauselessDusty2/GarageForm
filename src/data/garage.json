@@ -11,6 +11,16 @@
       {"value": "28", "imgSrc": "../img/28.png"},
       {"value": "30", "imgSrc": "../img/30.png"}
   ],
+  "basicWidthAlt" : [
+      {"value": "16", "imgSrc": "../img/16.png"},
+      {"value": "18", "imgSrc": "../img/18.png"},
+      {"value": "20", "imgSrc": "../img/20.png"},
+      {"value": "22", "imgSrc": "../img/22.png"},
+      {"value": "24", "imgSrc": "../img/24.png"},
+      {"value": "26", "imgSrc": "../img/26.png"},
+      {"value": "28", "imgSrc": "../img/28.png"},
+      {"value": "30", "imgSrc": "../img/30.png"}
+  ],
   "width" : [
       {"value": "12", "imgSrc": "../img/12.png"},
       {"value": "14", "imgSrc": "../img/14.png"},
@@ -24,15 +34,14 @@
       {"value": "30", "imgSrc": "../img/30.png"},
       {"value": "Other"}
   ],
-  "basicWidthAlt" : [
-      {"value": "16", "imgSrc": "../img/16.png"},
-      {"value": "18", "imgSrc": "../img/18.png"},
+  "width2" : [
       {"value": "20", "imgSrc": "../img/20.png"},
       {"value": "22", "imgSrc": "../img/22.png"},
       {"value": "24", "imgSrc": "../img/24.png"},
       {"value": "26", "imgSrc": "../img/26.png"},
       {"value": "28", "imgSrc": "../img/28.png"},
-      {"value": "30", "imgSrc": "../img/30.png"}
+      {"value": "30", "imgSrc": "../img/30.png"},
+      {"value": "Other"}
   ],
   "widthAlt" : [
       {"value": "16", "imgSrc": "../img/16.png"},
@@ -139,6 +148,10 @@
   ],
   "height" : [
       {"value": "8ft", "imgSrc": ""},
+      {"value": "10ft", "imgSrc": ""},
+      {"value": "Other"}
+  ],
+  "height2" : [
       {"value": "10ft", "imgSrc": ""},
       {"value": "Other"}
   ],
@@ -536,10 +549,19 @@
   ],
   "overheadDoorSize1" : [
       {"value": "9x7", "imgSrc": ""},
-      {"value": "9x8", "imgSrc": ""},
       {"value": "Other"}
   ],
   "overheadDoorSize2" : [
+      {"value": "9x7", "imgSrc": ""},
+      {"value": "9x8", "imgSrc": ""},
+      {"value": "Other"}
+  ],
+  "overheadDoorSize3" : [
+      {"value": "9x7", "imgSrc": ""},
+      {"value": "16x7", "imgSrc": ""},
+      {"value": "Other"}
+  ],
+  "overheadDoorSize4" : [
       {"value": "9x7", "imgSrc": ""},
       {"value": "9x8", "imgSrc": ""},
       {"value": "16x7", "imgSrc": ""},

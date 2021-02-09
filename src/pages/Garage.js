@@ -237,7 +237,7 @@ class Garage extends React.Component {
         const ADVANCED_SECTION = {
           garageWidth : {
               stateGroup : "garageWidth",
-              list : this.state.garageLength > 30 ? data.widthAlt : data.width,
+              list : this.state.overheadSize === "16x7" ? data.width2 : this.state.overheadSize === "16x8" ? data.width2 : this.state.garageLength > 30 ? data.widthAlt : data.width,
               title : "Width",
               state : this.state.garageWidth,
               summary : "The width of the garage means the gable end of the garage, the side that the overhead door will be on",
@@ -253,7 +253,7 @@ class Garage extends React.Component {
           },
           garageHeight : {
               stateGroup : "garageHeight",
-              list : data.height,
+              list : this.state.overheadSize === "9x8" ? data.height2 : this.state.overheadSize === "16x8" ? data.height2 : data.height,
               title : "Height",
               state : this.state.garageHeight,
               summary : "The height of the garage walls, measured from the ground to the bottom of the roof line",
@@ -405,7 +405,7 @@ class Garage extends React.Component {
           },
           overheadSize : {
               stateGroup : "overheadSize",
-              list : garageUtils.getOverheadSizes(this.state.garageWidth),
+              list : garageUtils.getOverheadSizes(this.state.garageWidth, this.state.garageHeight),
               title : "Overhead Door Size",
               state : this.state.overheadSize,
               summary : "Overhead door size options",

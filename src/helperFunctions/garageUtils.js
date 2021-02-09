@@ -225,7 +225,23 @@ export const getGauge = productLine => {
     return gauges
 }
 
-export const getOverheadSizes = width => width < 20 ? data.overheadDoorSize1 : data.overheadDoorSize2
+export const getOverheadSizes = (width, height) => {
+  let size = null
+  if (width && width < 20) {
+    if (height === "8ft") {
+      size = data.overheadDoorSize1
+    } else {
+      size = data.overheadDoorSize2
+    }
+  } else {
+    if (height === "8ft") {
+      size = data.overheadDoorSize3
+    } else {
+      size = data.overheadDoorSize4
+    }
+  }
+  return size
+}
 
 export const getOverheadColours = series => {
     let colours = null
