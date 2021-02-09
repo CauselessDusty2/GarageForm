@@ -1,0 +1,13 @@
+#addInfoText{
+  height: 4em;
+  resize: none;
+  outline: none;
+  font-size: 1.2em;
+}
+#infoHeader{
+
+}
+
+#selectionList{
+  word-break: break-word;
+}

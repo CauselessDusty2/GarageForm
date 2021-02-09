@@ -1,0 +1,40 @@
+.card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+
+  padding-top:0.5em;
+  margin: 0 0.5em 0.5em 0;
+  min-height: 120px;
+  width: 100px;
+
+  background: #fff;
+}
+.card:hover{
+  background: gold;
+  cursor: pointer;
+}
+.cardDescription{
+  font-size: 0.8em;
+  font-weight: lighter;
+  padding: 0.3em;
+}
+.cardImage{
+  width: 80px;
+  height: 80px;
+}
+.cardValue{
+  width: 80%;
+  overflow-wrap: anywhere;
+  text-overflow: ellipsis;
+  white-space: wrap;
+  overflow: hidden;
+
+  font-weight: bold;
+  font-size: 0.75em;
+  text-align: center;
+}
+.selectedState{
+  background: gold;
+}

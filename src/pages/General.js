@@ -1,5 +1,5 @@
 import {React, useState} from 'react'
-import '../App.css'
+
 import UserInput from "../Components/UserInput"
 import FileInput from '../Components/FileInput'
 import Container from '../Components/Container'
@@ -19,7 +19,7 @@ const General = props => {
                     value={additionalInfo}
                     onChange={(e) => handleSimpleStateChange(e.target.value)}/>
         </Container>
-        
+
         <FileInput setFilesState={setFiles}/>
 
         <UserInput

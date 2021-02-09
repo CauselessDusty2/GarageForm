@@ -1,7 +1,10 @@
 import React from 'react'
 import { Formik, Field, Form, ErrorMessage } from 'formik'
 import * as Yup from 'yup'
+
 import Container from './Container'
+
+import './UserInput.css'
 
 const handleSubmit = async(body) => {
     alert(body)
@@ -92,7 +95,7 @@ const UserInput = props => {
                         />
                         {errors.phoneNumber && touched.phoneNumber && <div>{errors.phoneNumber}</div>}
 
-                        <button type="submit" disabled={!!errors.phoneNumber || !!errors.name || !!errors.email || !touched.name}>Submit</button>
+                        <button type="submit" id="submitButton" disabled={!!errors.phoneNumber || !!errors.name || !!errors.email || !touched.name}>Submit</button>
                     </Form>
                 </Container>
             )}

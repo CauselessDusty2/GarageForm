@@ -1,6 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+import './Card.css'
+
 const Card = props => {
     const handleClick = () => {
         props.onChange(props.stateGroup, props.value);
@@ -9,7 +11,7 @@ const Card = props => {
         <div onClick={handleClick} className={"card " + props.selected}>
 
             {/* Image portion of the card */}
-            <img src={props.imgSrc} className="cardImage" alt="Item"/>
+            <img src={props.imgSrc} className="cardImage" alt={props.value}/>
 
             {/* Value or name portion of card */}
             <span className="cardValue">
