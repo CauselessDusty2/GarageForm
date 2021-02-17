@@ -55,7 +55,8 @@ class Garage extends React.Component {
             hardieFinish: '',
             hardieSize: '',
             sidingColour: '',
-            drywall: '',
+            intSheathing: '',
+            intSheathingCustom: '',
             insulation: '',
             overheadSize: '',
             overheadSizeCustom: '',
@@ -266,12 +267,12 @@ class Garage extends React.Component {
               state : this.state.studSize,
               summary : "The size of the studs for the walls, either 2x4 or 2x6 studs"
           },
-          drywall : {
-              stateGroup : "drywall",
-              list : data.yesNo,
-              title : "Include Drywall",
-              state : this.state.drywall,
-              summary : "Option to add drywall"
+          intSheathing : {
+              stateGroup : "intSheathing",
+              list : data.intFinish,
+              title : "Interior Sheathing",
+              state : this.state.intSheathing,
+              summary : "Options for interior sheathing"
           },
           insulation : {
               stateGroup : "insulation",
@@ -581,7 +582,7 @@ class Garage extends React.Component {
           "Length": this.state.customGarageLength||this.state.garageLength,
           "Height":this.state.heightCustom||this.state.garageHeight,
           "Stud Size":this.state.studSize,
-          "Drywall":this.state.drywall,
+          "Interior Sheathing":this.state.intSheathingCustom||this.state.intSheathing,
           "Insulation":this.state.insulation,
           "Siding Type":this.state.sidingTypeCustom||this.state.sidingType,
           "Siding Profile":this.state.sidingProfile,
@@ -625,14 +626,14 @@ class Garage extends React.Component {
                     section={this.state.toggleBasic ? BASIC_SECTION : ADVANCED_SECTION}
                 />
 
+                {!this.state.toggleBasic && <FileInput setFilesState={files => this.setState({files})}/>}
+
                 <QuoteInfo
                     title="Garage Info"
                     handleChange={this.handleSimpleStateChange}
                     state={this.state}
                     stateList={this.state.toggleBasic ? DISPLAY_LIST_BASIC : DISPLAY_LIST_ADVANCED}
                 />
-
-                {!this.state.toggleBasic && <FileInput setFilesState={files => this.setState({files})}/>}
 
                 {this.state.toggleBasic &&
                     <Price

@@ -118,14 +118,14 @@ class Roofing extends React.Component {
                     section={SECTION}
                 />
 
+                <FileInput setFilesState={files => this.setState({files})}/>
+
                 <QuoteInfo
                     title="Roofing Info"
                     handleChange={this.handleSimpleStateChange}
                     state={this.state}
                     stateList={DISPLAY_LIST}
                 />
-
-                <FileInput setFilesState={files => this.setState({files})}/>
 
                 <UserInput
                     handleChange={this.handleSimpleStateChange}

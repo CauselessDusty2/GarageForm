@@ -8,7 +8,7 @@ const Card = props => {
         props.onChange(props.stateGroup, props.value);
     }
     return(
-        <div onClick={handleClick} className={"card " + props.selected}>
+        <div onClick={props.className==="noSelect"?null:handleClick} className={"card " + props.selected + " " + props.className}>
 
             {/* Image portion of the card */}
             <img src={props.imgSrc} className="cardImage" alt={props.value}/>

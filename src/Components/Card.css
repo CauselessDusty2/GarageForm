@@ -10,6 +10,11 @@
   width: 100px;
 
   background: #fff;
+
+  -webkit-user-select: none;  /* Chrome all / Safari all */
+  -moz-user-select: none;     /* Firefox all */
+  -ms-user-select: none;      /* IE 10+ */
+  user-select: none;          /* Likely future */  
 }
 .card:hover{
   background: gold;
@@ -37,4 +42,9 @@
 }
 .selectedState{
   background: gold;
+}
+
+.noSelect:hover{
+  background: #fff;
+  cursor: default;
 }

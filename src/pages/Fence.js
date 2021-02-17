@@ -185,13 +185,14 @@ class Fence extends React.Component {
                     section={this.state.toggleBasic ? BASIC_SECTION : ADVANCED_SECTION}
                 />
 
+                {!this.state.toggleBasic && <FileInput setFilesState={files => this.setState({files})}/> }
+                
                 <QuoteInfo
                     title="Fence Info"
                     handleChange={this.handleSimpleStateChange}
                     state={this.state}
                     stateList={this.state.toggleBasic ? DISPLAY_LIST_BASIC: DISPLAY_LIST_ADVANCED}
                 />
-                {!this.state.toggleBasic && <FileInput setFilesState={files => this.setState({files})}/> }
 
                 {this.state.toggleBasic &&
                     <Price

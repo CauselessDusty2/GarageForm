@@ -795,5 +795,11 @@
   "yesNo" : [
       {"value": "Yes", "imgSrc": ""},
       {"value": "No", "imgSrc": ""}
+  ],
+  "intFinish" : [
+    {"value": "Drywall"},
+    {"value": "Plywood"},
+    {"value": "None"},
+    {"value": "Other"}
   ]
 }
