@@ -11,3 +11,23 @@
 #selectionList{
   word-break: break-word;
 }
+
+.sidenav {
+  color: white;
+  height: 100vh;
+  width: 240px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #777;
+  overflow-x: hidden;
+  padding: 0 30px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+
+  -webkit-user-select: none;  /* Chrome all / Safari all */
+  -moz-user-select: none;     /* Firefox all */
+  -ms-user-select: none;      /* IE 10+ */
+  user-select: none;          /* Likely future */
+}

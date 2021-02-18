@@ -5,7 +5,9 @@ import QuoteInfo from '../Components/QuoteInfo'
 import UserInput from "../Components/UserInput"
 import Price from "../Components/Price"
 import FileInput from '../Components/FileInput'
-import {getAttachmentList, getSupportList, getPostSizeList, getDeckingColourList, getPictureframeColourList, getFasciaSize} from '../helperFunctions/deckUtils.js'
+import AdditionalInfo from '../Components/AdditionalInfo'
+import SelectionList from '../Components/SelectionList'
+import {getAttachmentList, getSupportList, getPostSizeList, getDeckingColourList, getPictureframeColourList, getFasciaSize, getBalusterList, getSkirtingList, toggleSectionHeading} from '../helperFunctions/deckUtils.js'
 
 import data from "../data/deck.json"
 
@@ -19,8 +21,11 @@ class Deck extends React.Component {
         this.handleDeckingTypeChange=this.handleDeckingTypeChange.bind(this)
         this.handleTrexDeckingLineChange=this.handleTrexDeckingLineChange.bind(this)
         this.handlePictureframeChange=this.handlePictureframeChange.bind(this)
+        this.handleRailingChange=this.handleRailingChange.bind(this)
+        this.generateQuote=this.generateQuote.bind(this)
 
         this.state = {
+            quoteKey: '',
             files: null,
             attachment: '',
             height: '',
@@ -41,10 +46,50 @@ class Deck extends React.Component {
             pictureframeCustom: '',
             pictureframeColour: '',
             fasciaSize: '',
-            fasciaColour: ''
+            fasciaColour: '',
+            railing: '',
+            railingCustom: '',
+            baluster: '',
+            railingColour: '',
+            skirting: '',
+            skirtingMaterial: '',
+            additionalInfo: ''
         };
     }
 
+    generateQuote(e, key) {
+      e.preventDefault();
+      if (key === "aaa111"){
+        this.setState({
+          attachment: 'Attached',
+          height: '2ft',
+          heightCustom: '',
+          support: '8\' Ground Hog',
+          framingMaterial: 'Brown Treated',
+          framingMaterialCustom: '',
+          postSize: '4x4',
+          beamSize: '2x8',
+          beamPly: '2-Ply',
+          joistSize: '2x8',
+          joistSpacing: '16" on center',
+          joistSpacingCustom: '',
+          deckingType: 'Trex',
+          trexDeckingLine: 'Select',
+          deckingColour: 'Pebble Grey',
+          pictureframe: 'Single',
+          pictureframeCustom: '',
+          pictureframeColour: 'Winchester Grey',
+          fasciaSize: '1"x12"x12\' Fascia',
+          fasciaColour: 'Winchester Grey',
+          railing: 'Regal',
+          railingCustom: '',
+          baluster: 'Wide Pickets',
+          railingColour: 'Textured Black',
+          skirting: 'Horizontal',
+          skirtingMaterial: 'Pebble Grey'
+        })
+      }
+    }
     handleSimpleStateChange(key, value) {
         this.setState({ [key]: value})
     }
@@ -82,6 +127,12 @@ class Deck extends React.Component {
     handlePictureframeChange( state, pictureframe) {
         if (pictureframe !== this.state.pictureframe ){
             this.setState({pictureframe, pictureframeCustom: '', pictureframeColour: ''})
+        }
+    }
+
+    handleRailingChange( state, railing) {
+        if (railing !== this.state.railing ){
+            this.setState({railing, railingCustom: ''})
         }
     }
 
@@ -227,26 +278,83 @@ class Deck extends React.Component {
                 list : getPictureframeColourList(this.state.deckingType, this.state.trexDeckingLine),
                 additionalClass : "childSelection"
             },
+            railing : {
+              stateGroup: "railing",
+              title: "Railing",
+              state: this.state.railing,
+              summary: "The railing options for the deck",
+              list : data.railing,
+              changeHandler: this.handleRailingChange
+            },
+            baluster : {
+              showIf: getBalusterList(this.state.railing),
+              stateGroup: "baluster",
+              title: "Railing Configuration",
+              state: this.state.baluster,
+              summary: "The railing configuration for the balusters",
+              list : getBalusterList(this.state.railing),
+              additionalClass: "childSelection"
+            },
+            railingColour : {
+              showIf: this.state.railing === "Regal",
+              stateGroup: "railingColour",
+              title: "Railing Colour",
+              state: this.state.railingColour,
+              summary: "The colour of the railing",
+              list : data.regalColour,
+              additionalClass: "childSelection"
+            },
+            skirting : {
+              stateGroup: "skirting",
+              title: "Skirting",
+              state: this.state.skirting,
+              summary: "Skirting for the deck between the ground and the top of the deck",
+              list : data.skirtingDirection,
+            },
+            skirtingMaterial : {
+              showIf: !!this.state.skirting && this.state.skirting !== "None" && getSkirtingList(this.state.deckingType, this.state.trexDeckingLine),
+              stateGroup: "skirtingMaterial",
+              title: "Skirting Material",
+              state: this.state.skirtingMaterial,
+              summary: "The colour of the railing",
+              list : getSkirtingList(this.state.deckingType, this.state.trexDeckingLine),
+              additionalClass: "childSelection"
+            },
         }
 
         const DISPLAY_LIST = {
+          "section1": toggleSectionHeading("Frame", this.state) && "SECTION Frame",
           "Type": this.state.attachment,
           "Height": this.state.heightCustom || this.state.height,
           "Support": this.state.support,
           "Frame Material": this.state.framingMaterialCustom || this.state.framingMaterial,
+          "sub3": "SUBSECTION Post",
           "Post Size": this.state.postSize,
+          "sub4": "SUBSECTION Beam",
           "Beam Size": this.state.beamSize,
           "Beam Thickness": this.state.beamPly,
+          "sub5": "SUBSECTION Joist",
           "Joist Size": this.state.joistSize,
           "Joist Spacing": this.state.joistSpacingCustom || this.state.joistSpacing,
-          "Additional Info": this.state.additionalInfo,
+          "section2": toggleSectionHeading("Decking", this.state) && "SECTION Decking",
           "Decking Type": this.state.deckingType,
           "Trex Product Line": this.state.trexDeckingLine,
           "Decking Colour": this.state.deckingColour,
+          "sub1": "SUBSECTION Picture Frame",
           "Picture Frame": this.state.pictureframeCustom || this.state.pictureframe,
           "Picture Frame Colour": this.state.pictureframeColour,
+          "sub2": "SUBSECTION Fascia",
           "Fascia Size": this.state.fasciaSize,
-          "Fascia Colour": this.state.fasciaColour
+          "Fascia Colour": this.state.fasciaColour,
+          "section3": toggleSectionHeading("Railing", this.state) &&"SECTION Railing",
+          "Railing": this.state.railingCustom || this.state.railing,
+          "Configuration": this.state.baluster,
+          "Colour": this.state.railingColour,
+          "section4": "SECTION Skirting",
+          "Skirting": this.state.skirting,
+          "Skirting Material": this.state.skirtingMaterial,
+          "section5": "SECTION",
+          "Additional Info": this.state.additionalInfo,
         }
 
         return (
@@ -258,8 +366,15 @@ class Deck extends React.Component {
 
                 <FileInput setFilesState={files => this.setState({files})}/>
 
-                <QuoteInfo
+                <SelectionList
                     title="Deck Info"
+                    handleChange={this.handleSimpleStateChange}
+                    state={this.state}
+                    stateList={DISPLAY_LIST}
+                    generateQuote={this.generateQuote}
+                />
+
+                <AdditionalInfo
                     handleChange={this.handleSimpleStateChange}
                     state={this.state}
                     stateList={DISPLAY_LIST}
@@ -267,7 +382,7 @@ class Deck extends React.Component {
 
                 <UserInput
                     handleChange={this.handleSimpleStateChange}
-                    requestType="Fence"
+                    requestType="Deck"
                     files={this.state.files}
                     stateList={DISPLAY_LIST}
                 />

@@ -75,7 +75,7 @@ export const getPictureframeColourList = (deckingType, trexDeckingLine) => {
   return list
 }
 
-export const getFasciaSize = (deckingType) => {
+export const getFasciaSize = deckingType => {
   let list = null
 
   if (deckingType === "Brown Pressure Treated") {
@@ -89,4 +89,73 @@ export const getFasciaSize = (deckingType) => {
   }
 
   return list
+}
+
+export const getBalusterList = railing => {
+  let list
+  switch (railing) {
+    case "Brown Treated":
+      list = data.brownBalust
+      break;
+    case "Cedar":
+      list = data.cedarBalust
+      break;
+    case "Regal":
+      list = data.regalConfig
+      break;
+    default:
+      list = null
+  }
+
+  return list
+}
+
+export const getSkirtingList = (plankingType, line) => {
+  let list = null
+
+  if (plankingType === "MoistureShield") {
+    list = data.skirtingMoistureshield
+  } else if (plankingType === "Trex") {
+    if (line === "Select") {
+        list = data.skirtingTrexSelect
+    } else if (line === "Transcend" || line === "Enhance") {
+        list = data.skirtingTrexEnhanceTranscend
+    }
+  }
+
+  return list
+}
+
+export const toggleSectionHeading = (section, state) => {
+  let showHeading = false
+
+  const FRAME_LIST = [
+    state.attachment,
+    state.height,
+    state.support,
+    state.framingMaterial,
+    state.postSize,
+    state.beamSize,
+    state.beamPly,
+    state.joistSize,
+    state.joistSpacing,
+  ]
+
+  const DECKING_LIST = [
+    state.deckingType,
+  ]
+
+  const RAILING_LIST = [
+    state.railing
+  ]
+
+  if (section === "Frame"){
+    showHeading = FRAME_LIST.some(i => i !== '')
+  } else if (section === "Decking"){
+    showHeading = DECKING_LIST.some(i => i !== '')
+  } else if (section === "Railing"){
+    showHeading = RAILING_LIST.some(i => i !== '')
+  }
+
+  return showHeading
 }

@@ -201,17 +201,11 @@
   "fasciaSizeMoistureShield": [
     {"value": "1\"x12\"x12' Fascia"}
   ],
-  "Railing": [
+  "railing": [
     {"value": "Brown Treated"},
     {"value": "Cedar"},
-    {"value": "Regal"},
-    {"value": "Nuvo"},
-    {"value": "Other"}
-  ],
-  "RailingLowDeck": [
-    {"value": "Brown Treated"},
-    {"value": "Cedar"},
-    {"value": "Regal"},
+    {"value": "Regal", "imgSrc": "https://regalideas.com/wp-content/uploads/2016/08/Aluminum_Pickets-15.jpg"},
+    {"value": "Regal Crystal Rail", "imgSrc": "https://regalideas.com/wp-content/uploads/2016/08/20170907_111932.jpg"},
     {"value": "Nuvo"},
     {"value": "Other"}
   ],
@@ -222,25 +216,28 @@
     {"value": "Other"}
   ],
   "cedarBalust": [
-    {"value": "Round black baluster"},
-    {"value": "Square black baluser"},
+    {"value": "Round black baluster", "imgsrc": "https://static.wixstatic.com/media/c4f997_2c33bfc740f44a91a484f86d32f6518f~mv2_d_2000_2000_s_2.png/v1/fill/w_420,h_420,al_c,q_90,usm_0.66_1.00_0.01/c4f997_2c33bfc740f44a91a484f86d32f6518f~mv2_d_2000_2000_s_2.webp"},
+    {"value": "Square black baluster"},
     {"value": "Other"}
   ],
   "regalConfig": [
-    {"value": "Pickets"},
+    {"value": "Narrow Pickets"},
+    {"value": "Wide Pickets"},
     {"value": "Glass Panels"}
   ],
   "regalColour": [
-    {"value": "White"},
-    {"value": "Textured Black"},
-    {"value": "Taupe"},
-    {"value": "Yard Bronze"},
-    {"value": "Titanium Slate"},
-    {"value": "Black"}
+    {"value": "White", "imgSrc": "https://regalideas.com/wp-content/uploads/2016/08/White-hires.jpg"},
+    {"value": "Textured Black", "imgSrc": "https://regalideas.com/wp-content/uploads/2020/05/TB-hires_NEW.jpg"},
+    {"value": "Taupe", "imgSrc": "https://regalideas.com/wp-content/uploads/2016/08/TP-hires.jpg"},
+    {"value": "Yard Bronze", "imgSrc": "https://regalideas.com/wp-content/uploads/2016/08/YB-hires.jpg"},
+    {"value": "Titanium Slate", "imgSrc": "https://regalideas.com/wp-content/uploads/2016/08/TS-hires.jpg"},
+    {"value": "Black", "imgSrc": "https://regalideas.com/wp-content/uploads/2016/08/Black-hires.jpg"}
   ],
   "skirtingDirection": [
+    {"value": "None"},
     {"value": "Horizontal"},
-    {"value": "Vertical"}
+    {"value": "Vertical"},
+    {"value": "Other"}
   ],
   "skirtingMoistureshield": [
     {"value": "Brown Treated"},
