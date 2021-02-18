@@ -148,6 +148,23 @@ export const toggleSectionHeading = (section, state) => {
   const RAILING_LIST = [
     state.railing
   ]
+  const SKIRTING_LIST = [
+    state.skirting
+  ]
+  const POST_LIST = [
+    state.postSize
+  ]
+  const BEAM_LIST = [
+    state.beamSize,
+    state.beamPly
+  ]
+  const JOIST_LIST = [
+    state.joistSize,
+    state.joistSpacing
+  ]
+  const PICTUREFRAME_LIST = [
+    state.pictureframe
+  ]
 
   if (section === "Frame"){
     showHeading = FRAME_LIST.some(i => i !== '')
@@ -155,6 +172,16 @@ export const toggleSectionHeading = (section, state) => {
     showHeading = DECKING_LIST.some(i => i !== '')
   } else if (section === "Railing"){
     showHeading = RAILING_LIST.some(i => i !== '')
+  } else if (section === "Skirting"){
+    showHeading = SKIRTING_LIST.some(i => i !== '')
+  } else if (section === "Post"){
+    showHeading = POST_LIST.some(i => i !== '')
+  } else if (section === "Beam"){
+    showHeading = BEAM_LIST.some(i => i !== '')
+  } else if (section === "Joist"){
+    showHeading = JOIST_LIST.some(i => i !== '')
+  } else if (section === "Pictureframe"){
+    showHeading = PICTUREFRAME_LIST.some(i => i !== '')
   }
 
   return showHeading
