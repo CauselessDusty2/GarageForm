@@ -2,7 +2,7 @@ import {React, useState} from 'react'
 
 import Container from './Container'
 
-import './QuoteInfo.css'
+import './SelectionList.css'
 
 
 

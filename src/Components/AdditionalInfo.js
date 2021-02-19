@@ -2,7 +2,7 @@ import React from 'react'
 
 import Container from './Container'
 
-import './QuoteInfo.css'
+import './AdditionalInfo.css'
 
 const AdditionalInfo = props => {
     return (
