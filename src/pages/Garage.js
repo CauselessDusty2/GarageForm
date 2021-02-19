@@ -5,6 +5,8 @@ import QuoteInfo from '../Components/QuoteInfo'
 import UserInput from "../Components/UserInput"
 import Price from "../Components/Price";
 import FileInput from '../Components/FileInput'
+import AdditionalInfo from '../Components/AdditionalInfo'
+import SelectionList from '../Components/SelectionList'
 
 import data from "../data/garage.json"
 import * as garageUtils from "../helperFunctions/garageUtils.js"
@@ -628,7 +630,7 @@ class Garage extends React.Component {
 
                 {!this.state.toggleBasic && <FileInput setFilesState={files => this.setState({files})}/>}
 
-                <QuoteInfo
+                <SelectionList
                     title="Garage Info"
                     handleChange={this.handleSimpleStateChange}
                     state={this.state}
@@ -641,6 +643,12 @@ class Garage extends React.Component {
                         requirements = {[this.state.basic.garageWidth, this.state.basic.garageLength, this.state.basic.siding, this.state.basic.shingleColour]}
                     />
                 }
+
+                <AdditionalInfo
+                    handleChange={this.handleSimpleStateChange}
+                    state={this.state}
+                    stateList={this.state.toggleBasic ? DISPLAY_LIST_BASIC : DISPLAY_LIST_ADVANCED}
+                />
 
                 <UserInput
                     handleChange={this.handleSimpleStateChange}

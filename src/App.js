@@ -15,9 +15,24 @@ class App extends React.Component {
         super(props);
         this.handleClick = this.handleClick.bind(this)
         this.handleSimpleStateChange = this.handleSimpleStateChange.bind(this)
+        this.getClassName = this.getClassName.bind(this)
         this.state = {
             selected: ""
         }
+    }
+
+    getClassName = () => {
+      const NO_QUOTE = [
+        "Shed",
+        "General",
+        "Window",
+        "Entry Door",
+        "Storm Door",
+        "Custom Building",
+        "Interior Door"
+      ]
+
+      return NO_QUOTE.includes(this.state.selected) ? false : true;
     }
 
     handleClick = (selection) => {
@@ -41,7 +56,8 @@ class App extends React.Component {
                 <Card stateGroup="selected" value="Entry Door" onChange={this.handleSimpleStateChange}/>
                 <Card stateGroup="selected" value="Interior Door" onChange={this.handleSimpleStateChange}/>
             </Container>}
-            {this.state.selected && <button onClick={e => this.handleClick("")}>Back</button>}
+            <div className={this.getClassName() && "page"}>
+            {this.state.selected && <button onClick={e => this.handleClick("")} id="backButton">Back</button>}
             {this.state.selected === "Garage" && <Garage />}
             {this.state.selected === "Shed" && <h1>Under Construction</h1>}
             {this.state.selected === "Deck" && <Deck />}
@@ -54,6 +70,7 @@ class App extends React.Component {
             {this.state.selected === "Storm Door" && <h1>Under Construction</h1>}
             {this.state.selected === "Custom Building" && <CustomBuilding />}
             {this.state.selected === "Interior Door" && <h1>Under Construction</h1>}
+            </div>
         </span>);
     }
 }

@@ -165,6 +165,10 @@ export const toggleSectionHeading = (section, state) => {
   const PICTUREFRAME_LIST = [
     state.pictureframe
   ]
+  const FASCIA_LIST = [
+    state.fasciaSize,
+    state.fasciaColour,
+  ]
 
   if (section === "Frame"){
     showHeading = FRAME_LIST.some(i => i !== '')
@@ -181,6 +185,8 @@ export const toggleSectionHeading = (section, state) => {
   } else if (section === "Joist"){
     showHeading = JOIST_LIST.some(i => i !== '')
   } else if (section === "Pictureframe"){
+    showHeading = PICTUREFRAME_LIST.some(i => i !== '')
+  } else if (section === "Fascia"){
     showHeading = PICTUREFRAME_LIST.some(i => i !== '')
   }
 

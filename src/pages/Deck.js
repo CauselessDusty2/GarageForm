@@ -88,6 +88,8 @@ class Deck extends React.Component {
           skirting: 'Horizontal',
           skirtingMaterial: 'Pebble Grey'
         })
+      } else {
+        alert(`The key "${key}" is not a valid quote key`)
       }
     }
     handleSimpleStateChange(key, value) {
@@ -368,8 +370,6 @@ class Deck extends React.Component {
 
                 <SelectionList
                     title="Deck Info"
-                    handleChange={this.handleSimpleStateChange}
-                    state={this.state}
                     stateList={DISPLAY_LIST}
                     generateQuote={this.generateQuote}
                 />
@@ -377,7 +377,6 @@ class Deck extends React.Component {
                 <AdditionalInfo
                     handleChange={this.handleSimpleStateChange}
                     state={this.state}
-                    stateList={DISPLAY_LIST}
                 />
 
                 <UserInput

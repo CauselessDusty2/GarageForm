@@ -31,3 +31,13 @@
   -ms-user-select: none;      /* IE 10+ */
   user-select: none;          /* Likely future */
 }
+
+@media only screen and (max-width: 750px){
+  .sidenav {
+    top: unset;
+    bottom: 0;
+    width: 100%;
+    height: 30%;
+    margin-bottom: 0;
+  }
+}

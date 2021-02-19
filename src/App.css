@@ -16,7 +16,7 @@ h2{
 }
 
 #root{
-  width: 60%
+  width: 70%;
 }
 
 #appContainer{
@@ -42,6 +42,9 @@ h2{
   border: none;
   background-color: white;
 }
+.page{
+    margin-left: 300px;
+}
 
 .childSelection{
   margin-left: 3em;
@@ -54,4 +57,38 @@ h2{
 }
 .childSelection4{
   margin-left: 9.5em;
+}
+
+@media only screen and (max-width: 1120px){
+  #root{
+    width: 80%
+  }
+}
+@media only screen and (max-width: 920px){
+  #root{
+    width: 100%
+  }
+}
+@media only screen and (max-width: 750px){
+  #root{
+    margin-bottom: 35%;
+  }
+  #backButton{
+    margin-left: 0;
+  }
+  .page{
+    margin-left: 0;
+  }
+  .childSelection{
+    margin-left: 1em;
+  }
+  .childSelection2{
+    margin-left: 2em;
+  }
+  .childSelection3{
+    margin-left: 3em;
+  }
+  .childSelection4{
+    margin-left: 4em;
+  }
 }
