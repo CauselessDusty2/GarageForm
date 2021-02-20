@@ -51,7 +51,7 @@ const getMessage = (requestType, name, email, phoneNumber, files, stateList) => 
           } else if (stateList[key].includes("SECTION")) {
             res = `\n${stateList[key].replace("SECTION", "")}\n\n`
           } else if (stateList[key]){
-            res = `${key}: ${stateList[key]}\n`
+            res = `   \u2022 ${key}: ${stateList[key]}\n`
           }
         }
 
