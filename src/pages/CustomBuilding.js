@@ -10,7 +10,7 @@ const CustomBuilding = props => {
     const handleSimpleStateChange = value => setAdditionalInfo(value)
 
     return(<span>
-        <h1>General Request</h1>
+        <h1>Custom Building Request</h1>
         <p>A stamped engineered drawing is required to quote a custom building</p>
 
         <FileInput title="ATTACH STAMPED ENGINEERED DRAWINGS" setFilesState={setFiles}/>

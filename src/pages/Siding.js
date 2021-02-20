@@ -9,6 +9,7 @@ import SelectionList from '../Components/SelectionList'
 
 import data from "../data/garage.json"
 import * as garageUtils from "../helperFunctions/garageUtils.js"
+import {toggleSectionHeading} from "../helperFunctions/sidingUtils.js"
 
 class Siding extends React.Component {
     constructor(props) {
@@ -497,6 +498,7 @@ class Siding extends React.Component {
         }
 
         const DISPLAY_LIST = {
+          "SIDING SECTION": toggleSectionHeading("Siding", this.state) && "SECTION Siding",
           "Type": this.state.sidingTypeCustom||this.state.sidingType,
           "Profile": this.state.sidingProfile,
           "Line": this.state.mittenLine,
@@ -504,7 +506,7 @@ class Siding extends React.Component {
           "Finish": this.state.hardieFinish,
           "Size": this.state.hardieSize,
           "Colour": this.state.sidingColour,
-          "Different Gable Siding": this.state.difGableSiding === "Yes" ? "Yes" : null,
+          "GABLE SECTION": toggleSectionHeading("Gable", this.state) && "SECTION Gable",
           "Gable Type": this.state.gableSidingTypeCustom||this.state.gableSidingType,
           "Gable Profile": this.state.gableSidingProfile,
           "Gable Line": this.state.gableMittenLine,
@@ -512,7 +514,7 @@ class Siding extends React.Component {
           "Gable Finish": this.state.gableHardieFinish,
           "Gable Size": this.state.gableHardieSize,
           "Gable Colour": this.state.gableSidingColour,
-          "Different Skirting Siding": this.state.difSkirtingSiding === "Yes" ? "Yes" : null,
+          "SKIRTING SECTION": toggleSectionHeading("Skirting", this.state) && "SECTION Skirting Siding",
           "Skirting Type": this.state.skirtingSidingTypeCustom||this.state.skirtingSidingType,
           "Skirting Profile": this.state.skirtingSidingProfile,
           "Skirting Line": this.state.skirtingMittenLine,
@@ -520,7 +522,9 @@ class Siding extends React.Component {
           "Skirting Finish": this.state.skirtingHardieFinish,
           "Skirting Size": this.state.skirtingHardieSize,
           "Skirting Colour": this.state.skirtingSidingColour,
+          "TRIM SECTION": toggleSectionHeading("Trim", this.state) && "SECTION Trim",
           "Trim Colour": this.state.trimColour,
+          "Info SECTION": "SECTION",
           "Additional Info": this.state.additionalInfo
         }
 

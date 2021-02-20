@@ -278,17 +278,48 @@
     {"value": "Woodland Brown", "imgSrc": "https://s7d4.scene7.com/is/image/Trex/select-decking-woodland-brown-swatch-thumbnail.jpg"}
   ],
   "stairStringerType": [
-    {"value": "Brown Treated"},
-    {"value": "Pylex"},
-    {"value": "Regal"}
+    {"value": "Brown Treated", "imgSrc": "https://www.canac.ca/media/catalog/product/d/2/d26e9bdac509417ea77b585de05b547a4e906fbf_1552B_2_1552B_LIMON_TRAITE_B.jpg?quality=85&bg-color=255,255,255&fit=bounds&height=700&width=700&canvas=700:700"},
+    {"value": "Pylex", "imgSrc": "https://images.homedepot-static.com/productImages/5c8ff378-267c-40c5-b283-28cdc6b84914/svn/black-baked-powder-coating-pylex-outdoor-stair-risers-treads-13903-64_1000.jpg"},
+    {"value": "Regal", "imgSrc": "https://regalideas.com/wp-content/uploads/2016/08/QS2-YB-1-9.jpg"}
   ],
   "stairConfiguration": [
     {"value": "Tread only"},
     {"value": "Tread and risers"}
   ],
+  "stairConfigurationRegal": [
+    {"value": "Tread only"},
+    {"value": "Quickstep tread only"},
+    {"value": "Tread and Aluminum Stair Riser Cover"},
+    {"value": "Quickstep tread and Aluminum Stair Riser Cover", "imgSrc": "https://regalideas.com/wp-content/uploads/2016/08/RISER-COVER-300x225.jpg"}
+  ],
   "FastenersWood": [
     {"value": "Deck Screws"},
     {"value": "Pylex Deck Track"},
     {"value": "Camo Hidden Screws"}
+  ],
+  "regalLighting": [
+    {"value": "LED light strips", "imgSrc": "https://regalideas.com/wp-content/uploads/2016/08/LED_06.jpg"},
+    {"value": "None"}
+  ],
+  "regalCrystalRailLighting": [
+    {"value": "LED lighting", "imgSrc": "https://regalideas.com/wp-content/uploads/2020/06/CrystalRail-2.jpg"},
+    {"value": "None"}
+  ],
+  "woodRailLighting": [
+    {"value": "Solar Post Cap", "imgSrc": "https://staging.starbuilding.ca/img/products/152081-2.jpg"},
+    {"value": "None"}
+  ],
+  "riserLighting": [
+    {"value": "Ground Lights", "imgSrc": "https://in-lite.com/media/catalog/product/cache/c7d7ffff0774d9bff2ab877533ebb468/f/u/fusion-sfeer2_1.jpg"},
+    {"value": "ColouredGround Lights", "imgSrc": "https://in-lite.com/media/catalog/product/cache/c7d7ffff0774d9bff2ab877533ebb468/f/u/fusion-sfeer2_1.jpg"},
+    {"value": "Stair Lights", "imgSrc": "https://www.sternohome.com/media/catalog/product/cache/333cbde28a7f29bb6d9d5c60dcb67cdc/g/l/gl33458-low-voltage-led-stairlight-lifestyle2.jpg"},
+    {"value": "None"},
+    {"value": "Other"}
+  ],
+  "surfaceLighting": [
+    {"value": "Ground Lights", "imgSrc": "https://in-lite.com/media/catalog/product/cache/c7d7ffff0774d9bff2ab877533ebb468/f/u/fusion-sfeer2_1.jpg"},
+    {"value": "ColouredGround Lights", "imgSrc": "https://in-lite.com/media/catalog/product/cache/c7d7ffff0774d9bff2ab877533ebb468/f/u/fusion-sfeer2_1.jpg"},
+    {"value": "None"},
+    {"value": "Other"}
   ]
 }

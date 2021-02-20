@@ -169,6 +169,13 @@ export const toggleSectionHeading = (section, state) => {
     state.fasciaSize,
     state.fasciaColour,
   ]
+  const STAIR_LIST = [
+    state.stairStringerType,
+  ]
+  const LIGHTING_LIST = [
+    state.riserLighting,
+    state.surfaceLighting
+  ]
 
   if (section === "Frame"){
     showHeading = FRAME_LIST.some(i => i !== '')
@@ -188,7 +195,25 @@ export const toggleSectionHeading = (section, state) => {
     showHeading = PICTUREFRAME_LIST.some(i => i !== '')
   } else if (section === "Fascia"){
     showHeading = PICTUREFRAME_LIST.some(i => i !== '')
+  } else if (section === "Stairs"){
+    showHeading = STAIR_LIST.some(i => i !== '')
+  } else if (section === "Lighting"){
+    showHeading = LIGHTING_LIST.some(i => i !== '')
   }
 
   return showHeading
+}
+
+export const getRailingLightingList = (railingType) => {
+  let list = null
+
+  if (railingType === "Regal") {
+    list = data.regalLighting
+  } else if (railingType === "Regal Crystal Rail") {
+    list = data.regalCrystalRailLighting
+  }else if (railingType !== "Nuvo") {
+    list = data.woodRailLighting
+  }
+
+  return list
 }

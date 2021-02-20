@@ -7,7 +7,7 @@ import Price from "../Components/Price"
 import FileInput from '../Components/FileInput'
 import AdditionalInfo from '../Components/AdditionalInfo'
 import SelectionList from '../Components/SelectionList'
-import {getAttachmentList, getSupportList, getPostSizeList, getDeckingColourList, getPictureframeColourList, getFasciaSize, getBalusterList, getSkirtingList, toggleSectionHeading} from '../helperFunctions/deckUtils.js'
+import {getAttachmentList, getSupportList, getPostSizeList, getDeckingColourList, getPictureframeColourList, getFasciaSize, getBalusterList, getSkirtingList, toggleSectionHeading, getRailingLightingList} from '../helperFunctions/deckUtils.js'
 
 import data from "../data/deck.json"
 
@@ -50,10 +50,15 @@ class Deck extends React.Component {
             railing: '',
             railingCustom: '',
             baluster: '',
+            balusterCustom: '',
             railingColour: '',
+            stairStringerType: '',
+            stairConfigureation: '',
             skirting: '',
             skirtingMaterial: '',
-            additionalInfo: ''
+            additionalInfo: '',
+            riserLighting: '',
+            surfaceLighting: '',
         };
     }
 
@@ -134,7 +139,7 @@ class Deck extends React.Component {
 
     handleRailingChange( state, railing) {
         if (railing !== this.state.railing ){
-            this.setState({railing, railingCustom: ''})
+            this.setState({railing, railingCustom: '', baluster: '', balusterCustom: ''})
         }
     }
 
@@ -306,6 +311,30 @@ class Deck extends React.Component {
               list : data.regalColour,
               additionalClass: "childSelection"
             },
+            railingLighting : {
+              showIf: this.state.railing && this.state.railing !== "Nuvo",
+              stateGroup: "railingLighting",
+              title: "Railing Lighting",
+              state: this.state.railingLighting,
+              summary: "The lighting for the railing",
+              list : getRailingLightingList(this.state.railing),
+              additionalClass: "childSelection"
+            },
+            stairStringerType : {
+              stateGroup: "stairStringerType",
+              title: "Stair Stringer",
+              state: this.state.stairStringerType,
+              summary: "The type of stair stringers for the deck",
+              list : data.stairStringerType,
+            },
+            stairConfiguration : {
+              showIf: this.state.stairStringerType,
+              stateGroup: "stairConfiguration",
+              title: "Stair Configuration",
+              state: this.state.stairConfiguration,
+              summary: "The configuration of the stairs",
+              list : this.state.stairStringerType === "Regal" ? data.stairConfigurationRegal :  data.stairConfiguration,
+            },
             skirting : {
               stateGroup: "skirting",
               title: "Skirting",
@@ -321,6 +350,20 @@ class Deck extends React.Component {
               summary: "The colour of the railing",
               list : getSkirtingList(this.state.deckingType, this.state.trexDeckingLine),
               additionalClass: "childSelection"
+            },
+            riserLighting : {
+              stateGroup: "riserLighting",
+              title: "Stair Riser Lighting",
+              state: this.state.riserLighting,
+              summary: "Lighting for the stair risers",
+              list : data.riserLighting
+            },
+            surfaceLighting : {
+              stateGroup: "surfaceLighting",
+              title: "Deck surface Lighting",
+              state: this.state.surfaceLighting,
+              summary: "Lighting for the deck surface",
+              list : data.surfaceLighting,
             },
         }
 
@@ -350,11 +393,18 @@ class Deck extends React.Component {
           "Fascia Colour": this.state.fasciaColour,
           "section3": toggleSectionHeading("Railing", this.state) && "SECTION Railing",
           "Railing": this.state.railingCustom || this.state.railing,
-          "Configuration": this.state.baluster,
+          "Configuration": this.state.balusterCustom || this.state.baluster,
           "Colour": this.state.railingColour,
+          "Railing Lighting": this.state.railingLighting,
+          "section6": toggleSectionHeading("Stairs", this.state) && "SECTION Stairs",
+          "Stair Stringer": this.state.stairStringerType,
+          "Strair Configuration": this.state.stairConfiguration,
           "section4": toggleSectionHeading("Skirting", this.state) && "SECTION Skirting",
           "Skirting": this.state.skirting,
           "Skirting Material": this.state.skirtingMaterial,
+          "section7": toggleSectionHeading("Lighting", this.state) && "SECTION Lighting",
+          "Stair riser lighting": this.state.riserLighting,
+          "Deck Surface lighting": this.state.surfaceLighting,
           "section5": "SECTION",
           "Additional Info": this.state.additionalInfo,
         }
@@ -366,7 +416,7 @@ class Deck extends React.Component {
                     section={SECTION}
                 />
 
-                <FileInput setFilesState={files => this.setState({files})}/>
+                <FileInput setFilesState={files => this.setState({files})} title="Attach a sketch of the deck layout and size"/>
 
                 <SelectionList
                     title="Deck Info"

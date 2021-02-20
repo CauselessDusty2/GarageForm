@@ -389,3 +389,52 @@ export const getOverheadGlassType = windowPatern => windowPatern && windowPatern
 export const getDecorativeHandle = series => ( series === "Carriagecraft" || series === "Elite") ? data.decorativeHandle : null
 
 export const getDecorativeHinge = series => ( series === "Carriagecraft" || series === "Elite" ) ? data.decorativeHinge : null
+
+export const toggleSectionHeading = (section, state) => {
+  let showHeading = false
+
+  const SIZE_LIST = [
+    state.garageWidth,
+    state.garageLength,
+    state.garageHeight
+  ]
+  const WALL_LIST = [
+    state.studSize,
+    state.intSheathing,
+    state.insulation
+  ]
+  const SIDING_LIST = [
+    state.sidingType
+  ]
+  const ROOFING_LIST = [
+    state.roofType
+  ]
+  const OVERHEAD_LIST = [
+    state.overheadSize,
+    state.overheadSeries
+  ]
+  const GDO_LIST = [
+    state.gdo
+  ]
+  const WINDOW_LIST = [
+    state.overheadWindowPatern
+  ]
+
+  if (section === "Size"){
+    showHeading = SIZE_LIST.some(i => i !== '')
+  } else if (section === "Wall"){
+    showHeading = WALL_LIST.some(i => i !== '')
+  } else if (section === "Siding"){
+    showHeading = SIDING_LIST.some(i => i !== '')
+  } else if (section === "Roofing"){
+    showHeading = ROOFING_LIST.some(i => i !== '')
+  } else if (section === "Overhead"){
+    showHeading = OVERHEAD_LIST.some(i => i !== '')
+  } else if (section === "GDO"){
+    showHeading = GDO_LIST.some(i => i !== '')
+  } else if (section === "Window"){
+    showHeading = WINDOW_LIST.some(i => i !== '')
+  }
+
+  return showHeading
+}

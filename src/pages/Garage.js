@@ -580,12 +580,15 @@ class Garage extends React.Component {
         }
 
         const DISPLAY_LIST_ADVANCED ={
+          "SIZE SECTION": garageUtils.toggleSectionHeading("Size", this.state) && "SECTION Garage Size",
           "Width":this.state.customGarageWidth||this.state.garageWidth,
           "Length": this.state.customGarageLength||this.state.garageLength,
           "Height":this.state.heightCustom||this.state.garageHeight,
+          "WALL SECTION": garageUtils.toggleSectionHeading("Wall", this.state) && "SECTION Walls",
           "Stud Size":this.state.studSize,
           "Interior Sheathing":this.state.intSheathingCustom||this.state.intSheathing,
           "Insulation":this.state.insulation,
+          "SIDING SECTION": garageUtils.toggleSectionHeading("Siding", this.state) && "SECTION Siding",
           "Siding Type":this.state.sidingTypeCustom||this.state.sidingType,
           "Siding Profile":this.state.sidingProfile,
           "Siding Line":this.state.mittenLine,
@@ -593,16 +596,19 @@ class Garage extends React.Component {
           "Siding Finish":this.state.hardieFinish,
           "Siding Size":this.state.hardieSize,
           "Siding Colour":this.state.sidingColour,
+          "ROOFING HEADING": garageUtils.toggleSectionHeading("Roofing", this.state) && "SECTION Roofing",
           "Roofing Type":this.state.roofTypeCustom||this.state.roofType,
           "Roofing Profile":this.state.roofProfile,
           "Roofing Metal Gauge":this.state.roofGauge,
           "Roofing Colour":this.state.roofColour,
+          "OVERHEAD DOOR HEADING": garageUtils.toggleSectionHeading("Overhead", this.state) && "SECTION Overhead Door",
           "Overhead Door Size":this.state.overheadSizeCustom||this.state.overheadSize,
           "Overhead Door Series":this.state.overheadSeries,
           "Overhead Door Style":this.state.overheadEliteStyle,
           "Overhead Door Colour":this.state.overheadColour,
           "Overhead Door Decorative Handle":this.state.overheadDecorativeHandle,
-          "Overhead Door Decorative Glass":this.state.overheadDecorativeHinge,
+          "Overhead Door Decorative Hinge":this.state.overheadDecorativeHinge,
+          "WINDOW SUBHEADING": garageUtils.toggleSectionHeading("Window", this.state) && "SUBSECTION Window",
           "Overhead Door Window Patern":this.state.overheadWindowPaternCustom||this.state.overheadWindowPatern,
           "Overhead Door Glass Type":this.state.overheadGlassType,
           "Overhead Door Glass Finish":this.state.overheadGlassFinish,
@@ -611,9 +617,11 @@ class Garage extends React.Component {
           "Overhead Door Muntin Style":this.state.overheadMuntinStyle,
           "Overhead Door Muntin Colour":this.state.overheadMuntinColour,
           "Overhead Door Snap In Design":this.state.overheadSnapInDesign,
+          "GDO HEADING": garageUtils.toggleSectionHeading("GDO", this.state) && "SECTION Garage Door Opener",
           "Garage Door Opener Horse Power":this.state.gdoHp,
           "Garage Door Opener Drive Type":this.state.gdoDrive,
           "Garage Door Opener Additional Options":this.state.gdoOption,
+          "AdditionalInfo HEADING": "SECTION",
           "Additional Info": this.state.additionalInfo
         }
 
