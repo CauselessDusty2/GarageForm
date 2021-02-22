@@ -40,11 +40,22 @@ const getMessage = (requestType, name, email, phoneNumber, files, stateList) => 
   body += `${requestType} quote request\n\n`
   body += `Customer Name: ${name}\n`
   body += `Customer Email: ${email}\n`
-  body += `Customer Phone Number: ${phoneNumber}\n\n`
+  body += `Customer Phone Number: ${phoneNumber}\n`
 
   {stateList &&
       Object.keys(stateList).map( (key, index) => {
-        body+=  stateList[key] ? `${key}: ${stateList[key]}\n` : ""
+        let res = ""
+        if (stateList[key]) {
+          if (stateList[key].includes("SUBSECTION")) {
+            res = `\n${stateList[key].replace("SUBSECTION", "")}\n`
+          } else if (stateList[key].includes("SECTION")) {
+            res = `\n${stateList[key].replace("SECTION", "")}\n\n`
+          } else if (stateList[key]){
+            res = `   \u2022 ${key}: ${stateList[key]}\n`
+          }
+        }
+
+        body += res
       })
   }
 

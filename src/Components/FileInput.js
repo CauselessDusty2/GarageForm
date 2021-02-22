@@ -39,21 +39,24 @@ const FileInput = props => {
     }
 
     return(
-      <Container className="infoSection">
-          <label for="file_upload" className="fileInputButton">Select images or pdfs to upload</label>
-          <input type="file" id="file_upload" name="file_upload" className="file_upload" accept="image/*, .pdf" multiple onChange={(e) => handleFileUpload(e.target.files)}/>
+      <section>
+        {props.title && <h2>{props.title}</h2>}
+        <Container className="infoSection">
+            <label for="file_upload" className="fileInputButton">Select images or pdfs to upload</label>
+            <input type="file" id="file_upload" name="file_upload" className="file_upload" accept="image/*, .pdf" multiple onChange={(e) => handleFileUpload(e.target.files)}/>
 
-          <div className="fileContainer">
-            {files && Object.keys(files).map(key => {
-              if (imageFileTypes.includes(files[key].type)){
-                return <Card value={files[key].name} imgSrc={URL.createObjectURL(files[key])}/>
-              } else if (fileTypes.includes(files[key].type)){
-                return <object data={URL.createObjectURL(files[key])} id="pdf">PDF</object>
-              }
-              return null
-            })}
-          </div>
-      </Container>
+            <div className="fileContainer">
+              {files && Object.keys(files).map(key => {
+                if (imageFileTypes.includes(files[key].type)){
+                  return <Card value={files[key].name} imgSrc={URL.createObjectURL(files[key])} className="noSelect"/>
+                } else if (fileTypes.includes(files[key].type)){
+                  return <object data={URL.createObjectURL(files[key])} id="pdf">PDF</object>
+                }
+                return null
+              })}
+            </div>
+        </Container>
+      </section>
     )
 }
 

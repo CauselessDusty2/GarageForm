@@ -4,6 +4,8 @@ import QuoteSection from "../Components/QuoteSection";
 import QuoteInfo from '../Components/QuoteInfo'
 import UserInput from "../Components/UserInput"
 import FileInput from '../Components/FileInput'
+import AdditionalInfo from '../Components/AdditionalInfo'
+import SelectionList from '../Components/SelectionList'
 
 import data from "../data/garage.json"
 import * as garageUtils from "../helperFunctions/garageUtils.js"
@@ -118,14 +120,17 @@ class Roofing extends React.Component {
                     section={SECTION}
                 />
 
-                <QuoteInfo
+                <FileInput setFilesState={files => this.setState({files})}/>
+
+                <SelectionList
                     title="Roofing Info"
-                    handleChange={this.handleSimpleStateChange}
-                    state={this.state}
                     stateList={DISPLAY_LIST}
                 />
 
-                <FileInput setFilesState={files => this.setState({files})}/>
+                <AdditionalInfo
+                    handleChange={this.handleSimpleStateChange}
+                    state={this.state}
+                />
 
                 <UserInput
                     handleChange={this.handleSimpleStateChange}

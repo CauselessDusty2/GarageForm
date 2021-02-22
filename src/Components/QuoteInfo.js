@@ -6,7 +6,7 @@ import './QuoteInfo.css'
 
 const QuoteInfo = props => {
     return (
-        <Container className="infoSection">
+        <Container className="sidenav">
             <label>Additional Info</label>
             <textarea
                 className="textInput"

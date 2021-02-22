@@ -1,0 +1,325 @@
+{
+  "attachment": [
+    {"value": "Attached"},
+    {"value": "Freestanding"}
+  ],
+  "attachmentPad": [
+    {"value": "Freestanding"}
+  ],
+  "height": [
+    {"value": "Ground Level"},
+    {"value": "2ft"},
+    {"value": "3ft"},
+    {"value": "Other"}
+  ],
+  "supportFreestanding": [
+    {"value": "12\"x12\"x4\" Deck Pad"},
+    {"value": "18\"x18\"x4\" Footing Pad"},
+    {"value": "18\"x18\"x6\" Footing Pad"},
+    {"value": "12\"x12\"x4\" Deck Pad with Deck Jack"},
+    {"value": "18\"x18\"x4\" Footing Pad with Deck Jack"},
+    {"value": "18\"x18\"x6\" Footing Pad with Deck Jack"},
+    {"value": "6' Ground Hog"},
+    {"value": "8' Ground Hog"},
+    {"value": "8' Heavy Duty Ground Hog"},
+    {"value": "6' Ground Hog Installed"},
+    {"value": "8' Ground Hog Installed"},
+    {"value": "8' Heavy Duty Ground Hog Installed"}
+  ],
+  "supportAttached": [
+    {"value": "6' Ground Hog"},
+    {"value": "8' Ground Hog"},
+    {"value": "8' Heavy Duty Ground Hog"},
+    {"value": "6' Ground Hog Installed"},
+    {"value": "8' Ground Hog Installed"},
+    {"value": "8' Heavy Duty Ground Hog Installed"}
+  ],
+  "framingMaterial": [
+    {"value": "Brown Treated"},
+    {"value": "Cedar"},
+    {"value": "Other"}
+  ],
+  "framingMaterialLargePost": [
+    {"value": "Brown Treated"},
+    {"value": "Other"}
+  ],
+  "postSizeBrown": [
+    {"value": "4x4"},
+    {"value": "6x6"},
+    {"value": "8x8"}
+  ],
+  "postSizeBrownLargeBeam": [
+    {"value": "6x6"},
+    {"value": "8x8"}
+  ],
+  "postSizeCedar": [
+    {"value": "4x4"},
+    {"value": "6x6"}
+  ],
+  "postSizeCedarLargeBeam": [
+    {"value": "6x6"}
+  ],
+  "beamPly": [
+    {"value": "2-Ply"},
+    {"value": "3-Ply"},
+    {"value": "4-Ply"}
+  ],
+  "beamPlySmallPost": [
+    {"value": "2-Ply"},
+    {"value": "Other"}
+  ],
+  "beamSize": [
+    {"value": "2x6"},
+    {"value": "2x8"},
+    {"value": "2x10"},
+    {"value": "2x12"}
+  ],
+  "joistSize": [
+    {"value": "2x6"},
+    {"value": "2x8"},
+    {"value": "2x10"},
+    {"value": "2x12"}
+  ],
+  "joistSpacing": [
+    {"value": "12\" on center"},
+    {"value": "16\" on center"},
+    {"value": "Other"}
+  ],
+  "deckingType": [
+    {"value": "Brown Pressure Treated"},
+    {"value": "Cedar"},
+    {"value": "Trex"},
+    {"value": "MoistureShield"}
+  ],
+  "trexDeckingLine" : [
+    {"value": "Transcend"},
+    {"value": "Select"},
+    {"value": "Enhance"}
+  ],
+  "trexTranscendColours" : [
+    {"value": "Havana Gold", "imgSrc" : "https://s7d4.scene7.com/is/image/Trex/havanagold.jpg"},
+    {"value": "Island Mist", "imgSrc" : "https://s7d4.scene7.com/is/image/Trex/transcend-decking-island-mist-swatch-1.jpg"},
+    {"value": "Lava Rock", "imgSrc" : "https://s7d4.scene7.com/is/image/Trex/transcend-decking-lava-rock-swatch-3.jpg"},
+    {"value": "Spiced Rum", "imgSrc" : "https://s7d4.scene7.com/is/image/Trex/transcend-decking-spiced-rum-swatch-5.jpg"},
+    {"value": "Tiki Torch", "imgSrc" : "https://s7d4.scene7.com/is/image/Trex/tikitorch_4_5_2.jpg"},
+    {"value": "Gravel Path", "imgSrc" : "https://images.trex.com/is/image/Trex/trex-transcend-earth-tone-gravel-path-thumbnail.jpg?wid=186&hei=119"},
+    {"value": "Rope Swing", "imgSrc" : "https://images.trex.com/is/image/Trex/trex-transcend-earth-tone-rope-swing-thumbnail.jpg?wid=186&hei=119"},
+    {"value": "Vintage Lantern", "imgSrc" : "https://images.trex.com/is/image/Trex/trex-transcend-earth-tone-vintage-lantern-thumbnail.jpg?wid=186&hei=119"}
+  ],
+  "trexSelectColours" : [
+    {"value": "Madeira", "imgSrc": "https://s7d4.scene7.com/is/image/Trex/select-decking-madeira-swatch-thumbnail.jpg"},
+    {"value": "Pebble Grey", "imgSrc": "https://s7d4.scene7.com/is/image/Trex/select-decking-pebble-grey-swatch-thumbnail.jpg"},
+    {"value": "Saddle", "imgSrc": "https://s7d4.scene7.com/is/image/Trex/select-decking-saddle-swatch-thumbnail.jpg"},
+    {"value": "Winchester Grey", "imgSrc": "https://s7d4.scene7.com/is/image/Trex/select-decking-winchester-grey-swatch-thumbnail.jpg"},
+    {"value": "Woodland Brown", "imgSrc": "https://s7d4.scene7.com/is/image/Trex/select-decking-woodland-brown-swatch-thumbnail.jpg"}
+  ],
+  "trexEnhanceColours" : [
+    {"value": "Coastal Bluff", "imgSrc": "https://images.trex.com/is/image/Trex/trex-enhance-naturals-decking-coastal-bluff-board-grain-detail-pattern-industry-leader.jpg"},
+    {"value": "Foggy Wharf", "imgSrc": "https://images.trex.com/is/image/Trex/trex-enhance-naturals-decking-foggy-wharf-board-grain-detail-pattern-industry-leader.jpg"},
+    {"value": "Rocky Harbor", "imgSrc": "https://images.trex.com/is/image/Trex/trex-enhance-naturals-decking-rocky-harbor-board-grain-detail-pattern-industry-leader.jpg"},
+    {"value": "Toasted Sand", "imgSrc": "https://images.trex.com/is/image/Trex/trex-enhance-naturals-decking-toasted-sand-board-grain-detail-pattern-industry-leader.jpg"},
+    {"value": "Beach Dune", "imgSrc": "https://images.trex.com/is/image/Trex/trex-enhance-basics-decking-beach-dune-board-grain-detail-pattern-industry-leader.jpg"},
+    {"value": "Clam Shell", "imgSrc": "https://images.trex.com/is/image/Trex/trex-enhance-basics-decking-clam-shell-board-grain-detail-pattern-industry-leader.jpg"},
+    {"value": "Saddle", "imgSrc": "https://images.trex.com/is/image/Trex/trex-enhance-basics-decking-saddle-board-grain-detail-pattern-industry-leader.jpg"}
+  ],
+  "MoistureShieldColours" : [
+    {"value": "Smoke Gray", "imgSrc": "https://www.moistureshield.com/wp-content/uploads/2019/09/Color-Vision-SmokeyGray.jpg"},
+    {"value": "Spanish Leather", "imgSrc": "https://www.moistureshield.com/wp-content/uploads/2019/09/Color-Vision-SpanishLeather.jpg"},
+    {"value": "Sandstone", "imgSrc": "https://www.moistureshield.com/wp-content/uploads/2019/09/Color-Vision-Sandstone.jpg"},
+    {"value": "Catherdral Stone", "imgSrc": "https://www.moistureshield.com/wp-content/uploads/2019/09/Color-Vision-CathedralStone.jpg", "description": "Cool Deck"},
+    {"value": "Mochaccino", "imgSrc": "https://www.moistureshield.com/wp-content/uploads/2019/09/Color-Vision-Mochaccino.jpg", "description": "Cool Deck"},
+    {"value": "Cold Brew", "imgSrc": "https://www.moistureshield.com/wp-content/uploads/2020/11/Vision_ColdBrew_500x300px.jpg", "description": "Cool Deck"}
+  ],
+  "pictureframe": [
+    {"value": "None"},
+    {"value": "Single"},
+    {"value": "Double"},
+    {"value": "Other"}
+  ],
+  "pictureframeTrexSelect": [
+    {"value": "Madeira", "imgSrc": "https://s7d4.scene7.com/is/image/Trex/select-decking-madeira-swatch-thumbnail.jpg"},
+    {"value": "Pebble Grey", "imgSrc": "https://s7d4.scene7.com/is/image/Trex/select-decking-pebble-grey-swatch-thumbnail.jpg"},
+    {"value": "Saddle", "imgSrc": "https://s7d4.scene7.com/is/image/Trex/select-decking-saddle-swatch-thumbnail.jpg"},
+    {"value": "Winchester Grey", "imgSrc": "https://s7d4.scene7.com/is/image/Trex/select-decking-winchester-grey-swatch-thumbnail.jpg"},
+    {"value": "Woodland Brown", "imgSrc": "https://s7d4.scene7.com/is/image/Trex/select-decking-woodland-brown-swatch-thumbnail.jpg"}
+  ],
+  "pictureframeTrexEnhanceTranscend": [
+    {"value": "Havana Gold", "imgSrc" : "https://s7d4.scene7.com/is/image/Trex/havanagold.jpg"},
+    {"value": "Island Mist", "imgSrc" : "https://s7d4.scene7.com/is/image/Trex/transcend-decking-island-mist-swatch-1.jpg"},
+    {"value": "Lava Rock", "imgSrc" : "https://s7d4.scene7.com/is/image/Trex/transcend-decking-lava-rock-swatch-3.jpg"},
+    {"value": "Spiced Rum", "imgSrc" : "https://s7d4.scene7.com/is/image/Trex/transcend-decking-spiced-rum-swatch-5.jpg"},
+    {"value": "Tiki Torch", "imgSrc" : "https://s7d4.scene7.com/is/image/Trex/tikitorch_4_5_2.jpg"},
+    {"value": "Gravel Path", "imgSrc" : "https://images.trex.com/is/image/Trex/trex-transcend-earth-tone-gravel-path-thumbnail.jpg?wid=186&hei=119"},
+    {"value": "Rope Swing", "imgSrc" : "https://images.trex.com/is/image/Trex/trex-transcend-earth-tone-rope-swing-thumbnail.jpg?wid=186&hei=119"},
+    {"value": "Vintage Lantern", "imgSrc" : "https://images.trex.com/is/image/Trex/trex-transcend-earth-tone-vintage-lantern-thumbnail.jpg?wid=186&hei=119"},
+    {"value": "Coastal Bluff", "imgSrc": "https://images.trex.com/is/image/Trex/trex-enhance-naturals-decking-coastal-bluff-board-grain-detail-pattern-industry-leader.jpg"},
+    {"value": "Foggy Wharf", "imgSrc": "https://images.trex.com/is/image/Trex/trex-enhance-naturals-decking-foggy-wharf-board-grain-detail-pattern-industry-leader.jpg"},
+    {"value": "Rocky Harbor", "imgSrc": "https://images.trex.com/is/image/Trex/trex-enhance-naturals-decking-rocky-harbor-board-grain-detail-pattern-industry-leader.jpg"},
+    {"value": "Toasted Sand", "imgSrc": "https://images.trex.com/is/image/Trex/trex-enhance-naturals-decking-toasted-sand-board-grain-detail-pattern-industry-leader.jpg"},
+    {"value": "Beach Dune", "imgSrc": "https://images.trex.com/is/image/Trex/trex-enhance-basics-decking-beach-dune-board-grain-detail-pattern-industry-leader.jpg"},
+    {"value": "Clam Shell", "imgSrc": "https://images.trex.com/is/image/Trex/trex-enhance-basics-decking-clam-shell-board-grain-detail-pattern-industry-leader.jpg"},
+    {"value": "Saddle", "imgSrc": "https://images.trex.com/is/image/Trex/trex-enhance-basics-decking-saddle-board-grain-detail-pattern-industry-leader.jpg"}
+  ],
+  "fasciaTrexSelect": [
+    {"value": "Madeira", "imgSrc": "https://s7d4.scene7.com/is/image/Trex/select-decking-madeira-swatch-thumbnail.jpg"},
+    {"value": "Pebble Grey", "imgSrc": "https://s7d4.scene7.com/is/image/Trex/select-decking-pebble-grey-swatch-thumbnail.jpg"},
+    {"value": "Saddle", "imgSrc": "https://s7d4.scene7.com/is/image/Trex/select-decking-saddle-swatch-thumbnail.jpg"},
+    {"value": "Winchester Grey", "imgSrc": "https://s7d4.scene7.com/is/image/Trex/select-decking-winchester-grey-swatch-thumbnail.jpg"},
+    {"value": "Woodland Brown", "imgSrc": "https://s7d4.scene7.com/is/image/Trex/select-decking-woodland-brown-swatch-thumbnail.jpg"}
+  ],
+  "fasciaTrexEnhanceTranscend": [
+    {"value": "Havana Gold", "imgSrc" : "https://s7d4.scene7.com/is/image/Trex/havanagold.jpg"},
+    {"value": "Island Mist", "imgSrc" : "https://s7d4.scene7.com/is/image/Trex/transcend-decking-island-mist-swatch-1.jpg"},
+    {"value": "Lava Rock", "imgSrc" : "https://s7d4.scene7.com/is/image/Trex/transcend-decking-lava-rock-swatch-3.jpg"},
+    {"value": "Spiced Rum", "imgSrc" : "https://s7d4.scene7.com/is/image/Trex/transcend-decking-spiced-rum-swatch-5.jpg"},
+    {"value": "Tiki Torch", "imgSrc" : "https://s7d4.scene7.com/is/image/Trex/tikitorch_4_5_2.jpg"},
+    {"value": "Gravel Path", "imgSrc" : "https://images.trex.com/is/image/Trex/trex-transcend-earth-tone-gravel-path-thumbnail.jpg?wid=186&hei=119"},
+    {"value": "Rope Swing", "imgSrc" : "https://images.trex.com/is/image/Trex/trex-transcend-earth-tone-rope-swing-thumbnail.jpg?wid=186&hei=119"},
+    {"value": "Vintage Lantern", "imgSrc" : "https://images.trex.com/is/image/Trex/trex-transcend-earth-tone-vintage-lantern-thumbnail.jpg?wid=186&hei=119"},
+    {"value": "Coastal Bluff", "imgSrc": "https://images.trex.com/is/image/Trex/trex-enhance-naturals-decking-coastal-bluff-board-grain-detail-pattern-industry-leader.jpg"},
+    {"value": "Foggy Wharf", "imgSrc": "https://images.trex.com/is/image/Trex/trex-enhance-naturals-decking-foggy-wharf-board-grain-detail-pattern-industry-leader.jpg"},
+    {"value": "Rocky Harbor", "imgSrc": "https://images.trex.com/is/image/Trex/trex-enhance-naturals-decking-rocky-harbor-board-grain-detail-pattern-industry-leader.jpg"},
+    {"value": "Toasted Sand", "imgSrc": "https://images.trex.com/is/image/Trex/trex-enhance-naturals-decking-toasted-sand-board-grain-detail-pattern-industry-leader.jpg"},
+    {"value": "Beach Dune", "imgSrc": "https://images.trex.com/is/image/Trex/trex-enhance-basics-decking-beach-dune-board-grain-detail-pattern-industry-leader.jpg"},
+    {"value": "Clam Shell", "imgSrc": "https://images.trex.com/is/image/Trex/trex-enhance-basics-decking-clam-shell-board-grain-detail-pattern-industry-leader.jpg"},
+    {"value": "Saddle", "imgSrc": "https://images.trex.com/is/image/Trex/trex-enhance-basics-decking-saddle-board-grain-detail-pattern-industry-leader.jpg"}
+  ],
+  "fasciaSizeBrown": [
+    {"value": "2\"x8\""},
+    {"value": "2\"x10\""},
+    {"value": "2\"x12\""}
+  ],
+  "fasciaSizeCedar": [
+    {"value": "2\"x8\""},
+    {"value": "2\"x10\""},
+    {"value": "2\"x12\""}
+  ],
+  "fasciaSizeTrex": [
+    {"value": "1\"x8\"x12' Fascia"},
+    {"value": "1\"x12\"x12' Fascia"}
+  ],
+  "fasciaSizeMoistureShield": [
+    {"value": "1\"x12\"x12' Fascia"}
+  ],
+  "railing": [
+    {"value": "Brown Treated"},
+    {"value": "Cedar"},
+    {"value": "Regal", "imgSrc": "https://regalideas.com/wp-content/uploads/2016/08/Aluminum_Pickets-15.jpg"},
+    {"value": "Regal Crystal Rail", "imgSrc": "https://regalideas.com/wp-content/uploads/2016/08/20170907_111932.jpg"},
+    {"value": "Nuvo"},
+    {"value": "Other"}
+  ],
+  "brownBalust": [
+    {"value": "2\"x2\" brown treated baluster"},
+    {"value": "Round black baluster"},
+    {"value": "Square black baluser"},
+    {"value": "Other"}
+  ],
+  "cedarBalust": [
+    {"value": "Round black baluster", "imgsrc": "https://static.wixstatic.com/media/c4f997_2c33bfc740f44a91a484f86d32f6518f~mv2_d_2000_2000_s_2.png/v1/fill/w_420,h_420,al_c,q_90,usm_0.66_1.00_0.01/c4f997_2c33bfc740f44a91a484f86d32f6518f~mv2_d_2000_2000_s_2.webp"},
+    {"value": "Square black baluster"},
+    {"value": "Other"}
+  ],
+  "regalConfig": [
+    {"value": "Narrow Pickets"},
+    {"value": "Wide Pickets"},
+    {"value": "Glass Panels"}
+  ],
+  "regalColour": [
+    {"value": "White", "imgSrc": "https://regalideas.com/wp-content/uploads/2016/08/White-hires.jpg"},
+    {"value": "Textured Black", "imgSrc": "https://regalideas.com/wp-content/uploads/2020/05/TB-hires_NEW.jpg"},
+    {"value": "Taupe", "imgSrc": "https://regalideas.com/wp-content/uploads/2016/08/TP-hires.jpg"},
+    {"value": "Yard Bronze", "imgSrc": "https://regalideas.com/wp-content/uploads/2016/08/YB-hires.jpg"},
+    {"value": "Titanium Slate", "imgSrc": "https://regalideas.com/wp-content/uploads/2016/08/TS-hires.jpg"},
+    {"value": "Black", "imgSrc": "https://regalideas.com/wp-content/uploads/2016/08/Black-hires.jpg"}
+  ],
+  "skirtingDirection": [
+    {"value": "None"},
+    {"value": "Horizontal"},
+    {"value": "Vertical"},
+    {"value": "Other"}
+  ],
+  "skirtingMoistureshield": [
+    {"value": "Brown Treated"},
+    {"value": "Cedar"},
+    {"value": "Smoke Gray", "imgSrc": "https://www.moistureshield.com/wp-content/uploads/2019/09/Color-Vision-SmokeyGray.jpg"},
+    {"value": "Spanish Leather", "imgSrc": "https://www.moistureshield.com/wp-content/uploads/2019/09/Color-Vision-SpanishLeather.jpg"},
+    {"value": "Sandstone", "imgSrc": "https://www.moistureshield.com/wp-content/uploads/2019/09/Color-Vision-Sandstone.jpg"},
+    {"value": "Catherdral Stone", "imgSrc": "https://www.moistureshield.com/wp-content/uploads/2019/09/Color-Vision-CathedralStone.jpg", "description": "Cool Deck"},
+    {"value": "Mochaccino", "imgSrc": "https://www.moistureshield.com/wp-content/uploads/2019/09/Color-Vision-Mochaccino.jpg", "description": "Cool Deck"},
+    {"value": "Cold Brew", "imgSrc": "https://www.moistureshield.com/wp-content/uploads/2020/11/Vision_ColdBrew_500x300px.jpg", "description": "Cool Deck"}
+  ],
+  "skirtingTrexEnhanceTranscend": [
+    {"value": "Brown Treated"},
+    {"value": "Cedar"},
+    {"value": "Havana Gold", "imgSrc" : "https://s7d4.scene7.com/is/image/Trex/havanagold.jpg"},
+    {"value": "Island Mist", "imgSrc" : "https://s7d4.scene7.com/is/image/Trex/transcend-decking-island-mist-swatch-1.jpg"},
+    {"value": "Lava Rock", "imgSrc" : "https://s7d4.scene7.com/is/image/Trex/transcend-decking-lava-rock-swatch-3.jpg"},
+    {"value": "Spiced Rum", "imgSrc" : "https://s7d4.scene7.com/is/image/Trex/transcend-decking-spiced-rum-swatch-5.jpg"},
+    {"value": "Tiki Torch", "imgSrc" : "https://s7d4.scene7.com/is/image/Trex/tikitorch_4_5_2.jpg"},
+    {"value": "Gravel Path", "imgSrc" : "https://images.trex.com/is/image/Trex/trex-transcend-earth-tone-gravel-path-thumbnail.jpg?wid=186&hei=119"},
+    {"value": "Rope Swing", "imgSrc" : "https://images.trex.com/is/image/Trex/trex-transcend-earth-tone-rope-swing-thumbnail.jpg?wid=186&hei=119"},
+    {"value": "Vintage Lantern", "imgSrc" : "https://images.trex.com/is/image/Trex/trex-transcend-earth-tone-vintage-lantern-thumbnail.jpg?wid=186&hei=119"},
+    {"value": "Coastal Bluff", "imgSrc": "https://images.trex.com/is/image/Trex/trex-enhance-naturals-decking-coastal-bluff-board-grain-detail-pattern-industry-leader.jpg"},
+    {"value": "Foggy Wharf", "imgSrc": "https://images.trex.com/is/image/Trex/trex-enhance-naturals-decking-foggy-wharf-board-grain-detail-pattern-industry-leader.jpg"},
+    {"value": "Rocky Harbor", "imgSrc": "https://images.trex.com/is/image/Trex/trex-enhance-naturals-decking-rocky-harbor-board-grain-detail-pattern-industry-leader.jpg"},
+    {"value": "Toasted Sand", "imgSrc": "https://images.trex.com/is/image/Trex/trex-enhance-naturals-decking-toasted-sand-board-grain-detail-pattern-industry-leader.jpg"},
+    {"value": "Beach Dune", "imgSrc": "https://images.trex.com/is/image/Trex/trex-enhance-basics-decking-beach-dune-board-grain-detail-pattern-industry-leader.jpg"},
+    {"value": "Clam Shell", "imgSrc": "https://images.trex.com/is/image/Trex/trex-enhance-basics-decking-clam-shell-board-grain-detail-pattern-industry-leader.jpg"},
+    {"value": "Saddle", "imgSrc": "https://images.trex.com/is/image/Trex/trex-enhance-basics-decking-saddle-board-grain-detail-pattern-industry-leader.jpg"}
+  ],
+  "skirtingTrexSelect": [
+    {"value": "Brown Treated"},
+    {"value": "Cedar"},
+    {"value": "Madeira", "imgSrc": "https://s7d4.scene7.com/is/image/Trex/select-decking-madeira-swatch-thumbnail.jpg"},
+    {"value": "Pebble Grey", "imgSrc": "https://s7d4.scene7.com/is/image/Trex/select-decking-pebble-grey-swatch-thumbnail.jpg"},
+    {"value": "Saddle", "imgSrc": "https://s7d4.scene7.com/is/image/Trex/select-decking-saddle-swatch-thumbnail.jpg"},
+    {"value": "Winchester Grey", "imgSrc": "https://s7d4.scene7.com/is/image/Trex/select-decking-winchester-grey-swatch-thumbnail.jpg"},
+    {"value": "Woodland Brown", "imgSrc": "https://s7d4.scene7.com/is/image/Trex/select-decking-woodland-brown-swatch-thumbnail.jpg"}
+  ],
+  "stairStringerType": [
+    {"value": "Brown Treated", "imgSrc": "https://www.canac.ca/media/catalog/product/d/2/d26e9bdac509417ea77b585de05b547a4e906fbf_1552B_2_1552B_LIMON_TRAITE_B.jpg?quality=85&bg-color=255,255,255&fit=bounds&height=700&width=700&canvas=700:700"},
+    {"value": "Pylex", "imgSrc": "https://images.homedepot-static.com/productImages/5c8ff378-267c-40c5-b283-28cdc6b84914/svn/black-baked-powder-coating-pylex-outdoor-stair-risers-treads-13903-64_1000.jpg"},
+    {"value": "Regal", "imgSrc": "https://regalideas.com/wp-content/uploads/2016/08/QS2-YB-1-9.jpg"}
+  ],
+  "stairConfiguration": [
+    {"value": "Tread only"},
+    {"value": "Tread and risers"}
+  ],
+  "stairConfigurationRegal": [
+    {"value": "Tread only"},
+    {"value": "Quickstep tread only"},
+    {"value": "Tread and Aluminum Stair Riser Cover"},
+    {"value": "Quickstep tread and Aluminum Stair Riser Cover", "imgSrc": "https://regalideas.com/wp-content/uploads/2016/08/RISER-COVER-300x225.jpg"}
+  ],
+  "FastenersWood": [
+    {"value": "Deck Screws"},
+    {"value": "Pylex Deck Track"},
+    {"value": "Camo Hidden Screws"}
+  ],
+  "regalLighting": [
+    {"value": "LED light strips", "imgSrc": "https://regalideas.com/wp-content/uploads/2016/08/LED_06.jpg"},
+    {"value": "None"}
+  ],
+  "regalCrystalRailLighting": [
+    {"value": "LED lighting", "imgSrc": "https://regalideas.com/wp-content/uploads/2020/06/CrystalRail-2.jpg"},
+    {"value": "None"}
+  ],
+  "woodRailLighting": [
+    {"value": "Solar Post Cap", "imgSrc": "https://staging.starbuilding.ca/img/products/152081-2.jpg"},
+    {"value": "None"}
+  ],
+  "riserLighting": [
+    {"value": "Ground Lights", "imgSrc": "https://in-lite.com/media/catalog/product/cache/c7d7ffff0774d9bff2ab877533ebb468/f/u/fusion-sfeer2_1.jpg"},
+    {"value": "ColouredGround Lights", "imgSrc": "https://in-lite.com/media/catalog/product/cache/c7d7ffff0774d9bff2ab877533ebb468/f/u/fusion-sfeer2_1.jpg"},
+    {"value": "Stair Lights", "imgSrc": "https://www.sternohome.com/media/catalog/product/cache/333cbde28a7f29bb6d9d5c60dcb67cdc/g/l/gl33458-low-voltage-led-stairlight-lifestyle2.jpg"},
+    {"value": "None"},
+    {"value": "Other"}
+  ],
+  "surfaceLighting": [
+    {"value": "Ground Lights", "imgSrc": "https://in-lite.com/media/catalog/product/cache/c7d7ffff0774d9bff2ab877533ebb468/f/u/fusion-sfeer2_1.jpg"},
+    {"value": "ColouredGround Lights", "imgSrc": "https://in-lite.com/media/catalog/product/cache/c7d7ffff0774d9bff2ab877533ebb468/f/u/fusion-sfeer2_1.jpg"},
+    {"value": "None"},
+    {"value": "Other"}
+  ]
+}

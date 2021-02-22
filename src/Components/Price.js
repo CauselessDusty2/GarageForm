@@ -5,10 +5,10 @@ import './Price.css'
 //Add code here to return a price
 const getPrice = (requirements, type) => {
     let price = "Error"
-    if (type === "fence") {
-        let [material, height, style, length] = requirements
+    if (type === "shed") {
+        let [width, length, siding, options] = requirements
 
-        price = [...requirements].join(" - ") + "ft"
+        price = [...requirements].join(" - ")
 
     } else if (type === "garage") {
         let [width, length, siding] = requirements
