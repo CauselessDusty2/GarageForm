@@ -71,7 +71,7 @@ class Fence extends React.Component {
 
 
     render() {
-        const BASIC_SECTION={
+        /*const BASIC_SECTION={
             basic_length : {
                 stateGroup : "basic.length",
                 input : "number",
@@ -100,7 +100,7 @@ class Fence extends React.Component {
                 state : this.state.basic.style,
                 summary : "The style of the fence",
             }
-        }
+        }*/
 
         const ADVANCED_SECTION = {
             length : {
@@ -158,13 +158,13 @@ class Fence extends React.Component {
             }
         }
 
-        const DISPLAY_LIST_BASIC = {
+        /*const DISPLAY_LIST_BASIC = {
           "Length": this.state.basic.length,
           "Material": this.state.basic.material,
           "Height": this.state.basic.height,
           "Style": this.state.basic.style,
           "Additional Info": this.state.additionalInfo
-        }
+        }*/
 
         const DISPLAY_LIST_ADVANCED = {
           "Length": this.state.length,
@@ -178,22 +178,18 @@ class Fence extends React.Component {
 
         return (
             <div>
-                <button onClick={this.showBasic} className="basic">
-                    Switch to {this.state.toggleBasic ? "Advanced Request" : "Basic Request"}
-                </button>
-
                 <QuoteSection
                     defaultClickHandler={this.handleSimpleStateChange}
-                    section={this.state.toggleBasic ? BASIC_SECTION : ADVANCED_SECTION}
+                    section={ADVANCED_SECTION}
                 />
 
-                {!this.state.toggleBasic && <FileInput setFilesState={files => this.setState({files})}/> }
+                <FileInput setFilesState={files => this.setState({files})}/>
 
                 <SelectionList
                     title="Fence Info"
                     handleChange={this.handleSimpleStateChange}
                     state={this.state}
-                    stateList={this.state.toggleBasic ? DISPLAY_LIST_BASIC: DISPLAY_LIST_ADVANCED}
+                    stateList={DISPLAY_LIST_ADVANCED}
                 />
 
                 <AdditionalInfo
@@ -201,18 +197,11 @@ class Fence extends React.Component {
                     state={this.state}
                 />
 
-                {this.state.toggleBasic &&
-                    <Price
-                        type="fence"
-                        requirements = {[this.state.basic.material, this.state.basic.height, this.state.basic.style, this.state.basic.length]}
-                    />
-                }
-
                 <UserInput
                     handleChange={this.handleSimpleStateChange}
                     requestType="Fence"
                     files={this.state.files}
-                    stateList={this.state.toggleBasic ? DISPLAY_LIST_BASIC: DISPLAY_LIST_ADVANCED}
+                    stateList={DISPLAY_LIST_ADVANCED}
                 />
             </div>
         );

@@ -10,11 +10,11 @@ const QuoteInfo = props => {
     const [key, setkey] = useState("")
     return (
         <Container className="sidenav">
-        <form onSubmit={e => props.generateQuote(e, key)}>
-            <label for="keyInput">Quote Key:</label>
-            <input type="text" value={key} onChange={e => setkey(e.target.value)} name="keyInput" id="keyInput" placeholder="enter quote key here"/>
-            <input type="submit" />
-        </form>
+            {/*<form onSubmit={e => props.generateQuote(e, key)}>
+                <label for="keyInput">Quote Key:</label>
+                <input type="text" value={key} onChange={e => setkey(e.target.value)} name="keyInput" id="keyInput" placeholder="enter quote key here"/>
+                <input type="submit" />
+            </form>*/}
             <h1 id="infoHeader">
                 {props.title}
             </h1>

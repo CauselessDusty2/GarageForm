@@ -23,6 +23,10 @@ class Deck extends React.Component {
         this.handlePictureframeChange=this.handlePictureframeChange.bind(this)
         this.handleRailingChange=this.handleRailingChange.bind(this)
         this.generateQuote=this.generateQuote.bind(this)
+        this.handleStringerChange=this.handleStringerChange.bind(this)
+        this.handleSkirtingChange=this.handleSkirtingChange.bind(this)
+        this.handleRiserLightingChange=this.handleRiserLightingChange.bind(this)
+        this.handleSurfaceLightingChange=this.handleSurfaceLightingChange.bind(this)
 
         this.state = {
             quoteKey: '',
@@ -55,10 +59,13 @@ class Deck extends React.Component {
             stairStringerType: '',
             stairConfigureation: '',
             skirting: '',
+            skirtingCustom: '',
             skirtingMaterial: '',
             additionalInfo: '',
             riserLighting: '',
+            riserLightingCustom: '',
             surfaceLighting: '',
+            surfaceLightingCustom: '',
         };
     }
 
@@ -97,6 +104,7 @@ class Deck extends React.Component {
         alert(`The key "${key}" is not a valid quote key`)
       }
     }
+
     handleSimpleStateChange(key, value) {
         this.setState({ [key]: value})
     }
@@ -139,8 +147,32 @@ class Deck extends React.Component {
 
     handleRailingChange( state, railing) {
         if (railing !== this.state.railing ){
-            this.setState({railing, railingCustom: '', baluster: '', balusterCustom: ''})
+            this.setState({railing, railingCustom: '', baluster: '', balusterCustom: '', railingLighting: ''})
         }
+    }
+
+    handleStringerChange(state, stairStringerType) {
+      if (stairStringerType !== this.state.stairStringerType ){
+          this.setState({stairStringerType, stairConfiguration: ''})
+      }
+    }
+
+    handleSkirtingChange(state, skirting) {
+      if (skirting !== this.state.skirting ){
+          this.setState({skirting, skirtingCustom: '', skirtingMaterial: ''})
+      }
+    }
+
+    handleRiserLightingChange(state, riserLighting) {
+      if (riserLighting !== this.state.riserLighting ){
+          this.setState({riserLighting, riserLightingCustom: ''})
+      }
+    }
+
+    handleSurfaceLightingChange(state, surfaceLighting) {
+      if (surfaceLighting !== this.state.surfaceLighting ){
+          this.setState({surfaceLighting, surfaceLightingCustom: ''})
+      }
     }
 
     render() {
@@ -321,6 +353,7 @@ class Deck extends React.Component {
               additionalClass: "childSelection"
             },
             stairStringerType : {
+              changeHandler: this.handleStringerChange,
               stateGroup: "stairStringerType",
               title: "Stair Stringer",
               state: this.state.stairStringerType,
@@ -334,6 +367,7 @@ class Deck extends React.Component {
               state: this.state.stairConfiguration,
               summary: "The configuration of the stairs",
               list : this.state.stairStringerType === "Regal" ? data.stairConfigurationRegal :  data.stairConfiguration,
+              additionalClass: "childSelection"
             },
             skirting : {
               stateGroup: "skirting",
@@ -341,6 +375,7 @@ class Deck extends React.Component {
               state: this.state.skirting,
               summary: "Skirting for the deck between the ground and the top of the deck",
               list : data.skirtingDirection,
+              changeHandler: this.handleSkirtingChange
             },
             skirtingMaterial : {
               showIf: !!this.state.skirting && this.state.skirting !== "None" && getSkirtingList(this.state.deckingType, this.state.trexDeckingLine),
@@ -356,7 +391,8 @@ class Deck extends React.Component {
               title: "Stair Riser Lighting",
               state: this.state.riserLighting,
               summary: "Lighting for the stair risers",
-              list : data.riserLighting
+              list : data.riserLighting,
+              changeHandler: this.handleRiserLightingChange
             },
             surfaceLighting : {
               stateGroup: "surfaceLighting",
@@ -364,6 +400,7 @@ class Deck extends React.Component {
               state: this.state.surfaceLighting,
               summary: "Lighting for the deck surface",
               list : data.surfaceLighting,
+              changeHandler: this.handleSurfaceLightingChange
             },
         }
 
@@ -400,11 +437,11 @@ class Deck extends React.Component {
           "Stair Stringer": this.state.stairStringerType,
           "Strair Configuration": this.state.stairConfiguration,
           "section4": toggleSectionHeading("Skirting", this.state) && "SECTION Skirting",
-          "Skirting": this.state.skirting,
+          "Skirting": this.state.skirtingCustom || this.state.skirting,
           "Skirting Material": this.state.skirtingMaterial,
           "section7": toggleSectionHeading("Lighting", this.state) && "SECTION Lighting",
-          "Stair riser lighting": this.state.riserLighting,
-          "Deck Surface lighting": this.state.surfaceLighting,
+          "Stair riser lighting": this.state.riserLightingCustom || this.state.riserLighting,
+          "Deck Surface lighting": this.state.surfaceLightingCustom || this.state.surfaceLighting,
           "section5": "SECTION",
           "Additional Info": this.state.additionalInfo,
         }

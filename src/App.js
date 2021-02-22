@@ -8,6 +8,7 @@ import Siding from "./pages/Siding"
 import Roofing from "./pages/Roofing"
 import Container from './Components/Container'
 import CustomBuilding from './pages/CustomBuilding'
+import Shed from './pages/Shed'
 import Deck from './pages/Deck'
 
 class App extends React.Component {
@@ -23,7 +24,6 @@ class App extends React.Component {
 
     getClassName = () => {
       const NO_QUOTE = [
-        "Shed",
         "General",
         "Window",
         "Entry Door",
@@ -59,7 +59,7 @@ class App extends React.Component {
             <div className={this.getClassName() && "page"}>
             {this.state.selected && <button onClick={e => this.handleClick("")} id="backButton">Back</button>}
             {this.state.selected === "Garage" && <Garage />}
-            {this.state.selected === "Shed" && <h1>Under Construction</h1>}
+            {this.state.selected === "Shed" && <Shed />}
             {this.state.selected === "Deck" && <Deck />}
             {this.state.selected === "General" && <General />}
             {this.state.selected === "Window" && <h1>Under Construction</h1>}
