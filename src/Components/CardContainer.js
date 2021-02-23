@@ -25,6 +25,7 @@ const CardContainer = props => {
                         stateGroup={props.stateGroup}
                         selected={props.state === item.value ? "selectedState" : ""}
                         description={item?.description}
+                        disabled={item.disabled}
                     />
                 )}
                 {props.input && props.input === "number" && <input

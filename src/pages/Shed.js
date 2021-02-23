@@ -3,7 +3,6 @@ import React from 'react'
 import QuoteSection from "../Components/QuoteSection"
 import UserInput from "../Components/UserInput"
 import Price from "../Components/Price"
-import FileInput from '../Components/FileInput'
 import AdditionalInfo from '../Components/AdditionalInfo'
 import SelectionList from '../Components/SelectionList'
 

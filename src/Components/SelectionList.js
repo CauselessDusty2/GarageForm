@@ -1,4 +1,4 @@
-import {React, useState} from 'react'
+import {React} from 'react'
 
 import Container from './Container'
 
@@ -7,7 +7,7 @@ import './SelectionList.css'
 
 
 const QuoteInfo = props => {
-    const [key, setkey] = useState("")
+    {/*const [key, setkey] = useState("")*/}
     return (
         <Container className="sidenav">
             {/*<form onSubmit={e => props.generateQuote(e, key)}>

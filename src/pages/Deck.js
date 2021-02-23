@@ -1,12 +1,11 @@
 import React from 'react'
 
 import QuoteSection from "../Components/QuoteSection"
-import QuoteInfo from '../Components/QuoteInfo'
 import UserInput from "../Components/UserInput"
-import Price from "../Components/Price"
 import FileInput from '../Components/FileInput'
 import AdditionalInfo from '../Components/AdditionalInfo'
 import SelectionList from '../Components/SelectionList'
+
 import {getAttachmentList, getSupportList, getPostSizeList, getDeckingColourList, getPictureframeColourList, getFasciaSize, getBalusterList, getSkirtingList, toggleSectionHeading, getRailingLightingList} from '../helperFunctions/deckUtils.js'
 
 import data from "../data/deck.json"
@@ -199,13 +198,6 @@ class Deck extends React.Component {
                 state : this.state.support,
                 summary : "The type of support for the deck",
                 list : getSupportList(this.state.attachment)
-            },
-            attachment : {
-                stateGroup : "attachment",
-                title : "Type",
-                state : this.state.attachment,
-                summary : "If the deck is attached to the house ledger or if it is freestanding",
-                list : getAttachmentList(this.state.support)
             },
             framingMaterial : {
                 stateGroup : "framingMaterial",

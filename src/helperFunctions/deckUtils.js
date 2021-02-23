@@ -194,7 +194,7 @@ export const toggleSectionHeading = (section, state) => {
   } else if (section === "Pictureframe"){
     showHeading = PICTUREFRAME_LIST.some(i => i !== '')
   } else if (section === "Fascia"){
-    showHeading = PICTUREFRAME_LIST.some(i => i !== '')
+    showHeading = FASCIA_LIST.some(i => i !== '')
   } else if (section === "Stairs"){
     showHeading = STAIR_LIST.some(i => i !== '')
   } else if (section === "Lighting"){

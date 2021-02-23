@@ -1,7 +1,6 @@
 import React from 'react'
 
 import QuoteSection from "../Components/QuoteSection";
-import QuoteInfo from '../Components/QuoteInfo'
 import UserInput from "../Components/UserInput"
 import FileInput from '../Components/FileInput'
 import AdditionalInfo from '../Components/AdditionalInfo'
