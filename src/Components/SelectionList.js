@@ -28,7 +28,11 @@ const QuoteInfo = props => {
                     } else if (props.stateList[key].includes("SECTION")) {
                       elem = <h2>{props.stateList[key].replace("SECTION", "")}</h2>
                     } else {
-                      elem = props.stateList[key] ? <li key={index}>{key}: {props.stateList[key]}</li> : null
+                      if (typeof props.stateList[key] === "object") {
+                          elem = props.stateList[key].map(item => <li>{key}: {item}</li>)
+                      } else {
+                        elem = props.stateList[key] ? <li key={index}>{key}: {props.stateList[key]}</li> : null
+                      }
                     }
                   }
                   return elem

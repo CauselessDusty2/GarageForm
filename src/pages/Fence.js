@@ -6,32 +6,32 @@ import FileInput from '../Components/FileInput'
 import AdditionalInfo from '../Components/AdditionalInfo'
 import SelectionList from '../Components/SelectionList'
 
+import {toggleSectionHeading} from '../helperFunctions/fenceUtils.js'
+
 import data from "../data/fence.json"
 
 class Fence extends React.Component {
     constructor(props) {
         super(props);
         this.handleSimpleStateChange=this.handleSimpleStateChange.bind(this)
-        this.showBasic=this.showBasic.bind(this)
         this.handleMaterialChange=this.handleMaterialChange.bind(this)
 
         this.state = {
             files: null,
-            toggleBasic: true,
-            basic: {
-              material: '',
-              style: '',
-              height: '',
-              length: '',
-            },
+            length: '',
             material: '',
-            style: '',
             height: '',
             heightCustom: '',
+            style: '',
             postSize: '',
-            spacing: '',
-            length: '',
-            gateQty: ''
+            postSpacing: '',
+            postOptions: '',
+            picketType: '',
+            picketTypeCustom: '',
+            picketDirection: '',
+            picketSpacing: '',
+            railQty: '',
+            topCap: ''
         };
     }
 
@@ -53,57 +53,14 @@ class Fence extends React.Component {
     }
 
     handleSimpleStateChange(key, value) {
-        if (key.includes('basic.')){
-            this.setState(
-              {basic : {
-                ...this.state.basic,
-                [key.split('.')[1]]: value
-              }
-            })
-        } else {
-          this.setState({ [key]: value})
-        }
+      this.setState({ [key]: value})
     }
 
-    showBasic() {this.setState({toggleBasic: !this.state.toggleBasic})}
-
-
     render() {
-        /*const BASIC_SECTION={
-            basic_length : {
-                stateGroup : "basic.length",
-                input : "number",
-                title : "Length",
-                state : this.state.basic.length,
-                summary : "The length of the fence in feet"
-            },
-            basic_material : {
-                stateGroup : "basic.material",
-                list : data.material,
-                title : "Wood Type",
-                state : this.state.basic.material,
-                summary : "The type of wood for the fence"
-            },
-            basic_height : {
-                stateGroup : "basic.height",
-                list : data.basicHeight,
-                title : "Height",
-                state : this.state.basic.height,
-                summary : "The Height of the fence"
-            },
-            basic_style : {
-                stateGroup : "basic.style",
-                list : data.style,
-                title : "Style of Fence",
-                state : this.state.basic.style,
-                summary : "The style of the fence",
-            }
-        }*/
-
-        const ADVANCED_SECTION = {
+        const SECTION = {
             length : {
                 stateGroup : "length",
-                input : "number",
+                input : "text",
                 title : "Length",
                 state : this.state.length,
                 summary : "The length of the fence",
@@ -127,50 +84,106 @@ class Fence extends React.Component {
                 additionalClass : "childSelection"
             },
             style : {
-                showIf : this.state.material,
+                showIf : this.state.material === "Metal",
                 stateGroup : "style",
-                list : this.state.material === "Metal" ? data.advancedStyle : data.style,
+                list : data.style,
                 title : "Style of Fence",
                 state : this.state.style,
                 summary : "The style of the fence",
                 additionalClass : "childSelection"
             },
-
             postSize: {
                 showIf: !!this.state.material && this.state.material !== "Metal",
                 stateGroup : "postSize",
-                list : data.postSize,
+                list : this.state.topCap === "2x6"? data.postSize2x6TC : data.postSize,
                 title : "Post Size",
                 state : this.state.postSize,
                 summary : "The size of the fence posts",
                 additionalClass : "childSelection"
             },
-            spacing: {
+            postSpacing: {
                 showIf: !!this.state.material && this.state.material !== "Metal",
-                stateGroup : "spacing",
-                input: "number",
+                stateGroup : "postSpacing",
+                input: "text",
                 title : "Post Spacing",
-                state : this.state.spacing,
+                state : this.state.postSpacing,
                 summary : "The space between the fence posts",
                 additionalClass : "childSelection"
-            }
+            },
+            postOptions: {
+                showIf: !!this.state.material && this.state.material !== "Metal",
+                stateGroup : "postOptions",
+                title : "Post Options",
+                list : data.postOptions,
+                state : this.state.postOptions,
+                summary : "The options for the top of the posts",
+                additionalClass : "childSelection"
+            },
+            picketType: {
+                showIf: !!this.state.material && this.state.material !== "Metal",
+                stateGroup : "picketType",
+                list : data.picketType,
+                title : "Picket Type",
+                state : this.state.picketType,
+                summary : "The size of pickets for the fence",
+                additionalClass : "childSelection"
+            },
+            picketDirection: {
+                showIf: !!this.state.material && this.state.material !== "Metal",
+                stateGroup : "picketDirection",
+                list : data.picketDirection,
+                title : "Picket Direction",
+                state : this.state.picketDirection,
+                summary : "The directions for the pickets of the fence",
+                additionalClass : "childSelection"
+            },
+            picketSpacing: {
+                showIf: !!this.state.material && this.state.material !== "Metal",
+                stateGroup : "picketSpacing",
+                input: "text",
+                title : "Picket Spacing",
+                state : this.state.picketSpacing,
+                summary : "The space between the fence pickets",
+                additionalClass : "childSelection"
+            },
+            railQty: {
+                showIf: this.state.picketDirection === "Vertical",
+                stateGroup : "railQty",
+                input: "text",
+                title : "Horizontal Rail Quantity",
+                state : this.state.railQty,
+                summary : "The horizontal board going between posts that the pickets are nailed to",
+                additionalClass : "childSelection2"
+            },
+            topCap: {
+                showIf: !!this.state.material && this.state.material !== "Metal",
+                stateGroup : "topCap",
+                title : "Top Cap",
+                list : this.state.postSize === "4x4" ? data.topCap4x4Post : data.topCap,
+                state : this.state.topCap,
+                summary : "The board that is at the top of the pickets",
+                additionalClass : "childSelection"
+            },
         }
 
-        /*const DISPLAY_LIST_BASIC = {
-          "Length": this.state.basic.length,
-          "Material": this.state.basic.material,
-          "Height": this.state.basic.height,
-          "Style": this.state.basic.style,
-          "Additional Info": this.state.additionalInfo
-        }*/
-
-        const DISPLAY_LIST_ADVANCED = {
+        const DISPLAY_LIST = {
           "Length": this.state.length,
           "Material": this.state.material,
           "Height": this.state.heightCustom || this.state.height,
           "Style": this.state.style,
-          "PostSize": this.state.postSize,
-          "Post Spacing": this.state.spacing,
+          "SECTION POST": toggleSectionHeading("post", this.state) && "SECTION Post",
+          "Post Size": this.state.postSize,
+          "Post Spacing": this.state.postSpacing,
+          "Post Options": this.state.postOptions,
+          "SECTION PICKET": toggleSectionHeading("picket", this.state) && "SECTION Picket",
+          "Picket Type": this.state.picketType,
+          "Picket Direction": this.state.picketDirection,
+          "Picket Spacing": this.state.picketSpacing,
+          "SECTION RAIL": toggleSectionHeading("rail", this.state) && "SECTION Rail",
+          "Horizontal Rail Quantity": this.state.railQty,
+          "SECTION TOP CAP": toggleSectionHeading("topCap", this.state) && "SECTION Top Cap",
+          "Top Cap": this.state.topCap,
+          "SECTION Additional info": "SECTION",
           "Additional Info": this.state.additionalInfo
         }
 
@@ -178,7 +191,7 @@ class Fence extends React.Component {
             <div>
                 <QuoteSection
                     defaultClickHandler={this.handleSimpleStateChange}
-                    section={ADVANCED_SECTION}
+                    section={SECTION}
                 />
 
                 <FileInput setFilesState={files => this.setState({files})}/>
@@ -187,7 +200,7 @@ class Fence extends React.Component {
                     title="Fence Info"
                     handleChange={this.handleSimpleStateChange}
                     state={this.state}
-                    stateList={DISPLAY_LIST_ADVANCED}
+                    stateList={DISPLAY_LIST}
                 />
 
                 <AdditionalInfo
@@ -199,7 +212,7 @@ class Fence extends React.Component {
                     handleChange={this.handleSimpleStateChange}
                     requestType="Fence"
                     files={this.state.files}
-                    stateList={DISPLAY_LIST_ADVANCED}
+                    stateList={DISPLAY_LIST}
                 />
             </div>
         );

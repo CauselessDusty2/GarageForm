@@ -47,11 +47,15 @@ const getMessage = (requestType, name, email, phoneNumber, files, stateList) => 
         let res = ""
         if (stateList[key]) {
           if (stateList[key].includes("SUBSECTION")) {
-            res = `\n${stateList[key].replace("SUBSECTION", "")}\n`
+              res = `\n${stateList[key].replace("SUBSECTION", "")}\n`
           } else if (stateList[key].includes("SECTION")) {
-            res = `\n${stateList[key].replace("SECTION", "")}\n\n`
+              res = `\n${stateList[key].replace("SECTION", "")}\n\n`
           } else if (stateList[key]){
-            res = `   \u2022 ${key}: ${stateList[key]}\n`
+            if (typeof stateList[key] === "object") {
+                res = stateList[key].map(item => `\u2022 ${key}: ${item}\n`)
+            } else {
+                res = `\u2022 ${key}: ${stateList[key]}\n`
+            }
           }
         }
 

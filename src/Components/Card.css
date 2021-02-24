@@ -50,12 +50,16 @@
 }
 
 .card-disabled{
-  background: #eee;
+  background: #ddd;
+  /*display: none;*/
 }
 .card-disabled:hover{
-  background: #eee;
+  background: #ddd;
   cursor: not-allowed;
 }
 .cardtext-disabled{
   color: #666;
+}
+.cardImage-disabled{
+  opacity: 0.5;
 }

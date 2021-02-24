@@ -4,6 +4,7 @@
     {"value": "Freestanding"}
   ],
   "attachmentPad": [
+    {"value": "Attached", "disabled":true},
     {"value": "Freestanding"}
   ],
   "height": [
@@ -47,6 +48,7 @@
   ],
   "framingMaterialLargePost": [
     {"value": "Brown Treated"},
+    {"value": "Cedar", "disabled":true},
     {"value": "Other"}
   ],
   "postSizeBrown": [
@@ -55,15 +57,19 @@
     {"value": "8x8"}
   ],
   "postSizeBrownLargeBeam": [
+    {"value": "4x4", "disabled":true},
     {"value": "6x6"},
     {"value": "8x8"}
   ],
   "postSizeCedar": [
     {"value": "4x4"},
-    {"value": "6x6"}
+    {"value": "6x6"},
+    {"value": "8x8", "disabled":true}
   ],
   "postSizeCedarLargeBeam": [
-    {"value": "6x6"}
+    {"value": "4x4", "disabled":true},
+    {"value": "6x6"},
+    {"value": "8x8", "disabled":true}
   ],
   "beamPly": [
     {"value": "2-Ply"},
@@ -72,7 +78,8 @@
   ],
   "beamPlySmallPost": [
     {"value": "2-Ply"},
-    {"value": "Other"}
+    {"value": "3-Ply", "disabled":true},
+    {"value": "4-Ply", "disabled":true}
   ],
   "beamSize": [
     {"value": "2x6"},

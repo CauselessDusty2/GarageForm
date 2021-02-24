@@ -6,8 +6,10 @@ import FileInput from '../Components/FileInput'
 import AdditionalInfo from '../Components/AdditionalInfo'
 import SelectionList from '../Components/SelectionList'
 
-import data from "../data/garage.json"
+import roofingData from "../data/garage.json"
+import data from "../data/roof.json"
 import * as garageUtils from "../helperFunctions/garageUtils.js"
+import * as roofUtils from "../helperFunctions/roofUtils.js"
 
 class Roofing extends React.Component {
     constructor(props) {
@@ -20,6 +22,10 @@ class Roofing extends React.Component {
         this.state = {
             files: null,
             additionalInfo: '',
+            sqft: '',
+            overhang: '',
+            roofPitch: '',
+            roofPitchCustom: '',
             roofType: '',
             roofTypeCustom: '',
             roofProfile: '',
@@ -61,9 +67,29 @@ class Roofing extends React.Component {
 
     render() {
         const SECTION = {
+          sqft: {
+              stateGroup : "sqft",
+              input: "text",
+              title : "Building Square Footage",
+              state : this.state.sqft,
+          },
+          overhang: {
+              stateGroup : "overhang",
+              input: "text",
+              title : "Roof Overhang",
+              state : this.state.overhang,
+              summary : "The length that the roof hangs past the ceiling"
+          },
+          roofPitch : {
+              stateGroup : "roofPitch",
+              list : data.roofPitch,
+              title : "Roofing Pitch",
+              state : this.state.roofPitch,
+              summary : "The angle of the roof, measured as rise over run",
+          },
           roofType : {
               stateGroup : "roofType",
-              list : data.roofingTypes,
+              list : roofingData.roofingTypes,
               title : "Roofing Type",
               state : this.state.roofType,
               summary : "The type of roofing",
@@ -93,7 +119,7 @@ class Roofing extends React.Component {
           roofColour : {
               showIf : this.state.roofType === "Shingles" || this.state.roofGauge,
               stateGroup : "roofColour",
-              list : this.state.roofType === "Shingles" ? data.shingleColour : garageUtils.getSidingColours(
+              list : this.state.roofType === "Shingles" ? roofingData.shingleColour : garageUtils.getSidingColours(
                   this.state.roofType,
                   this.state.roofProfile,
                   this.state.roofGauge),
@@ -105,10 +131,16 @@ class Roofing extends React.Component {
         }
 
         const DISPLAY_LIST = {
+          "SECTION spec": roofUtils.toggleSectionHeading("spec", this.state) && "SECTION Specifications",
+          "Building Square Footage": this.state.sqft,
+          "Overhang": this.state.overhang,
+          "Roof Pitch": this.state.roofPitchCustom || this.state.roofPitch,
+          "SECTION roofing": roofUtils.toggleSectionHeading("roofing", this.state) && "SECTION Roofing",
           "Type":this.state.roofTypeCustom||this.state.roofType,
           "Profile":this.state.roofProfile,
           "Metal Gauge":this.state.roofGauge,
           "Colour":this.state.roofColour,
+          "SECTION Additional info": "SECTION",
           "Additional Info": this.state.additionalInfo
         }
 
@@ -119,7 +151,7 @@ class Roofing extends React.Component {
                     section={SECTION}
                 />
 
-                <FileInput setFilesState={files => this.setState({files})}/>
+                <FileInput setFilesState={files => this.setState({files})} title="Attach a picture or sketch of the roof shape and size"/>
 
                 <SelectionList
                     title="Roofing Info"

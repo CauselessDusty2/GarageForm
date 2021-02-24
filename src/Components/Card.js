@@ -25,7 +25,7 @@ const Card = props => {
         <div onClick={getClickHandler(props.className, props.disabled, handleClick)} className={["card", props.selected, props.className, props.disabled?"card-disabled":""].join(' ')}>
 
             {/* Image portion of the card */}
-            <img src={props.imgSrc} className="cardImage" alt={props.value}/>
+            <img src={props.imgSrc} className={["cardImage", props.disabled?"cardImage-disabled":""].join(' ')} alt={props.value}/>
 
             {/* Value or name portion of card */}
             <span className={["cardValue", props.disabled?"cardtext-disabled":""].join(' ')}>
