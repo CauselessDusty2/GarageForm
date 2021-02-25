@@ -4,35 +4,10 @@
     {"value": "High View", "imgSrc": "https://www.larsondoors.com/images/default-source/doors/278-ss/278-sswh.png?sfvrsn=8"},
     {"value": "Mid View", "imgSrc": "https://www.larsondoors.com/images/default-source/doors/630-08/630-08wh.png?sfvrsn=10"}
   ],
-  "viewFull": [
-    {"value": "Full View", "imgSrc": "https://www.larsondoors.com/images/default-source/doors/159fv/159fv_brown_bn.png?sfvrsn=7"},
-    {"value": "High View", "imgSrc": "https://www.larsondoors.com/images/default-source/doors/278-ss/278-sswh.png?sfvrsn=8", "disabled": true},
-    {"value": "Mid View", "imgSrc": "https://www.larsondoors.com/images/default-source/doors/630-08/630-08wh.png?sfvrsn=10", "disabled": true}
-  ],
-  "viewHigh": [
-    {"value": "Full View", "imgSrc": "https://www.larsondoors.com/images/default-source/doors/159fv/159fv_brown_bn.png?sfvrsn=7", "disabled": true},
-    {"value": "High View", "imgSrc": "https://www.larsondoors.com/images/default-source/doors/278-ss/278-sswh.png?sfvrsn=8"},
-    {"value": "Mid View", "imgSrc": "https://www.larsondoors.com/images/default-source/doors/630-08/630-08wh.png?sfvrsn=10", "disabled": true}
-  ],
-  "viewMid": [
-    {"value": "Full View", "imgSrc": "https://www.larsondoors.com/images/default-source/doors/159fv/159fv_brown_bn.png?sfvrsn=7", "disabled": true},
-    {"value": "High View", "imgSrc": "https://www.larsondoors.com/images/default-source/doors/278-ss/278-sswh.png?sfvrsn=8", "disabled": true},
-    {"value": "Mid View", "imgSrc": "https://www.larsondoors.com/images/default-source/doors/630-08/630-08wh.png?sfvrsn=10"}
-  ],
-  "viewExcludeHigh": [
-    {"value": "Full View", "imgSrc": "https://www.larsondoors.com/images/default-source/doors/159fv/159fv_brown_bn.png?sfvrsn=7"},
-    {"value": "High View", "imgSrc": "https://www.larsondoors.com/images/default-source/doors/278-ss/278-sswh.png?sfvrsn=8", "disabled": true},
-    {"value": "Mid View", "imgSrc": "https://www.larsondoors.com/images/default-source/doors/630-08/630-08wh.png?sfvrsn=10"}
-  ],
   "ventilation": [
     {"value": "None", "imgSrc": "https://www.larsondoors.com/images/default-source/doors/159fv/159fv_brown_bn.png?sfvrsn=7"},
     {"value": "On Demand", "imgSrc": "https://www.larsondoors.com/images/default-source/doors/630-08/630-08wh.png?sfvrsn=10"},
     {"value": "Seasonal", "imgSrc": "https://www.larsondoors.com/images/default-source/doors/159fv/159fv_brown_bn.png?sfvrsn=7"}
-  ],
-  "ventilationHighView": [
-    {"value": "None", "imgSrc": "https://www.larsondoors.com/images/default-source/doors/159fv/159fv_brown_bn.png?sfvrsn=7", "disabled": true},
-    {"value": "On Demand", "imgSrc": "https://www.larsondoors.com/images/default-source/doors/630-08/630-08wh.png?sfvrsn=10"},
-    {"value": "Seasonal", "imgSrc": "https://www.larsondoors.com/images/default-source/doors/159fv/159fv_brown_bn.png?sfvrsn=7", "disabled": true}
   ],
   "colour": [
     {"value": "Almond", "imgSrc": "https://www.larsondoors.com/images/default-source/color-options/almond_icon.jpg?sfvrsn=10"},
@@ -46,19 +21,6 @@
     {"value": "White", "imgSrc": "https://www.larsondoors.com/images/default-source/color-options/white_icon.jpg?sfvrsn=16"},
     {"value": "White Linen", "imgSrc": "https://www.larsondoors.com/images/default-source/color-options/white_linen_icon.jpg?sfvrsn=8"},
     {"value": "Woodland", "imgSrc": "https://www.larsondoors.com/images/default-source/color-options/woodland_icon.jpg?sfvrsn=4"}
-  ],
-  "colourHighView": [
-    {"value": "Almond", "imgSrc": "https://www.larsondoors.com/images/default-source/color-options/almond_icon.jpg?sfvrsn=10"},
-    {"value": "Black", "imgSrc": "https://www.larsondoors.com/images/default-source/color-options/black.jpg?sfvrsn=8", "disabled": true},
-    {"value": "Brown", "imgSrc": "https://www.larsondoors.com/images/default-source/color-options/brown_icon.jpg?sfvrsn=12"},
-    {"value": "Cranberry", "imgSrc": "https://www.larsondoors.com/images/default-source/color-options/cranberry.jpg?sfvrsn=8", "disabled": true},
-    {"value": "Graphite", "imgSrc": "https://www.larsondoors.com/images/default-source/color-options/graphite.jpg?sfvrsn=2", "disabled": true},
-    {"value": "Green", "imgSrc": "https://www.larsondoors.com/images/default-source/color-options/green.jpg?sfvrsn=10", "disabled": true},
-    {"value": "Pebblestone", "imgSrc": "https://www.larsondoors.com/images/default-source/color-options/pebblestone_icon.jpg?sfvrsn=4", "disabled": true},
-    {"value": "Sandstone", "imgSrc": "https://www.larsondoors.com/images/default-source/color-options/sandstone_icon.jpg?sfvrsn=12"},
-    {"value": "White", "imgSrc": "https://www.larsondoors.com/images/default-source/color-options/white_icon.jpg?sfvrsn=16"},
-    {"value": "White Linen", "imgSrc": "https://www.larsondoors.com/images/default-source/color-options/white_linen_icon.jpg?sfvrsn=8", "disabled": true},
-    {"value": "Woodland", "imgSrc": "https://www.larsondoors.com/images/default-source/color-options/woodland_icon.jpg?sfvrsn=4", "disabled": true}
   ],
   "handleColour": [
     {"value": "Aged Bronze", "imgSrc": "https://www.larsondoors.com/images/default-source/hardware-options/aged-bronze-icon.png?sfvrsn=17"},
@@ -76,11 +38,6 @@
     {"value": "Retractable Screen", "imgSrc": "https://www.larsondoors.com/images/default-source/doors/830-80/83080_wht.png?sfvrsn=9"},
     {"value": "Pet Door", "imgSrc": "https://www.larsondoors.com/images/default-source/doors/149pv/149pv_sand_agedb_straight.png?sfvrsn=6"},
     {"value": "Built-in Keyed Lock", "imgSrc": "https://www.larsondoors.com/images/default-source/doors/360-nv/360nv_wht.png?sfvrsn=9"}
-  ],
-  "featuresHigh": [
-    {"value": "Retractable Screen", "imgSrc": "https://www.larsondoors.com/images/default-source/doors/830-80/83080_wht.png?sfvrsn=9"},
-    {"value": "Pet Door", "imgSrc": "https://www.larsondoors.com/images/default-source/doors/149pv/149pv_sand_agedb_straight.png?sfvrsn=6"},
-    {"value": "Built-in Keyed Lock", "imgSrc": "https://www.larsondoors.com/images/default-source/doors/360-nv/360nv_wht.png?sfvrsn=9", "disabled": true}
   ],
   "width": [
     {"value": "32"},

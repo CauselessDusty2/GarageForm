@@ -28,7 +28,8 @@ class Fence extends React.Component {
             width: '',
             widthCustom: '',
             height: '',
-            heightCustom: ''
+            heightCustom: '',
+            additionalInfo: ''
         };
     }
 
@@ -118,7 +119,9 @@ class Fence extends React.Component {
           "Handle Colour": this.state.handleColour,
           "Feature": this.state.features,
           "Width": this.state.widthCustom || this.state.width,
-          "Height": this.state.heightCustom || this.state.height
+          "Height": this.state.heightCustom || this.state.height,
+          "SECTION AdditionalInfo": "SECTION",
+          "Additional Info": this.state.additionalInfo
         }
 
         return (
@@ -131,7 +134,7 @@ class Fence extends React.Component {
                 <FileInput setFilesState={files => this.setState({files})}/>
 
                 <SelectionList
-                    title="Fence Info"
+                    title="Storm Door Info"
                     handleChange={this.handleSimpleStateChange}
                     state={this.state}
                     stateList={DISPLAY_LIST}
@@ -144,7 +147,7 @@ class Fence extends React.Component {
 
                 <UserInput
                     handleChange={this.handleSimpleStateChange}
-                    requestType="Fence"
+                    requestType="Storm Door"
                     files={this.state.files}
                     stateList={DISPLAY_LIST}
                 />

@@ -654,7 +654,6 @@ class Garage extends React.Component {
                 <AdditionalInfo
                     handleChange={this.handleSimpleStateChange}
                     state={this.state}
-                    stateList={this.state.toggleBasic ? DISPLAY_LIST_BASIC : DISPLAY_LIST_ADVANCED}
                 />
 
                 <UserInput
