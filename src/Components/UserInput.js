@@ -6,9 +6,31 @@ import Container from './Container'
 
 import './UserInput.css'
 
-const handleSubmit = async(body) => {
-    alert(body)
-    //PLACE CODE HERE
+const handleSubmit = (requestType, name, email, phoneNumber, files, stateList) => {
+  let formData = new FormData();
+
+  let body = getMessage(requestType, name, email, phoneNumber, files, stateList)
+  let subject = `Web Request: ${requestType}`
+
+  formData.append('Customer Name', name)
+  formData.append('Customer Email', email)
+  formData.append('Customer Phone Number', phoneNumber)
+  formData.append('subject', subject)
+
+  for (let file in files) {
+    formData.append(files[file].name, files[file], files[file].name)
+  }
+
+  for (let key in stateList) {
+    if (stateList[key]){
+      formData.append(key, stateList[key])
+    }
+  }
+
+  // for (let key of formData.entries()) {
+  //     console.log(key[0], key[1])
+  // }
+  console.log(body)
 }
 
 const initialValues = {
@@ -46,11 +68,14 @@ const getMessage = (requestType, name, email, phoneNumber, files, stateList) => 
       Object.keys(stateList).map( (key, index) => {
         let res = ""
         if (stateList[key]) {
+          //If the value inclusdes SUBSECTION add a new line above
           if (stateList[key].includes("SUBSECTION")) {
               res = `\n${stateList[key].replace("SUBSECTION", "")}\n`
+          //If the value inclusdes SECTION add a new line above and below
           } else if (stateList[key].includes("SECTION")) {
               res = `\n${stateList[key].replace("SECTION", "")}\n\n`
           } else if (stateList[key]){
+            //for files and multi select items
             if (typeof stateList[key] === "object") {
                 res = stateList[key].map(item => `\u2022 ${key}: ${item}\n`)
             } else {
@@ -78,7 +103,7 @@ const UserInput = props => {
             initialValues={initialValues}
             dirty
             validationSchema={validationSchema}
-            onSubmit={values => handleSubmit(getMessage(props.requestType, values.name, values.email, values.phoneNumber, props.files, props.stateList))}
+            onSubmit={values => handleSubmit(props.requestType, values.name, values.email, values.phoneNumber, props.files, props.stateList)}
         >
             {({ errors, touched, dirty }) => (
                 <Container className="infoSection">

@@ -41,6 +41,7 @@ const CardContainer = props => {
                     description={item?.description}
                     disabled={item.disabled}
                 />)}
+
                 {props.input && props.input === "number" && <input
                     className={"textInput"}
                     type="text"
@@ -51,6 +52,7 @@ const CardContainer = props => {
                     value={props.state}
                     placeholder="Enter custom value"
                 />}
+
                 {props.input && props.input === "text" && <input
                     className={"textInput"}
                     type="text"
@@ -60,6 +62,7 @@ const CardContainer = props => {
                     value={props.state}
                     placeholder="Enter custom value"
                 />}
+                
                 {props.state === "Other" && <input
                     className={"textInput"}
                     type="text"

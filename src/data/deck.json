@@ -5,7 +5,7 @@
   ],
   "attachmentPad": [
     {"value": "Attached", "disabled":true},
-    {"value": "Freestanding"}
+    {"value": "Freestanding", "description":" Some Text"}
   ],
   "height": [
     {"value": "Ground Level"},
@@ -141,7 +141,11 @@
     {"value": "Sandstone", "imgSrc": "https://www.moistureshield.com/wp-content/uploads/2019/09/Color-Vision-Sandstone.jpg"},
     {"value": "Catherdral Stone", "imgSrc": "https://www.moistureshield.com/wp-content/uploads/2019/09/Color-Vision-CathedralStone.jpg", "description": "Cool Deck"},
     {"value": "Mochaccino", "imgSrc": "https://www.moistureshield.com/wp-content/uploads/2019/09/Color-Vision-Mochaccino.jpg", "description": "Cool Deck"},
-    {"value": "Cold Brew", "imgSrc": "https://www.moistureshield.com/wp-content/uploads/2020/11/Vision_ColdBrew_500x300px.jpg", "description": "Cool Deck"}
+    {
+      "value": "Cold Brew",
+      "imgSrc": "https://www.moistureshield.com/wp-content/uploads/2020/11/Vision_ColdBrew_500x300px.jpg",
+      "description": "Cool Deck"
+    }
   ],
   "pictureframe": [
     {"value": "None"},

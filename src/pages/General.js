@@ -22,6 +22,10 @@ const General = props => {
 
         <FileInput setFilesState={setFiles}/>
 
+        {files &&
+          <img src={URL.createObjectURL(files[0])} />
+        }
+
         <UserInput
             stateList={{"Request": additionalInfo}}
             requestType="General"

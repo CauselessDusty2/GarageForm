@@ -1,9 +1,12 @@
 import Container from './Container'
+import React, { useEffect } from 'react'
+//import pricing from "../data/pricing.json"
+import axios from 'axios'
 
 import './Price.css'
 
-//Add code here to return a price
-const getPrice = (requirements, type) => {
+
+const getPrice = (requirements, type, pricing) => {
     let price = "Error"
     if (type === "shed") {
         let [width, length, siding, options] = requirements
@@ -13,15 +16,49 @@ const getPrice = (requirements, type) => {
     } else if (type === "garage") {
         let [width, length, siding] = requirements
 
-        if (siding === "No Siding") {
-            //Pricing if no siding is selected
-            price = [...requirements].join(" - ")
+        //Pricing if no siding is selected
+        let key = Object.keys(pricing).find(item => {
+          let p = false
+          let [itemWidth, itemLength] = item.split(" ")[0].split("x")
+
+          if (itemWidth === width && itemLength === length && item.includes("GARAGE FRAMING")) {
+            p = true
+          }
+          return p
+        })
+
+        if(!key){
+          price = "Error: Contact Star for pricing"
         } else {
+          price = pricing[key]
+        }
+
+        if (siding !== "No Siding") {
             //Pricing if a siding is selected
-            price = [...requirements].join(" - ")
+            let key = Object.keys(pricing).find(item => {
+              let p = false
+              item = item.replace("X", "x")
+              console.log(item)
+              let [itemWidth, itemLength] = item.split(" ")[0].split("x")
+
+              if(itemWidth === width && itemLength === length && length === "30"){
+                console.log(item)
+              }
+
+              if (itemWidth === width && itemLength === length && item.includes("VINYL PACKAGE")) {
+                p = true
+              }
+              return p
+            })
+
+            if(!key){
+              price = "Error: Contact Star for pricing"
+            } else {
+              price += pricing[key]
+            }
         }
     }
-    return price
+    return typeof(price === "number") ? price.toFixed(2) : price
 }
 
 const valid = requirements => {
@@ -37,7 +74,13 @@ const valid = requirements => {
     return valid
 }
 
+let mydata = {}
+
 const Price = props => <Container className="infoSection">
+{useEffect(() => {
+   axios.get('https://staging.starbuilding.ca/pricing-json.php').then((response) => mydata=response.data)
+}, [])}
+
     <h1>Price</h1>
     {valid(props.requirements) ? <section>
         <p>The price for your {props.type} is</p>
@@ -46,7 +89,7 @@ const Price = props => <Container className="infoSection">
                 $
             </span>
             <span id="priceValue">
-                {getPrice(props.requirements, props.type)}
+                {getPrice(props.requirements, props.type, mydata)}
             </span>
         </div>
     </section> :

@@ -5,36 +5,71 @@ import UserInput from "../Components/UserInput"
 import FileInput from '../Components/FileInput'
 import AdditionalInfo from '../Components/AdditionalInfo'
 import SelectionList from '../Components/SelectionList'
+import CardContainer from '../Components/CardContainer'
 
-import * as utils from '../helperFunctions/stormDoorUtils.js'
+import * as utils from '../helperFunctions/interiorDoorUtils.js'
 
-import data from "../data/stormDoor.json"
+import data from "../data/interiorDoor.json"
 
-class StormDoor extends React.Component {
+import test from "../data/testComponentJson.json"
+
+class InteriorDoor extends React.Component {
     constructor(props) {
         super(props);
         this.handleSimpleStateChange=this.handleSimpleStateChange.bind(this)
+        this.handleStateChange=this.handleStateChange.bind(this)
+        this.handleAddDoor=this.handleAddDoor.bind(this)
         this.handleWidthChange=this.handleWidthChange.bind(this)
         this.handleHeightChange=this.handleHeightChange.bind(this)
         this.handleMultiSelectChange=this.handleMultiSelectChange.bind(this)
 
         this.state = {
             files: null,
-            view: '',
-            ventilation: '',
-            colour: '',
-            handleColour: '',
-            features: [],
-            width: '',
-            widthCustom: '',
-            height: '',
-            heightCustom: '',
-            additionalInfo: ''
+            additionalInfo: '',
+            doors: {
+              door1: {
+                width: '1',
+                widthCustom: '',
+                height: '',
+                heightCustom: '',
+                style: '',
+              }
+            }
         };
     }
 
     handleSimpleStateChange(key, value) {
       this.setState({ [key]: value})
+    }
+
+    handleStateChange(key, value) {
+      this.setState(prevState => ({
+        [key[0]]: {
+          ...prevState.doors,
+          [key[1]]: {
+            [key[2]]: value
+          }
+        }
+      }))
+    }
+
+    handleAddDoor() {
+      console.log(JSON.stringify(this.state))
+      let newDoor = {
+        width: '',
+        widthCustom: '',
+        height: '',
+        heightCustom: '',
+        style: '',
+      }
+      let newKey = "door" + (Object.keys(this.state.doors).length + 1)
+
+      this.setState(prevState => ({
+        doors: {
+          ...prevState.doors,
+          [newKey]: [newDoor]
+        }
+      }))
     }
 
     handleMultiSelectChange(key, value){
@@ -63,42 +98,9 @@ class StormDoor extends React.Component {
 
     render() {
         const SECTION = {
-            view : {
-                stateGroup : "view",
-                list : utils.getViewList(this.state),
-                title : "View",
-                state : this.state.view
-            },
-            ventilation : {
-                stateGroup : "ventilation",
-                list : utils.getVentilationList(this.state),
-                title : "Ventilation",
-                state : this.state.ventilation
-            },
-            colour : {
-                stateGroup : "colour",
-                list : utils.getColourList(this.state),
-                title : "Colour",
-                state : this.state.colour
-            },
-            handleColour : {
-                stateGroup : "handleColour",
-                list : utils.getHandleColourList(this.state),
-                title : "Handle Colour",
-                state : this.state.handleColour
-            },
-            features : {
-                multi: true,
-                stateGroup : "features",
-                list : utils.getFeaturesList(this.state),
-                title : "Features",
-                summary : "Select all that apply",
-                state : this.state.features,
-                changeHandler: this.handleMultiSelectChange
-            },
             width : {
                 stateGroup : "width",
-                list : data.width,
+                list : data.passageWidth,
                 title : "Width",
                 state : this.state.width,
                 changeHandler: this.handleWidthChange
@@ -109,15 +111,16 @@ class StormDoor extends React.Component {
                 title : "Height",
                 state : this.state.height,
                 changeHandler: this.handleHeightChange
+            },
+            style : {
+                stateGroup : "style",
+                list : data.mouldedPanel,
+                title : "Style",
+                state : this.state.style,
             }
         }
 
         const DISPLAY_LIST = {
-          "View": this.state.view,
-          "Ventilation": this.state.ventilation,
-          "Colour": this.state.colour,
-          "Handle Colour": this.state.handleColour,
-          "Feature": this.state.features,
           "Width": this.state.widthCustom || this.state.width,
           "Height": this.state.heightCustom || this.state.height,
           "SECTION AdditionalInfo": "SECTION",
@@ -126,15 +129,34 @@ class StormDoor extends React.Component {
 
         return (
             <div>
-                <QuoteSection
-                    defaultClickHandler={this.handleSimpleStateChange}
-                    section={SECTION}
+                <button onClick={this.handleAddDoor}>Add Door</button>
+
+                {console.log(Object.values(test).map(e => e.changeHandler || "handleSimpleStateChange"))}
+
+                <CardContainer
+                  title={test.width.title}
+                  stateGroup={test.width.stateGroup}
+                  list={data.[test.width.list]}
+                  onChange={this.[test.width.changeHandler]}
+                  state={this.state.[test.width.state]}
                 />
+
+                {Object.keys(this.state.doors).map(door => {return(
+                  <span>
+                    <CardContainer
+                      title={"Style"}
+                      stateGroup={["doors", door, "style"]}
+                      list={data.mouldedPanel}
+                      onChange={this.handleStateChange}
+                      state={this.state.doors[door].style}
+                    />
+                  </span>
+                )})}
 
                 <FileInput setFilesState={files => this.setState({files})}/>
 
                 <SelectionList
-                    title="Storm Door Info"
+                    title="Interior Door Info"
                     handleChange={this.handleSimpleStateChange}
                     state={this.state}
                     stateList={DISPLAY_LIST}
@@ -147,7 +169,7 @@ class StormDoor extends React.Component {
 
                 <UserInput
                     handleChange={this.handleSimpleStateChange}
-                    requestType="Storm Door"
+                    requestType="Interior Door"
                     files={this.state.files}
                     stateList={DISPLAY_LIST}
                 />
@@ -156,4 +178,4 @@ class StormDoor extends React.Component {
     }
 }
 
-export default StormDoor;
+export default InteriorDoor;
