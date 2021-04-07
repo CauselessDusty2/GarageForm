@@ -18,7 +18,7 @@ const handleSubmit = (requestType, name, email, phoneNumber, files, stateList) =
   formData.append('subject', subject)
 
   for (let file in files) {
-    formData.append(files[file].name, files[file], files[file].name)
+    formData.append('files', files[file], files[file].name)
   }
 
   for (let key in stateList) {

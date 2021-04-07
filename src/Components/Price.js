@@ -108,7 +108,7 @@ const getPrice = (requirements, type, pricing) => {
         price = getShedPrice(requirements, pricing)
         break;
       case "garage":
-        price = getShedPrice(requirements, pricing)
+        price = getGaragePrice(requirements, pricing)
         break;
       default:
         price = "Error"

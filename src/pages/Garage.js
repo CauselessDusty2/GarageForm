@@ -28,6 +28,7 @@ class Garage extends React.Component {
         this.handleSidingProfileChange=this.handleSidingProfileChange.bind(this)
         this.handleSidingTypeChange=this.handleSidingTypeChange.bind(this)
         this.handleSimpleStateChange=this.handleSimpleStateChange.bind(this)
+        this.handleMultiSelectChange=this.handleMultiSelectChange.bind(this)
         this.handleWindowPaternChange=this.handleWindowPaternChange.bind(this)
         this.showBasic=this.showBasic.bind(this)
 
@@ -78,7 +79,7 @@ class Garage extends React.Component {
             overheadDecorativeHinge: '',
             gdoHp: '',
             gdoDrive: '',
-            gdoOption: '',
+            gdoOption: [],
             roofType: '',
             roofTypeCustom: '',
             roofProfile: '',
@@ -95,7 +96,7 @@ class Garage extends React.Component {
 
     handleGdoChange(state, gdo) {
         if (gdo !== this.state.gdo ){
-            this.setState({gdo, gdoHp: '', gdoDrive: '', gdoOption: ''})
+            this.setState({gdo, gdoHp: '', gdoDrive: '', gdoOption: []})
         }
     }
 
@@ -124,6 +125,18 @@ class Garage extends React.Component {
         if ( this.state.overheadGlassFinish === "Dark Tint Clear" ) {
             this.setState({overheadWindowType: ''})
         }
+    }
+
+    handleMultiSelectChange(key, value){
+      let newState = this.state.gdoOption
+
+      if (newState.includes(value)){
+          newState = newState.filter(v => v !== value)
+      } else {
+        newState.push(value)
+      }
+
+      this.setState({ [key]: newState})
     }
 
     handleOverheadSeriesChange(state, overheadSeries) {
@@ -386,7 +399,7 @@ class Garage extends React.Component {
                       state={this.state.sidingProfile}
                       summary="The different profile options for the siding type"
                       onChange={this.handleSidingProfileChange}
-                      additionalClass="childSelection"
+                      additionalClass="childSelection animate"
                     />
                   }
 
@@ -718,7 +731,7 @@ class Garage extends React.Component {
                       title="Garage Door Opener Additional Options"
                       state={this.state.gdoOption}
                       summary="Openers can come with additional options, built in lights and MyQ smart phone connectivity"
-                      onChange={this.handleSimpleStateChange}
+                      onChange={this.handleMultiSelectChange}
                       additionalClass="childSelection"
                     />
                   }

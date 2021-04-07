@@ -48,15 +48,71 @@ h2{
 
 .childSelection{
   margin-left: 3em;
+  animation: 0.7s ease-out fadeIn forwards;
 }
 .childSelection2{
   margin-left: 6em;
+  animation: 0.7s ease-out fadeIn forwards;
 }
 .childSelection3{
   margin-left: 8em;
+  animation: 0.7s ease-out fadeIn2 forwards;
 }
 .childSelection4{
   margin-left: 9.5em;
+  animation: 0.7s ease-out fadeIn forwards;
+}
+
+.animate {
+  animation: 0.5s ease-out fadeIn forwards;
+  opacity: 1;
+}
+
+@keyframes fadeIn {
+  0% {
+    transform: translate(-3em, 0);
+    opacity: 0
+  }
+  10% {
+    transform: translate(-3em, 0);
+    opacity: 0
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 1
+  }
+}
+
+@keyframes fadeIn2 {
+  0% {
+    transform: translate(-2em, 0);
+    opacity: 0
+  }
+  9% {opacity: 0.5}
+  10% {
+    transform: translate(-2em, 0);
+    opacity: 1
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 1
+  }
+}
+
+@keyframes fadeIn3 {
+  0% {
+    transform: translate(-1.5em, 0);
+    opacity: 0
+  }
+  9% {opacity: 0.5}
+  10% {
+    transform: translate(-1.5em, 0);
+    opacity: 1
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 1
+  }
 }
 
 @media only screen and (max-width: 1120px){
