@@ -1,10 +1,7 @@
 import {React} from 'react'
-
 import Container from './Container'
 
 import './SelectionList.css'
-
-
 
 const QuoteInfo = props => {
     return (
@@ -16,19 +13,22 @@ const QuoteInfo = props => {
               <ul id="selectionList">
                 {Object.keys(props.stateList).map( (key, index) => {
                   let elem = null
-                  if (props.stateList[key]) {
-                    if (props.stateList[key].includes("SUBSECTION")) {
-                      elem = <h3>{props.stateList[key].replace("SUBSECTION", "")}</h3>
-                    } else if (props.stateList[key].includes("SECTION")) {
-                      elem = <h2>{props.stateList[key].replace("SECTION", "")}</h2>
+                  let value = props.stateList[key]
+
+                  if (value) {
+                    if (key.includes("SUBSECTION")) {
+                      elem = <h3>{value}</h3>
+                    } else if (key.includes("SECTION")) {
+                      elem = <h2>{value}</h2>
                     } else {
-                      if (typeof props.stateList[key] === "object") {
-                          elem = props.stateList[key].map(item => <li>{key}: {item}</li>)
+                      if (typeof value === "object") {
+                          elem = value.map(item => <li>{key}: {item}</li>)
                       } else {
-                        elem = props.stateList[key] ? <li key={index}>{key}: {props.stateList[key]}</li> : null
+                        elem = <li key={index}>{key}: {value}</li>
                       }
                     }
                   }
+                  
                   return elem
                 })}
               </ul>

@@ -8,6 +8,7 @@ const QuoteInfo = props => {
     return (
         <Container className="sidenav">
             <label>Additional Info</label>
+
             <textarea
                 className="textInput"
                 id="addInfoText"
@@ -18,11 +19,10 @@ const QuoteInfo = props => {
             <h1 id="infoHeader">
                 {props.title}
             </h1>
+
             {props.stateList &&
               <ul id="selectionList">
-                {Object.keys(props.stateList).map( (key, index) => {
-                  return props.stateList[key] ? <li key={index}>{key}: {props.stateList[key]}</li> : null
-                })}
+                {Object.keys(props.stateList).map( (key, index) => props.stateList[key] ? <li key={index}>{key}: {props.stateList[key]}</li> : null)}
               </ul>
             }
         </Container>

@@ -13,19 +13,32 @@ class Shed extends React.Component {
     constructor(props) {
         super(props);
         this.handleSimpleStateChange=this.handleSimpleStateChange.bind(this)
+        this.handleMultiSelectChange=this.handleMultiSelectChange.bind(this)
 
         this.state = {
             width: '',
             length: '',
             siding: '',
             shingleColour: '',
-            options: '',
+            options: [],
             additionalInfo: ''
         };
     }
 
     handleSimpleStateChange(key, value) {
       this.setState({ [key]: value})
+    }
+
+    handleMultiSelectChange(key, value){
+      let newState = this.state.options
+
+      if (newState.includes(value)){
+          newState = newState.filter(v => v !== value)
+      } else {
+        newState.push(value)
+      }
+
+      this.setState({ [key]: newState})
     }
 
     render() {
@@ -60,11 +73,13 @@ class Shed extends React.Component {
                 summary : "The colour of the shingles for the roof",
             },
             options: {
+                multi: true,
                 stateGroup : "options",
                 list : data.options,
                 title : "Options",
                 state : this.state.options,
-                summary : "The additonal options that you can have with the shed",
+                summary : "Select all that apply",
+                changeHandler: this.handleMultiSelectChange
             }
         }
 

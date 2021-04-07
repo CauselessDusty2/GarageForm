@@ -131,16 +131,16 @@ class Roofing extends React.Component {
         }
 
         const DISPLAY_LIST = {
-          "SECTION spec": roofUtils.toggleSectionHeading("spec", this.state) && "SECTION Specifications",
+          "SPECIFICATIONS SECTION": roofUtils.toggleSectionHeading("spec", this.state) && "Specifications",
           "Building Square Footage": this.state.sqft,
           "Overhang": this.state.overhang,
           "Roof Pitch": this.state.roofPitchCustom || this.state.roofPitch,
-          "SECTION roofing": roofUtils.toggleSectionHeading("roofing", this.state) && "SECTION Roofing",
+          "ROOFING SECTION": roofUtils.toggleSectionHeading("roofing", this.state) && "Roofing",
           "Type":this.state.roofTypeCustom||this.state.roofType,
           "Profile":this.state.roofProfile,
           "Metal Gauge":this.state.roofGauge,
           "Colour":this.state.roofColour,
-          "SECTION Additional info": "SECTION",
+          "ADDITIONAL INFO SECTION":  this.state.additionalInfo && "Additional info",
           "Additional Info": this.state.additionalInfo
         }
 

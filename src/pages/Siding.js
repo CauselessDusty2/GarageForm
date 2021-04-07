@@ -497,7 +497,7 @@ class Siding extends React.Component {
         }
 
         const DISPLAY_LIST = {
-          "SIDING SECTION": toggleSectionHeading("Siding", this.state) && "SECTION Siding",
+          "SIDING SECTION": toggleSectionHeading("Siding", this.state) && "Siding",
           "Type": this.state.sidingTypeCustom||this.state.sidingType,
           "Profile": this.state.sidingProfile,
           "Line": this.state.mittenLine,
@@ -505,7 +505,7 @@ class Siding extends React.Component {
           "Finish": this.state.hardieFinish,
           "Size": this.state.hardieSize,
           "Colour": this.state.sidingColour,
-          "GABLE SECTION": toggleSectionHeading("Gable", this.state) && "SECTION Gable",
+          "GABLE SECTION": toggleSectionHeading("Gable", this.state) && "Gable",
           "Gable Type": this.state.gableSidingTypeCustom||this.state.gableSidingType,
           "Gable Profile": this.state.gableSidingProfile,
           "Gable Line": this.state.gableMittenLine,
@@ -513,7 +513,7 @@ class Siding extends React.Component {
           "Gable Finish": this.state.gableHardieFinish,
           "Gable Size": this.state.gableHardieSize,
           "Gable Colour": this.state.gableSidingColour,
-          "SKIRTING SECTION": toggleSectionHeading("Skirting", this.state) && "SECTION Skirting Siding",
+          "SKIRTING SECTION": toggleSectionHeading("Skirting", this.state) && "Skirting Siding",
           "Skirting Type": this.state.skirtingSidingTypeCustom||this.state.skirtingSidingType,
           "Skirting Profile": this.state.skirtingSidingProfile,
           "Skirting Line": this.state.skirtingMittenLine,
@@ -521,9 +521,9 @@ class Siding extends React.Component {
           "Skirting Finish": this.state.skirtingHardieFinish,
           "Skirting Size": this.state.skirtingHardieSize,
           "Skirting Colour": this.state.skirtingSidingColour,
-          "TRIM SECTION": toggleSectionHeading("Trim", this.state) && "SECTION Trim",
+          "TRIM SECTION": toggleSectionHeading("Trim", this.state) && "Trim",
           "Trim Colour": this.state.trimColour,
-          "Info SECTION": "SECTION",
+          "ADDITIONAL INFO SECTION": this.state.additionalInfo && "Additional Info",
           "Additional Info": this.state.additionalInfo
         }
 

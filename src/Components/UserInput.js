@@ -67,19 +67,20 @@ const getMessage = (requestType, name, email, phoneNumber, files, stateList) => 
   {stateList &&
       Object.keys(stateList).map( (key, index) => {
         let res = ""
-        if (stateList[key]) {
+        let value = stateList[key]
+        if (value) {
           //If the value inclusdes SUBSECTION add a new line above
-          if (stateList[key].includes("SUBSECTION")) {
-              res = `\n${stateList[key].replace("SUBSECTION", "")}\n`
+          if (key.includes("SUBSECTION")) {
+              res = `\n${value}\n`
           //If the value inclusdes SECTION add a new line above and below
-          } else if (stateList[key].includes("SECTION")) {
-              res = `\n${stateList[key].replace("SECTION", "")}\n\n`
-          } else if (stateList[key]){
+          } else if (key.includes("SECTION")) {
+              res = `\n${value}\n\n`
+          } else {
             //for files and multi select items
-            if (typeof stateList[key] === "object") {
-                res = stateList[key].map(item => `\u2022 ${key}: ${item}\n`)
+            if (typeof value === "object") {
+                res = value.map(item => `\u2022 ${key}: ${item}\n`)
             } else {
-                res = `\u2022 ${key}: ${stateList[key]}\n`
+                res = `\u2022 ${key}: ${value}\n`
             }
           }
         }

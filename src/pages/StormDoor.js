@@ -120,10 +120,14 @@ class StormDoor extends React.Component {
           "Feature": this.state.features,
           "Width": this.state.widthCustom || this.state.width,
           "Height": this.state.heightCustom || this.state.height,
-          "SECTION AdditionalInfo": "SECTION",
+          "ADDITIONAL INFO SECTION":  this.state.additionalInfo && "Additional info",
           "Additional Info": this.state.additionalInfo
         }
-
+        let keys = ""
+        {Object.keys(DISPLAY_LIST).map(key=>{
+          keys += (key.replace("\"", "") + " , ")
+        })}
+        {console.log(keys)}
         return (
             <div>
                 <QuoteSection
