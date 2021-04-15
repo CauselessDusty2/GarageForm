@@ -5,6 +5,7 @@ import UserInput from "../Components/UserInput"
 import FileInput from '../Components/FileInput'
 import AdditionalInfo from '../Components/AdditionalInfo'
 import SelectionList from '../Components/SelectionList'
+import CardContainer from '../Components/CardContainer'
 
 import {toggleSectionHeading} from '../helperFunctions/fenceUtils.js'
 
@@ -189,6 +190,135 @@ class Fence extends React.Component {
 
         return (
             <div>
+                <CardContainer
+                  stateGroup="length"
+                  input="text"
+                  title="Length"
+                  state={this.state.length}
+                  summary="The length of the fence"
+                  onChange={this.handleSimpleStateChange}
+                />
+
+                <CardContainer
+                  stateGroup="material"
+                  list={data.advancedMaterial}
+                  title="Wood Type"
+                  state={this.state.material}
+                  summary="The type of wood for the fence"
+                  onChange={this.handleMaterialChange}
+                />
+
+                {this.state.material &&
+                  <CardContainer
+                    stateGroup="height"
+                    list={this.state.material === "Metal" ? data.heightMetal : data.heightWood}
+                    title="Height"
+                    state={this.state.height}
+                    summary="The Height of the fence"
+                    onChange={this.handleSimpleStateChange}
+                    customClickHandler={this.handleSimpleStateChange}
+                    additionalClass="childSelection"
+                  />
+                }
+
+                {this.state.material === "Metal" &&
+                  <CardContainer
+                    stateGroup="style"
+                    list={data.style}
+                    title="Style of Fence"
+                    state={this.state.style}
+                    summary="The style of the fence"
+                    onChange={this.handleSimpleStateChange}
+                    additionalClass="childSelection"
+                  />
+                }
+
+                {!!this.state.material && this.state.material !== "Metal" && <>
+                  <CardContainer
+                    stateGroup="postSize"
+                    list={this.state.topCap === "2x6"? data.postSize2x6TC : data.postSize}
+                    title="Post Size"
+                    state={this.state.postSize}
+                    summary="The size of the fence posts"
+                    onChange={this.handleSimpleStateChange}
+                    additionalClass="childSelection"
+                  />
+
+                  <CardContainer
+                    stateGroup="postSpacing"
+                    input="text"
+                    title="Post Spacing"
+                    state={this.state.postSpacing}
+                    summary="The space between the fence posts"
+                    onChange={this.handleSimpleStateChange}
+                    additionalClass="childSelection"
+                  />
+
+                  <CardContainer
+                    stateGroup="postOptions"
+                    list={data.postOptions}
+                    title="Post Options"
+                    state={this.state.postOptions}
+                    summary="The options for the top of the posts"
+                    onChange={this.handleSimpleStateChange}
+                    additionalClass="childSelection"
+                  />
+
+                  <CardContainer
+                    stateGroup="picketType"
+                    list={data.picketType}
+                    title="Picket Type"
+                    state={this.state.picketType}
+                    summary="The size of pickets for the fence"
+                    onChange={this.handleSimpleStateChange}
+                    additionalClass="childSelection"
+                  />
+
+                  <CardContainer
+                    stateGroup="picketDirection"
+                    list={data.picketDirection}
+                    title="Picket Direction"
+                    state={this.state.picketDirection}
+                    summary="The directions for the pickets of the fence"
+                    onChange={this.handleSimpleStateChange}
+                    additionalClass="childSelection"
+                  />
+
+                  <CardContainer
+                    stateGroup="picketSpacing"
+                    input="text"
+                    title="Picket Spacing"
+                    state={this.state.picketSpacing}
+                    summary="The space between the fence pickets"
+                    onChange={this.handleSimpleStateChange}
+                    additionalClass="childSelection"
+                  />
+                </>}
+
+                {this.state.picketDirection === "Vertical" &&
+                  <CardContainer
+                    stateGroup="railQty"
+                    input="text"
+                    title="Horizontal Rail Quantity"
+                    state={this.state.railQty}
+                    summary="The horizontal board going between posts that the pickets are nailed to"
+                    onChange={this.handleSimpleStateChange}
+                    additionalClass="childSelection2"
+                  />
+                }
+
+                {!!this.state.material && this.state.material !== "Metal" &&
+                  <CardContainer
+                    stateGroup="topCap"
+                    list={this.state.postSize === "4x4" ? data.topCap4x4Post : data.topCap}
+                    title="Top Cap"
+                    state={this.state.topCap}
+                    summary="The board that is at the top of the pickets"
+                    onChange={this.handleSimpleStateChange}
+                    additionalClass="childSelection"
+                  />
+                }
+
                 <QuoteSection
                     defaultClickHandler={this.handleSimpleStateChange}
                     section={SECTION}

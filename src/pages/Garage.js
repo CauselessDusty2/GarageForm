@@ -324,7 +324,6 @@ class Garage extends React.Component {
                     title="Width"
                     state={this.state.garageWidth}
                     summary="The width of the garage means the gable end of the garage, the side that the overhead door will be on"
-                    customState={this.state.garageWidthCustom}
                     customClickHandler={this.handleSimpleStateChange}
                     onChange={this.handleSimpleStateChange}
                   />
@@ -335,7 +334,6 @@ class Garage extends React.Component {
                     title="Length"
                     state={this.state.garageLength}
                     summary="The length of the garage means the eave end of the garage, the side that the man door will be on"
-                    customState={this.state.garageLengthCustom}
                     customClickHandler={this.handleSimpleStateChange}
                     onChange={this.handleSimpleStateChange}
                   />
@@ -346,7 +344,6 @@ class Garage extends React.Component {
                     title="Height"
                     state={this.state.garageHeight}
                     summary="The height of the garage walls, measured from the ground to the bottom of the roof line"
-                    customState={this.state.garageHeightCustom}
                     customClickHandler={this.handleSimpleStateChange}
                     onChange={this.handleSimpleStateChange}
                   />
@@ -367,7 +364,6 @@ class Garage extends React.Component {
                     state={this.state.intSheathing}
                     summary="Options for interior sheathing"
                     onChange={this.handleSimpleStateChange}
-                    customState={this.state.intSheathingCustom}
                     customClickHandler={this.handleSimpleStateChange}
                   />
 
@@ -387,7 +383,6 @@ class Garage extends React.Component {
                     state={this.state.sidingType}
                     summary="The diferent types of siding for the garage, vinyl, metal, engineered, stucco prep"
                     onChange={this.handleSidingTypeChange}
-                    customState={this.state.sidingTypeCustom}
                     customClickHandler={this.handleSimpleStateChange}
                   />
 
@@ -483,7 +478,6 @@ class Garage extends React.Component {
                     state={this.state.roofType}
                     summary="The type of roofing"
                     onChange={this.handleRoofTypeChange}
-                    customState={this.state.roofTypeCustom}
                     customClickHandler={this.handleSimpleStateChange}
                   />
 
@@ -532,7 +526,6 @@ class Garage extends React.Component {
                     state={this.state.overheadSize}
                     summary="Overhead door size options"
                     onChange={this.handleSimpleStateChange}
-                    customState={this.state.overheadSizeCustom}
                     customClickHandler={this.handleSimpleStateChange}
                   />
 
@@ -602,7 +595,6 @@ class Garage extends React.Component {
                       summary="Overhead door window patern options"
                       onChange={this.handleWindowPaternChange}
                       additionalClass="childSelection"
-                      customState={this.state.overheadWindowPaternCustom}
                       customClickHandler={this.handleSimpleStateChange}
                     />
                   }
