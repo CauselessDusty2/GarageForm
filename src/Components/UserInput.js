@@ -1,14 +1,36 @@
 import React from 'react'
-import { Formik, Field, Form, ErrorMessage } from 'formik'
+import { Formik, Field, Form } from 'formik'
 import * as Yup from 'yup'
 
 import Container from './Container'
 
 import './UserInput.css'
 
-const handleSubmit = async(body) => {
-    alert(body)
-    //PLACE CODE HERE
+const handleSubmit = (requestType, name, email, phoneNumber, files, stateList) => {
+  let formData = new FormData();
+
+  let body = getMessage(requestType, name, email, phoneNumber, files, stateList)
+  let subject = `Web Request: ${requestType}`
+
+  formData.append('Customer Name', name)
+  formData.append('Customer Email', email)
+  formData.append('Customer Phone Number', phoneNumber)
+  formData.append('subject', subject)
+
+  for (let file in files) {
+    formData.append('files', files[file], files[file].name)
+  }
+
+  for (let key in stateList) {
+    if (stateList[key]){
+      formData.append(key, stateList[key])
+    }
+  }
+
+  // for (let key of formData.entries()) {
+  //     console.log(key[0], key[1])
+  // }
+  console.log(body)
 }
 
 const initialValues = {
@@ -45,13 +67,21 @@ const getMessage = (requestType, name, email, phoneNumber, files, stateList) => 
   {stateList &&
       Object.keys(stateList).map( (key, index) => {
         let res = ""
-        if (stateList[key]) {
-          if (stateList[key].includes("SUBSECTION")) {
-            res = `\n${stateList[key].replace("SUBSECTION", "")}\n`
-          } else if (stateList[key].includes("SECTION")) {
-            res = `\n${stateList[key].replace("SECTION", "")}\n\n`
-          } else if (stateList[key]){
-            res = `   \u2022 ${key}: ${stateList[key]}\n`
+        let value = stateList[key]
+        if (value) {
+          //If the value inclusdes SUBSECTION add a new line above
+          if (key.includes("SUBSECTION")) {
+              res = `\n${value}\n`
+          //If the value inclusdes SECTION add a new line above and below
+          } else if (key.includes("SECTION")) {
+              res = `\n${value}\n\n`
+          } else {
+            //for files and multi select items
+            if (typeof value === "object") {
+                res = value.map(item => `\u2022 ${key}: ${item}\n`)
+            } else {
+                res = `\u2022 ${key}: ${value}\n`
+            }
           }
         }
 
@@ -74,7 +104,7 @@ const UserInput = props => {
             initialValues={initialValues}
             dirty
             validationSchema={validationSchema}
-            onSubmit={values => handleSubmit(getMessage(props.requestType, values.name, values.email, values.phoneNumber, props.files, props.stateList))}
+            onSubmit={values => handleSubmit(props.requestType, values.name, values.email, values.phoneNumber, props.files, props.stateList)}
         >
             {({ errors, touched, dirty }) => (
                 <Container className="infoSection">

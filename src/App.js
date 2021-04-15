@@ -10,6 +10,8 @@ import Container from './Components/Container'
 import CustomBuilding from './pages/CustomBuilding'
 import Shed from './pages/Shed'
 import Deck from './pages/Deck'
+import StormDoor from './pages/StormDoor'
+import InteriorDoor from './pages/InteriorDoor'
 
 class App extends React.Component {
     constructor(props) {
@@ -27,9 +29,7 @@ class App extends React.Component {
         "General",
         "Window",
         "Entry Door",
-        "Storm Door",
-        "Custom Building",
-        "Interior Door"
+        "Custom Building"
       ]
 
       return NO_QUOTE.includes(this.state.selected) ? false : true;
@@ -67,12 +67,14 @@ class App extends React.Component {
             {this.state.selected === "Fence" && <Fence />}
             {this.state.selected === "Siding" && <Siding />}
             {this.state.selected === "Roofing" && <Roofing />}
-            {this.state.selected === "Storm Door" && <h1>Under Construction</h1>}
+            {this.state.selected === "Storm Door" && <StormDoor />}
             {this.state.selected === "Custom Building" && <CustomBuilding />}
-            {this.state.selected === "Interior Door" && <h1>Under Construction</h1>}
+            {this.state.selected === "Interior Door" && <h1><InteriorDoor /></h1>}
             </div>
         </span>);
     }
 }
+
+
 
 export default App;

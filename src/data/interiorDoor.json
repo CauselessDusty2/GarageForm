@@ -1,0 +1,55 @@
+{
+  "passageWidth": [
+    {"value": "1'6\""},
+    {"value": "2'0\""},
+    {"value": "2'4\""},
+    {"value": "2'6\""},
+    {"value": "2'8\""},
+    {"value": "3'0\""},
+    {"value": "Other"}
+  ],
+  "bifoldWidth": [
+    {"value": "2'0\""},
+    {"value": "2'6\""},
+    {"value": "3'0\""},
+    {"value": "4'0\""},
+    {"value": "5'0\""},
+    {"value": "6'0\""},
+    {"value": "Other"}
+  ],
+  "height": [
+    {"value": "6'8\""},
+    {"value": "7'0\""},
+    {"value": "8'0\""},
+    {"value": "Other"}
+  ],
+  "mouldedPanel": [
+    {"value": "Two Panel Smooth", "imgSrc": "https://metrie.com/wp-content/uploads/imgpub/160/masonite-MPS-2-Com.png"},
+    {"value": "Two Panel Arch Top Smooth", "imgSrc": "https://metrie.com/wp-content/uploads/imgpub/160/masonite-MPS-2A-80.png"},
+    {"value": "Two Panel Roman Smooth", "imgSrc": "https://metrie.com/wp-content/uploads/imgpub/160/masonite-MPS-2R-80.png"},
+    {"value": "Four Panel Smooth", "imgSrc": "https://metrie.com/wp-content/uploads/imgpub/160/masonite-MPS-4-80.png"},
+    {"value": "Berkley", "imgSrc": "https://metrie.com/wp-content/uploads/imgpub/160/masonite-MPS-B-80.png"},
+    {"value": "Cheyenne", "imgSrc": "https://metrie.com/wp-content/uploads/imgpub/160/masonite-MPS-C-80.png"},
+    {"value": "Logan", "imgSrc": "https://metrie.com/wp-content/uploads/imgpub/160/masonite-MPS-L-80-30.png"},
+    {"value": "Lincoln Park", "imgSrc": "https://metrie.com/wp-content/uploads/imgpub/160/masonite-MPS-LP-80-30.png"},
+    {"value": "Livingston", "imgSrc": "https://metrie.com/wp-content/uploads/imgpub/160/masonite-MPS-LV.png"},
+    {"value": "Melrose", "imgSrc": "https://metrie.com/wp-content/uploads/imgpub/160/masonite-MPS-M-80.png"},
+    {"value": "Riverside", "imgSrc": "https://metrie.com/wp-content/uploads/imgpub/160/masonite-MPS-R-80.png"},
+    {"value": "Winslow", "imgSrc": "https://metrie.com/wp-content/uploads/imgpub/160/masonite-MPS-W-80-30.png"},
+    {"value": "Two Panel Arch Top Textured", "imgSrc": "https://metrie.com/wp-content/uploads/imgpub/160/masonite-MPT-2A-80.png"},
+    {"value": "Six Panel Textured", "imgSrc": "https://metrie.com/wp-content/uploads/imgpub/160/masonite-MPT-6-White.png"}
+  ],
+  "core": [
+    {"value": "Hollow"},
+    {"value": "Solid"}
+  ],
+  "configuration": [
+    {"value": "Slab"},
+    {"value": "PreHung"},
+    {"value": "Knockdown"}
+  ],
+  "swing": [
+    {"value": "Left Hand"},
+    {"value": "Right Hand"}
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "view": [
+    {"value": "Full View", "imgSrc": "https://www.larsondoors.com/images/default-source/doors/159fv/159fv_brown_bn.png?sfvrsn=7"},
+    {"value": "High View", "imgSrc": "https://www.larsondoors.com/images/default-source/doors/278-ss/278-sswh.png?sfvrsn=8"},
+    {"value": "Mid View", "imgSrc": "https://www.larsondoors.com/images/default-source/doors/630-08/630-08wh.png?sfvrsn=10"}
+  ],
+  "ventilation": [
+    {"value": "None", "imgSrc": "https://www.larsondoors.com/images/default-source/doors/159fv/159fv_brown_bn.png?sfvrsn=7"},
+    {"value": "On Demand", "imgSrc": "https://www.larsondoors.com/images/default-source/doors/630-08/630-08wh.png?sfvrsn=10"},
+    {"value": "Seasonal", "imgSrc": "https://www.larsondoors.com/images/default-source/doors/159fv/159fv_brown_bn.png?sfvrsn=7"}
+  ],
+  "colour": [
+    {"value": "Almond", "imgSrc": "https://www.larsondoors.com/images/default-source/color-options/almond_icon.jpg?sfvrsn=10"},
+    {"value": "Black", "imgSrc": "https://www.larsondoors.com/images/default-source/color-options/black.jpg?sfvrsn=8"},
+    {"value": "Brown", "imgSrc": "https://www.larsondoors.com/images/default-source/color-options/brown_icon.jpg?sfvrsn=12"},
+    {"value": "Cranberry", "imgSrc": "https://www.larsondoors.com/images/default-source/color-options/cranberry.jpg?sfvrsn=8"},
+    {"value": "Graphite", "imgSrc": "https://www.larsondoors.com/images/default-source/color-options/graphite.jpg?sfvrsn=2"},
+    {"value": "Green", "imgSrc": "https://www.larsondoors.com/images/default-source/color-options/green.jpg?sfvrsn=10"},
+    {"value": "Pebblestone", "imgSrc": "https://www.larsondoors.com/images/default-source/color-options/pebblestone_icon.jpg?sfvrsn=4"},
+    {"value": "Sandstone", "imgSrc": "https://www.larsondoors.com/images/default-source/color-options/sandstone_icon.jpg?sfvrsn=12"},
+    {"value": "White", "imgSrc": "https://www.larsondoors.com/images/default-source/color-options/white_icon.jpg?sfvrsn=16"},
+    {"value": "White Linen", "imgSrc": "https://www.larsondoors.com/images/default-source/color-options/white_linen_icon.jpg?sfvrsn=8"},
+    {"value": "Woodland", "imgSrc": "https://www.larsondoors.com/images/default-source/color-options/woodland_icon.jpg?sfvrsn=4"}
+  ],
+  "handleColour": [
+    {"value": "Aged Bronze", "imgSrc": "https://www.larsondoors.com/images/default-source/hardware-options/aged-bronze-icon.png?sfvrsn=17"},
+    {"value": "Antique Brass", "imgSrc": "https://www.larsondoors.com/images/default-source/hardware-options/antique-brass-icon.png?sfvrsn=17"},
+    {"value": "Black", "imgSrc": "https://www.larsondoors.com/images/default-source/hardware-options/matteblack-finish.png?sfvrsn=17"},
+    {"value": "Brass", "imgSrc": "https://www.larsondoors.com/images/default-source/hardware-options/brass-icon.png?sfvrsn=39"},
+    {"value": "Brown", "imgSrc": "https://www.larsondoors.com/images/default-source/hardware-options/brown-finish.png?sfvrsn=4"},
+    {"value": "Brushed Nickel", "imgSrc": "https://www.larsondoors.com/images/default-source/hardware-options/brushed-nickel-icon.png?sfvrsn=39"},
+    {"value": "Colour Matched", "imgSrc": "https://www.larsondoors.com/images/default-source/hardware-options/colormatch.png?sfvrsn=15"},
+    {"value": "Matte Black", "imgSrc": "https://www.larsondoors.com/images/default-source/hardware-options/matteblack-finish.png?sfvrsn=17"},
+    {"value": "Sandstone", "imgSrc": "https://www.larsondoors.com/images/default-source/hardware-options/sandstone-finish.png?sfvrsn=2"},
+    {"value": "White", "imgSrc": "https://www.larsondoors.com/images/default-source/hardware-options/white-finish.png?sfvrsn=7"}
+  ],
+  "features": [
+    {"value": "Retractable Screen", "imgSrc": "https://www.larsondoors.com/images/default-source/doors/830-80/83080_wht.png?sfvrsn=9"},
+    {"value": "Pet Door", "imgSrc": "https://www.larsondoors.com/images/default-source/doors/149pv/149pv_sand_agedb_straight.png?sfvrsn=6"},
+    {"value": "Built-in Keyed Lock", "imgSrc": "https://www.larsondoors.com/images/default-source/doors/360-nv/360nv_wht.png?sfvrsn=9"}
+  ],
+  "width": [
+    {"value": "32"},
+    {"value": "36"},
+    {"value": "Other"}
+  ],
+  "height": [
+    {"value": "80-81"},
+    {"value": "Other"}
+  ]
+}

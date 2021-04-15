@@ -1,25 +1,6 @@
 {
   "style": [
     {
-      "value": "Maple",
-      "imgSrc": "../img/maple-cedar.jpg",
-      "description": "The Maple is a popular fence design, with no-sag, and looks the same on both sides."
-    },{
-      "value": "Classic",
-      "imgSrc": "../img/fence-classic-cedar.jpg",
-      "description": "The Classic is the easiest fence to build and most economical, with boards on one side, no-sag, and rails on edge."
-    },{
-      "value": "Executive",
-      "imgSrc": "../img/fence-executive-cedar.jpg",
-      "description": "The Executive is the strongest, built with no-sag , three rails and a 2x6 cap to finish of the top."
-    },{
-      "value": "Luxton",
-      "imgSrc": "../img/fence-luxton-cedar.jpg",
-      "description": "The Luxton is a classic fence that is simple to build, with no-sag and three rails across one side."
-    }
-  ],
-  "advancedStyle": [
-    {
       "value": "Cubanite",
       "imgSrc": "https://static.wixstatic.com/media/c4f997_ccaaf51e477b42f4bb0fc879244871bf~mv2_d_2000_2000_s_2.png/v1/fill/w_746,h_746,al_c,q_90,usm_0.66_1.00_0.01/c4f997_ccaaf51e477b42f4bb0fc879244871bf~mv2_d_2000_2000_s_2.webp"
     },{
@@ -63,15 +44,6 @@
       "imgSrc": "https://static.wixstatic.com/media/c4f997_dda131ee2a004002b7932f2c5e145e87~mv2_d_2000_2000_s_2.png/v1/fill/w_370,h_370,al_c,q_85,usm_0.66_1.00_0.01/c4f997_dda131ee2a004002b7932f2c5e145e87~mv2_d_2000_2000_s_2.webp"
     }
   ],
-  "material": [
-    {
-      "value": "Brown Treated",
-      "imgSrc": "../img/fence-pressure-treated.jpg"
-    },{
-      "value": "Cedar",
-      "imgSrc": "../img/fence-cedar.jpg"
-    }
-  ],
   "advancedMaterial": [
     {
       "value": "Brown Treated",
@@ -82,10 +54,6 @@
     },{
       "value": "Metal"
     }
-  ],
-  "basicHeight" :  [
-    {"value": "5ft"},
-    {"value": "6ft"}
   ],
   "heightWood" :  [
     {"value": "5ft"},
@@ -100,5 +68,32 @@
   "postSize" : [
     {"value": "4x4"},
     {"value": "6x6"}
+  ],
+  "postSize2x6TC" : [
+    {"value": "4x4", "disabled": true},
+    {"value": "6x6"}
+  ],
+  "picketType": [
+    {"value": "1x4"},
+    {"value": "1x6"},
+    {"value": "Other"}
+  ],
+  "picketDirection" : [
+    {"value": "Horizontal"},
+    {"value": "Vertical"}
+  ],
+  "topCap" : [
+    {"value": "2x4"},
+    {"value": "2x6"},
+    {"value": "None"}
+  ],
+  "topCap4x4Post" : [
+    {"value": "2x4"},
+    {"value": "2x6", "disabled": true}
+  ],
+  "postOptions" : [
+    {"value": "Post Cap Lighting"},
+    {"value": "Point & Dado"},
+    {"value": "None"}
   ]
 }

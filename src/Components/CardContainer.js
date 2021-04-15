@@ -6,6 +6,21 @@ import Container from './Container'
 
 import './CardContainer.css'
 
+const getSelectedState = (state, value) => {
+  let response = ""
+  if (typeof state === "object"){
+    if (state.includes(value)){
+      response = "selectedState"
+    }
+  } else {
+    if (state === value) {
+      response = "selectedState"
+    }
+  }
+
+  return response
+}
+
 const CardContainer = props => {
     return (
         <section className={props.additionalClass + " cardSection"}>
@@ -16,17 +31,17 @@ const CardContainer = props => {
                 {props.summary}
             </summary>
             <Container className="cardContainer">
-                {props.list && props.list.map( (item, i)=>
-                    <Card
-                        key={i}
-                        value={item.value}
-                        imgSrc={item.imgSrc}
-                        onChange={props.onChange}
-                        stateGroup={props.stateGroup}
-                        selected={props.state === item.value ? "selectedState" : ""}
-                        description={item?.description}
-                    />
-                )}
+                {props.list && props.list.map( (item, i)=> <Card
+                    key={i}
+                    value={item.value}
+                    imgSrc={item.imgSrc}
+                    onChange={props.onChange}
+                    stateGroup={props.stateGroup}
+                    selected={getSelectedState(props.state, item.value)}
+                    description={item?.description}
+                    disabled={item.disabled}
+                />)}
+
                 {props.input && props.input === "number" && <input
                     className={"textInput"}
                     type="text"
@@ -37,6 +52,17 @@ const CardContainer = props => {
                     value={props.state}
                     placeholder="Enter custom value"
                 />}
+
+                {props.input && props.input === "text" && <input
+                    className={"textInput"}
+                    type="text"
+                    onChange={e => {
+                        props.onChange(props.stateGroup, e.target.value)
+                    }}
+                    value={props.state}
+                    placeholder="Enter custom value"
+                />}
+                
                 {props.state === "Other" && <input
                     className={"textInput"}
                     type="text"

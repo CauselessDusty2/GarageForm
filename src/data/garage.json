@@ -12,6 +12,8 @@
       {"value": "30", "imgSrc": "../img/30.png"}
   ],
   "basicWidthAlt" : [
+      {"value": "12", "imgSrc": "../img/12.png", "disabled": true},
+      {"value": "14", "imgSrc": "../img/14.png", "disabled": true},
       {"value": "16", "imgSrc": "../img/16.png"},
       {"value": "18", "imgSrc": "../img/18.png"},
       {"value": "20", "imgSrc": "../img/20.png"},
@@ -35,6 +37,10 @@
       {"value": "Other"}
   ],
   "width2" : [
+      {"value": "12", "imgSrc": "../img/12.png", "disabled": true},
+      {"value": "14", "imgSrc": "../img/14.png", "disabled": true},
+      {"value": "16", "imgSrc": "../img/12.png", "disabled": true},
+      {"value": "18", "imgSrc": "../img/14.png", "disabled": true},
       {"value": "20", "imgSrc": "../img/20.png"},
       {"value": "22", "imgSrc": "../img/22.png"},
       {"value": "24", "imgSrc": "../img/24.png"},
@@ -44,6 +50,8 @@
       {"value": "Other"}
   ],
   "widthAlt" : [
+      {"value": "12", "imgSrc": "../img/12.png", "disabled": true},
+      {"value": "14", "imgSrc": "../img/14.png", "disabled": true},
       {"value": "16", "imgSrc": "../img/16.png"},
       {"value": "18", "imgSrc": "../img/18.png"},
       {"value": "20", "imgSrc": "../img/20.png"},
@@ -87,7 +95,12 @@
       {"value": "24", "imgSrc": "../img/24.png"},
       {"value": "26", "imgSrc": "../img/26.png"},
       {"value": "28", "imgSrc": "../img/28.png"},
-      {"value": "30", "imgSrc": "../img/30.png"}
+      {"value": "30", "imgSrc": "../img/30.png"},
+      {"value": "32", "imgSrc": "../img/32.png", "disabled": true},
+      {"value": "34", "imgSrc": "../img/34.png", "disabled": true},
+      {"value": "36", "imgSrc": "../img/36.png", "disabled": true},
+      {"value": "38", "imgSrc": "../img/38.png", "disabled": true},
+      {"value": "40", "imgSrc": "../img/40.png", "disabled": true}
   ],
   "lengthAlt" : [
       {"value": "20", "imgSrc": "../img/20.png"},
@@ -96,6 +109,11 @@
       {"value": "26", "imgSrc": "../img/26.png"},
       {"value": "28", "imgSrc": "../img/28.png"},
       {"value": "30", "imgSrc": "../img/30.png"},
+      {"value": "32", "imgSrc": "../img/32.png", "disabled": true},
+      {"value": "34", "imgSrc": "../img/34.png", "disabled": true},
+      {"value": "36", "imgSrc": "../img/36.png", "disabled": true},
+      {"value": "38", "imgSrc": "../img/38.png", "disabled": true},
+      {"value": "40", "imgSrc": "../img/40.png", "disabled": true},
       {"value": "Other"}
   ],
   "siding" : [
@@ -152,6 +170,7 @@
       {"value": "Other"}
   ],
   "height2" : [
+      {"value": "8ft", "imgSrc": "", "disabled": true},
       {"value": "10ft", "imgSrc": ""},
       {"value": "Other"}
   ],
@@ -215,7 +234,9 @@
   ],
   "vinylLineOne" : [
       {"value": "Sentry", "imgSrc": "https://www.mittensiding.com/upload/mproducts/10/sentry-showcase.jpg"},
-      {"value": "Sentry Variegated", "imgSrc": "https://www.mittensiding.com/upload/mproducts/444/arctic-2.jpg"}
+      {"value": "Sentry Variegated", "imgSrc": "https://www.mittensiding.com/upload/mproducts/444/arctic-2.jpg"},
+      {"value": "Highland", "imgSrc": "https://www.mittensiding.com/upload/mproducts/69/highland-ash.jpg", "disabled": true},
+      {"value": "Oregon Pride", "imgSrc": "https://www.mittensiding.com/upload/mproducts/9/op-frost.jpg", "disabled": true}
   ],
   "vinylLineTwo" : [
       {"value": "Sentry", "imgSrc": "https://www.mittensiding.com/upload/mproducts/10/sentry-showcase.jpg"},
@@ -224,13 +245,21 @@
       {"value": "Oregon Pride", "imgSrc": "https://www.mittensiding.com/upload/mproducts/9/op-frost.jpg"}
   ],
   "vinylLineThree" : [
-      {"value": "Highland", "imgSrc": "https://www.mittensiding.com/upload/mproducts/69/highland-ash.jpg"}
+      {"value": "Sentry", "imgSrc": "https://www.mittensiding.com/upload/mproducts/10/sentry-showcase.jpg", "disabled": true},
+      {"value": "Sentry Variegated", "imgSrc": "https://www.mittensiding.com/upload/mproducts/444/arctic-2.jpg", "disabled": true},
+      {"value": "Highland", "imgSrc": "https://www.mittensiding.com/upload/mproducts/69/highland-ash.jpg"},
+      {"value": "Oregon Pride", "imgSrc": "https://www.mittensiding.com/upload/mproducts/9/op-frost.jpg", "disabled": true}
   ],
   "vinylLineFour" : [
+      {"value": "Sentry", "imgSrc": "https://www.mittensiding.com/upload/mproducts/10/sentry-showcase.jpg", "disabled": true},
+      {"value": "Sentry Variegated", "imgSrc": "https://www.mittensiding.com/upload/mproducts/444/arctic-2.jpg", "disabled": true},
       {"value": "Highland", "imgSrc": "https://www.mittensiding.com/upload/mproducts/69/highland-ash.jpg"},
       {"value": "Oregon Pride", "imgSrc": "https://www.mittensiding.com/upload/mproducts/9/op-frost.jpg"}
   ],
   "vinylLineFive" : [
+      {"value": "Sentry", "imgSrc": "https://www.mittensiding.com/upload/mproducts/10/sentry-showcase.jpg", "disabled": true},
+      {"value": "Sentry Variegated", "imgSrc": "https://www.mittensiding.com/upload/mproducts/444/arctic-2.jpg", "disabled": true},
+      {"value": "Highland", "imgSrc": "https://www.mittensiding.com/upload/mproducts/69/highland-ash.jpg", "disabled": true},
       {"value": "Oregon Pride", "imgSrc": "https://www.mittensiding.com/upload/mproducts/9/op-frost.jpg"}
   ],
   "mittenVariegatedColours" : [
@@ -468,6 +497,7 @@
       {"value":"Yellowstone Rustic", "imgSrc": "https://www.kwpproducts.com/wp-content/uploads/2018/07/yellowstone_rustic_400x400-300x300.jpg"}
   ],
   "gaugeOne" : [
+      {"value":"28 Gauge", "imgSrc": "../img/28.png", "disabled": true},
       {"value":"26 Gauge", "imgSrc": "../img/26.png"},
       {"value":"24 Gauge", "imgSrc": "../img/24.png"},
       {"value":"Unsure", "imgSrc": ""}
@@ -475,6 +505,7 @@
   "gaugeTwo" : [
       {"value":"28 Gauge", "imgSrc": "../img/28.png"},
       {"value":"26 Gauge", "imgSrc": "../img/26.png"},
+      {"value":"24 Gauge", "imgSrc": "../img/24.png", "disabled": true},
       {"value":"Unsure", "imgSrc": ""}
   ],
   "hardieplankFinish" : [
@@ -494,7 +525,8 @@
       {"value": "5-1/4\"", "imgSrc": ""},
       {"value": "6-1/4\"", "imgSrc": ""},
       {"value": "7-1/4\"", "imgSrc": ""},
-      {"value": "8-1/4\"", "imgSrc": ""}
+      {"value": "8-1/4\"", "imgSrc": ""},
+      {"value": "12\"", "imgSrc": "", "disabled": true}
   ],
   "hardiePlankSize2" : [
       {"value": "5-1/4\"", "imgSrc": ""},
@@ -504,17 +536,22 @@
       {"value": "12\"", "imgSrc": ""}
   ],
   "hardiePlankSize3" : [
-      {"value": "8-1/4\"", "imgSrc": ""}
+      {"value": "5-1/4\"", "imgSrc": "", "disabled": true},
+      {"value": "6-1/4\"", "imgSrc": "", "disabled": true},
+      {"value": "7-1/4\"", "imgSrc": "", "disabled": true},
+      {"value": "8-1/4\"", "imgSrc": ""},
+      {"value": "12\"", "imgSrc": "", "disabled": true}
   ],
   "hardiePanelSize1" : [
       {"value": "4x8", "imgSrc": ""},
       {"value": "4x10", "imgSrc": ""}
   ],
   "hardiePanelSize2" : [
-      {"value": "4x8", "imgSrc": ""}
+      {"value": "4x8", "imgSrc": ""},
+      {"value": "4x10", "imgSrc": "", "disabled": true}
   ],
   "hardieColour1" : [
-      {"value": "Primed", "imgSrc": "g"}
+      {"value": "Primed", "imgSrc": ""}
   ],
   "hardieColour2" : [
       {"value": "Primed", "imgSrc": ""},
@@ -549,16 +586,23 @@
   ],
   "overheadDoorSize1" : [
       {"value": "9x7", "imgSrc": ""},
+      {"value": "9x8", "imgSrc": "", "disabled": true},
+      {"value": "16x7", "imgSrc": "", "disabled": true},
+      {"value": "16x8", "imgSrc": "", "disabled": true},
       {"value": "Other"}
   ],
   "overheadDoorSize2" : [
       {"value": "9x7", "imgSrc": ""},
       {"value": "9x8", "imgSrc": ""},
+      {"value": "16x7", "imgSrc": "", "disabled": true},
+      {"value": "16x8", "imgSrc": "", "disabled": true},
       {"value": "Other"}
   ],
   "overheadDoorSize3" : [
       {"value": "9x7", "imgSrc": ""},
+      {"value": "9x8", "imgSrc": ""},
       {"value": "16x7", "imgSrc": ""},
+      {"value": "16x8", "imgSrc": "", "disabled": true},
       {"value": "Other"}
   ],
   "overheadDoorSize4" : [
@@ -667,7 +711,8 @@
       {"value": "Other", "imgSrc": "https://doordesigner.steel-craft.ca/img/preview/window-pattern-contemporary-custom.jpg"}
   ],
   "windowType1" : [
-      {"value": "Plain Lite", "imgSrc": "https://www.steel-craft.ca/portals/3/Images/doors/Window-Clear.jpg"}
+      {"value": "Plain Lite", "imgSrc": "https://www.steel-craft.ca/portals/3/Images/doors/Window-Clear.jpg"},
+      {"value": "Inlaid Muntin Bars", "imgSrc": "", "disabled": true}
   ],
   "windowType2" : [
       {"value": "Plain Lite", "imgSrc": "https://www.steel-craft.ca/portals/3/Images/doors/Window-Clear.jpg"},
@@ -777,9 +822,7 @@
   ],
   "openerOptions" : [
       {"value": "Lights", "imgSrc": "https://embed.widencdn.net/img/cgi/doho01uhq8/520px/C203_FAMILY_2.jpg"},
-      {"value": "MyQ", "imgSrc": "https://www.chamberlain.com/medias/TopNav-Smart-CLP22.jpg?context=bWFzdGVyfGltYWdlc3w2MzY5fGltYWdlL2pwZWd8aW1hZ2VzL2gwOC9oZGMvODc5ODAxNzEyNjQzMC5qcGd8MGY0MzBjNDM5NzdlNjlmYTA4YjlkNjljM2QxZmIwYWU3OTE2YTlmZmFlOWFiZDEzYzNkNjk0ZjEyZWRlMDMxMA"},
-      {"value": "MyQ and Lights", "imgSrc": "https://embed.widencdn.net/img/cgi/0aa0ihwxis/520px/B1381_family_2.jpg"},
-      {"value": "None", "imgSrc": ""}
+      {"value": "MyQ", "imgSrc": "https://www.chamberlain.com/medias/TopNav-Smart-CLP22.jpg?context=bWFzdGVyfGltYWdlc3w2MzY5fGltYWdlL2pwZWd8aW1hZ2VzL2gwOC9oZGMvODc5ODAxNzEyNjQzMC5qcGd8MGY0MzBjNDM5NzdlNjlmYTA4YjlkNjljM2QxZmIwYWU3OTE2YTlmZmFlOWFiZDEzYzNkNjk0ZjEyZWRlMDMxMA"}
   ],
   "horsePower" : [
       {"value": "1/2HP", "imgSrc": ""},

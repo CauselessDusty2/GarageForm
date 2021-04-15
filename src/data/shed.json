@@ -1,35 +1,45 @@
 {
   "widthOne": [
-    {"value": "12ft"}
+    {"value": "6", "disabled": true},
+    {"value": "8", "disabled": true},
+    {"value": "10", "disabled": true},
+    {"value": "12"}
   ],
   "widthTwo": [
-    {"value": "8ft"},
-    {"value": "10ft"},
-    {"value": "12ft"}
+    {"value": "6", "disabled": true},
+    {"value": "8"},
+    {"value": "10"},
+    {"value": "12"}
   ],
   "widthThree": [
-    {"value": "6ft"},
-    {"value": "8ft"},
-    {"value": "10ft"},
-    {"value": "12ft"}
+    {"value": "6"},
+    {"value": "8"},
+    {"value": "10"},
+    {"value": "12"}
   ],
   "lengthOne": [
-    {"value": "8ft"},
-    {"value": "10ft"}
+    {"value": "8"},
+    {"value": "10"},
+    {"value": "12", "disabled": true},
+    {"value": "14", "disabled": true},
+    {"value": "16", "disabled": true},
+    {"value": "20", "disabled": true}
   ],
   "lengthTwo": [
-    {"value": "8ft"},
-    {"value": "10ft"},
-    {"value": "12ft"},
-    {"value": "14ft"},
-    {"value": "16ft"}
-  ],"lengthThree": [
-    {"value": "8ft"},
-    {"value": "10ft"},
-    {"value": "12ft"},
-    {"value": "14ft"},
-    {"value": "16ft"},
-    {"value": "20ft"}
+    {"value": "8"},
+    {"value": "10"},
+    {"value": "12"},
+    {"value": "14"},
+    {"value": "16"},
+    {"value": "20", "disabled": true}
+  ],
+  "lengthThree": [
+    {"value": "8"},
+    {"value": "10"},
+    {"value": "12"},
+    {"value": "14"},
+    {"value": "16"},
+    {"value": "20"}
   ],
   "siding": [
     {"value": "OSB"},
@@ -96,8 +106,6 @@
   ],
   "options": [
     {"value": "6x6 Ramp"},
-    {"value": "Double Door"},
-    {"value": "Ramp and Double Door"},
-    {"value": "None"}
+    {"value": "Double Door"}
   ]
 }

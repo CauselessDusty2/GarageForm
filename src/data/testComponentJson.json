@@ -1,0 +1,22 @@
+{
+	"width": {
+		"stateGroup": "width",
+		"list": "passageWidth",
+		"title": "Width",
+		"state": "width",
+		"changeHandler": "handleWidthChange"
+	},
+	"height": {
+		"stateGroup": "height",
+		"list": "height",
+		"title": "Height",
+		"state": "height",
+		"changeHandler": "handleHeightChange"
+	},
+	"style": {
+		"stateGroup": "style",
+		"list": "mouldedPanel",
+		"title": "Style",
+		"state": "state.style"
+	}
+}
